@@ -48,6 +48,16 @@ module.exports = function(grunt) {
                     "dist/css/agency.css": "less/agency.less"
                 }
             }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'dist/img/'
+                }]
+            }
         }
     });
 
@@ -55,8 +65,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'copy', 'less']);
+    grunt.registerTask('default', ['concat', 'copy', 'less', 'imagemin']);
 
 };
