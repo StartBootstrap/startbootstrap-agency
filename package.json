@@ -1,0 +1,10 @@
+{
+  "name": "agency",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-less": "~0.11.4"
+  }
+}
