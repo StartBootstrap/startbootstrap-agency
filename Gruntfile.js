@@ -7,7 +7,12 @@ module.exports = function(grunt) {
             jquery: {
                 files: {
                     'dist/js/jquery.min.js': ['bower_components/jquery/dist/jquery.min.js'],
-                    'dist/js/jquery.js': ['bower_components/jquery/dist/jquery.js']
+                    'dist/js/jquery.js': ['bower_components/jquery/dist/jquery.js'],
+                    'dist/js/agency.js': ['js/agency.js'],
+                    'dist/js/cbpAnimatedHeader.js': ['js/cbpAnimatedHeader.js'],
+                    'dist/js/classie.js': ['js/classie.js'],
+                    'dist/js/contact_me.js': ['js/contact_me.js'],
+                    'dist/js/jqBootstrapValidation.js': ['js/jqBootstrapValidation.js']
                 }
             },
             bootstrap: {
@@ -25,13 +30,33 @@ module.exports = function(grunt) {
                 dest: 'dist/',
             },
         },
+        less: {
+            development: {
+                options: {
+                    paths: ["css"]
+                },
+                files: {
+                    "dist/css/agency.css": "less/agency.less"
+                }
+            },
+            production: {
+                options: {
+                    paths: ["css"],
+                    cleancss: true
+                },
+                files: {
+                    "dist/css/agency.css": "less/agency.less"
+                }
+            }
+        }
     });
 
     // Load the plugin that provides the "copy" task.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'copy']);
+    grunt.registerTask('default', ['concat', 'copy', 'less']);
 
 };
