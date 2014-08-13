@@ -21,6 +21,10 @@ module.exports = function(grunt) {
                     'dist/js/bootstrap.js': ['bower_components/bootstrap/dist/js/bootstrap.js'],
                     'dist/css/bootstrap.min.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css'],
                     'dist/css/bootstrap.css': ['bower_components/bootstrap/dist/css/bootstrap.css'],
+                    'dist/fonts/glyphicons-halflings-regular.eot': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot'],
+                    'dist/fonts/glyphicons-halflings-regular.svg': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg'],
+                    'dist/fonts/glyphicons-halflings-regular.ttf': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf'],
+                    'dist/fonts/glyphicons-halflings-regular.woff': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff'],
                 }
             },
         },
