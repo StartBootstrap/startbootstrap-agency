@@ -65,7 +65,7 @@ module.exports = function(grunt) {
         }
     });
 
-    // Load the plugin that provides the "copy" task.
+    // Load the plugins.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
