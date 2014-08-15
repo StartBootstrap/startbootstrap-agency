@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 files: {
                     'dist/js/jquery.min.js': ['bower_components/jquery/dist/jquery.min.js'],
                     'dist/js/jquery.js': ['bower_components/jquery/dist/jquery.js'],
-                    'dist/js/agency.js': ['js/agency.js'],
+                    'dist/js/<%= pkg.name %>.js': ['js/<%= pkg.name %>.js'],
                     'dist/js/cbpAnimatedHeader.js': ['js/cbpAnimatedHeader.js'],
                     'dist/js/classie.js': ['js/classie.js'],
                     'dist/js/contact_me.js': ['js/contact_me.js'],
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                     paths: ["css"]
                 },
                 files: {
-                    "dist/css/agency.css": "less/agency.less"
+                    "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
                 }
             },
             production: {
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "dist/css/agency.css": "less/agency.less"
+                    "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
                 }
             }
         },
@@ -62,6 +62,29 @@ module.exports = function(grunt) {
                     dest: 'dist/img/'
                 }]
             }
+        },
+        watch: {
+            scripts: {
+                files: ['js/*.js'],
+                tasks: ['concat'],
+                options: {
+                    spawn: false,
+                },
+            },
+            css: {
+                files: ['less/*.less'],
+                tasks: ['less'],
+                options: {
+                    spawn: false,
+                }
+            },
+            html: {
+            	files: ['*.html', 'mail/**'],
+            	tasks: ['copy'],
+            	options: {
+            		spawn: false,
+            	}
+            },
         }
     });
 
@@ -70,8 +93,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
     grunt.registerTask('default', ['concat', 'copy', 'less', 'imagemin']);
+    grunt.registerTask('build-css', ['less']);
+
 
 };
