@@ -1,72 +1,21 @@
 {
   "name": "startbootstrap-agency",
-  "description": "A one page HTML theme for agencies created by Start Bootstrap.",
-  "version": "1.0.0",
-  "keywords": [
-    "css",
-    "js",
-    "less",
-    "mobile-first",
-    "responsive",
-    "front-end",
-    "framework",
-    "web"
+  "version": "1.0.1",
+  "homepage": "https://github.com/IronSummitMedia/startbootstrap-agency",
+  "authors": [
+    "David Miller <david@ironsummitmedia.com>"
   ],
-  "homepage": "http://startbootstrap.com/",
-  "main": [
-    "index.html",
-    "less/agency.less",
-    "dist/css/agency.css",
-    "dist/js/agency.js",
-    "dist/js/cbpAnimatedHeader.js",
-    "dist/js/classie.js",
-    "dist/js/contact_me.js",
-    "dist/js/jqBootstrapValidation.js",
-    "dist/img/header-bg.jpg",
-    "dist/img/map-image.jpg",
-    "dist/img/about/1.jpg",
-    "dist/img/about/2.jpg",
-    "dist/img/about/3.jpg",
-    "dist/img/about/4.jpg",
-    "dist/img/logos/creative-market.jpg",
-    "dist/img/logos/designmodo.jpg",
-    "dist/img/logos/envato.jpg",
-    "dist/img/logos/themeforest.jpg",
-    "dist/img/portfolio/dreams-preview.png",
-    "dist/img/portfolio/dreams.png",
-    "dist/img/portfolio/escape-preview.png",
-    "dist/img/portfolio/escape.png",
-    "dist/img/portfolio/golden-preview.png",
-    "dist/img/portfolio/golden.png",
-    "dist/img/portfolio/roundicons-free.png",
-    "dist/img/portfolio/roundicons.png",
-    "dist/img/portfolio/startup-framework-preview.png",
-    "dist/img/portfolio/startup-framework.png",
-    "dist/img/portfolio/treehouse-preview.png",
-    "dist/img/portfolio/treehouse.png",
-    "dist/img/team/1.jpg",
-    "dist/img/team/2.jpg",
-    "dist/img/team/3.jpg",
-    "dist/mail/contact_me.php"
-  ],
+  "description": "A one page HTML theme for agencies created by Start Bootstrap",
+  "main": "dist/**",
+  "license": "Apache 2.0",
   "ignore": [
-    "/.*",
-    "_config.yml",
-    "bower_components",
-    "img/**",
-    "js/**",
-    "mail/**",
     "**/.*",
     "node_modules",
+    "bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
-    "jquery": ">= 1.9.0",
-    "bootstrap": ">= 3.2.0"
-  },
-  "authors": [
-    "David Miller <david@ironsummitmedia.com>"
-  ],
-  "license": "Apache 2.0"
+    "bootstrap": "~3.2.0"
+  }
 }
