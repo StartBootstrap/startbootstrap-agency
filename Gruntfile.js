@@ -7,12 +7,7 @@ module.exports = function(grunt) {
             jquery: {
                 files: {
                     'dist/js/jquery.min.js': ['bower_components/jquery/dist/jquery.min.js'],
-                    'dist/js/jquery.js': ['bower_components/jquery/dist/jquery.js'],
-                    'dist/js/<%= pkg.name %>.js': ['js/<%= pkg.name %>.js'],
-                    'dist/js/cbpAnimatedHeader.js': ['js/cbpAnimatedHeader.js'],
-                    'dist/js/classie.js': ['js/classie.js'],
-                    'dist/js/contact_me.js': ['js/contact_me.js'],
-                    'dist/js/jqBootstrapValidation.js': ['js/jqBootstrapValidation.js']
+                    'dist/js/jquery.js': ['bower_components/jquery/dist/jquery.js']
                 }
             },
             bootstrap: {
@@ -30,7 +25,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**'],
+                src: ['*.html', 'mail/**', 'js/*.js'],
                 dest: 'dist/',
             },
         },
@@ -79,11 +74,11 @@ module.exports = function(grunt) {
                 }
             },
             html: {
-            	files: ['*.html', 'mail/**'],
-            	tasks: ['copy'],
-            	options: {
-            		spawn: false,
-            	}
+                files: ['*.html', 'mail/**'],
+                tasks: ['copy'],
+                options: {
+                    spawn: false,
+                }
             },
         }
     });
