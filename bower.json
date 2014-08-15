@@ -1,12 +1,12 @@
 {
   "name": "startbootstrap-agency",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/IronSummitMedia/startbootstrap-agency",
   "authors": [
     "David Miller <david@ironsummitmedia.com>"
   ],
   "description": "A one page HTML theme for agencies created by Start Bootstrap",
-  "main": "dist/**",
+  "main": "/",
   "license": "Apache 2.0",
   "ignore": [
     "**/.*",
