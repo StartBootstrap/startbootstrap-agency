@@ -3,9 +3,24 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        concat: {
+            main: {
+                src: [
+                    'js/plugins/*.js',
+                    'js/<%= pkg.slug %>.js'
+                ],
+                dest: 'dist/js/<%= pkg.slug %>.js',
+            }
+        },
+        uglify: {
+            main: {
+                src: 'dist/js/<%= pkg.slug %>.js',
+                dest: 'dist/js/<%= pkg.slug %>.min.js'
+            }
+        },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'js/**', 'img/**'],
+                src: ['*.html', 'mail/**', 'img/**'],
                 dest: 'dist/',
             },
             jquery: {
@@ -77,21 +92,28 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    src: ['dist/css/<%= pkg.slug %>.css', 'dist/css/<%= pkg.slug %>.min.css', 'dist/js/<%= pkg.slug %>.js']
+                    src: ['dist/css/<%= pkg.slug %>.css', 'dist/css/<%= pkg.slug %>.min.css', 'dist/js/<%= pkg.slug %>.js', 'dist/js/<%= pkg.slug %>.min.js']
                 }
             }
         },
         watch: {
-            less: {
-                files: ['less/*.less'],
-                tasks: ['less'],
+            scripts: {
+                files: ['js/*.js', 'js/**/*.js'],
+                tasks: ['concat', 'uglify'],
+                options: {
+                    spawn: false,
+                },
+            },
+            copy: {
+                files: ['*.html', 'mail/**', 'img/**'],
+                tasks: ['copy'],
                 options: {
                     spawn: false,
                 }
             },
-            copy: {
-                files: ['*.html', 'mail/**', 'js/**', 'img/**'],
-                tasks: ['copy'],
+            less: {
+                files: ['less/*.less'],
+                tasks: ['less'],
                 options: {
                     spawn: false,
                 }
@@ -100,12 +122,14 @@ module.exports = function(grunt) {
     });
 
     // Load the plugins.
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['copy', 'less', 'usebanner']);
+    grunt.registerTask('default', ['concat', 'uglify', 'copy', 'less', 'usebanner']);
 
 };
