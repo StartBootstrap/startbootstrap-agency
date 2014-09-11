@@ -12,4 +12,4 @@ You can use the source files within this repo to customize the Agency theme. You
 - Run `npm install` in the root directory
 - After all of the node modules are installed you can either edit files and then run `grunt` to build the new dist folder, or you can run `grunt watch` which will tell Grunt to watch specified files for changes, and update the files in the dist folder automatically.
 
-*Note: You will need to have Node Package Manager (npm) and Grunt installed globally in order to perform the tasks outlined above.*
+*Note: You will need to have Node Package Manager (npm) and Grunt installed in order to perform the tasks outlined above.*
