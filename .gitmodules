@@ -1,0 +1,3 @@
+[submodule "test/templates"]
+	path = test/templates
+	url = git://github.com/h5bp/html5-boilerplate.git
