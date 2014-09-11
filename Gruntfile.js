@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'img/**'],
+                src: ['*.html', 'mail/**', 'img/**', 'less/**'],
                 dest: 'dist/',
             },
             jquery: {
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'mail/**', 'img/**'],
+                files: ['*.html', 'mail/**', 'img/**', 'less/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
