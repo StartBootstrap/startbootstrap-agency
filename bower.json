@@ -1,0 +1,25 @@
+{
+  "name": "startbootstrap-agency",
+  "version": "0.0.1",
+  "homepage": "https://github.com/IronSummitMedia/startbootstrap-agency",
+  "authors": [
+    "Start Bootstrap"
+  ],
+  "description": "A free bootstrap theme for Agencies or any other use!",
+  "keywords": [
+    "bootstrap",
+    "template",
+    "theme"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
