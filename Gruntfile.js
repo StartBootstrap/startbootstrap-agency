@@ -118,6 +118,13 @@ module.exports = function(grunt) {
                     spawn: false,
                 }
             },
+        },
+        bower: {
+            install: {
+                options: {
+                    targetDir: './bower_components',
+                }
+            }
         }
     });
 
@@ -128,8 +135,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-bower-task');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'copy', 'less', 'usebanner']);
+    grunt.registerTask('default', ['concat', 'uglify', 'copy', 'less', 'usebanner', 'bower']);
+    grunt.registerTask('build', ['concat', 'uglify', 'copy', 'less', 'usebanner']);
 
 };

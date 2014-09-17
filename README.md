@@ -10,7 +10,12 @@ You can use the source files within this repo to customize the Agency theme. You
 
 - First, clone the repository.
 - Run `npm install` in the root directory to install all of the Grunt dependencies.
-- Run `bower install` in the root directory to install all of the required Bower components.
-- After all of the node modules and bower components are installed, you can either edit files and then run `grunt` to build the new dist folder, or you can run `grunt watch` which will tell Grunt to watch specified files for changes, and update the files in the dist folder automatically. Make sure to check out the Gruntfile and change it around as needed if you're adding more components to your project.
+- After all of the node modules are installed, you will want to run the `grunt` command to make sure it's working and to install the required Bower components.
+
+## Grunt Tasks
+
+- `grunt` will run all Grunt tasks. It will build the dist folder and it will install Bower components.
+- `grunt watch` will watch specified files for changes, and automatically build them within the dist folder.
+- `grunt build` will build the dist folder, but will not install Bower components.
 
 *Note: You will need to have Node Package Manager (npm) and Grunt installed in order to perform the tasks outlined above.*
