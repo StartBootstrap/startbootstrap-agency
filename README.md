@@ -4,6 +4,9 @@ Agency is a one page HTML theme for agencies created by Start Bootstrap. This re
 
 To access the current version of this template, visit http://startbootstrap.com/template-overviews/agency/.
 
+## Screenshot
+![](http://sbootstrap.startbootstrapc.netdna-cdn.com/assets/img/templates/agency.jpg)
+
 ## Installation
 
 - Fork the source files from this repository.
@@ -25,4 +28,4 @@ If you have questions about the theme you can submit an issue here on GitHub or 
 
 If you have fixed a bug with the template feel free to open a pull request and I will review and merge the request.
 
-*NOTE: Pull requests with extended features will most likely not be added to the base theme! The themes are Start Bootstrap are meant to be starting points for people to work off of, and I don't typically add any new feature unless they are frequently asked for.*
+*NOTE: Pull requests with new features will most likely not be added to the base theme! The templates and themes on Start Bootstrap are meant to be starting points for people to work off of, and I don't typically add any new feature unless they are frequently asked for.*
