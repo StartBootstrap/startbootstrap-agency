@@ -4,18 +4,23 @@ Agency is a one page HTML theme for agencies created by Start Bootstrap. This re
 
 To access the current version of this template, visit http://startbootstrap.com/template-overviews/agency/.
 
-## Using these Source Files
+## Installation
 
-You can use the source files within this repo to customize the Agency theme. You can custmoize the HTML, CSS (using LESS), and the JavaScript while Grunt watches the files and compiles them automatically for you. To get started, follow the steps below.
+- Fork the source files from this repository.
+- Run `npm install` in the root directory to install Grunt dependencies.
+- Run `bower install` in the root directory to install Bower dependencies.
 
-- First, clone the repository.
-- Run `npm install` in the root directory to install all of the Grunt dependencies.
-- Run `grunt` after all of the node modules are installed to test the Grunt tasks and to install the required Bower components.
+You are now ready to work with the theme! Feel free to edit the Gruntfile as you see fit. It's recommended that you have a working knowledge of Grunt and Bower before attempting to use these source files. If you want the easy to use, HTML/CSS version of this template, you can download it at http://startbootstrap.com/template-overviews/agency/.
 
 ## Grunt Tasks
 
-- `grunt` will run all Grunt tasks. It will build the dist folder and it will install Bower components.
+- `grunt` will run all Grunt tasks. It will build the dist folder based on the specifications set up in the Gruntfile.
 - `grunt watch` will watch specified files for changes, and automatically build them within the dist folder.
-- `grunt build` will build the dist folder, but will not install Bower components.
 
-*Note: You will need to have Node Package Manager (npm) and Grunt installed in order to perform the tasks outlined above.*
+## Support
+
+If you have questions about the theme you can submit an issue here on GitHub or you can leave a comment on the theme overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/agency/.
+
+## Contributing
+
+If you have fixed a bug with the template, or have an idea for a new feature, feel free to open a pull request and I will review and merge the pull request if needed. *NOTE: Pull requests with extended features will most likely not be added to the base theme! The themes are Start Bootstrap are meant to be starting points for people to work off of, and I don't typically add any new feature unless they are frequently asked for.*
