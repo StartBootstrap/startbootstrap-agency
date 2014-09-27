@@ -7,15 +7,15 @@ module.exports = function(grunt) {
             main: {
                 src: [
                     'js/plugins/*.js',
-                    'js/<%= pkg.slug %>.js'
+                    'js/<%= pkg.name %>.js'
                 ],
-                dest: 'dist/js/<%= pkg.slug %>.js',
+                dest: 'dist/js/<%= pkg.name %>.js',
             }
         },
         uglify: {
             main: {
-                src: 'dist/js/<%= pkg.slug %>.js',
-                dest: 'dist/js/<%= pkg.slug %>.min.js'
+                src: 'dist/js/<%= pkg.name %>.js',
+                dest: 'dist/js/<%= pkg.name %>.min.js'
             }
         },
         copy: {
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
                     paths: ["css"]
                 },
                 files: {
-                    "dist/css/<%= pkg.slug %>.css": "less/<%= pkg.slug %>.less"
+                    "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
                 }
             },
             minified: {
@@ -76,12 +76,12 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "dist/css/<%= pkg.slug %>.min.css": "less/<%= pkg.slug %>.less"
+                    "dist/css/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
                 }
             }
         },
         banner: '/*!\n' +
-            ' * <%= pkg.name %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
@@ -92,7 +92,7 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    src: ['dist/css/<%= pkg.slug %>.css', 'dist/css/<%= pkg.slug %>.min.css', 'dist/js/<%= pkg.slug %>.js', 'dist/js/<%= pkg.slug %>.min.js']
+                    src: ['dist/css/<%= pkg.name %>.css', 'dist/css/<%= pkg.name %>.min.css', 'dist/js/<%= pkg.name %>.js', 'dist/js/<%= pkg.name %>.min.js']
                 }
             }
         },
