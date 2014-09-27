@@ -23,4 +23,6 @@ If you have questions about the theme you can submit an issue here on GitHub or 
 
 ## Contributing
 
-If you have fixed a bug with the template, or have an idea for a new feature, feel free to open a pull request and I will review and merge the pull request if needed. *NOTE: Pull requests with extended features will most likely not be added to the base theme! The themes are Start Bootstrap are meant to be starting points for people to work off of, and I don't typically add any new feature unless they are frequently asked for.*
+If you have fixed a bug with the template feel free to open a pull request and I will review and merge the request.
+
+*NOTE: Pull requests with extended features will most likely not be added to the base theme! The themes are Start Bootstrap are meant to be starting points for people to work off of, and I don't typically add any new feature unless they are frequently asked for.*
