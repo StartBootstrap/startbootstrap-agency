@@ -1,3 +1,0 @@
-[submodule "externals/jquery"]
-	path = externals/jquery
-	url = git://github.com/jquery/jquery.git

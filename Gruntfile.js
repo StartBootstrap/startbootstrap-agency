@@ -6,6 +6,7 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
+                    'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
                     'js/<%= pkg.name %>.js'
                 ],
@@ -28,8 +29,8 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'bower_components/jquery/dist/',
                     src: [
-                        'jquery.min.js',
                         'jquery.js',
+                        'jquery.min.js'
                     ],
                     dest: 'dist/js/'
                 }, ]
@@ -39,10 +40,10 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'bower_components/bootstrap/dist/',
                     src: [
-                        'js/bootstrap.js',
-                        'js/bootstrap.min.js',
                         'css/bootstrap.css',
-                        'css/bootstrap.min.css'
+                        'css/bootstrap.min.css',
+                        'js/bootstrap.js',
+                        'js/bootstrap.min.js'
                     ],
                     dest: 'dist/'
                 }, ]
@@ -50,7 +51,7 @@ module.exports = function(grunt) {
             glyphicons: {
                 files: [{
                     expand: true,
-                    cwd: 'bower_components/bootstrap/',
+                    cwd: 'bower_components/bootstrap/dist/',
                     src: [
                         'fonts/glyphicons-halflings-regular.eot',
                         'fonts/glyphicons-halflings-regular.svg',
@@ -98,7 +99,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['js/*.js', 'js/**/*.js'],
+                files: ['js/<%= pkg.name %>.js, js/plugins/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
@@ -118,13 +119,6 @@ module.exports = function(grunt) {
                     spawn: false,
                 }
             },
-        },
-        bower: {
-            install: {
-                options: {
-                    targetDir: './bower_components',
-                }
-            }
         }
     });
 
@@ -135,10 +129,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-bower-task');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'copy', 'less', 'usebanner', 'bower']);
-    grunt.registerTask('build', ['concat', 'uglify', 'copy', 'less', 'usebanner']);
+    grunt.registerTask('default', ['concat', 'uglify', 'copy', 'less', 'usebanner']);
 
 };
