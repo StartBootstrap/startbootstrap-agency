@@ -38,7 +38,6 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
 }
 .img-centered {
@@ -55,7 +54,6 @@ h6 {
   background-color: #ff8400;
   border-color: #ff8400;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -99,7 +97,6 @@ fieldset[disabled] .btn-primary.active {
   background-color: #ff8400;
   border-color: #ff8400;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
@@ -148,7 +145,6 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand {
   color: white;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none;
 }
 .navbar-default .navbar-brand:hover,
@@ -173,7 +169,6 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-default .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
@@ -244,11 +239,10 @@ header .intro-text .intro-lead-in {
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -264,11 +258,10 @@ header .intro-text .intro-heading {
   }
   header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
     font-weight: 700;
-    font-size: 75px;
-    line-height: 75px;
-    margin-bottom: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 40px;
   }
 }
 section {
@@ -549,7 +542,6 @@ aside.clients img {
 }
 section#contact {
   background-color: #222222;
-  background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -575,27 +567,23 @@ section#contact .form-control:focus {
 }
 section#contact ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
 section#contact :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
@@ -609,14 +597,12 @@ footer {
 footer span.copyright {
   line-height: 40px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none;
 }
 footer ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none;
 }
 ul.social-buttons {
