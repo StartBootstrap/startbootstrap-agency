@@ -175,7 +175,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "quatro","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "quatro","Helvetica Neue",Helvetica,Arial,bold;
     color: #fed136;
 }
 
@@ -668,7 +668,7 @@ section#contact .form-group {
 
 section#contact .form-group input,
 section#contact .form-group textarea {
-    padding: 20px;
+    padding: 10px;
 }
 
 section#contact .form-group input.form-control {
