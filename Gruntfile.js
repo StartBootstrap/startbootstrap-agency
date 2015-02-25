@@ -7,6 +7,8 @@ module.exports = function(grunt) {
             main: {
                 src: [
                     'bower_components/jquery.easing/js/jquery.easing.js',
+                    'bower_components/Placeholders/lib/utils.js',
+                    'bower_components/Placeholders/lib/main.js',
                     'bower_components/classie/classie.js',
                     'js/plugins/*.js',
                     'js/<%= pkg.name %>.js'
