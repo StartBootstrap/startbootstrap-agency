@@ -15,13 +15,20 @@ var cbpAnimatedHeader = (function() {
 		didScroll = false,
 		changeHeaderOn = 300;
 
+	function bindEvent(el, eventName, eventHandler) {
+		if (el.addEventListener) {
+			el.addEventListener(eventName, eventHandler, false);
+		} else if (el.attachEvent) {
+			el.attachEvent('on' + eventName, eventHandler);
+		}
+	}
 	function init() {
-		window.addEventListener( 'scroll', function( event ) {
+		bindEvent( window, 'scroll', function( event ) {
 			if( !didScroll ) {
 				didScroll = true;
 				setTimeout( scrollPage, 250 );
 			}
-		}, false );
+		});
 	}
 
 	function scrollPage() {
