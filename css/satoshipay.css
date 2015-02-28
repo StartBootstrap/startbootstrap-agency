@@ -213,6 +213,10 @@ fieldset[disabled] .btn-xl.active {
   .navbar-default.navbar-shrink .navbar-brand {
     font-size: 1.5em;
   }
+  .navbar-default.navbar-shrink .logo {
+    width: 120px;
+    transition: all 0.3s;
+  }
 }
 header {
   background-image: url('../img/black-gradient-bg.png');
