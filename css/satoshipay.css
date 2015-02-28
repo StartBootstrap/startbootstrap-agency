@@ -203,10 +203,6 @@ fieldset[disabled] .btn-xl.active {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .navbar-default .navbar-brand .logo {
-    width: 150px;
-    transition: all 0.3s;
-  }
   .navbar-default .navbar-nav > .active > a {
     border-radius: 3px;
   }
@@ -216,10 +212,6 @@ fieldset[disabled] .btn-xl.active {
   }
   .navbar-default.navbar-shrink .navbar-brand {
     font-size: 1.5em;
-  }
-  .navbar-default.navbar-shrink .navbar-brand .logo {
-    width: 120px;
-    transition: all 0.3s;
   }
 }
 header {
@@ -246,8 +238,8 @@ header .intro-text .intro-lead-in {
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 15px;
