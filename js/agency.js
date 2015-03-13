@@ -24,3 +24,11 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Remove highlight of Menu Items after clicking one and scrolling
+$(".btn-xl").mouseup(function() {
+    $(this).blur();
+});
+$(".page-scroll").mouseup(function() {
+    $(this).blur();
+});
