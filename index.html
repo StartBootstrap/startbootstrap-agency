@@ -481,46 +481,65 @@
             </div>
         </div>
     </aside> -->
-	
+
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Our inbox is open for your questions/messages/love! </h3>
+                    <h3 class="section-subheading text-muted">Our inbox is open for your questions/messages/love!</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
+                      <div class="row">
+                          <div class="col-md-6 col-md-offset-3">
+                                <p class="lead text-center"><a href="mailto:shesharpgr@gmail.com">shesharpgr@gmail.com</a></p>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="imsharptoo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">I'm sharp too!</h2>
+                    <h3 class="section-subheading">Interested in joining our team?</h2>
+                    <h3 class="section-subheading text-muted">If you are into promoting women's engagement with technology &amp; science and organizing events about it, don't hesitate to sign up!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                        <form action="https://shesharp.us10.list-manage.com/subscribe/post?u=7ad061b4a8c1061c25c6b2f2a&amp;id=7c4be75b57" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <div class="form-group mc-field-group">
+                                    	<label for="mce-FNAME">First Name</label>
+                                    	<input type="text" placeholder="Your Name" value="" name="FNAME" class="form-control" id="mce-FNAME">
+                                    </div>
+                                    <div class="form-group mc-field-group">
+                                    	<label for="mce-EMAIL">Email Address</label>
+                                        <input type="email" placeholder="Your Email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                	<div id="mce-responses" class="clear">
+                                		<div class="response" id="mce-error-response" style="display:none"></div>
+                                		<div class="response" id="mce-success-response" style="display:none"></div>
+                                	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_7ad061b4a8c1061c25c6b2f2a_7c4be75b57" tabindex="-1" value=""></div>
+                                    <div class="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-xl button"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <!--End mc_embed_signup-->
                 </div>
             </div>
         </div>
@@ -735,8 +754,23 @@
     <script src="js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!-- <script src="js/jqBootstrapValidation.js"></script> -->
+    <!-- <script src="js/contact_me.js"></script> -->
+
+    <!-- Mailchimp -->
+    <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+        (function($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';
+            ftypes[0]='email';
+            fnames[1]='FNAME';
+            ftypes[1]='text';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
+
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
