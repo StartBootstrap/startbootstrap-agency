@@ -35,7 +35,7 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: #fff;
 }
 
 a:hover,
@@ -905,4 +905,3 @@ section#contact #contactform {
 	margin-right: 0;
 	width: 50%;
 }
-
