@@ -35,7 +35,7 @@ a.active {
 }
 
 a {
-    color: #fff;
+    color: #fed136;
 }
 
 a:hover,
@@ -904,4 +904,12 @@ section#contact #participationform {
 section#contact #contactform {
 	margin-right: 0;
 	width: 50%;
+}
+
+#mission .timeline-image a {
+	color: #fff;
+}
+
+#mission .timeline-image a:hover {
+	color: #333;
 }
