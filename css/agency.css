@@ -660,11 +660,12 @@ section#contact {
 }
 
 section#contact .section-heading {
-    color: #fff;
+    color: #fed136;
 }
 
 section#contact .form-group {
     margin-bottom: 25px;
+	color: #fed136;
 }
 
 section#contact .form-group input,
@@ -882,3 +883,26 @@ body {
 .team-member h4 a:hover {
 	color: #fed136;
 }
+
+#contact h3.section-subheading {
+	color: #fff;
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+section#contact #participationform {
+    padding-left: 15px;
+	padding-right: 15px;
+	float: left;
+	width: 50%;
+}
+
+section#contact #contactform {
+	margin-right: 0;
+	width: 50%;
+}
+
