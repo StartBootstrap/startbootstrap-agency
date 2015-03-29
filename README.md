@@ -1,6 +1,6 @@
 # She Sharp Website
 
-[shesharpgr.org](http://shesharpgr.org/)
+[shesharp.org](http://shesharp.org/)
 
 She Sharp is a Greek community dedicated to promote women's engagement with technology & science.
 
