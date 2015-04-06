@@ -24,3 +24,10 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Closes the Responsive Menu on Click outside Menu
+$('header, section, aside, footer').click(function() {
+    if(!$('button.navbar-toggle').hasClass('collapsed')) {
+        $('.navbar-toggle:visible').click();
+    }
+});
