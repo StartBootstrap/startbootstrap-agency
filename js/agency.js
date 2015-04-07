@@ -24,3 +24,16 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+
+
+$('#menuContact').on('click',function(){
+    ga('send', 'event', 'menu-contact', 'click');
+});
+
+$('#comprar').on('click',function(){
+	ga('send', 'pageview', '/#comprar');
+});
+
+
+;
