@@ -26,7 +26,7 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Closes the Responsive Menu on Click outside Menu
-$('header, section, aside, footer').click(function() {
+$('body > *').not('nav').click(function() {
     if(!$('button.navbar-toggle').hasClass('collapsed')) {
         $('.navbar-toggle:visible').click();
     }
