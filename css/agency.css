@@ -865,3 +865,7 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+.navbar-default{
+    background: black;
+}
