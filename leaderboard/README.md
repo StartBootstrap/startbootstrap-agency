@@ -1,1 +1,0 @@
-# editathon-leaderboard
