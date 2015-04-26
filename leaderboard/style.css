@@ -1,0 +1,61 @@
+body {padding:5%}
+.label {
+	text-align: center;
+	color: #888;
+	font-size: 0.3em;		
+}
+.total-contributions {
+	text-align: center;
+	font-size: 14em;		
+}
+.total-contributors {
+	padding-top: 2%;
+	text-align: center;
+	font-size: 7em;
+	color: #888;	
+}
+.editathon-duration {
+	text-align: center;
+	font-style: italic;
+	font-size: 1.5em;
+	color: #aaa;
+	margin-top: 2%;
+}
+.separator {
+	margin: auto;
+	width: 30%;
+	height: 1px;
+	border-bottom: 1px dotted #aaa;		
+}
+#main-controls {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	padding: 10px;
+}
+#page-controls {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding: 10px;
+}
+.dialog {
+	display: none;			
+}
+.users {
+	margin-top: 5%;
+}
+.articles .title, .users .title {
+	font-size: 1.5em;
+}
+.articles a, .users a {
+	display: block;			
+}
+.articles .content, .users .content {
+	-webkit-column-count: 4; /* CH, SF, OP */
+	-moz-column-count: 4; /* FF */
+	column-count: 4;
+}
+#page2 {
+	display: none;
+}
