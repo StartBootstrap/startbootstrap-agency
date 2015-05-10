@@ -916,5 +916,6 @@ section#contact #contactform {
 
 .logo{
 	height: 50px;
-	top: 50%;
+	position: relative;
+	top: -15px;
 }
