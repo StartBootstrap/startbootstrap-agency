@@ -1,46 +1,48 @@
 // Bootstrap Button Variant
 
-.button-variant(@color; @background; @border) {
-	color: @color;
-	background-color: @background;
-	border-color: @border;
+@mixin button-variant($color, $background, $border)
+{
+	color: $color;
+	background-color: $background;
+	border-color: $border;
 
 	&:hover,
 	&:focus,
 	&:active,
 	&.active,
-	.open .dropdown-toggle& {
-		color: @color;
-		background-color: darken(@background, 10%);
-        border-color: darken(@border, 12%);
+	.open .dropdown-toggle {
+		color: $color;
+		background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
 	}
 	&:active,
 	&.active,
-	.open .dropdown-toggle& {
+	.open .dropdown-toggle {
 		background-image: none;
 	}
 	&.disabled,
 	&[disabled],
-	fieldset[disabled] & {
+	fieldset[disabled] {
 		&,
 		&:hover,
 		&:focus,
 		&:active,
 		&.active {
-			background-color: @background;
-			border-color: @border;
+			background-color: $background;
+			border-color: $border;
 		}
 	}
 
 	.badge {
-		color: @background;
-		background-color: @color;
+		color: $background;
+		background-color: $color;
 	}
 }
 
 // Background Features
 
-.background-cover() {
+@mixin background-cover()
+{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -49,19 +51,23 @@
 
 // Font Selections
 
-.serif-font() {
+@mixin serif-font()
+{
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.script-font() {
+@mixin script-font()
+{
 	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
-.body-font() {
+@mixin body-font()
+{
 	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.heading-font() {
+@mixin heading-font()
+{
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 }
