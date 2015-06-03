@@ -919,3 +919,13 @@ section#contact #contactform {
 	position: relative;
 	top: -15px;
 }
+
+#mce-error-response {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+#mce-success-response {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
