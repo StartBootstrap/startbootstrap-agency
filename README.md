@@ -1,4 +1,4 @@
-# [Luke Acland](http://lukeacland.co.nz/) - by [Bird Apps](http://birdapps.nz/)
+# [Luke Acland, Barrister](http://lukeacland.co.nz/) - by [Bird Apps](http://birdapps.nz/)
 
 Marking website for Luke Acland, a Nelson based Barrister.
 
