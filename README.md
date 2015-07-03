@@ -2,4 +2,4 @@
 
 Marketing website for Luke Acland, a Nelson based Barrister.
 
-This website is based on a fork of Iron Summit Media's [Agency](http://startbootstrap.com/template-overviews/agency/) which is uilt using the [Bootstrap](http://getbootstrap.com/) framework. 
+This website is based on a fork of Iron Summit Media's [Agency](http://startbootstrap.com/template-overviews/agency/) which uses the [Bootstrap](http://getbootstrap.com/) framework. 
