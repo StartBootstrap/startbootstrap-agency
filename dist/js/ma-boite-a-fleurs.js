@@ -1,6 +1,6 @@
 /*!
- * Agency v0.0.1 (http://startbootstrap.com)
- * Copyright 2014 Start Bootstrap
+ * ma-boite-a-fleurs v1.0.0 (http://plassiale.github.io/ma-boite-a-fleurs/)
+ * Copyright 2015 Start Bootstrap
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
 

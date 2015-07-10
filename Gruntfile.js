@@ -3,6 +3,19 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        clean : {
+        	dist: {
+        	      src: ['dist/**']
+        	    }
+        },
+        connect: {
+            server: {
+              options: {
+                port: 9001,
+                base: 'dist'
+              }
+            }
+          },
         concat: {
             main: {
                 src: [
@@ -24,6 +37,7 @@ module.exports = function(grunt) {
                 src: ['*.html', 'mail/**', 'img/**', 'less/**'],
                 dest: 'dist/',
             },
+            /* see concat */
             jquery: {
                 files: [{
                     expand: true,
@@ -59,6 +73,17 @@ module.exports = function(grunt) {
                         'fonts/glyphicons-halflings-regular.woff',
                     ],
                     dest: 'dist/'
+                }, ]
+            },
+            fontawesome: {
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/font-awesome/',
+                    src: [
+                        'fonts/*.*',
+                        'css/*.css'
+                    ],
+                    dest: 'dist/font-awesome/'
                 }, ]
             },
         },
@@ -98,11 +123,12 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            scripts: {
+        	scripts: {
                 files: ['js/<%= pkg.name %>.js, js/plugins/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
+                    livereload: true
                 },
             },
             copy: {
@@ -110,6 +136,7 @@ module.exports = function(grunt) {
                 tasks: ['copy'],
                 options: {
                     spawn: false,
+                    livereload: true
                 }
             },
             less: {
@@ -117,20 +144,23 @@ module.exports = function(grunt) {
                 tasks: ['less'],
                 options: {
                     spawn: false,
+                    livereload: true
                 }
             },
         }
     });
 
     // Load the plugins.
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'copy', 'less', 'usebanner']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less', 'usebanner','connect','watch']);
 
 };
