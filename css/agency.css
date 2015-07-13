@@ -4,6 +4,9 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ /* KitSplit yellow: #fed136
+ */
+
 .sizeImg {
     width: 70px;
     height: auto;
@@ -14,12 +17,39 @@ body {
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.text-header {
+    color: #324A9C;
+}
+
 .text-muted {
-    color: #777;
+    color: #259FA1;
+}
+
+.text-bold {
+    color: #8C7474;
 }
 
 .text-primary {
     color: #fed136;
+}
+
+.main-title {
+    font-size: 106px !important;
+    color: #f1f1f1;
+}
+
+.main-subtitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #fed136;
+    margin-top: 50px;
+    padding: 8px;
+}
+
+.spacer {
+    height: 50px;
 }
 
 p {
@@ -41,6 +71,17 @@ a.active {
 
 a {
     color: #fed136;
+}
+
+a.dark {
+    color: #fff;
+}
+
+a.dark:hover,
+a.dark:focus,
+a.dark:active,
+a.dark.active {
+    color: #114114;
 }
 
 a:hover,
@@ -176,37 +217,49 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    //background-color: #222;
 }
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #fed136;
+    //color: #fed136;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fec503;
+    //color: #fec503;
+}
+
+.navbar-header .page-scroll {
+    background-color: #fed136;
+    color: #fff;
+    width: 100%;
+    //padding-right: 200px;
 }
 
 .navbar-default .navbar-collapse {
-    border-color: rgba(255,255,255,.02);
+    //border-color: rgba(255,255,255,.02);
+    padding: 0 20px;
+}
+
+.navbar-default .navbar-collapse .in{
+    background-color: #000;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #fed136;
-    background-color: #fed136;
+    //border-color: #fff;
+    //background-color: #fed136;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    //background-color: #fed136;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    //background-color: #fed136;
 }
 
 .navbar-default .nav li a {
@@ -220,22 +273,53 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #fed136;
+    color: #444;
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: #fed136;
+    background-color: #addbbb;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #fec503;
+    background-color: #addbbb;
+}
+
+
+.navbar-logo {
+    height: auto;
+    width: 150px;
+}
+
+.
+
+@media(min-width:600px) {
+    .intro-container {
+        height: 420px;
+    }
+}
+
+@media(min-width:0px) {
+    .main-title {
+        font-size: 68px !important;
+        color: #f1f1f1;
+    }
 }
 
 @media(min-width:768px) {
+
+    .main-title {
+        font-size: 106px !important;
+        color: #f1f1f1;
+    }
+
+    .intro-container {
+        min-height: 820px;
+    }
+
     .navbar-default {
         padding: 25px 0;
         border: 0;
@@ -258,11 +342,38 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #fed136;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
+        background-color: #fed136;
+    }
+
+    header .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        //font-style: italic;
+        line-height: 40px;
+    }
+
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+
+    section {
+        padding: 150px 0;
     }
 }
 
@@ -270,7 +381,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../img/bg.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -286,9 +397,9 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
-    font-style: italic;
+    //font-style: italic;
     line-height: 22px;
 }
 
@@ -301,29 +412,7 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
-@media(min-width:768px) {
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-    }
 
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-    }
-
-    header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-    }
-}
 
 section {
     padding: 100px 0;
@@ -344,11 +433,6 @@ section h3.section-subheading {
     font-weight: 400;
 }
 
-@media(min-width:768px) {
-    section {
-        padding: 150px 0;
-    }
-}
 
 .service-heading {
     margin: 15px 0;
@@ -426,10 +510,48 @@ section h3.section-subheading {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+
+
+.intro-div {
+    margin-top: 150px;
+}
+
+
+@media(min-width:0px) {
+
+
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
+
+    .navbar-default .navbar-collapse {
+        background-color: #fed136;
+    }
+
+    .navbar-header {
+        background-color: #fed136;
+        font-color: #fff;
+    }
+
+    
+}
+
+@media(min-width:768px) {
+
+
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+
+    .navbar-default .navbar-collapse {
+        background-color: transparent;
+    }
+
+    .navbar-header {
+        background-color: transparent;
+    }
+
+    
 }
 
 .timeline {
@@ -606,6 +728,8 @@ section h3.section-subheading {
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 20px 20px;
     }
+
+   
 }
 
 @media(min-width:1200px) {
