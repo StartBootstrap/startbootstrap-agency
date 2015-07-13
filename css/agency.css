@@ -48,6 +48,27 @@ body {
     padding: 8px;
 }
 
+.opaque {
+  zoom: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+  -moz-opacity: .85;
+  -khtml-opacity: .85;
+  opacity: .85;
+}
+
+#press {
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.press-logo {
+    width: 200px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .spacer {
     height: 50px;
 }
@@ -532,8 +553,6 @@ section h3.section-subheading {
         background-color: #fed136;
         font-color: #fff;
     }
-
-    
 }
 
 @media(min-width:768px) {
