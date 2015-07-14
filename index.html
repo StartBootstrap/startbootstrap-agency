@@ -81,7 +81,7 @@
 			<div class="intro-text">
 				<div class="intro-heading">[ <span style="color">ma-boite-a-fleurs</span> ]</div>
 				<div class="intro-copy">An NKS Company</div>
-				<div class="intro-lead-in">#<span class="intro-lead-in-hash">ma-boite-a-fleurs</span> <span class="intro-lead-in-type"></span></div>
+				<div class="intro-lead-in">#<span class="intro-lead-in-hash">ma-boite-a-fleurs</span> <span class="intro-lead-in-type"></span> </div>
 
 				<a href="#services" class="page-scroll btn btn-xl">Plus de détails</a>
 			</div>
@@ -114,7 +114,7 @@
 					</a>
 					<h4 class="service-heading">Vente de boxs</h4>
 					<p class="text-muted text-justify">Tous les 3, 6, 9 ou 12 mois recevez votre plante d'intérieur, plante aromatique, composition florale ...</p>
-					<a href="#portfolio" class="page-scroll btn btn-primary">Les boxs</a>
+					<a href="#boxes" class="page-scroll btn btn-primary">Les boxs</a>
 				</div>
 				<div class="col-md-4 service">
 					<span class="fa-stack fa-4x"> <i
@@ -122,7 +122,7 @@
 						class="fa fa-credit-card fa-stack-1x fa-inverse"></i>
 					</span>
 					<h4 class="service-heading">Livraison / paiement</h4>
-					<p class="text-muted text-justify">Vos plantes sont livrée dans votre CE,
+					<p class="text-muted text-justify">Vos plantes sont livrées dans votre CE,
 						sur votre lieu de travail. Le règlement s'éffectue auprès de votre
 						CE.</p>
 				</div>
@@ -138,7 +138,7 @@
 					<p class="text-muted text-justify" ><span class=""/> Noël : sapins douglas 80 cm-120 cm-200 cm.</p>
 					<p class="text-muted text-justify" ><span class="">Fête des mères</span> : compositions florales</p>
 					<p class="text-muted text-justify" ><span class="">Saint valentin</span> : roses rouges pour lui dire je t'aime</p>
-					<a href="#portfolio" class="page-scroll btn btn-primary">Détails</a>
+					<a href="#ventes-privees" class="page-scroll btn btn-primary">Détails</a>
 				</div>
 
 			</div>
@@ -155,7 +155,7 @@
 						sit amet consectetur.</h3>
 				</div>
 			</div>
-			<div class="row">
+			<div id="boxes" class="row">
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a href="#portfolioModal1" class="portfolio-link"
 						data-toggle="modal">
@@ -172,7 +172,7 @@
 					</div>
 				</div>
 			</div>	
-			<div class="row">	
+			<div id="ventes-privees" class="row">	
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a href="#portfolioModal2" class="portfolio-link"
 						data-toggle="modal">
@@ -731,13 +731,19 @@
 	<script src="js/ma-boite-a-fleurs.min.js"></script>
 
 	<script type="text/javascript">
-  $(document).ready(
-	function(){
-      $(".intro-lead-in-type").typed({
-        strings: [ " : <b>4</b> ventes évènementielles",": partenariat avec votre CE.",": livraisons toute l'année.", ": des végétaux différents tous les mois."],
-        typeSpeed: 50
-      });
-    });
+	
+	$(document).ready(
+		function() {
+			$(".intro-lead-in-type").typed({
+			strings: [ 
+			" : <b>3</b> ventes évènementielles par an",
+			": partenariat avec votre CE.",
+			": livraisons des végéaux toute l'année.", 
+			": des végétaux différents tous les mois."],
+			typeSpeed: 50
+		  });
+			}
+	);
 </script>
 
 </body>

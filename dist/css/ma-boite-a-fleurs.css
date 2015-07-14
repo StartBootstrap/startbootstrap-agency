@@ -315,9 +315,16 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
-.service:hover {
-  transform: scale(1.1);
-  background-color: #f7f7f7;
+@media (min-width: 768px) {
+  .service {
+    padding: 50px;
+    height: 450px;
+  }
+  .service:hover {
+    transform: scale(1.1);
+    background-color: #f7f7f7;
+    z-index: 100;
+  }
 }
 .service-heading {
   margin: 15px 0;

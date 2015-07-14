@@ -21,7 +21,8 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
-                    'js/<%= pkg.name %>.js'
+                    'js/<%= pkg.name %>.js',
+					'bower_components/typed.js/js/typed.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js',
             }

@@ -24,6 +24,7 @@
     "font-awesome": "~4.0.3"
   },
   "devDependencies": {
-    "jquery.easing": "~1.3.0"
+    "jquery.easing": "~1.3.0",
+    "typed.js": "*"
   }
 }

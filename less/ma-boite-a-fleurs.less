@@ -260,12 +260,18 @@ section {
 }
 
 // Services Section
-
-.service:hover {
-	transform : scale(1.1);
-	background-color : @gray-lighter ;
+@media(min-width:768px) {
+	.service {
+		padding : 50px;
+		height : 450px;
+		&:hover {
+			transform : scale(1.1);
+			background-color : @gray-lighter ;
+			z-index : 100;
+			
+		}
+	}
 }
-
 .service-heading {
 	margin: 15px 0;
 	text-transform: none;
