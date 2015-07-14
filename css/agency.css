@@ -22,6 +22,14 @@ body {
 
 }
 
+.photo-credit {
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    color: #969696;
+    font-size: 12px;
+}
+
 .text-header {
     color: #324A9C;
 }
