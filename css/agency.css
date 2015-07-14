@@ -39,7 +39,7 @@ body {
 }
 
 .text-bold {
-    color: #8C7474;
+    color: #white;
 }
 
 .text-primary {
@@ -56,19 +56,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    background-color: #fed136;
+    background-color: #fdcf3c;
     margin-top: 50px;
     padding: 8px;
 }
 
-.opaque {
-  zoom: 1;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
-  -moz-opacity: .85;
-  -khtml-opacity: .85;
-  opacity: .85;
-}
 
 #press {
     padding-top: 25px;
@@ -90,6 +82,15 @@ p {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.75;
+}
+
+.opaque {
+  zoom: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+  -moz-opacity: .85;
+  -khtml-opacity: .85;
+  opacity: .70;
 }
 
 p.large {
