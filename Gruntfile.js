@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                     ],
                     dest: 'dist/font-awesome/'
                 }, ]
-            },
+            }
         },
         less: {
             expanded: {

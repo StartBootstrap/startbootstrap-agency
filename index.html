@@ -79,15 +79,11 @@
 	<header>
 		<div class="container">
 			<div class="intro-text">
-				<div class="intro-heading">ma-boite-a-fleurs</div>
-				<div class="intro-lead-copy">An NKS Company</div>
-				<div class="intro-lead-in">ma-boite-a-fleurs vous livre vos
-					fleurs toute l'année.</div>
-				<!-- 
-                <a href="#portfolio" class="page-scroll btn btn-xl">Nos offres CE</a>
-                <a href="#portfolio" class="page-scroll btn btn-xl">Nos boxs</a>
-                -->
-				<a href="#services" class="page-scroll btn btn-xl">Le concept</a>
+				<div class="intro-heading">[ <span style="color">ma-boite-a-fleurs</span> ]</div>
+				<div class="intro-copy">An NKS Company</div>
+				<div class="intro-lead-in">#<span class="intro-lead-in-hash">ma-boite-a-fleurs</span> <span class="intro-lead-in-type"></span></div>
+
+				<a href="#services" class="page-scroll btn btn-xl">Plus de détails ?</a>
 			</div>
 		</div>
 	</header>
@@ -449,7 +445,7 @@
 						<li>
 							<div class="timeline-image">
 								<h4>3 Mois</h4>
-								<img class="img-circle img-responsive" src="img/about/1.jpg"
+								<img class="img-circle img-responsive" src="img/boxs/1.jpg"
 									alt="">
 							</div>
 							<div class="timeline-panel">
@@ -469,7 +465,7 @@
 						<li class="timeline-inverted">
 							<div class="timeline-image">
 								<h4>6 Mois</h4>
-								<img class="img-circle img-responsive" src="img/about/2.jpg"
+								<img class="img-circle img-responsive" src="img/boxs/2.jpg"
 									alt="">
 							</div>
 							<div class="timeline-panel">
@@ -489,7 +485,7 @@
 						<li>
 							<div class="timeline-image">
 								<h4>9 Mois</h4>
-								<img class="img-circle img-responsive" src="img/about/3.jpg"
+								<img class="img-circle img-responsive" src="img/boxs/3.jpg"
 									alt="">
 							</div>
 							<div class="timeline-panel">
@@ -733,6 +729,16 @@
 
 	<!-- Custom Theme JavaScript -->
 	<script src="js/ma-boite-a-fleurs.min.js"></script>
+
+	<script type="text/javascript">
+  $(document).ready(
+	function(){
+      $(".intro-lead-in-type").typed({
+        strings: [ " : <b>4</b> ventes évènementielles",": partenariat avec votre CE.",": livraisons toute l'année.", ": des végétaux différents tous les mois."],
+        typeSpeed: 50
+      });
+    });
+</script>
 
 </body>
 

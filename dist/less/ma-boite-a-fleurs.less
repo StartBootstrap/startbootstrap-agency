@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: @gray-darkest;
 	border-color: transparent;
 	.navbar-brand {
-		color: @brand-primary;
+		color: white; 
 		.script-font;
         &:hover,
         &:focus,
@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
     			&:focus {
     				color: @brand-primary;
     				outline: none;
+					border-color : @brand-primary;
     			}
     		}
     	}
@@ -173,18 +174,32 @@ header {
 		padding-top: 100px;
 		padding-bottom: 50px;
 		.intro-lead-in {
-			.serif-font;
-			font-style: italic;
+			.heading-font;
 			font-size: 22px;
 			line-height: 22px;
 			margin-bottom: 25px;
+			text-align : left;
+			.intro-lead-in-hash {
+				background-color : @brand-primary;
+			}
+			.intro-lead-in-type {
+				color : white;
+			}
 		}
 		.intro-heading {
-			.heading-font;
+			.script-font; 
 			font-weight: 700;
 			font-size: 50px;
 			line-height: 50px;
+			margin-bottom: 0px;
+		}
+		.intro-copy {
+			.heading-font; 
+			font-weight: 100;
+			font-size: 10px;
+			line-height: 10px;
 			margin-bottom: 25px;
+			text-align : right;
 		}
 	}
 }
@@ -195,10 +210,9 @@ header {
 			padding-top: 300px;
 			padding-bottom: 200px;
 			.intro-lead-in {
-				.serif-font;
-				font-style: italic;
-				font-size: 40px;
-				line-height: 40px;
+				.heading-font;
+				font-size: 30px;
+				line-height: 30px;
 				margin-bottom: 25px;
 			}
 			.intro-heading {
@@ -206,7 +220,15 @@ header {
 				font-weight: 700;
 				font-size: 75px;
 				line-height: 75px;
+				margin-bottom: 0px;
+			}
+			.intro-copy {
+				.heading-font;
+				font-weight: 100;
+				font-size: 15px;
+				line-height: 15px;
 				margin-bottom: 50px;
+				text-align : right;
 			}
 		}
 	}
@@ -721,4 +743,26 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @brand-primary;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

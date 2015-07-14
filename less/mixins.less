@@ -65,3 +65,11 @@
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 }
+
+.sepia(@val) {
+	-webkit-filter: sepia(@val);
+	-moz-filter: sepia(@val);
+	-o-filter: sepia(@val);
+	-ms-filter: sepia(@val);
+	filter: sepia(@val);
+}
