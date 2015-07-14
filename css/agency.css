@@ -90,7 +90,7 @@ p {
   filter: alpha(opacity=85);
   -moz-opacity: .85;
   -khtml-opacity: .85;
-  opacity: .70;
+  opacity: .85;
 }
 
 p.large {
@@ -115,7 +115,7 @@ a {
 }
 
 a.dark {
-    color: #fff;
+    color: #555;
 }
 
 a.dark:hover,
@@ -308,13 +308,16 @@ fieldset[disabled] .btn-xl.active {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #222;
+    color: #555;
 }
 
-.navbar-default .nav li a:hover,
+.navbar-default .nav li a:hover {
+    outline: 0;
+    color: #fff;
+}
+
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #444;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -347,6 +350,7 @@ fieldset[disabled] .btn-xl.active {
     .main-title {
         font-size: 68px !important;
         color: #f1f1f1;
+        text-shadow: 1px 1px 1px #000;
     }
 }
 
