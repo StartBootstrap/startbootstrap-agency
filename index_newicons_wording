@@ -86,7 +86,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
             <li><a class="page-scroll" href="#rent">For renters</a></li>
             <li><a class="page-scroll" href="#owngear">For owners</a></li>
             <li><a class="page-scroll" href="#rentalhouse">For rental houses</a></li>
-            <li><a class="page-scroll" href="#about">About</a></li>
+            <!-- <li><a class="page-scroll" href="#about">About</a></li> -->
             <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
             <!-- <li><a class="page-scroll" href="#contact">Sign up</a></li> -->
             <li><a class="page-scroll" href="https://marketplace.kitsplit.com/en/login" target="_blank" > <font color="1D96D8">  Sign in </font> </a></li>
@@ -103,7 +103,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
         <div class="row">
             <div class="intro-div intro-text">
                 <div class="main-title intro-heading text-header text-center">KITSPLIT</div>
-                <div class="main-subtitle intro-lead-in text-bold text-center opaque"> Rent cameras & creative equipment from vetted locals. <a class="dark" href="#rent"><i>Learn more.</i></a></div>
+                <div class="main-subtitle intro-lead-in text-bold text-center"> Rent cameras & creative equipment from vetted locals. <a class="dark" href="#rent"><i>Learn more.</i></a></div>
 
                 <div class="col-lg-2 col-lg-offset-5">
                     <a href="#contact" class="page-scroll btn btn-xl">Sign up</a>
@@ -114,40 +114,12 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
       </div>
     </header>
 
-    <div id="press" class="bg-light-gray">
-
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="text-center">
-                        <h3 class='text-bold'>AS SEEN IN</h3>
-                        <br />
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="text-center">
-                        <a href="http://www.fastcompany.com/3043160/tech-forecast/this-airbnb-for-creative-equipment-will-rent-you-drones-oculus-rifts-google-gl" target="_blank"><img class="press-logo" src="img/logos/fast-company.png" /></a>
-                        & 
-                        <a href="http://www.forbes.com/sites/aliciaadamczyk/2015/03/06/rent-a-drone-creatives-can-rent-oculus-rift-google-glass-and-more-through-kitsplit/" target="_blank"><img class="press-logo" src="img/logos/forbes.png" /></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="text-center">
-                       
-                    </div>
-                </div>
-            </div>
-
-
-    </div>
-
     <!-- Services Section -->
     <section id="rent">
         <div class="container">
             <div class="row">
                <h1 class="text-center text-header"> How does it work? </h1>
+
                <br/>
 
                <div class="col-lg-8 col-lg-offset-2">
@@ -163,7 +135,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
                         <i class="fa fa-search fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">FIND GEAR</h4>
-                    <p class="text-muted"> Cameras, lenses, lights...search to find cutting-edge gear in your area. </p>
+                    <p class="text-muted"> Cameras, lenses, lights...search the site to find equipment that's in your area. </p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -171,15 +143,15 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
                         <i class="fa fa-money fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">BOOK IT</h4>
-                    <p class="text-muted"> Schedule a pickup place and time that works with your schedule. </p>
+                    <p class="text-muted"> Pick your dates and book equipment. </p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-users fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading"> USE IT </h4>
-                    <p class="text-muted"> Make something awesome! </p>
+                    <h4 class="service-heading"> RENT IT </h4>
+                    <p class="text-muted"> Meet the owner...</p>
                 </div>
             </div>
         </div>
@@ -189,7 +161,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
                     <br>
                     <br>
                     <br>
-                    <h3 class="h2 text-muted"> "Now, putting shoots together is so much easier, more affordable, and more pleasurable—and I get to meet local creatives in the process!" <h4><b><i> —Natalie Holt </i></b></h4> 
+                    <h3 class="h2 text-muted"> "Now, putting shoots together is so much easier, more affordable, and more pleasurable——and I get to meet local creatives in the process!" <h4><b><i> —Natalie Holt </i></b></h4> 
                      </h3>
            
         </div>
@@ -213,7 +185,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
                         <i class="fa fa-list fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">LIST YOUR GEAR</h4>
-                    <p class="text-muted"> Create listings in minutes. </p>
+                    <p class="text-muted"> Earn money with the gear that would otherwise be collecting dust. </p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -221,7 +193,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
                         <i class="fa fa-check fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">ACCEPT OR DECLINE</h4>
-                    <p class="text-muted"> You're always in charge of who can rent your gear. </p>
+                    <p class="text-muted"> This is same wording as polish site. </p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -229,7 +201,7 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
                         <i class="fa fa-money fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading"> GET PAID </h4>
-                    <p class="text-muted"> Earn thousands per year. </p>
+                    <p class="text-muted"> Get paid and be sure your equipment is safe. </p>
                 </div>
             </div>
             <!-- 
@@ -286,10 +258,10 @@ window._fbq.push(['track', '6026172434372', {'value':'0.01','currency':'USD'}]);
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-header">ARE YOU AN ESTABLISHED RENTAL HOUSE?</h2>
-                    <h3 class="section-subheading text-muted">We're here to help. Expand your business and meet new customers. And to make it super easy, we'll list all of your equipment! </h3>
-
-                                        <a href="#contact" class="page-scroll btn btn-xl">Contact Us</a>
+                    <h3 class="section-subheading text-muted">We're here to help. Expand your business and meet new customers.</h3>
+                    <h3>Contact us and we'll help you list your equipment.</h3>
                     <br />
+                    <img style="width: 50%; height: auto;" src="img/portfolio/depthkit.png" />
                 </div>
             </div>
             
@@ -400,7 +372,7 @@ IN NYC FOR THE MONTH OF JULY! </h4>
                     <div class="team-member">
                         <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
                         <h4>Ken Amarit</h4>
-                        <p class="text-muted">Co-founder & indie game designer </p>
+                        <p class="text-muted">Cofounder & indie game designer </p>
                         <ul class="list-inline social-buttons">
                             <li><a href="https://twitter.com/kenamarit"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -455,8 +427,8 @@ IN NYC FOR THE MONTH OF JULY! </h4>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-header">JOIN TODAY</h2>
-                    <h3 class="section-subheading text-muted"> <font color="white"> Fill out this form to request access to be a founding member of KitSplit, and we'll get back to you soon! For other inquiries, email us at  <a href="mailto:contact@kitsplit.com" target="_top">contact@kitsplit.com</a> </font> </h3>
+                    <h2 class="section-heading text-header">Apply for an Invite</h2>
+                    <h3 class="section-subheading text-muted"> <font color="white"> Fill out this form to request access to the private beta site, and we'll get back to you soon! For other inquiries, email us at  <a href="mailto:contact@kitsplit.com" target="_top">contact@kitsplit.com</a> </font> </h3>
                 </div>
             </div>
             <div class="row">
