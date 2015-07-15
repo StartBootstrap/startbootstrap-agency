@@ -35,9 +35,6 @@ body {
 }
 
 /* go on with normal style definitions */
-.main-title { 
-  font-family: QuatroUltraBlack, sans-serif;
-}
 
 .photo-credit {
     position: absolute;
@@ -64,8 +61,10 @@ body {
 }
 
 .main-title {
+    font-family: QuatroUltraBlack, sans-serif !important;
     font-size: 106px !important;
-    color: #f1f1f1;
+    //color: #f1f1f1;
+    color: #fed136 !important;
 }
 
 .main-subtitle {
@@ -73,7 +72,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    background-color: #fdcf3c;
+    //background-color: #fdcf3c;
     margin-top: 50px;
     padding: 8px;
 }
@@ -339,7 +338,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a:hover {
     outline: 0;
-    color: #fff;
+    color: #1D96D8;
 }
 
 .navbar-default .nav li a:focus {
