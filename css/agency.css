@@ -342,11 +342,10 @@ fieldset[disabled] .btn-xl.active {
     width: 150px;
 }
 
-.
 
-@media(min-width:600px) {
+@media(min-width:1px) {
     .intro-container {
-        height: 420px;
+        height: 100vh;
     }
 }
 
@@ -366,7 +365,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .intro-container {
-        min-height: 820px;
+        min-height: 100vh;
     }
 
     .navbar-default {
