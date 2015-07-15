@@ -114,6 +114,10 @@ a {
     color: #fed136;
 }
 
+a.aqua {
+    color: #E0FFFF;
+}
+
 a.dark {
     color: #555;
 }
