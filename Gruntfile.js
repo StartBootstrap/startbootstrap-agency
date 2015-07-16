@@ -130,6 +130,17 @@ module.exports = function(grunt) {
                 }
             }
         },
+        cssmin: {
+        	  options: {
+        	    shorthandCompacting: false,
+        	    roundingPrecision: -1
+        	  },
+        	  target: {
+        	    files: {
+        	      'dist/css/spinkit.min.css': 'bower_components/spinkit/css/spinners/7-three-bounce.css'
+        	    }
+        	  }
+        	},
         watch: {
         	scripts: {
                 files: ['js/<%= pkg.name %>.js, js/plugins/*.js'],
@@ -167,8 +178,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-cssmin')
     
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less', 'usebanner','connect','watch']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin','connect','watch']);
 
 };

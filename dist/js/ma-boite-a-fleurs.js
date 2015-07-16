@@ -1,5 +1,3 @@
-/* ma-boite-a-fleurs v1.0.0 */
-
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
