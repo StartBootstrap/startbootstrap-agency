@@ -368,6 +368,8 @@ section h3.section-subheading {
   position: relative;
   max-width: 400px;
   margin: 0 auto;
+  text-decoration: none;
+  color: #3a3a3a;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   background: rgba(122, 171, 68, 0.9);
