@@ -181,9 +181,12 @@ header {
 			text-align : left;
 			.intro-lead-in-hash {
 				background-color : @brand-primary;
+				padding : 10px;
 			}
 			.intro-lead-in-type {
-				color : white;
+				color : @brand-primary;
+				background-color : white;
+				padding : 10px;
 			}
 		}
 		.intro-heading {
@@ -213,10 +216,11 @@ header {
 				.heading-font;
 				font-size: 30px;
 				line-height: 30px;
-				margin-bottom: 25px;
+				margin-bottom: 100px;
+				margin-top: 100px;
 			}
 			.intro-heading {
-				.heading-font;
+				.script-font;
 				font-weight: 700;
 				font-size: 75px;
 				line-height: 75px;
@@ -228,6 +232,7 @@ header {
 				font-size: 15px;
 				line-height: 15px;
 				margin-bottom: 50px;
+				margin-top: 20px;
 				text-align : right;
 			}
 		}
@@ -335,6 +340,9 @@ section {
         		font-size: 16px;
         		margin: 0;
         	}
+        }
+        .portfolio-img {
+        	/*.grayscale(50%)*/
         }
     }
     * {

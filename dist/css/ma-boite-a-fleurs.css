@@ -1,3 +1,7 @@
+/* ma-boite-a-fleurs v1.0.0 */
+
+/*@brand-primary: #84C140;*/
+/*@gray-lighter: #f7f7f7;*/
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6,7 +10,7 @@ body {
   color: #777777;
 }
 .text-primary {
-  color: #84c140;
+  color: #7aab44;
 }
 p {
   font-size: 14px;
@@ -23,13 +27,13 @@ a.active {
   outline: none;
 }
 a {
-  color: #84c140;
+  color: #7aab44;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #6a9c32;
+  color: #608735;
 }
 h1,
 h2,
@@ -45,15 +49,15 @@ h6 {
   margin: 0 auto;
 }
 .bg-light-gray {
-  background-color: #f7f7f7;
+  background-color: #ededed;
 }
 .bg-darkest-gray {
   background-color: #222222;
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #84c140;
-  border-color: #84c140;
+  background-color: #7aab44;
+  border-color: #7aab44;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -64,8 +68,8 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #6a9c32;
-  border-color: #659430;
+  background-color: #608735;
+  border-color: #5b7f33;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -87,17 +91,17 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #84c140;
-  border-color: #84c140;
+  background-color: #7aab44;
+  border-color: #7aab44;
 }
 .btn-primary .badge {
-  color: #84c140;
+  color: #7aab44;
   background-color: #ffffff;
 }
 .btn-xl {
   color: #ffffff;
-  background-color: #84c140;
-  border-color: #84c140;
+  background-color: #7aab44;
+  border-color: #7aab44;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -111,8 +115,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: #ffffff;
-  background-color: #6a9c32;
-  border-color: #659430;
+  background-color: #608735;
+  border-color: #5b7f33;
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -134,11 +138,11 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-  background-color: #84c140;
-  border-color: #84c140;
+  background-color: #7aab44;
+  border-color: #7aab44;
 }
 .btn-xl .badge {
-  color: #84c140;
+  color: #7aab44;
   background-color: #ffffff;
 }
 .navbar-default {
@@ -153,21 +157,21 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-  color: #6a9c32;
+  color: #608735;
 }
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
 .navbar-default .navbar-toggle {
-  background-color: #84c140;
-  border-color: #84c140;
+  background-color: #7aab44;
+  border-color: #7aab44;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #84c140;
+  background-color: #7aab44;
 }
 .navbar-default .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -178,19 +182,19 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
-  color: #84c140;
+  color: #7aab44;
   outline: none;
-  border-color: #84c140;
+  border-color: #7aab44;
 }
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
-  background-color: #84c140;
+  background-color: #7aab44;
 }
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: white;
-  background-color: #6a9c32;
+  background-color: #608735;
 }
 @media (min-width: 768px) {
   .navbar-default {
@@ -243,10 +247,13 @@ header .intro-text .intro-lead-in {
   text-align: left;
 }
 header .intro-text .intro-lead-in .intro-lead-in-hash {
-  background-color: #84c140;
+  background-color: #7aab44;
+  padding: 10px;
 }
 header .intro-text .intro-lead-in .intro-lead-in-type {
-  color: white;
+  color: #7aab44;
+  background-color: white;
+  padding: 10px;
 }
 header .intro-text .intro-heading {
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
@@ -274,11 +281,11 @@ header .intro-text .intro-copy {
     text-transform: uppercase;
     font-size: 30px;
     line-height: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
+    margin-top: 100px;
   }
   header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
     font-weight: 700;
     font-size: 75px;
     line-height: 75px;
@@ -291,6 +298,7 @@ header .intro-text .intro-copy {
     font-size: 15px;
     line-height: 15px;
     margin-bottom: 50px;
+    margin-top: 20px;
     text-align: right;
   }
 }
@@ -322,7 +330,7 @@ section h3.section-subheading {
   }
   .service:hover {
     transform: scale(1.1);
-    background-color: #f7f7f7;
+    background-color: #ededed;
     z-index: 100;
   }
 }
@@ -341,7 +349,7 @@ section h3.section-subheading {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: rgba(132, 193, 64, 0.9);
+  background: rgba(122, 171, 68, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -386,6 +394,9 @@ section h3.section-subheading {
   font-style: italic;
   font-size: 16px;
   margin: 0;
+}
+#portfolio .portfolio-item .portfolio-img {
+  /*.grayscale(50%)*/
 }
 #portfolio * {
   z-index: 2;
@@ -449,7 +460,7 @@ section h3.section-subheading {
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #84c140;
+  background-color: #7aab44;
   color: white;
   border-radius: 100%;
   border: 7px solid #f1f1f1;
@@ -604,7 +615,7 @@ section#contact .form-group textarea.form-control {
   height: 236px;
 }
 section#contact .form-control:focus {
-  border-color: #84c140;
+  border-color: #7aab44;
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
@@ -673,7 +684,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-  background-color: #84c140;
+  background-color: #7aab44;
 }
 .btn:focus,
 .btn:active,
@@ -748,11 +759,11 @@ ul.social-buttons li a:active {
 }
 ::-moz-selection {
   text-shadow: none;
-  background: #84c140;
+  background: #7aab44;
 }
 ::selection {
   text-shadow: none;
-  background: #84c140;
+  background: #7aab44;
 }
 img::selection {
   background: transparent;
@@ -761,7 +772,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #84c140;
+  webkit-tap-highlight-color: #7aab44;
 }
 .typed-cursor {
   opacity: 1;

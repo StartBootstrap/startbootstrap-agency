@@ -19,10 +19,11 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
+                    'js/<%= pkg.name %>.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
-                    'js/<%= pkg.name %>.js',
-					'bower_components/typed.js/js/typed.js'
+					'bower_components/typed.js/js/typed.js',
+					'bower_components/wow/dist/wow.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js',
             }
@@ -86,7 +87,17 @@ module.exports = function(grunt) {
                     ],
                     dest: 'dist/font-awesome/'
                 }, ]
-            }
+            },
+            animate: {
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/animate.css/',
+                    src: [
+                        'animate.min.css'
+                    ],
+                    dest: 'dist/css'
+                }, ]
+            },
         },
         less: {
             expanded: {
@@ -107,11 +118,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        banner: '/*!\n' +
-            ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
-            ' */\n',
+        banner: '/* <%= pkg.title %> v<%= pkg.version %> */\n',
         usebanner: {
             dist: {
                 options: {
@@ -133,7 +140,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'mail/**', 'img/**', 'less/**'],
+                files: ['*.html', 'img/**', 'less/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
