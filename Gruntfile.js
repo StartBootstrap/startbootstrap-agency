@@ -39,13 +39,15 @@ module.exports = function(grunt) {
                 src: ['*.html', 'mail/**', 'img/**', 'less/**'],
                 dest: 'dist/',
             },
-            /* see concat */
+            favicon: {
+                src: ['favicon/favicon.ico'],
+                dest: 'dist/favicon.ico',
+            },
             jquery: {
                 files: [{
                     expand: true,
                     cwd: 'bower_components/jquery/dist/',
                     src: [
-                        'jquery.js',
                         'jquery.min.js'
                     ],
                     dest: 'dist/js/'
@@ -56,9 +58,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'bower_components/bootstrap/dist/',
                     src: [
-                        'css/bootstrap.css',
                         'css/bootstrap.min.css',
-                        'js/bootstrap.js',
                         'js/bootstrap.min.js'
                     ],
                     dest: 'dist/'
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
                     cwd: 'bower_components/fontawesome/',
                     src: [
                         'fonts/*.*',
-                        'css/*.css'
+                        'css/font-awesome.min.css'
                     ],
                     dest: 'dist/font-awesome/'
                 }, ]
