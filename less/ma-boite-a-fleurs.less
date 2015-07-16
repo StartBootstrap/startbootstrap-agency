@@ -78,6 +78,22 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 20px 40px;
 }
 
+.societe {
+	color : @brand-primary;	
+	font-weight: bold;
+}
+
+.main-color {
+	color : @brand-primary;	
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.no-border {
+	border : none ! important;
+}
 // Custom Navigation Bar
 
 .navbar-default {
@@ -239,6 +255,17 @@ header {
 	}
 }
 
+@media (max-width: 767px) {
+	header {
+		.intro-text {
+			.intro-copy {
+				margin-bottom: 100px;
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
 // Global Section Styles
 
 section {
@@ -249,19 +276,15 @@ section {
 		margin-bottom: 15px;
     }
     h3.section-subheading {
-		font-size: 16px;
+		font-size: 18px;
 		.serif-font;
 		text-transform: none;
-		font-style: italic;
 		font-weight: 400;
-		margin-bottom: 75px;
+		margin-bottom: 50px;
+		line-height : 1.5;
+		border : 1px solid @brand-primary;
+		padding : 15px;
     }
-}
-
-@media(min-width:768px) {
-	section {
-		padding: 150px 0;
-	}
 }
 
 // Services Section
@@ -270,10 +293,10 @@ section {
 		padding : 50px;
 		height : 450px;
 		&:hover {
-			transform : scale(1.1);
+			transform : scale(1.2);
 			background-color : @gray-lighter ;
 			z-index : 100;
-			
+			border : 1px solid @brand-primary;			
 		}
 	}
 }

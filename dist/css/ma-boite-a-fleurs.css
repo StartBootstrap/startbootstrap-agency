@@ -1,13 +1,15 @@
 /* ma-boite-a-fleurs v1.0.0 */
 
 /*@brand-primary: #84C140;*/
+/*@gray-darkest: #222;*/
+/*@gray: #777;*/
 /*@gray-lighter: #f7f7f7;*/
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .text-muted {
-  color: #777777;
+  color: #383838;
 }
 .text-primary {
   color: #7aab44;
@@ -52,7 +54,7 @@ h6 {
   background-color: #ededed;
 }
 .bg-darkest-gray {
-  background-color: #222222;
+  background-color: #3a3a3a;
 }
 .btn-primary {
   color: #ffffff;
@@ -145,8 +147,21 @@ fieldset[disabled] .btn-xl.active {
   color: #7aab44;
   background-color: #ffffff;
 }
+.societe {
+  color: #7aab44;
+  font-weight: bold;
+}
+.main-color {
+  color: #7aab44;
+}
+.strong {
+  font-weight: bold;
+}
+.no-border {
+  border: none ! important;
+}
 .navbar-default {
-  background-color: #222222;
+  background-color: #3a3a3a;
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
@@ -215,7 +230,7 @@ fieldset[disabled] .btn-xl.active {
     border-radius: 3px;
   }
   .navbar-default.navbar-shrink {
-    background-color: #222222;
+    background-color: #3a3a3a;
     padding: 10px 0;
   }
   .navbar-default.navbar-shrink .navbar-brand {
@@ -302,6 +317,12 @@ header .intro-text .intro-copy {
     text-align: right;
   }
 }
+@media (max-width: 767px) {
+  header .intro-text .intro-copy {
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+}
 section {
   padding: 100px 0;
 }
@@ -311,17 +332,14 @@ section h2.section-heading {
   margin-bottom: 15px;
 }
 section h3.section-subheading {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
-  font-style: italic;
   font-weight: 400;
-  margin-bottom: 75px;
-}
-@media (min-width: 768px) {
-  section {
-    padding: 150px 0;
-  }
+  margin-bottom: 50px;
+  line-height: 1.5;
+  border: 1px solid #7aab44;
+  padding: 15px;
 }
 @media (min-width: 768px) {
   .service {
@@ -329,9 +347,10 @@ section h3.section-subheading {
     height: 450px;
   }
   .service:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     background-color: #ededed;
     z-index: 100;
+    border: 1px solid #7aab44;
   }
 }
 .service-heading {
@@ -593,7 +612,7 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
-  background-color: #222222;
+  background-color: #3a3a3a;
   background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -669,7 +688,7 @@ ul.social-buttons {
 }
 ul.social-buttons li a {
   display: block;
-  background-color: #222222;
+  background-color: #3a3a3a;
   height: 40px;
   width: 40px;
   border-radius: 100%;
@@ -738,7 +757,7 @@ ul.social-buttons li a:active {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: #222222;
+  background-color: #3a3a3a;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -749,7 +768,7 @@ ul.social-buttons li a:active {
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: #222222;
+  background-color: #3a3a3a;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
