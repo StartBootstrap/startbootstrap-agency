@@ -80,7 +80,7 @@ module.exports = function(grunt) {
             fontawesome: {
                 files: [{
                     expand: true,
-                    cwd: 'bower_components/font-awesome/',
+                    cwd: 'bower_components/fontawesome/',
                     src: [
                         'fonts/*.*',
                         'css/*.css'
