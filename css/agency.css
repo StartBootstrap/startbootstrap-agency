@@ -99,6 +99,18 @@ body {
     margin: 3px;
 }
 
+.sign-in-button {
+    background-color: #1D96D8;
+
+    padding: 14px;
+    margin-top: -14px;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; /* future proofing */
+    -khtml-border-radius: 2px; /* for old Konqueror browsers */
+}
+
 p {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
