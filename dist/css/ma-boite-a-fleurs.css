@@ -349,7 +349,7 @@ section h3.section-subheading {
     height: 450px;
   }
   .service:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: #ededed;
     z-index: 100;
     border: 1px solid #7aab44;
