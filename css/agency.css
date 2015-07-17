@@ -36,14 +36,6 @@ body {
 
 /* go on with normal style definitions */
 
-.photo-credit {
-    position: absolute;
-    bottom: 100px;
-    left: 25px;
-    color: #969696;
-    font-size: 12px;
-}
-
 .text-header {
     color: #324A9C;
 }
@@ -378,8 +370,21 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:1px) {
     .intro-container {
-        height: 100vh;
+        height: 820px;
     }
+
+     .photo-credit {
+        position: absolute;
+        top: 760px;
+        left: 70px;
+        color: #969696;
+        font-size: 12px;
+    }
+
+    .intro-div {
+        margin-top: 25px;
+    }
+
 }
 
 @media(min-width:0px) {
@@ -387,6 +392,12 @@ fieldset[disabled] .btn-xl.active {
         font-size: 68px !important;
         color: #f1f1f1;
         text-shadow: 1px 1px 1px #000;
+    }
+}
+
+@media(min-width: 600px) {
+    .intro-div {
+        margin-top: 150px;
     }
 }
 
@@ -398,9 +409,11 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .intro-container {
-        min-height: 100vh;
+        min-height: 820px;
     }
 
+    
+    
     .navbar-default {
         padding: 25px 0;
         border: 0;
@@ -592,11 +605,6 @@ section h3.section-subheading {
     z-index: 2;
 }
 
-
-
-.intro-div {
-    margin-top: 150px;
-}
 
 
 @media(min-width:0px) {
