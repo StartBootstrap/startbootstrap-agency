@@ -20,6 +20,20 @@ $(document).ready(
 			    $('.navbar-toggle:visible').click();
 			});
 			
+			// modal : load external files
+			$('#portfolioModalRemoteContent').on('show.bs.modal', function (event) {
+				  var button = $(event.relatedTarget) ;
+				  var title = button.data('title') ;
+				  var href = button.attr('href');
+				  var modal = $(this);
+				  modal.find('.modal-title').text(title); 
+				  modal.find('.modal-body').load(href); 
+				  
+				}).on('hidden.bs.modal', function (event) {
+					$(this).find('.modal-body').empty();
+				}).modal('hide');
+
+			
 			// hide preload
 			$('.preloader').fadeOut(1000);
 			

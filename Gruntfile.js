@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'img/**', 'less/**'],
+                src: ['*.html', 'mail/**', 'img/**', 'less/**', 'portfolio/**'],
                 dest: 'dist/',
             },
             favicon: {
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'img/**', 'less/**'],
+                files: ['*.html', 'img/**', 'less/**', 'portfolio/**', 'js/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
