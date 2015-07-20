@@ -23,7 +23,8 @@ module.exports = function(grunt) {
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
 					'bower_components/typed.js/js/typed.js',
-					'bower_components/wow/dist/wow.js'
+					'bower_components/wow/dist/wow.js',
+					'bower_components/purl/purl.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js',
             }
@@ -118,18 +119,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        banner: '/* <%= pkg.title %> v<%= pkg.version %> */\n',
-        usebanner: {
-            dist: {
-                options: {
-                    position: 'top',
-                    banner: '<%= banner %>'
-                },
-                files: {
-                    src: ['dist/css/<%= pkg.name %>.css', 'dist/css/<%= pkg.name %>.min.css', 'dist/js/<%= pkg.name %>.js', 'dist/js/<%= pkg.name %>.min.js']
-                }
-            }
-        },
         cssmin: {
         	  options: {
         	    shorthandCompacting: false,
@@ -143,7 +132,7 @@ module.exports = function(grunt) {
         	},
         watch: {
         	scripts: {
-                files: ['js/<%= pkg.name %>.js, js/plugins/*.js'],
+                files: ['js/**'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
@@ -151,7 +140,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'img/**', 'less/**', 'portfolio/**', 'js/**'],
+                files: ['*.html', 'img/**', 'less/**', 'portfolio/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
