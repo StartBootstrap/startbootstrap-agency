@@ -19,20 +19,66 @@ $(document).ready(
 			$('.navbar-collapse ul li a').click(function() {
 			    $('.navbar-toggle:visible').click();
 			});
-			
-			// modal : load external files
-			$('#portfolioModalRemoteContent').on('show.bs.modal', function (event) {
-				  var button = $(event.relatedTarget) ;
-				  var title = button.data('title') ;
-				  var href = button.attr('href');
-				  var modal = $(this);
-				  modal.find('.modal-title').text(title); 
-				  modal.find('.modal-body').load(href); 
-				  
-				}).on('hidden.bs.modal', function (event) {
-					$(this).find('.modal-body').empty();
-				}).modal('hide');
 
+			// modal : load link passed in url
+			// ex : if fragment is indexed in google, reload the entire page with modal opened
+			var url = $.url();
+			if(url.param('modal-url'))
+			{
+				
+				$('#portfolioModal')
+				// on hide : redirect to root page (with fragment if set)
+				.on('hide.bs.modal', function (event) {
+					// redirect to root
+						window.location.href = url.attr('protocol') + '://'+ url.attr('host') + ':' + url.attr('port')  + url.attr('path') + '#' + url.attr('fragment'); 
+					}
+				)
+				// use parameters in url
+				.on('show.bs.modal', function (event) {
+				  var button = $(event.relatedTarget) ;
+				  var title = url.param('modal-title') ;
+				  var href = url.param('modal-url') ;
+				  var modal = $(this);
+				  if($.trim(title))
+				  {
+					  modal.find('.modal-title').text(title); 
+				  }
+				  if($.trim( href) )
+				  {
+					  modal.find('.modal-body').load(href); 
+				  }
+				  
+				})
+				// display modal with url and title in parameter
+				.modal('show');
+			}
+			else
+			{
+				// modal : default behaviour (on link clicked)
+				$('#portfolioModal').on('show.bs.modal', function (event) {
+					  var button = $(event.relatedTarget) ;
+					  var title = button.data('title') ;
+					  var href = button.attr('href');
+					  var modal = $(this);
+					  if($.trim(title))
+					  {
+						  modal.find('.modal-title').text(title); 
+					  }
+					  if($.trim( href) )
+					  {
+						  modal.find('.modal-body').load(href); 
+					  }
+					  
+					}).on('hidden.bs.modal', function (event) {
+						$(this).find('.modal-body').empty();
+					}).modal('hide');
+			}
+
+			
+			// init wow.js
+			new WOW( {
+					mobile: false
+			}).init();
 			
 			// hide preload
 			$('.preloader').fadeOut(1000);
@@ -50,11 +96,5 @@ $(document).ready(
 				loop: true,
 				startDelay : 1000
 			});
-			
-			// init wow.js
-			new WOW( {
-					mobile: false
-			}).init();
-
 		}
 	);
