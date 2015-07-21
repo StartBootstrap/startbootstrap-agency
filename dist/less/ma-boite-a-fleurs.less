@@ -482,6 +482,7 @@ section {
 		    color: inherit;
 		    &.subheading {
 		    	text-transform: none;
+					color : @brand-primary;
 		    }
 		}
 	}
@@ -702,74 +703,6 @@ ul.social-buttons {
 .btn.active,
 .btn:active:focus {
 	outline: none;
-}
-
-.portfolio-modal {
-	.modal-content {
-	    border-radius: 0;
-	    background-clip: border-box;
-	    -webkit-box-shadow: none;
-	    box-shadow: none;
-	    border: none;
-	    min-height: 100%;
-	    padding: 100px 0;
-	    text-align: center;
-		h2 {
-	    	margin-bottom: 15px;
-	    	font-size: 3em;
-		}
-		p {
-			margin-bottom: 30px;
-		}
-		p.item-intro {
-			margin: 20px 0 30px;
-			.serif-font;
-			font-style: italic;
-			font-size: 16px;
-		}
-		ul.list-inline {
-			margin-bottom: 30px;
-			margin-top: 0;
-		}
-		img {
-			margin-bottom: 30px;
-		}
-	}
-    .close-modal {
-        position: absolute;
-        width:75px;
-        height:75px;
-        background-color:transparent;
-        top: 25px;
-        right: 25px;
-        cursor: pointer;
-        &:hover {
-            opacity: 0.3;
-        }
-        .lr {
-            height:75px;
-            width:1px;
-            margin-left:35px;
-            background-color:@gray-darkest;
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
-            /* Safari and Chrome */
-            z-index:1051;
-            .rl {
-                height:75px;
-                width:1px;
-                background-color:@gray-darkest;
-                transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                /* IE 9 */
-                -webkit-transform: rotate(90deg);
-                /* Safari and Chrome */
-                z-index:1052;
-            }
-        }
-    }
 }
 
 // Highlight Color Customization

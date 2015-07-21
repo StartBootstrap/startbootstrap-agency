@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'img/**', 'less/**', 'portfolio/**'],
+                src: ['*.html', 'mail/**', 'img/**', 'less/**', 'popup/**'],
                 dest: 'dist/',
             },
             favicon: {
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'img/**', 'less/**', 'portfolio/**'],
+                files: ['*.html', 'img/**', 'less/**', 'popup/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
@@ -168,7 +168,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin')
-    
+
     // Default task(s).
     grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin','connect','watch']);
 

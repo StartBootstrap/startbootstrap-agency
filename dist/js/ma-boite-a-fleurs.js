@@ -9,7 +9,7 @@ $(document).ready(
 		        }, 1500, 'easeInOutExpo');
 		        event.preventDefault();
 		    });
-			
+
 			// Highlight the top nav as scrolling occurs
 			$('body').scrollspy({
 			    target: '.navbar-fixed-top'
@@ -25,12 +25,12 @@ $(document).ready(
 			var url = $.url();
 			if(url.param('modal-url'))
 			{
-				
-				$('#portfolioModal')
+
+				$('#modal')
 				// on hide : redirect to root page (with fragment if set)
 				.on('hide.bs.modal', function (event) {
 					// redirect to root
-						window.location.href = url.attr('protocol') + '://'+ url.attr('host') + ':' + url.attr('port')  + url.attr('path') + '#' + url.attr('fragment'); 
+						window.location.href = url.attr('protocol') + '://'+ url.attr('host') + ':' + url.attr('port')  + url.attr('path') + '#' + url.attr('fragment');
 					}
 				)
 				// use parameters in url
@@ -41,13 +41,13 @@ $(document).ready(
 				  var modal = $(this);
 				  if($.trim(title))
 				  {
-					  modal.find('.modal-title').text(title); 
+					  modal.find('.modal-title').text(title);
 				  }
 				  if($.trim( href) )
 				  {
-					  modal.find('.modal-body').load(href); 
+					  modal.find('.modal-body').load(href +" #modal-target");
 				  }
-				  
+
 				})
 				// display modal with url and title in parameter
 				.modal('show');
@@ -55,40 +55,41 @@ $(document).ready(
 			else
 			{
 				// modal : default behaviour (on link clicked)
-				$('#portfolioModal').on('show.bs.modal', function (event) {
+				$('#modal').on('show.bs.modal', function (event) {
 					  var button = $(event.relatedTarget) ;
 					  var title = button.data('title') ;
 					  var href = button.attr('href');
 					  var modal = $(this);
 					  if($.trim(title))
 					  {
-						  modal.find('.modal-title').text(title); 
+						  modal.find('.modal-title').text(title);
 					  }
 					  if($.trim( href) )
 					  {
-						  modal.find('.modal-body').load(href); 
+							// replace .modal-body by #modal block in external page
+						  modal.find('.modal-body').load(href +" #modal-target");
 					  }
-					  
+
 					}).on('hidden.bs.modal', function (event) {
 						$(this).find('.modal-body').empty();
 					}).modal('hide');
 			}
 
-			
+
 			// init wow.js
 			new WOW( {
 					mobile: false
 			}).init();
-			
+
 			// hide preload
 			$('.preloader').fadeOut(1000);
-			
+
 			// init typed.js
 			$(".intro-lead-in-type").typed({
-				strings: [ 
+				strings: [
 					"<b>3</b> ventes évènementielles par an",
 					"partenariat avec votre CE.",
-					"livraisons des végéaux toute l'année.", 
+					"livraisons des végéaux toute l'année.",
 					"des végétaux différents tous les mois."
 				],
 				typeSpeed: 50,
@@ -98,6 +99,7 @@ $(document).ready(
 			});
 		}
 	);
+
 /*
  * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
  *
