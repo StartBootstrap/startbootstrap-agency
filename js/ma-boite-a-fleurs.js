@@ -89,7 +89,7 @@ $(document).ready(
 				strings: [
 					"<b>3</b> ventes évènementielles par an",
 					"partenariat avec votre CE.",
-					"livraisons des végéaux toute l'année.",
+					"livraisons des végétaux toute l'année.",
 					"des végétaux différents tous les mois."
 				],
 				typeSpeed: 50,
