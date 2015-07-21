@@ -30,7 +30,8 @@ $(document).ready(
 				// on hide : redirect to root page (with fragment if set)
 				.on('hide.bs.modal', function (event) {
 					// redirect to root
-						window.location.href = url.attr('protocol') + '://'+ url.attr('host') + ':' + url.attr('port')  + url.attr('path') + '#' + url.attr('fragment');
+					//	window.location.href = url.attr('protocol') + '://'+ url.attr('host') + ':' + url.attr('port')  + url.attr('path') + '#' + url.attr('fragment');
+					$(this).find('.modal-body').empty();
 					}
 				)
 				// use parameters in url
@@ -57,7 +58,7 @@ $(document).ready(
 				// modal : default behaviour (on link clicked)
 				$('#modal').on('show.bs.modal', function (event) {
 					  var button = $(event.relatedTarget) ;
-					  var title = button.data('title') ;
+					  var title = button.attr('title') ;
 					  var href = button.attr('href');
 					  var modal = $(this);
 					  if($.trim(title))
@@ -66,7 +67,6 @@ $(document).ready(
 					  }
 					  if($.trim( href) )
 					  {
-							// replace .modal-body by #modal block in external page
 						  modal.find('.modal-body').load(href +" #modal-target");
 					  }
 
