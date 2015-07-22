@@ -19,6 +19,7 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
+                    'js/<%= pkg.name %>-cookies.js',
                     'js/<%= pkg.name %>.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
