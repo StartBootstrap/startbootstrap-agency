@@ -167,6 +167,7 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-default .navbar-brand {
   color: white;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-default .navbar-brand:hover,
@@ -195,6 +196,7 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
@@ -265,6 +267,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-lead-in .intro-lead-in-hash {
   background-color: #7aab44;
   padding: 10px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 header .intro-text .intro-lead-in .intro-lead-in-type {
   color: #7aab44;
@@ -277,6 +280,7 @@ header .intro-text .intro-heading {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 0px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 header .intro-text .intro-copy {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -286,6 +290,7 @@ header .intro-text .intro-copy {
   line-height: 10px;
   margin-bottom: 25px;
   text-align: right;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -331,6 +336,7 @@ section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 section h3.section-subheading {
   font-size: 16px;
