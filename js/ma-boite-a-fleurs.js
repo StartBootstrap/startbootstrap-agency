@@ -20,12 +20,12 @@ $(document).ready(
 			    $('.navbar-toggle:visible').click();
 			});
 
-			// modal : load link passed in url
-			// ex : if fragment is indexed in google, reload the entire page with modal opened
-			var url = $.url();
+			// preload
+			var preload = $('.preloader');
+
 			var modal = $('#modal')
 			.on('hidden.bs.modal', function (event) {
-				$(this).find('.modal-body').empty();
+				$(this).find('.modal-body').html(preload);
 				}
 			);
 
@@ -33,7 +33,7 @@ $(document).ready(
 			{
 				if($.trim(title))
 				{
-					popup.find('.modal-title').text(title);
+					popup.find('.modal-title').html(title);
 				}
 				if($.trim( href) )
 				{
@@ -41,13 +41,19 @@ $(document).ready(
 				}
 			}
 
-			if(url.param('modal-url'))
+			if($.url().param('modal-url'))
 			{
 				// use parameters in url
 				modal.on('show.bs.modal', function (event) {
 					createmodal($(this),
-											url.param('modal-title'),
-											url.param('modal-url'));
+											$.url().param('modal-title'),
+											$.url().param('modal-url'));
+				// dont check url
+				$(this).on('show.bs.modal', function (event) {
+					  createmodal($(this),
+												$(event.relatedTarget).attr('title'),
+												$(event.relatedTarget).attr('href'));
+					})
 				}).modal('show');
 			}
 			else
@@ -64,9 +70,6 @@ $(document).ready(
 			new WOW( {
 					mobile: false
 			}).init();
-
-			// preload
-			var preload = $('.preloader');
 
 			// init typed.js
 			$(".intro-lead-in-type").typed({

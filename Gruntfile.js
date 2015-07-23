@@ -23,9 +23,9 @@ module.exports = function(grunt) {
                     'js/<%= pkg.name %>-cookies.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
-					'bower_components/typed.js/js/typed.js',
-					'bower_components/wow/dist/wow.js',
-					'bower_components/purl/purl.js'
+					          'bower_components/typed.js/js/typed.js',
+					          'bower_components/wow/dist/wow.js',
+					          'bower_components/purl/purl.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js',
             }
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'img/**', 'less/**', 'popup/**'],
+                src: ['*.html', 'mail/**', 'img/**', 'less/**'],
                 dest: 'dist/',
             },
             favicon: {
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'img/**', 'less/**', 'popup/**'],
+                files: ['*.html', 'img/**', 'less/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
