@@ -196,7 +196,6 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
