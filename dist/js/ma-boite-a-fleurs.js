@@ -23,66 +23,50 @@ $(document).ready(
 			// modal : load link passed in url
 			// ex : if fragment is indexed in google, reload the entire page with modal opened
 			var url = $.url();
+			var modal = $('#modal')
+			.on('hidden.bs.modal', function (event) {
+				$(this).find('.modal-body').empty();
+				}
+			);
+
+			function createmodal(popup,title,href)
+			{
+				if($.trim(title))
+				{
+					popup.find('.modal-title').text(title);
+				}
+				if($.trim( href) )
+				{
+					popup.find('.modal-body').load(href +" #modal-target");
+				}
+			}
+
 			if(url.param('modal-url'))
 			{
-
-				$('#modal')
-				// on hide : redirect to root page (with fragment if set)
-				.on('hide.bs.modal', function (event) {
-					// redirect to root
-					//	window.location.href = url.attr('protocol') + '://'+ url.attr('host') + ':' + url.attr('port')  + url.attr('path') + '#' + url.attr('fragment');
-					$(this).find('.modal-body').empty();
-					}
-				)
 				// use parameters in url
-				.on('show.bs.modal', function (event) {
-				  var button = $(event.relatedTarget) ;
-				  var title = url.param('modal-title') ;
-				  var href = url.param('modal-url') ;
-				  var modal = $(this);
-				  if($.trim(title))
-				  {
-					  modal.find('.modal-title').text(title);
-				  }
-				  if($.trim( href) )
-				  {
-					  modal.find('.modal-body').load(href +" #modal-target");
-				  }
-
-				})
-				// display modal with url and title in parameter
-				.modal('show');
+				modal.on('show.bs.modal', function (event) {
+					createmodal($(this),
+											url.param('modal-title'),
+											url.param('modal-url'));
+				}).modal('show');
 			}
 			else
 			{
 				// modal : default behaviour (on link clicked)
-				$('#modal').on('show.bs.modal', function (event) {
-					  var button = $(event.relatedTarget) ;
-					  var title = button.attr('title') ;
-					  var href = button.attr('href');
-					  var modal = $(this);
-					  if($.trim(title))
-					  {
-						  modal.find('.modal-title').text(title);
-					  }
-					  if($.trim( href) )
-					  {
-						  modal.find('.modal-body').load(href +" #modal-target");
-					  }
-
-					}).on('hidden.bs.modal', function (event) {
-						$(this).find('.modal-body').empty();
+				modal.on('show.bs.modal', function (event) {
+					  createmodal($(this),
+												$(event.relatedTarget).attr('title'),
+												$(event.relatedTarget).attr('href'));
 					}).modal('hide');
 			}
-
 
 			// init wow.js
 			new WOW( {
 					mobile: false
 			}).init();
 
-			// hide preload
-			$('.preloader').fadeOut(1000);
+			// preload
+			var preload = $('.preloader');
 
 			// init typed.js
 			$(".intro-lead-in-type").typed({
