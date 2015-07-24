@@ -1,3 +1,9 @@
+var preload = $('.preloader').clone();
+
+$(window).load(function () {
+    $('.preloader:first').fadeOut(1000);
+});
+
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
@@ -21,7 +27,7 @@ $(document).ready(
 			});
 
 			// preload
-			var preload = $('.preloader');
+			$(this).find('.modal-body').html(preload)
 
 			var modal = $('#modal')
 			.on('hidden.bs.modal', function (event) {
