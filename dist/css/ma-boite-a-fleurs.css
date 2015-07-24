@@ -270,7 +270,7 @@ fieldset[disabled] .btn-xl.active {
   margin-right: 0px;
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/balcony-106799_1920.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -653,9 +653,11 @@ aside.clients img {
 }
 section#contact {
   background-color: #3a3a3a;
-  background-image: url('../img/map-image.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('../img/contact-bg.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 section#contact .section-heading {
   color: white;
