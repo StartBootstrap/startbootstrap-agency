@@ -19,21 +19,21 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
-                    'js/<%= pkg.name %>.js',
-                    'js/<%= pkg.name %>-cookies.js',
+                    'js/custom.js',
+                    'js/custom-cookies.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
 					          'bower_components/typed.js/js/typed.js',
 					          'bower_components/wow/dist/wow.js',
 					          'bower_components/purl/purl.js'
                 ],
-                dest: 'dist/js/<%= pkg.name %>.js',
+                dest: 'dist/js/custom.js',
             }
         },
         uglify: {
             main: {
-                src: 'dist/js/<%= pkg.name %>.js',
-                dest: 'dist/js/<%= pkg.name %>.min.js'
+                src: 'dist/js/custom.js',
+                dest: 'dist/js/custom.min.js'
             }
         },
         copy: {
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
                     paths: ["css"]
                 },
                 files: {
-                    "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+                    "dist/css/custom.css": "less/custom.less"
                 }
             },
             minified: {
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "dist/css/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
+                    "dist/css/custom.min.css": "less/custom.less"
                 }
             }
         },

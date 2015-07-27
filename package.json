@@ -1,12 +1,12 @@
 {
-  "name": "ma-boite-a-fleurs",
-  "title": "ma-boite-a-fleurs",
+  "name": "NKS Flowers",
+  "title": "NKS Flowers",
   "version": "1.0.0",
   "homepage": "http://plassiale.github.io/ma-boite-a-fleurs/",
-  "author": "Start Bootstrap",
+  "author": "NKS Flowers",
   "license": {
     "type": "Apache 2.0",
-    "url": "https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE"
+    "url": "https://github.com/plassiale/ma-boite-a-fleurs/blob/master/LICENSE"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
