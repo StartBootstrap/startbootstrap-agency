@@ -1,3 +1,8 @@
+// remove layer all times
+setTimeout(function(){
+  document.querySelectorAll('.preloader')[0].style.display = 'none';
+}, 8000);
+
 var preload = $('.preloader').clone();
 
 $(window).load(function () {
