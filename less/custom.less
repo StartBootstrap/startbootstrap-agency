@@ -218,62 +218,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-header {
-	background-image: url('../img/header-bg-2.jpg');
-	background-repeat: none;
-	background-attachment: scroll;
-	background-position: center center;
-	.background-cover;
+.header-fix-layer {
+	position : absolute;
+  z-index: 999;
+  width : 100%;
 	text-align: center;
 	color: white;
 	.intro-text {
 		padding-top: 100px;
-		padding-bottom: 50px;
 		.intro-lead-in {
 			.heading-font;
 			font-size: 22px;
 			line-height: 22px;
 			margin-bottom: 25px;
-			text-align : left;
-			.intro-lead-in-hash {
-				background-color : @brand-primary;
-				padding : 10px;
-				text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-			}
-			.intro-lead-in-type {
-				color : @brand-primary;
-				background-color : white;
-				padding : 10px;
-			}
+			text-align : center;
 		}
 		.intro-heading {
 			.script-font;
 			font-weight: 700;
-			font-size: 50px;
-			line-height: 50px;
+			font-size: 70px;
+			line-height: 70px;
 			margin-bottom: 0px;
 			text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 		}
 		.intro-copy {
 			.heading-font;
-			font-weight: 100;
-			font-size: 10px;
-			line-height: 10px;
-			margin-bottom: 25px;
-			text-align : right;
+			font-weight: 200;
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 50px;
+			text-align : center;
 			text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 		}
 	}
 }
 
 @media(min-width:768px) {
-	header {
+	.header-fix-layer {
 		.intro-text {
 			padding-top: 300px;
-			padding-bottom: 200px;
 			.intro-lead-in {
 				.heading-font;
-				font-size: 30px;
+				font-size: 40px;
 				line-height: 30px;
 				margin-bottom: 100px;
 				margin-top: 100px;
@@ -281,28 +267,26 @@ header {
 			.intro-heading {
 				.script-font;
 				font-weight: 700;
-				font-size: 75px;
-				line-height: 75px;
+				font-size: 80px;
+				line-height: 80px;
 				margin-bottom: 0px;
 			}
 			.intro-copy {
 				.heading-font;
-				font-weight: 100;
-				font-size: 15px;
-				line-height: 15px;
+				font-weight: 200;
+				font-size: 25px;
+				line-height: 25px;
 				margin-bottom: 50px;
-				margin-top: 20px;
-				text-align : right;
+				margin-top: 40px;
 			}
 		}
 	}
 }
 
 @media (max-width: 767px) {
-	header {
+	.header-fix-layer {
 		.intro-text {
 			.intro-copy {
-				margin-bottom: 100px;
 				margin-top: 50px;
 			}
 		}
@@ -643,7 +627,7 @@ aside.clients {
 
 section#contact {
 	background-color: @gray-darkest;
-	background-image: url('../img/contact-bg.jpg');
+	background-image: url('../img/map-image.png');
 	.background-cover;
 	.section-heading {
 		color: white;
@@ -772,4 +756,23 @@ body {
 	font-size: 20px;
 	line-height: 20px;
 	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+html,
+body,
+.carousel,
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }

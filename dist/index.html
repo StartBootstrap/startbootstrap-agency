@@ -88,18 +88,48 @@
 	</nav>
 
 	<!-- Header -->
-	<header>
-		<div class="container">
-			<div class="intro-text">
-				<div class="intro-heading">NKS Flowers</div>
-				<div class="intro-copy col-xs-8 col-xs-offset-4">Abonnements mensuels et ventes privées de végétaux.</div>
-				<div class="intro-lead-in hidden-xs"><span class="intro-lead-in-hash">#NKS-Flowers</span> : <span class="intro-lead-in-type"></span> </div>
+<header id="header-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+					<li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#header-carousel" data-slide-to="1"></li>
+					<li data-target="#header-carousel" data-slide-to="2"></li>
+					<li data-target="#header-carousel" data-slide-to="3"></li>
+					<li data-target="#header-carousel" data-slide-to="4"></li>
+			</ol>
 
-				<a href="#services" class="row page-scroll btn btn-xl">Plus de détails</a>
+			<!-- Wrapper for Slides -->
+			<div class="carousel-inner">
+					<div class="item active">
+							<!-- main background -->
+							<!--<div class="fill" style="background-image:url('img/header-bg-nks-flower-1.jpg');"></div>-->
+							<div class="header-fix-layer container fill" style="background-image:url('img/header-bg-nks-flower-1.jpg');">
+								<div class="intro-text">
+									<div class="intro-heading">NKS Flowers</div>
+									<div class="intro-copy">Abonnements mensuels et ventes privées de végétaux.</div>
+									<a href="#services" class="btn-detail page-scroll btn btn-xl">Nous découvrir</a>
+								</div>
+						</div>
+
+					</div>
+					<div class="item">
+							<!-- potager / plantes -->
+							<div class="fill" style="background-image:url('img/header-bg-nks-flower-2.jpg');"></div>
+					</div>
+					<div class="item">
+						<!-- ventes privées-->
+						<div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Ventes privees');"></div>
+					</div>
+					<div class="item">
+						<!-- enfants -->
+						<div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Boxes enfants');"></div>
+					</div>
+					<div class="item">
+						<!-- ventes privées -->
+						<div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=partenariat CE - Livraisons');"></div>
+					</div>
 			</div>
-			<a id="arrow-down" href="#services" class="page-scroll btn fa fa-5x fa-angle-down" ></a>
-		</div>
-	</header>
+ 	</header>
 
 	<!-- Services Section -->
 	<section id="services">
@@ -430,7 +460,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading">Nous contacter</h2>
+					<h2 class="section-heading">Contact</h2>
 					<h3 class="section-subheading no-border"></h3>
 				</div>
 			</div>
@@ -481,7 +511,7 @@
 							<div class="clearfix"></div>
 							<div class="col-lg-12 text-center">
 								<div id="success"></div>
-								<button type="submit" class="btn btn-xl">Contactez nous</button>
+								<button type="submit" class="btn btn-xl">Envoyer</button>
 							</div>
 						</div>
 					</form>
@@ -494,15 +524,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<span class="copyright">Copyright &copy; NKS Flowers
-						2015 </span>
+					<span>Copyright &copy; NKS Flowers 2015 </span>
 				</div>
-				<div class="col-md-6">
-					<ul class="list-inline quicklinks">
-						<li><a href="#">Conditions d'utilisation - CGV</a> | RCS 52024635600023</li>
-					</ul>
+				<div class="col-md-4">
+						<span>RCS 52024635600023</span>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-">
+						<span><a href="#">Conditions d'utilisation - CGV</a></span>
 					<!--
 					<ul class="list-inline social-buttons">
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>

@@ -82,19 +82,9 @@ $(document).ready(
 					mobile: false
 			}).init();
 
-			// init typed.js
-			$(".intro-lead-in-type").typed({
-				strings: [
-					"<b>3</b> ventes évènementielles par an",
-					"partenariat avec votre CE.",
-					"livraisons des végétaux toute l'année.",
-					"des végétaux différents tous les mois."
-				],
-				typeSpeed: 50,
-				showCursor: false,
-				loop: true,
-				startDelay : 1000
-			});
+      $('#header-carousel').on('slide.bs.carousel', function () {
+          //$('.header-fix-layer').fadeOut(1000);
+      });
 		}
 	);
 
