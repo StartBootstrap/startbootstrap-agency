@@ -44,6 +44,14 @@
 </head>
 
 <body id="page-top" class="index">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<div class="preloader">
 		<div class="preloader-text text-center">NKS Flowers</div>
@@ -77,7 +85,7 @@
 					<li><a class="page-scroll" href="#portfolio">Produits</a></li>
 					<li><a class="page-scroll" href="#partenaires">Partenaires</a></li>
 					<li><a class="page-scroll" href="#contact">Contact</a></li>
-
+					<li><span class="fb-like" data-href="http://nks-flowers.fr" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></span></li>
 				<!--	<li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
 
 				</ul>
@@ -180,7 +188,7 @@
 							class="fa fa-star fa-stack-1x fa-inverse"></i>
 						</span>
 					</a>
-					<h4 class="service-heading">Vente évènementielle / privées</h4>
+					<h4 class="service-heading">Ventes évènementielles / privées</h4>
 
 					<p class="text-muted text-left" >
 					<a href="popup-vp-noel.html"

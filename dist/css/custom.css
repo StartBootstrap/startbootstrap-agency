@@ -203,6 +203,10 @@ fieldset[disabled] .btn-xl.active {
   outline: none;
   border-color: #7aab44;
 }
+.navbar-default .nav li span {
+  vertical-align: middle;
+  height: 0px;
+}
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
