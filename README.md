@@ -1,7 +1,10 @@
 # choix du template
 Nous avons choisi le theme startbootstrap-agency
 # comment lancer le site:
-Il faut d'abord telecharger le depot, et ensuite cliquer sur le fichier index.html avec votre navigateur pour lancer. Allez au menu Mon CV ,cliquer dessus pour voir le debut du CV
+Il faut d'abord télécharger le depot, et ensuite,vous cliquez sur le fichier index.html avec votre navigateur pour lancer. Allez au menu "Mon CV",cliquez dessus pour voir le du CV
+
+
+
 # [Start Bootstrap](http://startbootstrap.com/) - [Agency](http://startbootstrap.com/template-overviews/agency/)
 
 [Agency](http://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
