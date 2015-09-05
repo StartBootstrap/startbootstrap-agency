@@ -308,6 +308,41 @@ fieldset[disabled] .btn-xl.active {
   text-align: center;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+.header-fix-layer .intro-boxs {
+  padding-top: 100px;
+  color: #383838;
+}
+.header-fix-layer .intro-boxs .intro-boxs-text1 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 25px;
+  line-height: 25px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.header-fix-layer .intro-boxs .intro-boxs-text2 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.header-fix-layer .intro-boxs .intro-boxs-detail {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.header-fix-layer .intro-boxs .btn-detail {
+  margin-top: 100px;
+}
 @media (min-width: 768px) {
   .header-fix-layer .intro-text {
     padding-top: 300px;
