@@ -91,6 +91,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
+.underline {
+	text-decoration: underline;
+}
+
 .no-border {
 	border : none ! important;
 }
@@ -221,7 +225,6 @@ h1, h2, h3, h4, h5, h6 {
 	 }
 }
 
-
 .header-fix-layer {
 	position : absolute;
   width : 100%;
@@ -256,30 +259,29 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.intro-boxs {
 
-		padding-top: 100px;
+		margin-top: 150px;
+		margin-right: auto;
+		margin-left: auto;
 		color : @gray;
+		border-color : @gray;
+		background-color: rgba(255, 255, 255, 0.85);
+		padding : 50px;
+		width: 60%;
+		border-radius: 8px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
 		.intro-boxs-text1 {
 			.heading-font;
 			font-weight: 200;
-			font-size: 25px;
-			line-height: 25px;
-			margin-top: 100px;
-			margin-bottom: 10px;
-			text-align : center;
-			}
-
-		.intro-boxs-text2 {
-			.heading-font;
-			font-weight: 200;
-			font-size: 25px;
-			line-height: 25px;
-			margin-bottom: 40px;
+			font-size: 30px;
+			line-height: 30px;
+			margin-top: 10px;
+			margin-bottom: 50px;
 			text-align : center;
 			}
 
 		.intro-boxs-detail {
-			.heading-font;
+			.serif-font;
 			font-weight: 200;
 			font-size: 25px;
 			line-height: 25px;
@@ -288,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		.btn-detail {
-			margin-top : 100px;
+			margin-top : 50px;
 		}
 	}
 }
