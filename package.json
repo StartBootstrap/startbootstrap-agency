@@ -1,13 +1,9 @@
 {
-  "name": "NKS Flowers",
-  "title": "NKS Flowers",
+  "name": "NKS_Flowers",
+  "title": "NKS_Flowers",
   "version": "1.0.0",
-  "homepage": "http://plassiale.github.io/ma-boite-a-fleurs/",
+  "homepage": "http://nks-flowers.fr/",
   "author": "NKS Flowers",
-  "license": {
-    "type": "Apache 2.0",
-    "url": "https://github.com/plassiale/ma-boite-a-fleurs/blob/master/LICENSE"
-  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-copy": "~0.5.0",
