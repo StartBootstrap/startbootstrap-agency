@@ -82,3 +82,12 @@
 	-ms-filter: grayscale(@val);
 	filter: grayscale(@val);
 }
+
+.transition-bg(@val)
+{
+	-webkit-transition: background-color @val linear;
+	-moz-transition: background-color @val linear;
+	-o-transition: background-color @val linear;
+	-ms-transition: background-color @val linear;
+	transition: background-color @val linear;
+}

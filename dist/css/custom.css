@@ -283,15 +283,38 @@ fieldset[disabled] .btn-xl.active {
   color: white;
 }
 .header-fix-layer .intro-text {
-  padding-top: 100px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+.header-fix-layer .intro-text:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
 }
 .header-fix-layer .intro-text .intro-lead-in {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 25px;
-  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-color: #383838;
+  color: black;
 }
 .header-fix-layer .intro-text .intro-heading {
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
@@ -301,23 +324,13 @@ fieldset[disabled] .btn-xl.active {
   margin-bottom: 0px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
-.header-fix-layer .intro-text .intro-copy {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 20px;
-  line-height: 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
 .header-fix-layer .intro-boxs {
-  margin-top: 150px;
+  margin-top: 100px;
   margin-right: auto;
   margin-left: auto;
   color: #383838;
   border-color: #383838;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 50px;
   width: 60%;
   border-radius: 8px;
@@ -329,7 +342,6 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 200;
   font-size: 30px;
   line-height: 30px;
-  margin-top: 10px;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -339,44 +351,12 @@ fieldset[disabled] .btn-xl.active {
   font-size: 25px;
   line-height: 25px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
   text-align: center;
+  border-bottom: 1px solid #7aab44;
 }
 .header-fix-layer .intro-boxs .btn-detail {
   margin-top: 50px;
-}
-@media (min-width: 768px) {
-  .header-fix-layer .intro-text {
-    padding-top: 300px;
-  }
-  .header-fix-layer .intro-text .intro-lead-in {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 40px;
-    line-height: 30px;
-    margin-bottom: 100px;
-    margin-top: 100px;
-  }
-  .header-fix-layer .intro-text .intro-heading {
-    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 80px;
-    margin-bottom: 0px;
-  }
-  .header-fix-layer .intro-text .intro-copy {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 200;
-    font-size: 25px;
-    line-height: 25px;
-    margin-bottom: 50px;
-    margin-top: 40px;
-  }
-}
-@media (max-width: 767px) {
-  .header-fix-layer .intro-text .intro-copy {
-    margin-top: 50px;
-  }
 }
 section {
   padding: 100px 0;
@@ -395,19 +375,31 @@ section h3.section-subheading {
   margin-bottom: 50px;
   line-height: 1.3;
   border: 1px solid #7aab44;
-  padding: 15px;
+  border-radius: 5px;
+  padding: 20px;
   text-align: justify;
 }
 @media (min-width: 768px) {
   .service {
     padding: 50px;
     height: 450px;
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
   }
   .service:hover {
     transform: scale(1.1);
     background-color: #ededed;
     z-index: 100;
     border: 1px solid #7aab44;
+    border-radius: 5px;
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
   }
 }
 .service-heading {
@@ -651,22 +643,6 @@ section h3.section-subheading {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 0px 20px 20px;
   }
-}
-.team-member {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.team-member img {
-  margin: 0 auto;
-  border: 7px solid white;
-}
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
-}
-.team-member p {
-  margin-top: 0;
 }
 aside.clients img {
   margin: 50px auto;
