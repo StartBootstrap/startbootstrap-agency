@@ -255,14 +255,6 @@ h1, h2, h3, h4, h5, h6 {
 			border-color : @gray;
 			color : black;
 		}
-		.intro-heading {
-			.script-font;
-			font-weight: 700;
-			font-size: 70px;
-			line-height: 70px;
-			margin-bottom: 0px;
-			text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-		}
 	}
 	.intro-boxs {
 		margin-top: 100px;
@@ -297,10 +289,58 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		.btn-detail {
-			margin-top : 50px;
+			margin-top : 40px;
+			z-index: 100;
 		}
 	}
 }
+
+@media(max-width:767px) {
+	.header-fix-layer {
+		.intro-text {
+			margin-top: 70px;
+			margin-left: auto;
+			margin-right: auto;
+			padding : 10px;
+
+			width: 95%;
+			.intro-lead-in {
+				.heading-font;
+				font-size: 18px;
+				line-height: 18px;
+				margin-bottom: 20px;
+				margin-top: 20px;
+			}
+		}
+		.intro-boxs {
+			margin-top: 70px;
+			margin-right: auto;
+			margin-left: auto;
+			padding : 10px;
+			width: 95%;
+
+			.intro-boxs-text1 {
+				.heading-font;
+				font-size: 18px;
+				line-height: 18px;
+				margin-bottom: 15px;
+				}
+
+			.intro-boxs-detail {
+				.serif-font;
+				font-size: 18px;
+				line-height: 18px;
+				margin-bottom: 15px;
+				padding-bottom: 15px;
+			}
+
+			.btn-detail {
+				margin-top : 20px;
+			}
+		}
+	}
+}
+
 
 // Global Section Styles
 section {
