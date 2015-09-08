@@ -231,14 +231,6 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	color: white;
 
-	.intro-container {
-
-		position: relative;
-		  top: 50%;
-			transform: translate(0,-50%);
-		padding : 40px;
-	}
-
 	.intro-text {
 		border-radius: 8px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -264,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 		color : @gray;
 		border-color : @gray;
 		background-color: rgba(255, 255, 255, 0.80);
-		padding : 50px;
+		padding : 40px;
 		border-radius: 8px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
@@ -289,8 +281,25 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		.btn-detail {
-			margin-top : 40px;
+			margin-top : 15px;
 		}
+	}
+}
+
+
+@media(min-width:768px) {
+	.intro-container {
+		position: relative;
+		top: 50%;
+		transform: translate(0,-50%);
+		padding : 40px;
+	}
+}
+
+@media(max-width:767px) {
+	.intro-container {
+		position: relative;
+		margin-top : 70px;
 	}
 }
 
@@ -816,80 +825,83 @@ body,
 	padding-left: 30px;
 	padding-right: 30px;
 
-/* BIENTOT*/
-.alizarin {
-    background: @brand-primary;
-}
+	/* BIENTOT*/
+	.alizarin {
+	    background: @brand-primary;
+	}
 
 
-.dl {
-    background: @gray-lighter;
-    border-radius: 15px;
-    position: relative;
-		border : 1px solid @brand-primary;
-}
+	.dl {
+	    background: @gray-lighter;
+	    border-radius: 15px;
+	    position: relative;
+			border : 1px solid @brand-primary;
+	}
 
-.dl .brand {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 10px 10px;
-    margin-top: 10px;
-    text-align: center;
-    min-height: 50px;
-		color: @gray;
-}
+	.dl .brand {
+	    text-transform: uppercase;
+	    letter-spacing: 3px;
+	    padding: 10px 10px;
+	    margin-top: 10px;
+	    text-align: center;
+	    min-height: 50px;
+			color: @gray;
+	}
 
-.dl .brand h2 {
-	font-size: 20px;
-	line-height: 20px;
-	margin-top: 0px;
-  margin-bottom: 0px;
-}
+	.dl .brand h2 {
+		font-size: 20px;
+		line-height: 20px;
+		margin-top: 0px;
+	  margin-bottom: 0px;
+	}
 
-.dl .discount {
-    min-height: 50px;
-    position: relative;
-    font-size: 80px;
-    text-align: center;
-    font-weight: bold;
+	.dl .discount {
+	    min-height: 50px;
+	    position: relative;
+	    font-size: 80px;
+	    text-align: center;
+	    font-weight: bold;
 
-    padding: 20px;
-    color: white;
-}
+	    padding: 20px;
+	    color: white;
+	}
 
-.dl .discount:after {
-    content: " ";
+	.dl .discount:after {
+	    content: " ";
 
-    border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
-    position: absolute;
-    bottom: -20px;
-    left: 20%;
-}
+	    border-right: 20px solid transparent;
+	    border-left: 20px solid transparent;
+	    position: absolute;
+	    bottom: -20px;
+	    left: 20%;
+	}
 
-.dl .discount.alizarin:after {
-    border-top: 20px solid @brand-primary;
-}
+	.dl .discount.alizarin:after {
+	    border-top: 20px solid @brand-primary;
+	}
 
-.dl .discount .type {
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+	.dl .discount .type {
+	    font-size: 20px;
+	    letter-spacing: 1px;
+	    text-transform: uppercase;
 
-}
+	}
 
-.dl .descr {
-    padding : 30px;
-}
+	.dl .descr {
+	    padding : 30px 0px 30px 0px;
+			background-color : white;
+	}
 
-.cmd {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	text-align: center;
-	min-height: 50px;
-	font-weight: 600;
-	font-size: 18px;
-}
+	.cmd {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		text-align: center;
+		min-height: 50px;
+		font-weight: 600;
+		font-size: 18px;
+		padding : 10px 10px;
+		border-top: 1px solid @brand-primary;
+	}
 
 /* SAPIN */
 	.sapin-img, .sapin-text-header
@@ -1013,5 +1025,12 @@ body,
 	    font-size: 0.95em;
 	    font-weight: bold;
 	    text-align: center;
+	}
+}
+
+@media(max-width:767px) {
+	.modal-text {
+	  margin-left: 0px;
+		padding: 0;
 	}
 }
