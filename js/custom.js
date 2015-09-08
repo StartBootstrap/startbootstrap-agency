@@ -77,6 +77,13 @@ $(document).ready(
 					}).modal('hide');
 			}
 
+      // init magnify
+      modal.on('shown.bs.modal', function (event) {
+          $('[data-toggle="magnify"]').each(function () {
+              $(this).magnify()
+          })
+      });
+
 			// init wow.js
 			new WOW( {
 					mobile: false

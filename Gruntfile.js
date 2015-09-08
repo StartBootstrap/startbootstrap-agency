@@ -24,7 +24,8 @@ module.exports = function(grunt) {
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
 					          'bower_components/wow/dist/wow.js',
-					          'bower_components/purl/purl.js'
+					          'bower_components/purl/purl.js',
+                    'bower_components/bootstrap-magnify/js/bootstrap-magnify.js'
                 ],
                 dest: 'dist/js/custom.js',
             }
@@ -95,6 +96,16 @@ module.exports = function(grunt) {
                     cwd: 'bower_components/animate.css/',
                     src: [
                         'animate.min.css'
+                    ],
+                    dest: 'dist/css'
+                }, ]
+            },
+            bootstrapmagnify: {
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/bootstrap-magnify/css/',
+                    src: [
+                        'bootstrap-magnify.min.css'
                     ],
                     dest: 'dist/css'
                 }, ]
