@@ -23,7 +23,6 @@ module.exports = function(grunt) {
                     'js/custom-cookies.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
-					          'bower_components/typed.js/js/typed.js',
 					          'bower_components/wow/dist/wow.js',
 					          'bower_components/purl/purl.js'
                 ],

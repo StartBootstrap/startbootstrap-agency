@@ -82,8 +82,11 @@ $(document).ready(
 					mobile: false
 			}).init();
 
-      $('#header-carousel').on('slide.bs.carousel', function () {
-          //$('.header-fix-layer').fadeOut(1000);
+      $("#header-carousel").swiperight(function() {
+            $(this).carousel('prev');
       });
+      $("#header-carousel").swipeleft(function() {
+            $(this).carousel('next');
+       });
 		}
 	);
