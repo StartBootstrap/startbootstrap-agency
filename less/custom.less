@@ -230,16 +230,20 @@ h1, h2, h3, h4, h5, h6 {
   width : 100%;
 	text-align: center;
 	color: white;
-	.intro-text {
-		margin-top: 100px;
-		margin-left: auto;
-		margin-right: auto;
-		padding : 40px;
 
-		width: 60%;
+	.intro-container {
+
+		position: relative;
+		  top: 50%;
+			transform: translate(0,-50%);
+		padding : 40px;
+	}
+
+	.intro-text {
 		border-radius: 8px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 		background-color: rgba(255, 255, 255, 0.15);
+
 		.transition-bg(500ms);
 		&:hover {
 			background-color: rgba(255, 255, 255, 0.80);
@@ -256,19 +260,15 @@ h1, h2, h3, h4, h5, h6 {
 			color : black;
 		}
 	}
-	.intro-boxs {
-		margin-top: 100px;
-		margin-right: auto;
-		margin-left: auto;
+	.intro-produits {
 		color : @gray;
 		border-color : @gray;
 		background-color: rgba(255, 255, 255, 0.80);
 		padding : 50px;
-		width: 60%;
 		border-radius: 8px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
-		.intro-boxs-text1 {
+		.intro-produits-heading {
 			.heading-font;
 			font-weight: 200;
 			font-size: 30px;
@@ -277,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 			text-align : center;
 			}
 
-		.intro-boxs-detail {
+		.intro-produits-detail {
 			.serif-font;
 			font-weight: 200;
 			font-size: 25px;
@@ -297,11 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 @media(max-width:767px) {
 	.header-fix-layer {
 		.intro-text {
-			margin-top: 70px;
-			margin-left: auto;
-			margin-right: auto;
 			padding : 10px;
-			width: 100%;
 
 			.intro-lead-in {
 				.heading-font;
@@ -311,42 +307,25 @@ h1, h2, h3, h4, h5, h6 {
 				margin-top: 10px;
 			}
 			img {
-				width : 60%;
-			}
-			.btn-detail {
-				padding-top: 15px;
-				padding-bottom: 15px;
+				width : 50%;
 			}
 		}
-		.intro-boxs {
-			margin-top: 60px;
-			margin-right: auto;
-			margin-left: auto;
+		.intro-produits {
 			padding : 10px;
-			width: 100%;
-			max-height: 80%;
-			overflow-x: hidden;
-			overflow-y: auto;
 
-			.intro-boxs-text1 {
+			.intro-produits-heading {
 				.heading-font;
 				font-size: 18px;
 				line-height: 18px;
-				margin-bottom: 10px;
+				margin-bottom: 20px;
 				}
 
-			.intro-boxs-detail {
+			.intro-produits-detail {
 				.serif-font;
 				font-size: 18px;
 				line-height: 18px;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
-			}
-
-			.btn-detail {
-				margin-top : 0px;
-				padding-top: 15px;
-				padding-bottom: 15px;
 			}
 		}
 	}
