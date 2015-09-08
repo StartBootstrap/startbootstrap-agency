@@ -830,11 +830,6 @@ body,
 .carousel-inner {
   height: 100%;
 }
-@media (max-width: 767px) {
-  .carousel-indicators {
-    bottom: 0px;
-  }
-}
 .fill {
   width: 100%;
   height: 100%;
