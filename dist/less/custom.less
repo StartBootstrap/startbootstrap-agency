@@ -301,17 +301,21 @@ h1, h2, h3, h4, h5, h6 {
 			margin-left: auto;
 			margin-right: auto;
 			padding : 10px;
+			width: 100%;
 
-			width: 95%;
 			.intro-lead-in {
 				.heading-font;
 				font-size: 18px;
 				line-height: 18px;
 				margin-bottom: 20px;
-				margin-top: 20px;
+				margin-top: 10px;
 			}
 			img {
 				width : 60%;
+			}
+			.btn-detail {
+				padding-top: 15px;
+				padding-bottom: 15px;
 			}
 		}
 		.intro-boxs {
@@ -319,13 +323,16 @@ h1, h2, h3, h4, h5, h6 {
 			margin-right: auto;
 			margin-left: auto;
 			padding : 10px;
-			width: 95%;
+			width: 100%;
+			max-height: 80%;
+			overflow-x: hidden;
+			overflow-y: auto;
 
 			.intro-boxs-text1 {
 				.heading-font;
 				font-size: 18px;
 				line-height: 18px;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				}
 
 			.intro-boxs-detail {
@@ -337,7 +344,9 @@ h1, h2, h3, h4, h5, h6 {
 			}
 
 			.btn-detail {
-				margin-top : 10px;
+				margin-top : 0px;
+				padding-top: 15px;
+				padding-bottom: 15px;
 			}
 		}
 	}
@@ -817,22 +826,17 @@ body,
     -o-background-size: cover;
 }
 
-.img-bg-vp {
-	  opacity: 0.4;
-		position :relative;
-}
-
 .img-inner-vp {
 	max-height: 230px;
 }
 
 .modal-text {
-	position : absolute;
 	top : 20px;
   width: 100%;
   margin-left: -15px;
 	padding-left: 30px;
 	padding-right: 30px;
+
 /* BIENTOT*/
 .alizarin {
     background: @brand-primary;
@@ -843,26 +847,34 @@ body,
     background: @gray-lighter;
     border-radius: 15px;
     position: relative;
+		border : 1px solid @brand-primary;
 }
 
 .dl .brand {
     text-transform: uppercase;
     letter-spacing: 3px;
-    padding: 10px 15px;
+    padding: 10px 10px;
     margin-top: 10px;
     text-align: center;
-    min-height: 100px;
+    min-height: 50px;
+		color: @gray;
+}
+
+.dl .brand h2 {
+	font-size: 20px;
+	line-height: 20px;
+	margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .dl .discount {
     min-height: 50px;
     position: relative;
     font-size: 80px;
-    line-height: 80px;
     text-align: center;
     font-weight: bold;
 
-    padding: 20px 15px 0;
+    padding: 20px;
     color: white;
 }
 
@@ -884,14 +896,14 @@ body,
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: -20px;
+
 }
 
 .dl .descr {
     padding : 30px;
 }
 
-.dl .cmd {
+.cmd {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	text-align: center;
