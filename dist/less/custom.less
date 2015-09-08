@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 	.intro-produits {
 		color : @gray;
 		border-color : @gray;
-		background-color: rgba(255, 255, 255, 0.80);
+		background-color: rgba(255, 255, 255, 0.75);
 		padding : 40px;
 		border-radius: 8px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 			font-weight: 200;
 			font-size: 30px;
 			line-height: 30px;
-			margin-bottom: 50px;
+			margin-bottom: 40px;
 			text-align : center;
 			}
 
@@ -274,14 +274,18 @@ h1, h2, h3, h4, h5, h6 {
 			font-weight: 200;
 			font-size: 25px;
 			line-height: 25px;
-			margin-bottom: 20px;
+			padding-top: 20px;
 			padding-bottom: 20px;
 			text-align : center;
 			border-bottom: 1px solid @brand-primary;
+			.transition-bg(1000ms);
+			&:hover {
+					background-color: white;
+					.transition-bg(100ms);
+			}
 		}
-
 		.btn-detail {
-			margin-top : 15px;
+			margin-top : 40px;
 		}
 	}
 }
@@ -326,15 +330,16 @@ h1, h2, h3, h4, h5, h6 {
 				.heading-font;
 				font-size: 18px;
 				line-height: 18px;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				}
 
 			.intro-produits-detail {
 				.serif-font;
 				font-size: 18px;
 				line-height: 18px;
-				margin-bottom: 10px;
 				padding-bottom: 10px;
+				padding-top: 10px;
+				margin : 0px;
 			}
 		}
 	}
