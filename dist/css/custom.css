@@ -428,7 +428,7 @@ section h3.section-subheading {
 @media (min-width: 768px) {
   .service {
     padding: 50px;
-    height: 450px;
+    height: 500px;
     -webkit-transition: background-color 500ms linear;
     -moz-transition: background-color 500ms linear;
     -o-transition: background-color 500ms linear;
@@ -1036,4 +1036,8 @@ body,
 }
 .panel-heading a.collapsed:after {
   content: "\e080";
+}
+.producteurs-locaux {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
