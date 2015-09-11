@@ -42,8 +42,10 @@ module.exports = function(grunt) {
                 dest: 'dist/',
             },
             favicon: {
-                src: ['favicon/favicon.ico'],
-                dest: 'dist/favicon.ico',
+                expand: true,
+                src: '*',
+                cwd: 'favicon/',
+                dest: 'dist/'
             },
             jquery: {
                 files: [{
