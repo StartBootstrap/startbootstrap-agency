@@ -423,6 +423,7 @@ section h3.section-subheading {
   padding: 20px;
   text-align: justify;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: white;
 }
 @media (min-width: 768px) {
   .service {
@@ -703,9 +704,6 @@ section#contact {
 }
 section#contact .section-heading {
   color: white;
-}
-section#contact .section-subheading {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 section#contact .form-group {
   margin-bottom: 25px;
