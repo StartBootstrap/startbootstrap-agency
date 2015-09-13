@@ -1028,23 +1028,32 @@ body,
   font-weight: bold;
   text-align: center;
 }
-.panel-heading h4:after {
+.panel-heading a,
+.panel-heading a:hover,
+.panel-heading a:visited {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+}
+.panel-heading a:after {
   font-family: 'Glyphicons Halflings';
   content: "\e114";
   float: right;
   color: #3a3a3a;
 }
-.panel-heading h4.collapsed:after {
+.panel-heading a.collapsed:after {
   content: "\e080";
 }
-.panel-heading h4:before {
+.panel-heading a:before {
   font-family: 'FontAwesome';
   content: "\f068";
   float: left;
   color: #3a3a3a;
   padding-right: 10px;
 }
-.panel-heading h4.collapsed:before {
+.panel-heading a.collapsed:before {
   content: "\f067";
 }
 .producteurs-locaux {
