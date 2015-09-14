@@ -70,9 +70,11 @@ $(document).ready(
 
       // init magnify
       modal.on('shown.bs.modal', function (event) {
-          $('[data-toggle="magnify"]').each(function () {
-              $(this).magnify()
+          $(this).find('[data-toggle="magnify"]').each(function () {
+              $(this).magnify();
           })
+
+					$(this).find("img.lazy").show().lazyload();
       });
 
 			// init wow.js
@@ -87,6 +89,7 @@ $(document).ready(
             $(this).carousel('next');
        });
 
+			 $("img.lazy").show().lazyload();
 
        // init lazy scripts
 			 var js,

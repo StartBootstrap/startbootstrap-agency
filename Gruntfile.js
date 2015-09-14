@@ -25,7 +25,8 @@ module.exports = function(grunt) {
                     'js/plugins/*.js',
 					          'bower_components/wow/dist/wow.js',
 					          'bower_components/purl/purl.js',
-                    'bower_components/bootstrap-magnify/js/bootstrap-magnify.js'
+                    'bower_components/bootstrap-magnify/js/bootstrap-magnify.js',
+                    'bower_components/jquery.lazyload/js/jquery.lazyload.js'
                 ],
                 dest: 'dist/js/custom.js',
             }
