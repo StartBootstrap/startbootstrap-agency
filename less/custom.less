@@ -199,21 +199,11 @@ h1, h2, h3, h4, h5, h6 {
     background: #ffffff none repeat scroll 0 0;
     display: flex;
     flex-flow: row nowrap;
-    height: 100%;
+    height: 20px;
     justify-content: center;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
     z-index: 99999;
 		color : @brand-primary;
-		.preloader-text {
-			.script-font;
-			font-weight: 600;
-			font-size: 40px;
-			line-height: 40px;
-			text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-	}
+
 	.sk-spinner-three-bounce div {
 	  background-color: @brand-primary !important;
 	 }
@@ -294,8 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 @media(min-width:768px) {
 	.intro-container {
 		position: relative;
-		top: 50%;
-		transform: translate(0,-50%);
+		top: 150px;
 		padding : 40px;
 	}
 }
@@ -672,7 +661,7 @@ aside.clients {
 // Contact Section
 section#contact {
 	background-color: @gray-darkest;
-	background-image: url('../img/map-image.png');
+	/* background-image: url('../img/map-image.png'); */
 	.background-cover;
 	.section-heading {
 		color: white;
@@ -793,14 +782,6 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @brand-primary;
-}
-
-.modal .preloader-text {
-	.script-font;
-	font-weight: 300;
-	font-size: 20px;
-	line-height: 20px;
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 html,

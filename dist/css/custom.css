@@ -252,21 +252,10 @@ fieldset[disabled] .btn-xl.active {
   background: #ffffff none repeat scroll 0 0;
   display: flex;
   flex-flow: row nowrap;
-  height: 100%;
+  height: 20px;
   justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
   z-index: 99999;
   color: #7aab44;
-}
-.preloader .preloader-text {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 40px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .preloader .sk-spinner-three-bounce div {
   background-color: #7aab44 !important;
@@ -357,8 +346,7 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
   .intro-container {
     position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
+    top: 150px;
     padding: 40px;
   }
 }
@@ -701,7 +689,7 @@ aside.clients img {
 }
 section#contact {
   background-color: #3a3a3a;
-  background-image: url('../img/map-image.png');
+  /* background-image: url('../img/map-image.png'); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -817,13 +805,6 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #7aab44;
-}
-.modal .preloader-text {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 20px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 html,
 body,

@@ -1,14 +1,3 @@
-// remove layer all times
-setTimeout(function(){
-  document.querySelectorAll('.preloader')[0].style.display = 'none';
-}, 8000);
-
-var preload = $('.preloader').clone();
-
-$(window).load(function () {
-    $('.preloader:first').fadeOut(1000);
-});
-
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
@@ -30,6 +19,8 @@ $(document).ready(
 			$('.navbar-collapse ul li a').click(function() {
 			    $('.navbar-toggle:visible').click();
 			});
+
+      var preload = $('.preloader').clone();
 
 			// preload
 			$(this).find('.modal-body').html(preload)
@@ -95,5 +86,21 @@ $(document).ready(
       $("#header-carousel").swipeleft(function() {
             $(this).carousel('next');
        });
+
+
+       // init lazy scripts
+			 var js,
+	 				fjs = document.getElementsByTagName('script')[0],
+	 				add = function(url, id) {
+	 						if (document.getElementById(id)) {return;}
+	 						js = document.createElement('script');
+	 						js.src = url;
+	 						id && (js.id = id);
+	 						fjs.parentNode.insertBefore(js, fjs);
+	 				};
+
+	 		// Facebook SDK
+	 		add('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
+
 		}
 	);
