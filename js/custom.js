@@ -1,14 +1,3 @@
-// remove layer all times
-setTimeout(function(){
-  document.querySelectorAll('.preloader')[0].style.display = 'none';
-}, 8000);
-
-var preload = $('.preloader').clone();
-
-$(window).load(function () {
-    $('.preloader:first').fadeOut(1000);
-});
-
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
@@ -31,8 +20,7 @@ $(document).ready(
 			    $('.navbar-toggle:visible').click();
 			});
 
-			// preload
-			$(this).find('.modal-body').html(preload)
+      var preload = $('.preloader').clone();
 
 			var modal = $('#modal')
 			.on('hidden.bs.modal', function (event) {
@@ -44,11 +32,11 @@ $(document).ready(
 			{
 				if($.trim(title))
 				{
-					popup.find('.modal-title').html(title);
+					popup.find('.modal-title').html($.trim(title));
 				}
 				if($.trim( href) )
 				{
-					popup.find('.modal-body').load(href +" #modal-target");
+					popup.find('.modal-body').load($.trim( href) +" #modal-target");
 				}
 			}
 
@@ -59,12 +47,12 @@ $(document).ready(
 					createmodal($(this),
 											$.url().param('modal-title'),
 											$.url().param('modal-url'));
-				// dont check url
-				$(this).on('show.bs.modal', function (event) {
-					  createmodal($(this),
-												$(event.relatedTarget).attr('title'),
-												$(event.relatedTarget).attr('href'));
-					})
+						// dont check url after
+						$(this).on('show.bs.modal', function (event) {
+							  createmodal($(this),
+														$(event.relatedTarget).attr('data-icon') + " " + $(event.relatedTarget).attr('title'),
+														$(event.relatedTarget).attr('href'));
+							})
 				}).modal('show');
 			}
 			else
@@ -72,22 +60,17 @@ $(document).ready(
 				// modal : default behaviour (on link clicked)
 				modal.on('show.bs.modal', function (event) {
 					  createmodal($(this),
-												$(event.relatedTarget).attr('title'),
+												$(event.relatedTarget).attr('data-icon') + " " + $(event.relatedTarget).attr('title'),
 												$(event.relatedTarget).attr('href'));
 					}).modal('hide');
 			}
 
       // init magnify
       modal.on('shown.bs.modal', function (event) {
-          $('[data-toggle="magnify"]').each(function () {
-              $(this).magnify()
+          $(this).find('[data-toggle="magnify"]').each(function () {
+              $(this).magnify();
           })
       });
-
-			// init wow.js
-			new WOW( {
-					mobile: false
-			}).init();
 
       $("#header-carousel").swiperight(function() {
             $(this).carousel('prev');
@@ -95,5 +78,48 @@ $(document).ready(
       $("#header-carousel").swipeleft(function() {
             $(this).carousel('next');
        });
+
+       // init lazy scripts
+			 var js,
+	 				fjs = document.getElementsByTagName('script')[0],
+	 				add = function(url, id) {
+	 						if (document.getElementById(id)) {return;}
+	 						js = document.createElement('script');
+	 						js.src = url;
+	 						id && (js.id = id);
+	 						fjs.parentNode.insertBefore(js, fjs);
+	 				};
+
+	 		// Facebook SDK
+	 		add('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
+
+			// init wow.js
+			new WOW( {
+					mobile: false
+			}).init();
+
+			/*
+			 Initialisation du lasy
+			*/
+			$("img.lazy").show().lazyload({
+				 threshold : 500
+		 });
+
+		 /*
+		 	Chargement des images du caroussel
+		 */
+		 $(".preload-img-bg").each(function()
+				 {
+					 var img = new Image();
+					 img.src = $(this).css('background-image').replace(/^url\(['"]?/,'').replace(/['"]?\)$/,'');
+				 }
+	 		);
+
+			/*
+				Chargement des images necessaires une fois le dom chargé
+			*/
+			 $("img.preload-img").each(function () {
+					 $(this).attr('src', $(this).attr('data-original'));
+			 });
 		}
 	);

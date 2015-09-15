@@ -1,365 +1,3 @@
-// remove layer all times
-setTimeout(function(){
-  document.querySelectorAll('.preloader')[0].style.display = 'none';
-}, 8000);
-
-var preload = $('.preloader').clone();
-
-$(window).load(function () {
-    $('.preloader:first').fadeOut(1000);
-});
-
-/* When DOM is loaded*/
-$(document).ready(
-		function() {
-			// jQuery for page scrolling feature - requires jQuery Easing plugin
-			$('a.page-scroll').bind('click', function(event) {
-		        var $anchor = $(this);
-		        $('html, body').stop().animate({
-		            scrollTop: $($anchor.attr('href')).offset().top
-		        }, 1500, 'easeInOutExpo');
-		        event.preventDefault();
-		    });
-
-			// Highlight the top nav as scrolling occurs
-			$('body').scrollspy({
-			    target: '.navbar-fixed-top'
-			})
-
-			// Closes the Responsive Menu on Menu Item Click
-			$('.navbar-collapse ul li a').click(function() {
-			    $('.navbar-toggle:visible').click();
-			});
-
-			// preload
-			$(this).find('.modal-body').html(preload)
-
-			var modal = $('#modal')
-			.on('hidden.bs.modal', function (event) {
-				$(this).find('.modal-body').html(preload);
-				}
-			);
-
-			function createmodal(popup,title,href)
-			{
-				if($.trim(title))
-				{
-					popup.find('.modal-title').html(title);
-				}
-				if($.trim( href) )
-				{
-					popup.find('.modal-body').load(href +" #modal-target");
-				}
-			}
-
-			if($.url().param('modal-url'))
-			{
-				// use parameters in url
-				modal.on('show.bs.modal', function (event) {
-					createmodal($(this),
-											$.url().param('modal-title'),
-											$.url().param('modal-url'));
-				// dont check url
-				$(this).on('show.bs.modal', function (event) {
-					  createmodal($(this),
-												$(event.relatedTarget).attr('title'),
-												$(event.relatedTarget).attr('href'));
-					})
-				}).modal('show');
-			}
-			else
-			{
-				// modal : default behaviour (on link clicked)
-				modal.on('show.bs.modal', function (event) {
-					  createmodal($(this),
-												$(event.relatedTarget).attr('title'),
-												$(event.relatedTarget).attr('href'));
-					}).modal('hide');
-			}
-
-      // init magnify
-      modal.on('shown.bs.modal', function (event) {
-          $('[data-toggle="magnify"]').each(function () {
-              $(this).magnify()
-          })
-      });
-
-			// init wow.js
-			new WOW( {
-					mobile: false
-			}).init();
-
-      $("#header-carousel").swiperight(function() {
-            $(this).carousel('prev');
-      });
-      $("#header-carousel").swipeleft(function() {
-            $(this).carousel('next');
-       });
-		}
-	);
-
-/*
- * Script provenant du site de la CNIL :
- * http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/outils-et-codes-sources/la-mesure-daudience/
- *
- */
-
-var tagAnalyticsCNIL = {}
-
-tagAnalyticsCNIL.CookieConsent = function() {
-
-    var gaProperty = 'UA-65364486-1'
-    // Désactive le tracking si le cookie d'Opt-out existe déjà .
-    var disableStr = 'ga-disable-' + gaProperty;
-    var firstCall = false;
-
-    //Cette fonction retourne la date date d'expiration du cookie de consentement
-
-    function getCookieExpireDate() {
-     // Le nombre de millisecondes que font 13 mois
-     var cookieTimeout = 33696000000;
-     var date = new Date();
-     date.setTime(date.getTime()+cookieTimeout);
-     var expires = "; expires="+date.toGMTString();
-     return expires;
-    }
-
-
-    //Cette fonction vérifie si on  a déjà  obtenu le consentement de la personne qui visite le site.
-    function checkFirstVisit() {
-       var consentCookie =  getCookie('hasConsent');
-       if ( !consentCookie ) return true;
-    }
-
-    //Affiche une  bannière d'information en haut de la page
-     function showBanner(){
-        var bodytag = document.getElementsByTagName('nav')[0];
-        var div = document.createElement('div');
-        div.setAttribute('id','cookie-banner');
-        div.setAttribute('width','100%');
-        // Le code HTML de la demande de consentement
-        div.innerHTML =  '<div style="top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
-        border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">Ce site utilise Google\
-        Analytics. En continuant &agrave; naviguer, vous nous autorisez &agrave; d&eacute;poser un cookie &agrave; des fins de mesure\
-        d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
-        style="text-decoration:underline;"> En savoir plus</a>.</div>';
-        // Vous pouvez modifier le contenu ainsi que le style
-        // Ajoute la bannière juste au début de la page
-        bodytag.insertBefore(div,bodytag.firstChild);
-        document.getElementsByTagName('body')[0].className+=' cookiebanner';
-        createInformAndAskDiv();
-     }
-
-
-    // Fonction utile pour récupérer un cookie à partir de son nom
-    function getCookie(NameOfCookie)  {
-        if (document.cookie.length > 0) {
-            begin = document.cookie.indexOf(NameOfCookie+"=");
-            if (begin != -1)  {
-                begin += NameOfCookie.length+1;
-                end = document.cookie.indexOf(";", begin);
-                if (end == -1) end = document.cookie.length;
-                return unescape(document.cookie.substring(begin, end));
-            }
-         }
-        return null;
-    }
-
-    //Récupère la version d'Internet Explorer, si c'est un autre navigateur la fonction renvoie -1
-    function getInternetExplorerVersion() {
-      var rv = -1;
-      if (navigator.appName == 'Microsoft Internet Explorer')  {
-        var ua = navigator.userAgent;
-        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-        if (re.exec(ua) != null)
-          rv = parseFloat( RegExp.$1 );
-      }  else if (navigator.appName == 'Netscape')  {
-        var ua = navigator.userAgent;
-        var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
-        if (re.exec(ua) != null)
-          rv = parseFloat( RegExp.$1 );
-      }
-      return rv;
-    }
-
-    //Effectue une demande de confirmation de DNT pour les utilisateurs d'IE
-    function askDNTConfirmation() {
-        var r = confirm("La signal DoNotTrack de votre navigateur est activé, confirmez vous activer \
-        la fonction DoNotTrack?")
-        return r;
-    }
-
-    //Vérifie la valeur de navigator.DoNotTrack pour savoir si le signal est activé et est à  1
-    function notToTrack() {
-        if ( (navigator.doNotTrack && (navigator.doNotTrack=='yes' || navigator.doNotTrack=='1'))
-            || ( navigator.msDoNotTrack && navigator.msDoNotTrack == '1') ) {
-            var isIE = (getInternetExplorerVersion()!=-1)
-            if (!isIE){
-                 return true;
-            }
-            return false;
-        }
-    }
-
-    //Si le signal est à  0 on considère que le consentement a déjà  été obtenu
-    function isToTrack() {
-        if ( navigator.doNotTrack && (navigator.doNotTrack=='no' || navigator.doNotTrack==0 )) {
-            return true;
-        }
-    }
-
-    // Fonction d'effacement des cookies
-    function delCookie(name )   {
-        var path = ";path=" + "/";
-        var hostname = document.location.hostname;
-        if (hostname.indexOf("www.") === 0)
-            hostname = hostname.substring(4);
-        var domain = ";domain=" + "."+hostname;
-        var expiration = "Thu, 01-Jan-1970 00:00:01 GMT";
-        document.cookie = name + "=" + path + domain + ";expires=" + expiration;
-    }
-
-    // Efface tous les types de cookies utilisés par Google Analytics
-    function deleteAnalyticsCookies() {
-        var cookieNames = ["__utma","__utmb","__utmc","__utmt","__utmv","__utmz","_ga","_gat"]
-        for (var i=0; i<cookieNames.length; i++)
-            delCookie(cookieNames[i])
-    }
-
-    //La fonction qui informe et demande le consentement. Il s'agit d'un div qui apparait au centre de la page
-    function createInformAndAskDiv() {
-        var bodytag = document.getElementsByTagName('body')[0];
-        var div = document.createElement('div');
-        div.setAttribute('id','inform-and-ask');
-        div.style.width= window.innerWidth+"px" ;
-        div.style.height= window.innerHeight+"px";
-        div.style.display= "none";
-        div.style.position= "fixed";
-        // Le code HTML de la demande de consentement
-        // Vous pouvez modifier le contenu ainsi que le style
-        div.innerHTML =  '<div class="text-muted text-justify" style="width: 300px; background-color: white; repeat scroll 0% 0% white;\
-        border: 1px solid #cccccc; padding :10px 10px;text-align:center; position: fixed; top:30px; \
-        left:50%; margin-top:0px; margin-left:-150px; z-index:100000; opacity:1" id="inform-and-consent">\
-        <div><span><b>Les cookies Google Analytics</b></span></div><br><div>Ce site utilise  des cookies\
-        de Google Analytics, ces cookies nous aident &agrave; identifier le contenu qui vous interesse le plus\
-        ainsi qu\'à  rep&eacute;rer certains dysfonctionnements. Vos donn&eacute;es de navigations sur ce site sont\
-        envoy&eacute;es à  Google Inc</div><div style="padding :10px 10px;text-align:center;"><button\
-        style="margin-right:50px;text-decoration:underline;" name="S\'opposer" onclick="tagAnalyticsCNIL.CookieConsent.gaOptout();\
-        tagAnalyticsCNIL.CookieConsent.hideInform();" id="optout-button" >S\'opposer</button>\
-        <button style="text-decoration:underline;" name="cancel" onclick="tagAnalyticsCNIL.CookieConsent.hideInform()"\
-        >Accepter</button></div></div>';
-        // Ajoute la bannière juste au début de la page
-        bodytag.insertBefore(div,bodytag.firstChild);
-    }
-
-
-
-    function isClickOnOptOut( evt) {
-        // Si le noeud parent ou le noeud parent du parent est la bannière, on ignore le clic
-        return(evt.target.parentNode.id == 'cookie-banner' || evt.target.parentNode.parentNode.id =='cookie-banner'
-        || evt.target.id == 'optout-button')
-    }
-
-    function consent(evt) {
-        // On vérifie qu'il ne s'agit pas d'un clic sur la bannière
-        if (!isClickOnOptOut(evt) ) {
-            if ( !clickprocessed) {
-                evt.preventDefault();
-                document.cookie = 'hasConsent=true; '+ getCookieExpireDate() +' ; path=/';
-                callGoogleAnalytics();
-                clickprocessed = true;
-                window.setTimeout(function() {evt.target.click();}, 1000)
-            }
-        }
-    }
-
-
-    function callGoogleAnalytics() {
-        if (firstCall) return;
-        else firstCall = true;
-
-
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', gaProperty, 'auto');
-        ga('send', 'pageview');
-
-
-    }
-
-    return {
-
-        // La fonction d'opt-out
-         gaOptout: function() {
-            document.cookie = disableStr + '=true;'+ getCookieExpireDate() +' ; path=/';
-            document.cookie = 'hasConsent=false;'+ getCookieExpireDate() +' ; path=/';
-            var div = document.getElementById('cookie-banner');
-            // Ci dessous le code de la banniÃ¨re affichÃ©e une fois que l'utilisateur s'est opposÃ© au dÃ©pot
-            // Vous pouvez modifier le contenu et le style
-            if ( div!= null ) div.innerHTML = '<div style="background-color:#fff;text-align:center;padding:5px;font-size:12px;\
-            border-bottom:1px solid #eeeeee;" id="cookie-message"> Vous vous êtes opposé au dépôt de cookies de mesures d\'audience\
-            dans votre navigateur </div>'
-            window[disableStr] = true;
-            clickprocessed = true;
-            deleteAnalyticsCookies();
-        },
-
-
-         showInform: function() {
-            var div = document.getElementById("inform-and-ask");
-            div.style.display = "block";
-        },
-
-
-         hideInform: function() {
-            var div = document.getElementById("inform-and-ask");
-            div.style.display = "none";
-            var div = document.getElementById("cookie-banner");
-            div.style.display = "none";
-        },
-
-
-        start: function() {
-            //Ce bout de code vÃ©rifie que le consentement n'a pas dÃ©jÃ  Ã©tÃ© obtenu avant d'afficher
-            // la banniÃ¨re
-            var consentCookie =  getCookie('hasConsent');
-            clickprocessed = false;
-            if (!consentCookie) {
-                //L'utilisateur n'a pas encore de cookie, on affiche la banniÃ©re.
-                //Si il clique sur un autre Ã©lÃ©ment que la banniÃ©re on enregistre le consentement
-                if ( notToTrack() ) {
-                    //L'utilisateur a activé DoNotTrack. Do not ask for consent and just opt him out
-                    tagAnalyticsCNIL.CookieConsent.gaOptout()
-
-                } else {
-                    if (isToTrack() ) {
-                        consent();
-                    } else {
-                        if (window.addEventListener) {
-                          window.addEventListener("load", showBanner, false);
-                          document.addEventListener("click", consent, false);
-                        } else {
-                          window.attachEvent("onload", showBanner);
-                          document.attachEvent("onclick", consent);
-                        }
-                    }
-                }
-            } else {
-                if (document.cookie.indexOf('hasConsent=false') > -1)
-                    window[disableStr] = true;
-                else
-                    callGoogleAnalytics();
-            }
-        }
-    }
-
-}();
-
-tagAnalyticsCNIL.CookieConsent.start();
-
 /*
  * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
  *
@@ -1671,6 +1309,249 @@ $('#name').focus(function() {
   };
 
 })( jQuery );
+
+/*!
+ * Lazy Load - jQuery plugin for lazy loading images
+ *
+ * Copyright (c) 2007-2015 Mika Tuupola
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *   http://www.appelsiini.net/projects/lazyload
+ *
+ * Version:  1.9.7
+ *
+ */
+
+(function($, window, document, undefined) {
+    var $window = $(window);
+
+    $.fn.lazyload = function(options) {
+        var elements = this;
+        var $container;
+        var settings = {
+            threshold       : 0,
+            failure_limit   : 0,
+            event           : "scroll",
+            effect          : "show",
+            container       : window,
+            data_attribute  : "original",
+            skip_invisible  : false,
+            appear          : null,
+            load            : null,
+            placeholder     : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+        };
+
+        function update() {
+            var counter = 0;
+
+            elements.each(function() {
+                var $this = $(this);
+                if (settings.skip_invisible && !$this.is(":visible")) {
+                    return;
+                }
+                if ($.abovethetop(this, settings) ||
+                    $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                } else if (!$.belowthefold(this, settings) &&
+                    !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                        /* if we found an image we'll load, reset the counter */
+                        counter = 0;
+                } else {
+                    if (++counter > settings.failure_limit) {
+                        return false;
+                    }
+                }
+            });
+
+        }
+
+        if(options) {
+            /* Maintain BC for a couple of versions. */
+            if (undefined !== options.failurelimit) {
+                options.failure_limit = options.failurelimit;
+                delete options.failurelimit;
+            }
+            if (undefined !== options.effectspeed) {
+                options.effect_speed = options.effectspeed;
+                delete options.effectspeed;
+            }
+
+            $.extend(settings, options);
+        }
+
+        /* Cache container as jQuery as object. */
+        $container = (settings.container === undefined ||
+                      settings.container === window) ? $window : $(settings.container);
+
+        /* Fire one scroll event per scroll. Not one scroll event per image. */
+        if (0 === settings.event.indexOf("scroll")) {
+            $container.bind(settings.event, function() {
+                return update();
+            });
+        }
+
+        this.each(function() {
+            var self = this;
+            var $self = $(self);
+
+            self.loaded = false;
+
+            /* If no src attribute given use data:uri. */
+            if ($self.attr("src") === undefined || $self.attr("src") === false) {
+                if ($self.is("img")) {
+                    $self.attr("src", settings.placeholder);
+                }
+            }
+
+            /* When appear is triggered load original image. */
+            $self.one("appear", function() {
+                if (!this.loaded) {
+                    if (settings.appear) {
+                        var elements_left = elements.length;
+                        settings.appear.call(self, elements_left, settings);
+                    }
+                    $("<img />")
+                        .bind("load", function() {
+
+                            var original = $self.attr("data-" + settings.data_attribute);
+                            $self.hide();
+                            if ($self.is("img")) {
+                                $self.attr("src", original);
+                            } else {
+                                $self.css("background-image", "url('" + original + "')");
+                            }
+                            $self[settings.effect](settings.effect_speed);
+
+                            self.loaded = true;
+
+                            /* Remove image from array so it is not looped next time. */
+                            var temp = $.grep(elements, function(element) {
+                                return !element.loaded;
+                            });
+                            elements = $(temp);
+
+                            if (settings.load) {
+                                var elements_left = elements.length;
+                                settings.load.call(self, elements_left, settings);
+                            }
+                        })
+                        .attr("src", $self.attr("data-" + settings.data_attribute));
+                }
+            });
+
+            /* When wanted event is triggered load original image */
+            /* by triggering appear.                              */
+            if (0 !== settings.event.indexOf("scroll")) {
+                $self.bind(settings.event, function() {
+                    if (!self.loaded) {
+                        $self.trigger("appear");
+                    }
+                });
+            }
+        });
+
+        /* Check if something appears when window is resized. */
+        $window.bind("resize", function() {
+            update();
+        });
+
+        /* With IOS5 force loading images when navigating with back button. */
+        /* Non optimal workaround. */
+        if ((/(?:iphone|ipod|ipad).*os 5/gi).test(navigator.appVersion)) {
+            $window.bind("pageshow", function(event) {
+                if (event.originalEvent && event.originalEvent.persisted) {
+                    elements.each(function() {
+                        $(this).trigger("appear");
+                    });
+                }
+            });
+        }
+
+        /* Force initial check if images should appear. */
+        $(document).ready(function() {
+            update();
+        });
+
+        return this;
+    };
+
+    /* Convenience methods in jQuery namespace.           */
+    /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+    $.belowthefold = function(element, settings) {
+        var fold;
+
+        if (settings.container === undefined || settings.container === window) {
+            fold = (window.innerHeight ? window.innerHeight : $window.height()) + $window.scrollTop();
+        } else {
+            fold = $(settings.container).offset().top + $(settings.container).height();
+        }
+
+        return fold <= $(element).offset().top - settings.threshold;
+    };
+
+    $.rightoffold = function(element, settings) {
+        var fold;
+
+        if (settings.container === undefined || settings.container === window) {
+            fold = $window.width() + $window.scrollLeft();
+        } else {
+            fold = $(settings.container).offset().left + $(settings.container).width();
+        }
+
+        return fold <= $(element).offset().left - settings.threshold;
+    };
+
+    $.abovethetop = function(element, settings) {
+        var fold;
+
+        if (settings.container === undefined || settings.container === window) {
+            fold = $window.scrollTop();
+        } else {
+            fold = $(settings.container).offset().top;
+        }
+
+        return fold >= $(element).offset().top + settings.threshold  + $(element).height();
+    };
+
+    $.leftofbegin = function(element, settings) {
+        var fold;
+
+        if (settings.container === undefined || settings.container === window) {
+            fold = $window.scrollLeft();
+        } else {
+            fold = $(settings.container).offset().left;
+        }
+
+        return fold >= $(element).offset().left + settings.threshold + $(element).width();
+    };
+
+    $.inviewport = function(element, settings) {
+         return !$.rightoffold(element, settings) && !$.leftofbegin(element, settings) &&
+                !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+     };
+
+    /* Custom selectors for your convenience.   */
+    /* Use as $("img:below-the-fold").something() or */
+    /* $("img").filter(":below-the-fold").something() which is faster */
+
+    $.extend($.expr[":"], {
+        "below-the-fold" : function(a) { return $.belowthefold(a, {threshold : 0}); },
+        "above-the-top"  : function(a) { return !$.belowthefold(a, {threshold : 0}); },
+        "right-of-screen": function(a) { return $.rightoffold(a, {threshold : 0}); },
+        "left-of-screen" : function(a) { return !$.rightoffold(a, {threshold : 0}); },
+        "in-viewport"    : function(a) { return $.inviewport(a, {threshold : 0}); },
+        /* Maintain BC for couple of versions. */
+        "above-the-fold" : function(a) { return !$.belowthefold(a, {threshold : 0}); },
+        "right-of-fold"  : function(a) { return $.rightoffold(a, {threshold : 0}); },
+        "left-of-fold"   : function(a) { return !$.rightoffold(a, {threshold : 0}); }
+    });
+
+})(jQuery, window, document);
 
 /*
 * jQuery Mobile v1.4.5
@@ -3436,3 +3317,391 @@ if ( eventCaptureSupported ) {
     })
 
 } ( window.jQuery );
+
+/*
+ * Script provenant du site de la CNIL :
+ * http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/outils-et-codes-sources/la-mesure-daudience/
+ *
+ */
+
+var tagAnalyticsCNIL = {}
+
+tagAnalyticsCNIL.CookieConsent = function() {
+
+    var gaProperty = 'UA-65364486-1'
+    // Désactive le tracking si le cookie d'Opt-out existe déjà .
+    var disableStr = 'ga-disable-' + gaProperty;
+    var firstCall = false;
+
+    //Cette fonction retourne la date date d'expiration du cookie de consentement
+
+    function getCookieExpireDate() {
+     // Le nombre de millisecondes que font 13 mois
+     var cookieTimeout = 33696000000;
+     var date = new Date();
+     date.setTime(date.getTime()+cookieTimeout);
+     var expires = "; expires="+date.toGMTString();
+     return expires;
+    }
+
+
+    //Cette fonction vérifie si on  a déjà  obtenu le consentement de la personne qui visite le site.
+    function checkFirstVisit() {
+       var consentCookie =  getCookie('hasConsent');
+       if ( !consentCookie ) return true;
+    }
+
+    //Affiche une  bannière d'information en haut de la page
+     function showBanner(){
+        var bodytag = document.getElementsByTagName('nav')[0];
+        var div = document.createElement('div');
+        div.setAttribute('id','cookie-banner');
+        div.setAttribute('width','100%');
+        // Le code HTML de la demande de consentement
+        div.innerHTML =  '<div style="top:0px;width:100%;position:fixed;background-color:#fff;text-align:center;padding:5px;font-size:12px;\
+        border-bottom:1px solid #eeeeee;" id="cookie-banner-message" align="center">Ce site utilise Google\
+        Analytics. En continuant &agrave; naviguer, vous nous autorisez &agrave; d&eacute;poser un cookie &agrave; des fins de mesure\
+        d\'audience.<a href="javascript:tagAnalyticsCNIL.CookieConsent.hideInform();" style="text-decoration:underline;">Continuer</a>  <a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()" \
+        style="text-decoration:underline;"> En savoir plus</a>.</div>';
+        // Vous pouvez modifier le contenu ainsi que le style
+        // Ajoute la bannière juste au début de la page
+        bodytag.insertBefore(div,bodytag.firstChild);
+        document.getElementsByTagName('body')[0].className+=' cookiebanner';
+        createInformAndAskDiv();
+     }
+
+
+    // Fonction utile pour récupérer un cookie à partir de son nom
+    function getCookie(NameOfCookie)  {
+        if (document.cookie.length > 0) {
+            begin = document.cookie.indexOf(NameOfCookie+"=");
+            if (begin != -1)  {
+                begin += NameOfCookie.length+1;
+                end = document.cookie.indexOf(";", begin);
+                if (end == -1) end = document.cookie.length;
+                return unescape(document.cookie.substring(begin, end));
+            }
+         }
+        return null;
+    }
+
+    //Récupère la version d'Internet Explorer, si c'est un autre navigateur la fonction renvoie -1
+    function getInternetExplorerVersion() {
+      var rv = -1;
+      if (navigator.appName == 'Microsoft Internet Explorer')  {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat( RegExp.$1 );
+      }  else if (navigator.appName == 'Netscape')  {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat( RegExp.$1 );
+      }
+      return rv;
+    }
+
+    //Effectue une demande de confirmation de DNT pour les utilisateurs d'IE
+    function askDNTConfirmation() {
+        var r = confirm("La signal DoNotTrack de votre navigateur est activé, confirmez vous activer \
+        la fonction DoNotTrack?")
+        return r;
+    }
+
+    //Vérifie la valeur de navigator.DoNotTrack pour savoir si le signal est activé et est à  1
+    function notToTrack() {
+        if ( (navigator.doNotTrack && (navigator.doNotTrack=='yes' || navigator.doNotTrack=='1'))
+            || ( navigator.msDoNotTrack && navigator.msDoNotTrack == '1') ) {
+            var isIE = (getInternetExplorerVersion()!=-1)
+            if (!isIE){
+                 return true;
+            }
+            return false;
+        }
+    }
+
+    //Si le signal est à  0 on considère que le consentement a déjà  été obtenu
+    function isToTrack() {
+        if ( navigator.doNotTrack && (navigator.doNotTrack=='no' || navigator.doNotTrack==0 )) {
+            return true;
+        }
+    }
+
+    // Fonction d'effacement des cookies
+    function delCookie(name )   {
+        var path = ";path=" + "/";
+        var hostname = document.location.hostname;
+        if (hostname.indexOf("www.") === 0)
+            hostname = hostname.substring(4);
+        var domain = ";domain=" + "."+hostname;
+        var expiration = "Thu, 01-Jan-1970 00:00:01 GMT";
+        document.cookie = name + "=" + path + domain + ";expires=" + expiration;
+    }
+
+    // Efface tous les types de cookies utilisés par Google Analytics
+    function deleteAnalyticsCookies() {
+        var cookieNames = ["__utma","__utmb","__utmc","__utmt","__utmv","__utmz","_ga","_gat"]
+        for (var i=0; i<cookieNames.length; i++)
+            delCookie(cookieNames[i])
+    }
+
+    //La fonction qui informe et demande le consentement. Il s'agit d'un div qui apparait au centre de la page
+    function createInformAndAskDiv() {
+        var bodytag = document.getElementsByTagName('body')[0];
+        var div = document.createElement('div');
+        div.setAttribute('id','inform-and-ask');
+        div.style.width= window.innerWidth+"px" ;
+        div.style.height= window.innerHeight+"px";
+        div.style.display= "none";
+        div.style.position= "fixed";
+        // Le code HTML de la demande de consentement
+        // Vous pouvez modifier le contenu ainsi que le style
+        div.innerHTML =  '<div class="text-muted text-justify" style="width: 300px; background-color: white; repeat scroll 0% 0% white;\
+        border: 1px solid #cccccc; padding :10px 10px;text-align:center; position: fixed; top:30px; \
+        left:50%; margin-top:0px; margin-left:-150px; z-index:100000; opacity:1" id="inform-and-consent">\
+        <div><span><b>Les cookies Google Analytics</b></span></div><br><div>Ce site utilise  des cookies\
+        de Google Analytics, ces cookies nous aident &agrave; identifier le contenu qui vous interesse le plus\
+        ainsi qu\'à  rep&eacute;rer certains dysfonctionnements. Vos donn&eacute;es de navigations sur ce site sont\
+        envoy&eacute;es à  Google Inc</div><div style="padding :10px 10px;text-align:center;"><button\
+        style="margin-right:50px;text-decoration:underline;" name="S\'opposer" onclick="tagAnalyticsCNIL.CookieConsent.gaOptout();\
+        tagAnalyticsCNIL.CookieConsent.hideInform();" id="optout-button" >S\'opposer</button>\
+        <button style="text-decoration:underline;" name="cancel" onclick="tagAnalyticsCNIL.CookieConsent.hideInform()"\
+        >Accepter</button></div></div>';
+        // Ajoute la bannière juste au début de la page
+        bodytag.insertBefore(div,bodytag.firstChild);
+    }
+
+
+
+    function isClickOnOptOut( evt) {
+        // Si le noeud parent ou le noeud parent du parent est la bannière, on ignore le clic
+        return(evt.target.parentNode.id == 'cookie-banner' || evt.target.parentNode.parentNode.id =='cookie-banner'
+        || evt.target.id == 'optout-button')
+    }
+
+    function consent(evt) {
+        // On vérifie qu'il ne s'agit pas d'un clic sur la bannière
+        if (!isClickOnOptOut(evt) ) {
+            if ( !clickprocessed) {
+                evt.preventDefault();
+                document.cookie = 'hasConsent=true; '+ getCookieExpireDate() +' ; path=/';
+                callGoogleAnalytics();
+                clickprocessed = true;
+                window.setTimeout(function() {evt.target.click();}, 1000)
+            }
+        }
+    }
+
+
+    function callGoogleAnalytics() {
+        if (firstCall) return;
+        else firstCall = true;
+
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', gaProperty, 'auto');
+        ga('send', 'pageview');
+
+
+    }
+
+    return {
+
+        // La fonction d'opt-out
+         gaOptout: function() {
+            document.cookie = disableStr + '=true;'+ getCookieExpireDate() +' ; path=/';
+            document.cookie = 'hasConsent=false;'+ getCookieExpireDate() +' ; path=/';
+            var div = document.getElementById('cookie-banner');
+            // Ci dessous le code de la banniÃ¨re affichÃ©e une fois que l'utilisateur s'est opposÃ© au dÃ©pot
+            // Vous pouvez modifier le contenu et le style
+            if ( div!= null ) div.innerHTML = '<div style="background-color:#fff;text-align:center;padding:5px;font-size:12px;\
+            border-bottom:1px solid #eeeeee;" id="cookie-message"> Vous vous êtes opposé au dépôt de cookies de mesures d\'audience\
+            dans votre navigateur </div>'
+            window[disableStr] = true;
+            clickprocessed = true;
+            deleteAnalyticsCookies();
+        },
+
+
+         showInform: function() {
+            var div = document.getElementById("inform-and-ask");
+            div.style.display = "block";
+        },
+
+
+         hideInform: function() {
+            var div = document.getElementById("inform-and-ask");
+            div.style.display = "none";
+            var div = document.getElementById("cookie-banner");
+            div.style.display = "none";
+        },
+
+
+        start: function() {
+            //Ce bout de code vÃ©rifie que le consentement n'a pas dÃ©jÃ  Ã©tÃ© obtenu avant d'afficher
+            // la banniÃ¨re
+            var consentCookie =  getCookie('hasConsent');
+            clickprocessed = false;
+            if (!consentCookie) {
+                //L'utilisateur n'a pas encore de cookie, on affiche la banniÃ©re.
+                //Si il clique sur un autre Ã©lÃ©ment que la banniÃ©re on enregistre le consentement
+                if ( notToTrack() ) {
+                    //L'utilisateur a activé DoNotTrack. Do not ask for consent and just opt him out
+                    tagAnalyticsCNIL.CookieConsent.gaOptout()
+
+                } else {
+                    if (isToTrack() ) {
+                        consent();
+                    } else {
+                        if (window.addEventListener) {
+                          window.addEventListener("load", showBanner, false);
+                          document.addEventListener("click", consent, false);
+                        } else {
+                          window.attachEvent("onload", showBanner);
+                          document.attachEvent("onclick", consent);
+                        }
+                    }
+                }
+            } else {
+                if (document.cookie.indexOf('hasConsent=false') > -1)
+                    window[disableStr] = true;
+                else
+                    callGoogleAnalytics();
+            }
+        }
+    }
+
+}();
+
+tagAnalyticsCNIL.CookieConsent.start();
+
+/* When DOM is loaded*/
+$(document).ready(
+		function() {
+			// jQuery for page scrolling feature - requires jQuery Easing plugin
+			$('a.page-scroll').bind('click', function(event) {
+		        var $anchor = $(this);
+		        $('html, body').stop().animate({
+		            scrollTop: $($anchor.attr('href')).offset().top
+		        }, 1500, 'easeInOutExpo');
+		        event.preventDefault();
+		    });
+
+			// Highlight the top nav as scrolling occurs
+			$('body').scrollspy({
+			    target: '.navbar-fixed-top'
+			})
+
+			// Closes the Responsive Menu on Menu Item Click
+			$('.navbar-collapse ul li a').click(function() {
+			    $('.navbar-toggle:visible').click();
+			});
+
+      var preload = $('.preloader').clone();
+
+			var modal = $('#modal')
+			.on('hidden.bs.modal', function (event) {
+				$(this).find('.modal-body').html(preload);
+				}
+			);
+
+			function createmodal(popup,title,href)
+			{
+				if($.trim(title))
+				{
+					popup.find('.modal-title').html($.trim(title));
+				}
+				if($.trim( href) )
+				{
+					popup.find('.modal-body').load($.trim( href) +" #modal-target");
+				}
+			}
+
+			if($.url().param('modal-url'))
+			{
+				// use parameters in url
+				modal.on('show.bs.modal', function (event) {
+					createmodal($(this),
+											$.url().param('modal-title'),
+											$.url().param('modal-url'));
+						// dont check url after
+						$(this).on('show.bs.modal', function (event) {
+							  createmodal($(this),
+														$(event.relatedTarget).attr('data-icon') + " " + $(event.relatedTarget).attr('title'),
+														$(event.relatedTarget).attr('href'));
+							})
+				}).modal('show');
+			}
+			else
+			{
+				// modal : default behaviour (on link clicked)
+				modal.on('show.bs.modal', function (event) {
+					  createmodal($(this),
+												$(event.relatedTarget).attr('data-icon') + " " + $(event.relatedTarget).attr('title'),
+												$(event.relatedTarget).attr('href'));
+					}).modal('hide');
+			}
+
+      // init magnify
+      modal.on('shown.bs.modal', function (event) {
+          $(this).find('[data-toggle="magnify"]').each(function () {
+              $(this).magnify();
+          })
+      });
+
+      $("#header-carousel").swiperight(function() {
+            $(this).carousel('prev');
+      });
+      $("#header-carousel").swipeleft(function() {
+            $(this).carousel('next');
+       });
+
+       // init lazy scripts
+			 var js,
+	 				fjs = document.getElementsByTagName('script')[0],
+	 				add = function(url, id) {
+	 						if (document.getElementById(id)) {return;}
+	 						js = document.createElement('script');
+	 						js.src = url;
+	 						id && (js.id = id);
+	 						fjs.parentNode.insertBefore(js, fjs);
+	 				};
+
+	 		// Facebook SDK
+	 		add('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
+
+			// init wow.js
+			new WOW( {
+					mobile: false
+			}).init();
+
+			/*
+			 Initialisation du lasy
+			*/
+			$("img.lazy").show().lazyload({
+				 threshold : 500
+		 });
+
+		 /*
+		 	Chargement des images du caroussel
+		 */
+		 $(".preload-img-bg").each(function()
+				 {
+					 var img = new Image();
+					 img.src = $(this).css('background-image').replace(/^url\(['"]?/,'').replace(/['"]?\)$/,'');
+				 }
+	 		);
+
+			/*
+				Chargement des images necessaires une fois le dom chargé
+			*/
+			 $("img.preload-img").each(function () {
+					 $(this).attr('src', $(this).attr('data-original'));
+			 });
+		}
+	);

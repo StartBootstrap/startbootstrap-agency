@@ -19,13 +19,14 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
-                    'js/custom.js',
-                    'js/custom-cookies.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
 					          'bower_components/wow/dist/wow.js',
 					          'bower_components/purl/purl.js',
-                    'bower_components/bootstrap-magnify/js/bootstrap-magnify.js'
+                    'bower_components/bootstrap-magnify/js/bootstrap-magnify.js',
+                    'bower_components/jquery.lazyload/js/jquery.lazyload.js',
+                    'js/custom-cookies.js',
+                    'js/custom.js'
                 ],
                 dest: 'dist/js/custom.js',
             }
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'img/**', 'less/**'],
+                src: ['*.html','mail/**', 'img/**', 'less/**'],
                 dest: 'dist/',
             },
             favicon: {
@@ -143,6 +144,18 @@ module.exports = function(grunt) {
         	    }
         	  }
         	},
+        htmlmin: {
+            dist: {
+              options: {
+                removeComments: true,
+                collapseWhitespace: true
+              },
+              expand: true,
+              cwd: 'dist',
+              src: ['*.html'],
+              dest: 'dist/'
+              }
+          },
         watch: {
         	scripts: {
                 files: ['js/**'],
@@ -153,7 +166,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'img/**', 'less/**'],
+                files: ['*/**.html', 'img/**', 'less/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
@@ -168,6 +181,14 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             },
+            htmlmin: {
+                files: ['dist/*/**.html'],
+                tasks: ['htmlmin'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            }
         }
     });
 
@@ -181,8 +202,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin')
+    grunt.loadNpmTasks('grunt-contrib-htmlmin')
 
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin','connect','watch']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','connect','watch']);
 
 };
