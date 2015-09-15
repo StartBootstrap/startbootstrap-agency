@@ -3595,6 +3595,18 @@ tagAnalyticsCNIL.CookieConsent.start();
 $(document).ready(
 		function() {
 
+
+		 function loadCss(filename) {
+		     var l = document.createElement('link');
+		     l.rel = 'stylesheet';
+		     l.href = filename
+		     var h = document.getElementsByTagName('head')[0];
+		     h.parentNode.insertBefore(l, h);
+		 }
+
+     loadCss('css/custom.min.css');
+     loadCss('//fonts.googleapis.com/css?family=Kaushan+Script:400,700|family=Montserrat:400,700|Droid+Serif:400,700,400italic,700italic|family=Roboto+Slab:400,100,300,700');
+
 			// jQuery for page scrolling feature - requires jQuery Easing plugin
 			$('a.page-scroll').bind('click', function(event) {
 		        var $anchor = $(this);
@@ -3713,7 +3725,7 @@ $(document).ready(
  						 id && (js.id = id);
  						 fjs.parentNode.insertBefore(js, fjs);
  				 };
- 
+
  	 		// Facebook SDK
  	 		addScript('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
 
