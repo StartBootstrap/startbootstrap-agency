@@ -3583,6 +3583,20 @@ tagAnalyticsCNIL.CookieConsent.start();
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
+
+			// init lazy scripts
+			var js,
+				 fjs = document.getElementsByTagName('script')[0],
+				 addScript = function(url, id) {
+						 if (document.getElementById(id)) {return;}
+						 js = document.createElement('script');
+						 js.src = url;
+						 id && (js.id = id);
+						 fjs.parentNode.insertBefore(js, fjs);
+				 };
+
+			addScript('js/bootstrap.min.js','bootstrap-script');
+
 			// jQuery for page scrolling feature - requires jQuery Easing plugin
 			$('a.page-scroll').bind('click', function(event) {
 		        var $anchor = $(this);
@@ -3592,15 +3606,15 @@ $(document).ready(
 		        event.preventDefault();
 		    });
 
-			// Highlight the top nav as scrolling occurs
-			$('body').scrollspy({
-			    target: '.navbar-fixed-top'
-			})
-
 			// Closes the Responsive Menu on Menu Item Click
 			$('.navbar-collapse ul li a').click(function() {
 			    $('.navbar-toggle:visible').click();
 			});
+
+			// Highlight the top nav as scrolling occurs
+			$('body').scrollspy({
+			    target: '.navbar-fixed-top'
+			})
 
       var preload = $('.preloader').clone();
 
@@ -3654,6 +3668,7 @@ $(document).ready(
           })
       });
 
+			// init swipe for mobile
       $("#header-carousel").swiperight(function() {
             $(this).carousel('prev');
       });
@@ -3661,24 +3676,10 @@ $(document).ready(
             $(this).carousel('next');
        });
 
-       // init lazy scripts
-			 var js,
-	 				fjs = document.getElementsByTagName('script')[0],
-	 				add = function(url, id) {
-	 						if (document.getElementById(id)) {return;}
-	 						js = document.createElement('script');
-	 						js.src = url;
-	 						id && (js.id = id);
-	 						fjs.parentNode.insertBefore(js, fjs);
-	 				};
-
-	 		// Facebook SDK
-	 		add('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
-
-			// init wow.js
-			new WOW( {
-					mobile: false
-			}).init();
+			 // init wow.js
+ 			new WOW( {
+ 					mobile: false
+ 			}).init();
 
 			/*
 			 Initialisation du lasy
@@ -3688,7 +3689,7 @@ $(document).ready(
 		 });
 
 		 /*
-		 	Chargement des images du caroussel
+		 	Preload caroussel img
 		 */
 		 $(".preload-img-bg").each(function()
 				 {
@@ -3698,10 +3699,14 @@ $(document).ready(
 	 		);
 
 			/*
-				Chargement des images necessaires une fois le dom chargé
+				Preload img after dom is ready
 			*/
 			 $("img.preload-img").each(function () {
 					 $(this).attr('src', $(this).attr('data-original'));
 			 });
+
+ 	 		// Facebook SDK
+ 	 		addScript('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
+
 		}
 	);

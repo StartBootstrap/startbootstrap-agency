@@ -182,7 +182,7 @@ module.exports = function(grunt) {
                 }
             },
             htmlmin: {
-                files: ['dist/*/**.html'],
+                files: ['dist/*.html'],
                 tasks: ['htmlmin'],
                 options: {
                     spawn: false,
@@ -198,7 +198,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin')
