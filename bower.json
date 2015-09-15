@@ -1,11 +1,11 @@
 {
-  "name": "startbootstrap-agency",
+  "name": "nks-flowers",
   "version": "0.0.1",
-  "homepage": "https://github.com/IronSummitMedia/startbootstrap-agency",
+  "homepage": "http://nks-flowers.fr",
   "authors": [
-    "Start Bootstrap"
+    "NKS-FLOWERS"
   ],
-  "description": "A free bootstrap theme for agencies by Start Bootstrap.",
+  "description": "NKS Fowers website.",
   "keywords": [
     "bootstrap",
     "template",
