@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 					          'bower_components/wow/dist/wow.js',
 					          'bower_components/purl/purl.js',
                     'bower_components/bootstrap-magnify/js/bootstrap-magnify.js',
-                    'bower_components/jquery.lazyload/js/jquery.lazyload.js',
+                    'bower_components/jquery.lazyload/jquery.lazyload.js',
                     'js/custom-cookies.js',
                     'js/custom.js'
                 ],
@@ -40,10 +40,6 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            main: {
-                src: ['*.html','mail/**', 'img/**', 'less/**'],
-                dest: 'dist/',
-            },
             favicon: {
                 expand: true,
                 src: '*',
@@ -104,11 +100,30 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'bower_components/bootstrap/dist/',
-                    src: [
-                        'css/bootstrap.min.css'                    ],
+                    src: ['css/bootstrap.min.css'],
                     dest: 'dist/'
                 }, ]
             },
+            sitemap: {
+                files: [{
+                    expand: true,
+                    cwd: 'sitemap',
+                    src: ['*'],
+                    dest: 'dist/'
+                }, ]
+            },
+            html: {
+                src: ['*.html'],
+                dest: 'dist/'
+            },
+            php: {
+                src: ['**/*.php'],
+                dest: 'dist/'
+            },
+            img: {
+                src: ['img/**'],
+                dest: 'dist/'
+            }
         },
         less: {
             expanded: {
@@ -152,9 +167,17 @@ module.exports = function(grunt) {
                     livereload: true
                 },
             },
-            copy: {
-                files: ['*.html', 'img/**', 'less/**'],
-                tasks: ['copy'],
+            copyhtml: {
+                files: ['*.html'],
+                tasks: ['copy:html', 'htmlmin'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            copyimg: {
+                files: ['img/**'],
+                tasks: ['copy:img'],
                 options: {
                     spawn: false,
                     livereload: true
@@ -162,41 +185,12 @@ module.exports = function(grunt) {
             },
             less: {
                 files: ['less/*.less'],
-                tasks: ['less'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            },
-            htmlmin: {
-                files: ['dist/*.html'],
-                tasks: ['htmlmin'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            },
-            cssmin: {
-                files: ['dist/css/*.css'],
-                tasks: ['cssmin'],
+                tasks: ['less', 'cssmin'],
                 options: {
                     spawn: false,
                     livereload: true
                 }
             }
-        },
-        xml_sitemap: {
-          default_options: {
-            options: {
-              /*changefreq: 'weekly',*/
-              dest: 'dist/'
-            },
-            files: [
-              {
-                src: ['*.html']
-              }
-            ]
-          }
         }
     });
 
@@ -210,9 +204,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
-    grunt.loadNpmTasks('grunt-xml-sitemap');
 
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','xml_sitemap','connect','watch']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','connect','watch']);
 
 };
