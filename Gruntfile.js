@@ -184,6 +184,19 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             }
+        },
+        xml_sitemap: {
+          default_options: {
+            options: {
+              /*changefreq: 'weekly',*/
+              dest: 'dist/'
+            },
+            files: [
+              {
+                src: ['*.html']
+              }
+            ]
+          }
         }
     });
 
@@ -197,8 +210,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
+    grunt.loadNpmTasks('grunt-xml-sitemap');
 
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','connect','watch']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','xml_sitemap','connect','watch']);
 
 };
