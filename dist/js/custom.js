@@ -3614,11 +3614,11 @@ $(document).ready(
 			{
 				if($.trim(title))
 				{
-					popup.find('.modal-title').html(title);
+					popup.find('.modal-title').html($.trim(title));
 				}
 				if($.trim( href) )
 				{
-					popup.find('.modal-body').load(href +" #modal-target");
+					popup.find('.modal-body').load($.trim( href) +" #modal-target");
 				}
 			}
 
@@ -3629,12 +3629,12 @@ $(document).ready(
 					createmodal($(this),
 											$.url().param('modal-title'),
 											$.url().param('modal-url'));
-				// dont check url
-				$(this).on('show.bs.modal', function (event) {
-					  createmodal($(this),
-												$(event.relatedTarget).attr('title'),
-												$(event.relatedTarget).attr('href'));
-					})
+						// dont check url after
+						$(this).on('show.bs.modal', function (event) {
+							  createmodal($(this),
+														$(event.relatedTarget).attr('data-icon') + " " + $(event.relatedTarget).attr('title'),
+														$(event.relatedTarget).attr('href'));
+							})
 				}).modal('show');
 			}
 			else
@@ -3642,7 +3642,7 @@ $(document).ready(
 				// modal : default behaviour (on link clicked)
 				modal.on('show.bs.modal', function (event) {
 					  createmodal($(this),
-												$(event.relatedTarget).attr('title'),
+												$(event.relatedTarget).attr('data-icon') + " " + $(event.relatedTarget).attr('title'),
 												$(event.relatedTarget).attr('href'));
 					}).modal('hide');
 			}
