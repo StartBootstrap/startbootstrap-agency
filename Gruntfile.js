@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         clean : {
         	dist: {
-        	      src: ['dist/**']
+        	      src: ['dist/**','tmp/**']
         	    }
         },
         connect: {
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                     src: [
                         'font-awesome.min.css'
                     ],
-                    dest: 'dist/css/'
+                    dest: 'tmp/css/'
                 }, ]
               },
             animate: {
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
                     src: [
                         'animate.min.css'
                     ],
-                    dest: 'dist/css'
+                    dest: 'tmp/css'
                 }, ]
             },
             bootstrapmagnify: {
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                     src: [
                         'bootstrap-magnify.min.css'
                     ],
-                    dest: 'dist/css'
+                    dest: 'tmp/css'
                 }, ]
             },
             bootstrap: {
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'bower_components/bootstrap/dist/',
                     src: ['css/bootstrap.min.css'],
-                    dest: 'dist/'
+                    dest: 'tmp/'
                 }, ]
             },
             sitemap: {
@@ -131,7 +131,7 @@ module.exports = function(grunt) {
                     paths: ["css"]
                 },
                 files: {
-                    "dist/css/custom.css": "less/custom.less"
+                    "tmp/css/custom.css": "less/custom.less"
                 }
             }
         },
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
         	  },
         	  target: {
               files: {
-              'dist/css/custom.min.css': ['dist/css/*.css']
+              'dist/css/custom.min.css': ['tmp/css/*.css']
               }
         	  }
         	},
