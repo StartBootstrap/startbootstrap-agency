@@ -2,19 +2,6 @@
 $(document).ready(
 		function() {
 
-			// init lazy scripts
-			var js,
-				 fjs = document.getElementsByTagName('script')[0],
-				 addScript = function(url, id) {
-						 if (document.getElementById(id)) {return;}
-						 js = document.createElement('script');
-						 js.src = url;
-						 id && (js.id = id);
-						 fjs.parentNode.insertBefore(js, fjs);
-				 };
-
-			addScript('js/bootstrap.min.js','bootstrap-script');
-
 			// jQuery for page scrolling feature - requires jQuery Easing plugin
 			$('a.page-scroll').bind('click', function(event) {
 		        var $anchor = $(this);
@@ -123,6 +110,17 @@ $(document).ready(
 					 $(this).attr('src', $(this).attr('data-original'));
 			 });
 
+			 // init lazy scripts
+ 			var js,
+ 				 fjs = document.getElementsByTagName('script')[0],
+ 				 addScript = function(url, id) {
+ 						 if (document.getElementById(id)) {return;}
+ 						 js = document.createElement('script');
+ 						 js.src = url;
+ 						 id && (js.id = id);
+ 						 fjs.parentNode.insertBefore(js, fjs);
+ 				 };
+ 
  	 		// Facebook SDK
  	 		addScript('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
 

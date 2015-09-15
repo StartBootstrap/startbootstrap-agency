@@ -19,6 +19,8 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
+                    'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/bootstrap/dist/js/bootstrap.min.js',
                     'bower_components/jquery.easing/js/jquery.easing.js',
                     'js/plugins/*.js',
 					          'bower_components/wow/dist/wow.js',
@@ -48,51 +50,36 @@ module.exports = function(grunt) {
                 cwd: 'favicon/',
                 dest: 'dist/'
             },
-            jquery: {
-                files: [{
-                    expand: true,
-                    cwd: 'bower_components/jquery/dist/',
-                    src: [
-                        'jquery.min.js'
-                    ],
-                    dest: 'dist/js/'
-                }, ]
-            },
-            bootstrap: {
-                files: [{
-                    expand: true,
-                    cwd: 'bower_components/bootstrap/dist/',
-                    src: [
-                        'css/bootstrap.min.css',
-                        'js/bootstrap.min.js'
-                    ],
-                    dest: 'dist/'
-                }, ]
-            },
             glyphicons: {
                 files: [{
                     expand: true,
                     cwd: 'bower_components/bootstrap/dist/',
                     src: [
-                        'fonts/glyphicons-halflings-regular.eot',
-                        'fonts/glyphicons-halflings-regular.svg',
-                        'fonts/glyphicons-halflings-regular.ttf',
-                        'fonts/glyphicons-halflings-regular.woff',
+                        'fonts/glyphicons-halflings-regular.*'
                     ],
                     dest: 'dist/'
                 }, ]
             },
-            fontawesome: {
+            fontawesomefonts: {
                 files: [{
                     expand: true,
-                    cwd: 'bower_components/fontawesome/',
+                    cwd: 'bower_components/fontawesome/fonts/',
                     src: [
-                        'fonts/*.*',
-                        'css/font-awesome.min.css'
+                        '*.*'
                     ],
-                    dest: 'dist/font-awesome/'
+                    dest: 'dist/fonts/'
                 }, ]
-            },
+              },
+              fontawesomecss: {
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/fontawesome/css',
+                    src: [
+                        'font-awesome.min.css'
+                    ],
+                    dest: 'dist/css/'
+                }, ]
+              },
             animate: {
                 files: [{
                     expand: true,
@@ -113,6 +100,15 @@ module.exports = function(grunt) {
                     dest: 'dist/css'
                 }, ]
             },
+            bootstrap: {
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/bootstrap/dist/',
+                    src: [
+                        'css/bootstrap.min.css'                    ],
+                    dest: 'dist/'
+                }, ]
+            },
         },
         less: {
             expanded: {
@@ -122,15 +118,6 @@ module.exports = function(grunt) {
                 files: {
                     "dist/css/custom.css": "less/custom.less"
                 }
-            },
-            minified: {
-                options: {
-                    paths: ["css"],
-                    cleancss: true
-                },
-                files: {
-                    "dist/css/custom.min.css": "less/custom.less"
-                }
             }
         },
         cssmin: {
@@ -139,9 +126,9 @@ module.exports = function(grunt) {
         	    roundingPrecision: -1
         	  },
         	  target: {
-        	    files: {
-        	      'dist/css/spinkit.min.css': 'bower_components/spinkit/css/spinners/7-three-bounce.css'
-        	    }
+              files: {
+              'dist/css/custom.min.css': ['dist/css/*.css']
+              }
         	  }
         	},
         htmlmin: {
@@ -166,7 +153,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*/**.html', 'img/**', 'less/**'],
+                files: ['*.html', 'img/**', 'less/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
@@ -184,6 +171,14 @@ module.exports = function(grunt) {
             htmlmin: {
                 files: ['dist/*.html'],
                 tasks: ['htmlmin'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            cssmin: {
+                files: ['dist/css/*.css'],
+                tasks: ['cssmin'],
                 options: {
                     spawn: false,
                     livereload: true
