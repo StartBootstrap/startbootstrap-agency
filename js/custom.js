@@ -73,8 +73,6 @@ $(document).ready(
           $(this).find('[data-toggle="magnify"]').each(function () {
               $(this).magnify();
           })
-
-					$(this).find("img.lazy").show().lazyload();
       });
 
 			// init wow.js
@@ -89,7 +87,12 @@ $(document).ready(
             $(this).carousel('next');
        });
 
-			 $("img.lazy").show().lazyload();
+			 /*$("img.lazy").each(function () {
+					 $(this).attr('src', $(this).attr('data-original'));
+			 })*/
+			 $("img.lazy").show().lazyload({
+    			threshold : 400
+			});
 
        // init lazy scripts
 			 var js,
