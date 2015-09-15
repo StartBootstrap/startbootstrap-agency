@@ -196,6 +196,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
 
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','connect','watch']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin','connect','watch']);
 
 };
