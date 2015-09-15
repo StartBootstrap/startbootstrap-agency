@@ -22,9 +22,6 @@ $(document).ready(
 
       var preload = $('.preloader').clone();
 
-			// preload
-			$(this).find('.modal-body').html(preload)
-
 			var modal = $('#modal')
 			.on('hidden.bs.modal', function (event) {
 				$(this).find('.modal-body').html(preload);
@@ -75,24 +72,12 @@ $(document).ready(
           })
       });
 
-			// init wow.js
-			new WOW( {
-					mobile: false
-			}).init();
-
       $("#header-carousel").swiperight(function() {
             $(this).carousel('prev');
       });
       $("#header-carousel").swipeleft(function() {
             $(this).carousel('next');
        });
-
-			 /*$("img.lazy").each(function () {
-					 $(this).attr('src', $(this).attr('data-original'));
-			 })*/
-			 $("img.lazy").show().lazyload({
-    			threshold : 400
-			});
 
        // init lazy scripts
 			 var js,
@@ -108,5 +93,33 @@ $(document).ready(
 	 		// Facebook SDK
 	 		add('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
 
+			// init wow.js
+			new WOW( {
+					mobile: false
+			}).init();
+
+			/*
+			 Initialisation du lasy
+			*/
+			$("img.lazy").show().lazyload({
+				 threshold : 500
+		 });
+
+		 /*
+		 	Chargement des images du caroussel
+		 */
+		 $(".preload-img-bg").each(function()
+				 {
+					 var img = new Image();
+					 img.src = $(this).css('background-image').replace(/^url\(['"]?/,'').replace(/['"]?\)$/,'');
+				 }
+	 		);
+
+			/*
+				Chargement des images necessaires une fois le dom chargé
+			*/
+			 $("img.preload-img").each(function () {
+					 $(this).attr('src', $(this).attr('data-original'));
+			 });
 		}
 	);
