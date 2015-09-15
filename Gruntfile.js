@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                src: ['*.html', 'mail/**', 'img/**', 'less/**'],
+                src: ['*.html','mail/**', 'img/**', 'less/**'],
                 dest: 'dist/',
             },
             favicon: {
@@ -144,16 +144,17 @@ module.exports = function(grunt) {
         	    }
         	  }
         	},
-          htmlmin: {
+        htmlmin: {
             dist: {
               options: {
                 removeComments: true,
                 collapseWhitespace: true
               },
-              files: {
-                'dist/index.html': 'index.html'
+              expand: true,
+              cwd: 'dist',
+              src: ['*.html'],
+              dest: 'dist/'
               }
-            }
           },
         watch: {
         	scripts: {
@@ -165,7 +166,7 @@ module.exports = function(grunt) {
                 },
             },
             copy: {
-                files: ['*.html', 'img/**', 'less/**'],
+                files: ['*/**.html', 'img/**', 'less/**'],
                 tasks: ['copy'],
                 options: {
                     spawn: false,
@@ -175,6 +176,14 @@ module.exports = function(grunt) {
             less: {
                 files: ['less/*.less'],
                 tasks: ['less'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            htmlmin: {
+                files: ['dist/*/**.html'],
+                tasks: ['htmlmin'],
                 options: {
                     spawn: false,
                     livereload: true
@@ -196,6 +205,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
 
     // Default task(s).
-    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin','connect','watch']);
+    grunt.registerTask('default', ['clean','concat', 'uglify', 'copy', 'less','cssmin', 'htmlmin','connect','watch']);
 
 };
