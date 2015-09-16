@@ -40,6 +40,11 @@ module.exports = function(grunt) {
             }
         },
         copy: {
+          htacess: {
+              expand: true,
+              src: '.htaccess',
+              dest: 'dist/'
+          },
             favicon: {
                 expand: true,
                 src: '*',
