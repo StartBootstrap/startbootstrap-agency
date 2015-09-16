@@ -30,6 +30,10 @@ Header append Vary User-Agent env=!dont-vary
  ExpiresByType application/javascript A259200
  ExpiresByType application/x-javascript "access plus 2592000 seconds"
  ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+  AddType application/font-woff2 .woff2
+ ExpiresByType application/font-woff2 "access plus 2592000 seconds"
+  AddType application/font-woff .woff
+ ExpiresByType application/font-woff "access plus 2592000 seconds"
 </IfModule>
 # END Expire headers
 
