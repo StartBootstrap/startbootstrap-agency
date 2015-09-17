@@ -11,4 +11,44 @@
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
+<url>
+  <loc>http://nks-flowers.fr/popup-vp-noel.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-vp-fete-meres.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-vp-saint-valentin.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-box-interieur.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-box-exterieur.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-box-aromatique.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-box-enfant.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://nks-flowers.fr/popup-box-1er-prix.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>
