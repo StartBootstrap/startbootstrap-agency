@@ -3515,8 +3515,8 @@ tagAnalyticsCNIL.CookieConsent = function() {
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', gaProperty, 'auto');
-        ga('send', 'pageview');
+      //  ga('create', gaProperty, 'auto');
+      //  ga('send', 'pageview');
 
 
     }
@@ -3594,7 +3594,7 @@ tagAnalyticsCNIL.CookieConsent.start();
 /* When DOM is loaded*/
 $(document).ready(
 		function() {
-			
+
 			// jQuery for page scrolling feature - requires jQuery Easing plugin
 			$('a.page-scroll').bind('click', function(event) {
 		        var $anchor = $(this);
@@ -3715,7 +3715,7 @@ $(document).ready(
  				 };
 
  	 		// Facebook SDK
- 	 		addScript('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
+ 	 		//addScript('//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4', 'facebook-jssdk');
 
 		}
 	);
