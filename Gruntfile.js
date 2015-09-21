@@ -118,6 +118,11 @@ module.exports = function(grunt) {
                 }, ]
             },
             html: {
+                options: {
+                  process: function (content, srcpath) {
+                    return content.replace('${version}', '<%= pkg.version %>'/* '1.0.0' */ );
+                  }
+                },
                 src: ['*.html'],
                 dest: 'dist/'
             },
