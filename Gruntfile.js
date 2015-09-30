@@ -120,7 +120,7 @@ module.exports = function(grunt) {
             html: {
                 options: {
                   process: function (content, srcpath) {
-                    return content.replace('${version}', '<%= pkg.version %>'/* '1.0.0' */ );
+                    return content.split('${version}').join(grunt.config.get('pkg.version'));
                   }
                 },
                 src: ['*.html'],
