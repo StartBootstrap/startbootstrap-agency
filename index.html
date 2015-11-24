@@ -31,6 +31,29 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- D3 Styles -->
+    <style>
+        path {
+          fill: none;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+        }
+
+        /* Underlying Map */
+        .major_road { stroke: #776; }
+        .minor_road { stroke: #ccb; }
+        .highway { stroke: #776; stroke-width: 1.5px; }
+        .rail { stroke: #776; }
+        /*.ferry { stroke-dasharray: 5 5; opacity: 0.1; }*/
+
+        .hexagon {
+          fill: none;
+        }
+
+        .legendOrdinal { font-size: 10px; }
+
+    </style>
+
 </head>
 
 <body id="page-top" class="index">
@@ -57,6 +80,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#sanfrancisco">San Francisco</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -125,6 +151,23 @@
             </div>
         </div>
     </section>
+
+    <!-- San Francisco Section -->
+    <section id="sanfrancisco" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">San Francisco</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row text-center" id="sfviz">
+            </div>
+            <div class="row text-center" id="sflegend">
+            </div>
+        </div>
+    </section>
+
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
@@ -657,6 +700,169 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+
+    <!-- D3 Plugins -->
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.5.0/d3-legend.min.js"></script>
+    <script src="js/d3.hexbin.min.js"></script>
+    <script src="js/d3.geo.tile.min.js"></script>
+
+    <!-- D3 Script -->
+    <script>
+        var width = Math.max(960, window.innerWidth),
+            height = Math.max(700, 0.65*window.innerHeight);
+
+        var tiler = d3.geo.tile()
+            .size([width, height]);
+
+        var projection = d3.geo.mercator()
+            // NY
+            // .center([-73.993952, 40.734331])
+            // SF
+            .center([-122.4183, 37.7750])
+            // Seattle
+            // .center([-122.337053, 47.617494])
+            .scale((1 << 21) / 2 / Math.PI)
+            .translate([width / 2, height / 2]);
+
+        var path = d3.geo.path()
+            .projection(projection);
+
+        var hexbin = d3.hexbin()
+            .size([width, height])
+            .radius(20);
+
+        // Select 5 camera makers
+        var color_brands = d3.scale.ordinal()
+            .domain(["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"])
+            .range(["#1f78b4", "#33a02c", "#ff7f00", "#6a3d9a", "#e31a1c"]);
+
+        var global_max = 0;
+
+        var color_scale = d3.scale.pow()
+            .exponent(0.33)
+            .interpolate(d3.interpolateHsl);
+
+        var svg = d3.select("#sfviz").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Underlying Map
+        svg.selectAll("g")
+            .data(tiler
+                .scale(projection.scale() * 2 * Math.PI)
+                .translate(projection([0, 0])))
+            .enter().append("g")
+            .each(function(d) {
+                var g = d3.select(this);                
+                d3.json("http://vector.mapzen.com/osm/roads/" + d[2] + "/" + d[0] + "/" + d[1] + ".topojson?api_key=vector-tiles-6A2EEiQ", function(error, json) {
+                    var geojson_data = topojson.feature(json, json.objects.vectile);
+                    g.selectAll("path")
+                        .data(geojson_data.features.sort(function(a, b) { return a.properties.sort_key - b.properties.sort_key; }))
+                        .enter().append("path")
+                        .attr("class", function(d) { return d.properties.kind; })
+                        .attr("d", path);
+                });
+            });
+
+        // Hexbins
+        queue()
+            .defer(d3.csv, "data/flickr_results.csv")
+            .await(ready);
+
+        function ready(error, flickr) {
+            if (error) throw error;
+
+
+            // Project long/lat into pixel coordinates
+            flickr.forEach(function(d) {
+                var p = projection([d.longitude, d.latitude]);
+                d[0] = p[0];
+                d[1] = p[1];
+                d.year = parseInt(d.year);
+            });
+
+            // Filter
+            flickr = flickr.filter(function(d) { return d.year>=2013; });
+
+            // Create hexbins
+            var hex_flickr = hexbin(flickr).sort(function(a, b) { return b.length - a.length; });
+
+            // Get camera counts of each hexbin
+            hex_flickr.forEach(function(hex) {
+                hex.camera_counts = {CANON:0, NIKON:0, APPLE:0, SONY:0, PANASONIC:0};
+                hex.max_camera = "";
+                hex.max_photos = 0;
+                hex.forEach(function(d) {
+                    if (d.camera in hex.camera_counts) {
+                        hex.camera_counts[d.camera] += 1;   
+                    };          
+                });
+                for (var key in hex.camera_counts){
+                    if (hex.camera_counts[key] > hex.max_photos) {
+                        hex.max_photos = hex.camera_counts[key];
+                        hex.max_camera = key;
+
+                        if (hex.max_photos > global_max) {
+                        global_max = hex.max_photos;
+                        };  
+                    };
+                    
+                };
+            });
+
+            // Set color scale
+            color_scale.domain([0, global_max]);
+
+            // Draw hexagons
+            svg.append("g")
+                .attr("class", "hexagons")
+                .selectAll("path")
+                .data(hex_flickr)
+                .enter().append("path")
+                .attr("d", hexbin.hexagon())
+                .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+                .style("fill", function(d) {
+                    color_scale.range(["white", color_brands(d.max_camera)]);
+                    return color_scale(d.max_photos);
+                })
+                .style("opacity", 0.8);
+
+            // Legend
+            var svg_legend = d3.select("#sflegend")
+                .append("svg")
+                .attr("width", width);
+
+            var color_legend = d3.scale.ordinal()
+                .domain(["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"])
+                .range(["#1f78b4", "#33a02c", "#ff7f00", "#6a3d9a", "#e31a1c"]);
+
+            svg_legend.append("g")
+                .attr("class", "legendOrdinal")
+                .attr("transform", "translate(" + (width/2-165) + ",20)");
+
+            var legendOrdinal = d3.legend.color()
+                .shape("path", hexbin.hexagon(12))
+                .shapePadding(50)
+                .orient("horizontal")
+                .scale(color_legend);
+
+            svg_legend.select(".legendOrdinal")
+                .call(legendOrdinal);
+
+            // Tooltips
+            
+
+            
+            // Filters
+
+
+
+        };
+    </script>
+
 
 </body>
 
