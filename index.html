@@ -44,14 +44,9 @@
         .minor_road { stroke: #ccb; }
         .highway { stroke: #776; stroke-width: 1.5px; }
         .rail { stroke: #776; }
-        /*.ferry { stroke-dasharray: 5 5; opacity: 0.1; }*/
+        .ferry { stroke-dasharray: 5 5; opacity: 0.1; }
 
-        .hexagon {
-          fill: none;
-        }
-
-        .legendOrdinal { font-size: 10px; }
-
+        .legendOrdinal { font-size: 12px; }
         .maptips {
           position: absolute;
           z-index: 1060;
@@ -114,7 +109,7 @@
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#sanfrancisco">San Francisco</a>
+                        <a class="page-scroll" href="#cities">Cities</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -185,18 +180,17 @@
     </section>
 
     <!-- San Francisco Section -->
-    <section id="sanfrancisco" class="bg-light-gray">
+    <section id="cities" class="bg-light-gray">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row san-francisco">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">San Francisco</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-            </div>
-            <div class="row text-center" id="sfviz">
-            </div>
-            <div class="row text-center" id="sflegend">
-            </div>
+            	<div class="row text-center" id="sfviz"></div>
+            	<div class="row text-center map-legend"></div>
+            	<div class="row text-center" id="sffilter"></div>
+            </div>            
         </div>
     </section>
 
@@ -746,6 +740,10 @@
         var width = Math.max(960, window.innerWidth),
             height = Math.max(700, 0.65*window.innerHeight);
 
+        function getRandomIntInclusive(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
         var tiler = d3.geo.tile()
             .size([width, height]);
 
@@ -771,10 +769,8 @@
             .domain(["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"])
             .range(["#1f78b4", "#33a02c", "#ff7f00", "#6a3d9a", "#e31a1c"]);
 
-        var global_max = 0;
-
         var color_scale = d3.scale.pow()
-            .exponent(0.33)
+            .exponent(0.333)
             .interpolate(d3.interpolateHsl);
 
         var svg = d3.select("#sfviz").append("svg")
@@ -782,31 +778,48 @@
             .attr("height", height);
 
         // Underlying Map
-        svg.selectAll("g")
-            .data(tiler
-                .scale(projection.scale() * 2 * Math.PI)
-                .translate(projection([0, 0])))
-            .enter().append("g")
-            .each(function(d) {
-                var g = d3.select(this);                
-                d3.json("http://vector.mapzen.com/osm/roads/" + d[2] + "/" + d[0] + "/" + d[1] + ".topojson?api_key=vector-tiles-6A2EEiQ", function(error, json) {
-                    var geojson_data = topojson.feature(json, json.objects.vectile);
-                    g.selectAll("path")
-                        .data(geojson_data.features.sort(function(a, b) { return a.properties.sort_key - b.properties.sort_key; }))
-                        .enter().append("path")
-                        .attr("class", function(d) { return d.properties.kind; })
-                        .attr("d", path);
-                });
-            });
+        // svg.selectAll("g")
+        //     .data(tiler
+        //         .scale(projection.scale() * 2 * Math.PI)
+        //         .translate(projection([0, 0])))
+        //     .enter().append("g")
+        //     .each(function(d) {
+        //         var g = d3.select(this);                
+        //         d3.json("http://vector.mapzen.com/osm/roads/" + d[2] + "/" + d[0] + "/" + d[1] + ".topojson?api_key=vector-tiles-6A2EEiQ", function(error, json) {
+        //             var geojson_data = topojson.feature(json, json.objects.vectile);
+        //             g.selectAll("path")
+        //                 .data(geojson_data.features.sort(function(a, b) { return a.properties.sort_key - b.properties.sort_key; }))
+        //                 .enter().append("path")
+        //                 .attr("class", function(d) { return d.properties.kind; })
+        //                 .attr("d", path);
+        //         });
+        //     });
 
-        // Hexbins
+        // Legends
+        var map_legend = d3.selectAll(".map-legend")
+            .append("svg")
+            .attr("width", width);
+
+        map_legend.append("g")
+            .attr("class", "legendOrdinal")
+            .attr("transform", "translate(" + (width/2-165) + ",20)");
+
+        var legendOrdinal = d3.legend.color()
+            .shape("path", hexbin.hexagon(12))
+            .shapePadding(50)
+            .orient("horizontal")
+            .scale(color_brands);
+
+        map_legend.select(".legendOrdinal")
+            .call(legendOrdinal);
+
+        // Load data
         queue()
             .defer(d3.csv, "data/flickr_results.csv")
             .await(ready);
 
         function ready(error, flickr) {
             if (error) throw error;
-
 
             // Project long/lat into pixel coordinates
             flickr.forEach(function(d) {
@@ -820,7 +833,8 @@
             flickr = flickr.filter(function(d) { return d.year>=2011; });
 
             // Create hexbins
-            var hex_flickr = hexbin(flickr).sort(function(a, b) { return b.length - a.length; });
+            var hex_flickr = hexbin(flickr);
+            var global_max = 0;
 
             // Get camera counts of each hexbin
             hex_flickr.forEach(function(hex) {
@@ -862,28 +876,6 @@
                 })
                 .style("opacity", 0.8);
 
-            // Legend
-            var svg_legend = d3.select("#sflegend")
-                .append("svg")
-                .attr("width", width);
-
-            var color_legend = d3.scale.ordinal()
-                .domain(["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"])
-                .range(["#1f78b4", "#33a02c", "#ff7f00", "#6a3d9a", "#e31a1c"]);
-
-            svg_legend.append("g")
-                .attr("class", "legendOrdinal")
-                .attr("transform", "translate(" + (width/2-165) + ",20)");
-
-            var legendOrdinal = d3.legend.color()
-                .shape("path", hexbin.hexagon(12))
-                .shapePadding(50)
-                .orient("horizontal")
-                .scale(color_legend);
-
-            svg_legend.select(".legendOrdinal")
-                .call(legendOrdinal);
-
             // Tooltips
             svg.select(".hexagons").selectAll("path")
                 .on("mouseover", create_tooltip)
@@ -892,7 +884,10 @@
             function create_tooltip(d) {
                 var url_index = getRandomIntInclusive(0, d.length-1);
 
-                var hover_tip = d3.select("#sfviz")
+                d3.select(this).style("stroke", "#fed136")
+                	.style("stroke-width", "3px");
+
+                var hover_tip = d3.select("body")
                                     .append("div")
                                     .attr("class", "maptips")
                                     .attr("display", "inline")
@@ -908,12 +903,12 @@
             };
 
             function delete_tooltip(d) {
+            	d3.select(this).style("stroke", null)
+                	.style("stroke-width", null);
                 d3.select(".maptips").remove();
             };
 
-            function getRandomIntInclusive(min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            };
+
 
 
             
