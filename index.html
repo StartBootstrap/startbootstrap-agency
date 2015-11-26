@@ -172,24 +172,31 @@
 
     <!-- Cities Maps Section -->
     <section id="cities" class="bg-light-gray">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row san-francisco">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">San Francisco</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
+                <div class="row">
+                    <div class="row col-md-4 text-right btn-group" role="group" id="sffilter"></div>
+                    <div class="row col-md-4"><p></p></div>
+	            	<div class="row col-md-4 text-left map-legend"></div>
+	            </div>                
             	<div class="row text-center cities-maps" id="sfviz"></div>
-            	<div class="row text-center map-legend"></div>
-            	<div class="row text-center" id="sffilter"></div>
+            	
             </div>
             <div class="row new-york">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">New York</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
+                <div class="row">
+                    <div class="row col-md-6 text-left" id="nyfilter"></div>            
+	            	<div class="row col-md-6 text-center map-legend"></div>	            	
+	            </div>                
             	<div class="row text-center cities-maps" id="nyviz"></div>
-            	<div class="row text-center map-legend"></div>
-            	<div class="row text-center" id="nyfilter"></div>
+            	
             </div>            
         </div>
     </section>
@@ -373,11 +380,12 @@
         // Legends
         var map_legend = d3.selectAll(".map-legend")
             .append("svg")
-            .attr("width", width);
+            .attr("width", width/2)
+            .attr("height", 50);
 
         map_legend.append("g")
             .attr("class", "legendOrdinal")
-            .attr("transform", "translate(" + (width/2-165) + ",20)");
+            .attr("transform", "translate(20,20)");
 
         var legendOrdinal = d3.legend.color()
             .shape("path", hexbin.hexagon(12))
@@ -394,104 +402,130 @@
             .await(ready);
 
         function ready(error, flickr) {
-            if (error) throw error;
+            if (error) throw error;            
 
-            // Project long/lat into pixel coordinates
-            flickr.forEach(function(d) {            	
-                var p = projection([d.longitude, d.latitude]);
-                d[0] = p[0];
-                d[1] = p[1];
-                d.year = parseInt(d.year);
-            });
+           	// Call map function
+           	map_viz(flickr, {"low":2005, "high":2014});
+           	function map_viz(flickr, filter) {
+           		// Project long/lat into pixel coordinates
+	            flickr.forEach(function(d) {            	
+	                var p = projection([d.longitude, d.latitude]);
+	                d[0] = p[0];
+	                d[1] = p[1];
+	                d.year = parseInt(d.year);
+	            });
 
-            // Filter
-            flickr = flickr.filter(function(d) { return d.year>=2011; });
+	            // Filter	            
+	            flickr_filtered = flickr.filter(function(d) { return d.year>=filter.low & d.year<=filter.high; });	            
 
-            // Create hexbins
-            var hex_flickr = hexbin(flickr);
-            var global_max = 0;
+	            // Create hexbins
+	            var hex_flickr = hexbin(flickr_filtered);
+	            var global_max = 0;
 
-            // Get camera counts of each hexbin
-            hex_flickr.forEach(function(hex) {
-                hex.camera_counts = {CANON:0, NIKON:0, APPLE:0, SONY:0, PANASONIC:0};
-                hex.max_camera = "";
-                hex.max_photos = 0;
-                hex.forEach(function(d) {
-                    if (d.camera in hex.camera_counts) {
-                        hex.camera_counts[d.camera] += 1;   
-                    };          
-                });
-                for (var key in hex.camera_counts){
-                    if (hex.camera_counts[key] > hex.max_photos) {
-                        hex.max_photos = hex.camera_counts[key];
-                        hex.max_camera = key;
+	            // Get camera counts of each hexbin
+	            hex_flickr.forEach(function(hex) {
+	                hex.camera_counts = {CANON:0, NIKON:0, APPLE:0, SONY:0, PANASONIC:0};
+	                hex.max_camera = "";
+	                hex.max_photos = 0;
+	                hex.forEach(function(d) {
+	                    if (d.camera in hex.camera_counts) {
+	                        hex.camera_counts[d.camera] += 1;   
+	                    };          
+	                });
+	                for (var key in hex.camera_counts){
+	                    if (hex.camera_counts[key] > hex.max_photos) {
+	                        hex.max_photos = hex.camera_counts[key];
+	                        hex.max_camera = key;
 
-                        if (hex.max_photos > global_max) {
-                        global_max = hex.max_photos;
-                        };  
-                    };
-                    
-                };
-            });
+	                        if (hex.max_photos > global_max) {
+	                        global_max = hex.max_photos;
+	                        };  
+	                    };
+	                    
+	                };
+	            });
 
-            // Set color scale
-            color_scale.domain([0, global_max]);
+	            // Set color scale
+	            color_scale.domain([0, global_max]);
 
-            // Draw hexagons
-            svg.append("g")
-                .attr("class", "hexagons")
-                .selectAll("path")
-                .data(hex_flickr)
-                .enter().append("path")
-                .attr("d", hexbin.hexagon())
-                .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})
-                .style("fill", function(d) {
-                    color_scale.range(["white", color_brands(d.max_camera)]);
-                    return color_scale(d.max_photos);
-                })
-                .style("opacity", 0.8);
+	            // Draw hexagons	            
+	            svg.selectAll(".hexagons")	            	
+	            	.remove();
 
-            // Tooltips
-            svg.select(".hexagons").selectAll("path")
-                .on("mouseover", create_tooltip)
-                .on("mouseout", delete_tooltip);
+	            svg.append("g")
+	                .attr("class", "hexagons")
+	                .selectAll("path")
+	                .data(hex_flickr)
+	                .enter().append("path")
+	                .attr("d", hexbin.hexagon())
+	                .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})
+	                .style("fill", function(d) {
+	                    color_scale.range(["white", color_brands(d.max_camera)]);
+	                    return color_scale(d.max_photos);
+	                })
+	                .style("opacity", 0.8);
 
-            function create_tooltip(d) {
-                var url_index = getRandomIntInclusive(0, d.length-1);
+	            // Tooltips
+	            svg.select(".hexagons").selectAll("path")
+	                .on("mouseover", create_tooltip)
+	                .on("mouseout", delete_tooltip);
 
-                d3.select(this).style("stroke", "#fed136")
-                	.style("stroke-width", "3px");
+	            function create_tooltip(d) {
+	                var url_index = getRandomIntInclusive(0, d.length-1);
 
-                var hover_tip = d3.select("body")
-                                    .append("div")
-                                    .attr("class", "maptips")
-                                    .attr("display", "inline")
-                                    .style("left", (d3.event.pageX + 10) + "px")
-                                    .style("top", (d3.event.pageY) + "px");
-                                    
-                hover_tip.append("img")
-                    .attr("src", d[url_index].url)
-                    .attr("class", "img-responsive");
+	                d3.select(this).style("stroke", "#FDB515")
+	                	.style("stroke-width", "3px");
 
-                hover_tip.append("p")
-                    .text(d.max_camera);
-            };
+	                var hover_tip = d3.select("body")
+	                                    .append("div")
+	                                    .attr("class", "maptips")
+	                                    .attr("display", "inline")
+	                                    .style("left", (d3.event.pageX + 10) + "px")
+	                                    .style("top", (d3.event.pageY) + "px");
+	                                    
+	                hover_tip.append("img")
+	                    .attr("src", d[url_index].url)
+	                    .attr("class", "img-responsive");
 
-            function delete_tooltip(d) {
-            	d3.select(this).style("stroke", null)
-                	.style("stroke-width", null);
-                d3.select(".maptips").remove();
-            };
+	                hover_tip.append("p")
+	                    .text(d.max_camera);
+	            };
 
+	            function delete_tooltip(d) {
+	            	d3.select(this)
+	            		.transition()
+	            		.duration(200)
+	                	.style("stroke-width", "0px");
+	                d3.select(".maptips").remove();
+	            };
+           	};
 
+           	// Filtering mechanism
+            d3.select("#sffilter")
+            	.append("button")
+            	.attr("class", "btn btn-default").attr("type", "button")
+           	    .on("click", function(){ map_viz(flickr, {"low":2005, "high":2007}); })
+           	    .html("2005-2007");
 
+           	d3.select("#sffilter")
+            	.append("button")
+            	.attr("class", "btn btn-default").attr("type", "button")
+            	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
+           	    .html("2008-2011");
 
-            
-            // Filters
+           	d3.select("#sffilter")
+            	.append("button")
+            	.attr("class", "btn btn-default").attr("type", "button")
+            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":2014}); })
+           	    .html("2012-2014");
 
-
-
+           	d3.select("#sffilter")
+            	.append("button")
+            	.attr("class", "btn btn-default").attr("type", "button")
+            	.on("click", function(){ map_viz(flickr, {"low":2005, "high":2014}); })
+           	    .html("ALL");
         };
+
     </script>
 
 
