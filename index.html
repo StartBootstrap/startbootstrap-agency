@@ -51,7 +51,7 @@
           position: absolute;
           z-index: 1060;
           display: inline;
-          width: 300px;
+          width: 250px;
           padding: 1px;
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 14px;
@@ -177,27 +177,23 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">San Francisco</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row">
-                    <div class="row col-md-4 text-right btn-group" role="group" id="sffilter"></div>
-                    <div class="row col-md-4"><p></p></div>
-	            	<div class="row col-md-4 text-left map-legend"></div>
+                </div>                
+                <div class="btn-group" role="group" id="sffilter"></div> 	            	
 	            </div>                
-            	<div class="row text-center cities-maps" id="sfviz"></div>
+            	<div class="cities-maps" id="sfviz"></div>
+                <div class="map-legend"></div>
             	
             </div>
             <div class="row new-york">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">New York</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row">
-                    <div class="row col-md-6 text-left" id="nyfilter"></div>            
-	            	<div class="row col-md-6 text-center map-legend"></div>	            	
-	            </div>                
-            	<div class="row text-center cities-maps" id="nyviz"></div>
-            	
-            </div>            
+                </div>                
+                <div class="btn-group" role="group" id="nyfilter"></div>                   
+                </div>                
+                <div class="cities-maps" id="nyviz"></div>
+                <div class="map-legend"></div>                
+            </div>
         </div>
     </section>
 
@@ -338,8 +334,9 @@
         var coordinates = [[-122.4183, 37.7750], [-73.993952, 40.734331]];
 
         // Select 5 camera makers
+        var camera_makers = ["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"];
         var color_brands = d3.scale.ordinal()
-            .domain(["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"])
+            .domain(camera_makers)
             .range(["#1f78b4", "#33a02c", "#ff7f00", "#6a3d9a", "#e31a1c"]);
 
         var color_scale = d3.scale.pow()
@@ -488,7 +485,28 @@
 	                    .attr("class", "img-responsive");
 
 	                hover_tip.append("p")
-	                    .text(d.max_camera);
+	                    .text("Photo by: " + d[url_index].user);
+                    
+                    var camera_ref = camera_makers.map( function(k) { 
+                        var rObj = {};
+                        rObj["camera"] = k
+                        rObj["count"] = d.camera_counts[k];
+                        return rObj;
+                        });                    
+
+                    var table_row = hover_tip.append("table")
+                        .attr("class", "table")
+                        .selectAll("tr")
+                        .data(camera_ref)
+                        .enter()
+                        .append("tr");
+
+                    table_row.append("td")                        
+                        .html(function(e){ return e.camera; });
+
+                    table_row.append("td")                        
+                        .html(function(e){ return e.count; });
+
 	            };
 
 	            function delete_tooltip(d) {
@@ -504,25 +522,25 @@
             d3.select("#sffilter")
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
-           	    .on("click", function(){ map_viz(flickr, {"low":2005, "high":2007}); })
-           	    .html("2005-2007");
+           	    .on("click", function(){ map_viz(flickr, {"low":1000, "high":2007}); })
+           	    .html("-- 2007");
 
            	d3.select("#sffilter")
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
             	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
-           	    .html("2008-2011");
+           	    .html("2008--2011");
 
            	d3.select("#sffilter")
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
-            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":2014}); })
-           	    .html("2012-2014");
+            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":3000}); })
+           	    .html("2012 --");
 
            	d3.select("#sffilter")
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
-            	.on("click", function(){ map_viz(flickr, {"low":2005, "high":2014}); })
+            	.on("click", function(){ map_viz(flickr, {"low":1000, "high":3000}); })
            	    .html("ALL");
         };
 
