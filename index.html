@@ -505,7 +505,7 @@
                         .html(function(e){ return e.camera; });
 
                     table_row.append("td")                        
-                        .html(function(e){ return e.count; });
+                        .html(function(e){ return Math.round(e.count/d.length*100) + "% " + "(" + e.count + ")"; });
 
 	            };
 
@@ -523,19 +523,19 @@
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
            	    .on("click", function(){ map_viz(flickr, {"low":1000, "high":2007}); })
-           	    .html("-- 2007");
+           	    .html("&mdash;2007");
 
            	d3.select("#sffilter")
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
             	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
-           	    .html("2008--2011");
+           	    .html("2008&ndash;2011");
 
            	d3.select("#sffilter")
             	.append("button")
             	.attr("class", "btn btn-default").attr("type", "button")
             	.on("click", function(){ map_viz(flickr, {"low":2012, "high":3000}); })
-           	    .html("2012 --");
+           	    .html("2012&mdash;");
 
            	d3.select("#sffilter")
             	.append("button")
