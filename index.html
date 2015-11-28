@@ -178,8 +178,7 @@
                     <h2 class="section-heading">San Francisco</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>                
-                <div class="btn-group" role="group" id="sffilter"></div> 	            	
-	            </div>                
+                <div class="btn-group" role="group" id="sffilter"></div> 	            		            
             	<div class="cities-maps" id="sfviz"></div>
                 <div class="map-legend"></div>
             	
@@ -189,8 +188,7 @@
                     <h2 class="section-heading">New York</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>                
-                <div class="btn-group" role="group" id="nyfilter"></div>                   
-                </div>                
+                <div class="btn-group" role="group" id="nyfilter"></div>                
                 <div class="cities-maps" id="nyviz"></div>
                 <div class="map-legend"></div>                
             </div>
@@ -317,8 +315,10 @@
 
     <!-- D3 Script -->
     <script>
-        var width = Math.max(960, window.innerWidth),
+        var width = Math.max(960, 0.9*window.innerWidth),
             height = Math.max(700, 0.65*window.innerHeight);
+
+        console.log(window.innerWidth);
 
         function getRandomIntInclusive(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -331,7 +331,7 @@
             .size([width, height])
             .radius(20);
 
-        var coordinates = [[-122.4183, 37.7750], [-73.993952, 40.734331]];
+        var coordinates = [[-122.421356, 37.785839], [-73.993952, 40.734331]];
 
         // Select 5 camera makers
         var camera_makers = ["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"];
