@@ -173,23 +173,23 @@
     <!-- Cities Maps Section -->
     <section id="cities" class="bg-light-gray">
         <div class="container">
-            <div class="row san-francisco">
+            <div class="row cities-section">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">San Francisco</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>                
-                <div class="btn-group" role="group" id="sffilter"></div> 	            		            
-            	<div class="cities-maps" id="sfviz"></div>
+                <div class="btn-group cities-filter" role="group" id="sffilter"></div> 	            		            
+            	<div class="cities-maps"></div>
                 <div class="map-legend"></div>
             	
             </div>
-            <div class="row new-york">
+            <div class="row cities-section">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">New York</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>                
-                <div class="btn-group" role="group" id="nyfilter"></div>                
-                <div class="cities-maps" id="nyviz"></div>
+                <div class="btn-group cities-filter" role="group" id="nyfilter"></div>                
+                <div class="cities-maps"></div>
                 <div class="map-legend"></div>                
             </div>
         </div>
@@ -316,9 +316,7 @@
     <!-- D3 Script -->
     <script>
         var width = Math.max(960, 0.9*window.innerWidth),
-            height = Math.max(700, 0.65*window.innerHeight);
-
-        console.log(window.innerWidth);
+            height = Math.max(700, 0.65*window.innerHeight);        
 
         function getRandomIntInclusive(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -331,7 +329,10 @@
             .size([width, height])
             .radius(20);
 
-        var coordinates = [[-122.421356, 37.785839], [-73.993952, 40.734331]];
+        var cities = [
+        	{"name": "sanfrancisco", "center": [-122.421356, 37.785839], "file": "data/sf.csv"},
+        	{"name": "newyork", "center": [-73.993952, 40.734331], "file": "data/ny.csv"}
+        ];        
 
         // Select 5 camera makers
         var camera_makers = ["CANON", "NIKON", "APPLE", "SONY", "PANASONIC"];
@@ -341,38 +342,203 @@
 
         var color_scale = d3.scale.pow()
             .exponent(0.333)
-            .interpolate(d3.interpolateHsl);
+            .interpolate(d3.interpolateHsl);        
 
+        // Use D3 to create svg maps
+	    d3.selectAll(".cities-maps")
+	    	.data(cities)
+	    	.append("svg")	    	
+	    	.attr("width", width)
+	    	.attr("height", height)
+	    	.attr("id", function (city) { return city.name; } )
+	    	.each( function (city) {
 
-        var projection = d3.geo.mercator()
-	        .scale((1 << 21) / 2 / Math.PI)
-	        .translate([width / 2, height / 2])
-	        .center(coordinates[0]);
+	    		// Vector Tiles
+	    		var projection = d3.geo.mercator()
+			        .scale((1 << 21) / 2 / Math.PI)
+			        .translate([width / 2, height / 2])
+			        .center(city.center);
+	    		var path = d3.geo.path().projection(projection);
 
-        var path = d3.geo.path()
-            .projection(projection);
+	    		var svg = d3.select(this);
+				svg.selectAll("g")
+		            .data(tiler
+		                .scale(projection.scale() * 2 * Math.PI)
+		                .translate(projection([0, 0])))
+		            .enter().append("g")
+		            .each(function(d) {
+		                var g = d3.select(this);                
+		                d3.json("http://vector.mapzen.com/osm/roads/" + d[2] + "/" + d[0] + "/" + d[1] + ".topojson?api_key=vector-tiles-6A2EEiQ", 
+		                	function(error, json) {
+			                    var geojson_data = topojson.feature(json, json.objects.vectile);
+			                    g.selectAll("path")
+			                        .data(geojson_data.features.sort(function(a, b) { return a.properties.sort_key - b.properties.sort_key; }))
+			                        .enter().append("path")
+			                        .attr("class", function(d) { return d.properties.kind; })
+			                        .attr("d", path);
+		                	});
+		            });            
 
-        var svg = d3.select("#sfviz").append("svg")
-            .attr("width", width)
-            .attr("height", height);
+		        var filter_selection = d3.select(this.parentNode.parentNode)
+		        	.select(".cities-filter");
+				    
 
-        // Underlying Map
-        svg.selectAll("g")
-            .data(tiler
-                .scale(projection.scale() * 2 * Math.PI)
-                .translate(projection([0, 0])))
-            .enter().append("g")
-            .each(function(d) {
-                var g = d3.select(this);                
-                d3.json("http://vector.mapzen.com/osm/roads/" + d[2] + "/" + d[0] + "/" + d[1] + ".topojson?api_key=vector-tiles-6A2EEiQ", function(error, json) {
-                    var geojson_data = topojson.feature(json, json.objects.vectile);
-                    g.selectAll("path")
-                        .data(geojson_data.features.sort(function(a, b) { return a.properties.sort_key - b.properties.sort_key; }))
-                        .enter().append("path")
-                        .attr("class", function(d) { return d.properties.kind; })
-                        .attr("d", path);
-                });
-            });
+		        // Hexbins
+		        queue()
+            		.defer(d3.csv, city.file)
+            		.await(ready);
+
+            	// Hexbin functions
+		        function ready(error, flickr) {
+		            if (error) throw error;
+
+		            // Filtering mechanism
+		            filter_selection
+		            	.append("button")
+		            	.attr("class", "btn btn-default").attr("type", "button")
+		           	    .on("click", function(){ map_viz(flickr, {"low":1000, "high":2007}); })
+		           	    .html("&mdash;2007");
+
+		           	filter_selection
+		            	.append("button")
+		            	.attr("class", "btn btn-default").attr("type", "button")
+		            	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
+		           	    .html("2008&ndash;2011");
+
+		           	filter_selection
+		            	.append("button")
+		            	.attr("class", "btn btn-default").attr("type", "button")
+		            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":3000}); })
+		           	    .html("2012&mdash;");
+
+		           	filter_selection
+		            	.append("button")
+		            	.attr("class", "btn btn-default").attr("type", "button")
+		            	.on("click", function(){ map_viz(flickr, {"low":1000, "high":3000}); })
+		           	    .html("ALL");		        	
+
+		        	// Call map function
+		           	map_viz(flickr, {"low":2005, "high":2014});
+		           	function map_viz(flickr, filter) {		           		
+		           		// Project long/lat into pixel coordinates
+			            flickr.forEach(function(d) {            	
+			                var p = projection([d.longitude, d.latitude]);
+			                d[0] = p[0];
+			                d[1] = p[1];
+			                d.year = parseInt(d.year);
+			            });
+
+			            // Filter	            
+			            var flickr_filtered = flickr.filter(function(d) { return d.year>=filter.low & d.year<=filter.high; });
+
+			            // Create hexbins
+			            var hex_flickr = hexbin(flickr_filtered);
+			            var global_max = 0;
+
+			            // Get camera counts of each hexbin
+			            hex_flickr.forEach(function(hex) {
+			                hex.camera_counts = {CANON:0, NIKON:0, APPLE:0, SONY:0, PANASONIC:0};
+			                hex.max_camera = "";
+			                hex.max_photos = 0;
+			                hex.forEach(function(d) {
+			                    if (d.camera in hex.camera_counts) {
+			                        hex.camera_counts[d.camera] += 1;   
+			                    };          
+			                });
+			                for (var key in hex.camera_counts){
+			                    if (hex.camera_counts[key] > hex.max_photos) {
+			                        hex.max_photos = hex.camera_counts[key];
+			                        hex.max_camera = key;
+
+			                        if (hex.max_photos > global_max) {
+			                        global_max = hex.max_photos;
+			                        };  
+			                    };
+			                    
+			                };
+			            });
+
+			            // Remove bins with less than minimum number of photos
+			            var min_photos = 10;
+			            hex_flickr = hex_flickr.filter( function(d) { return d.max_photos>=10; } );
+
+			            // Set color scale
+			            color_scale.domain([0, global_max]);
+
+			            // Draw hexagons	            
+			            svg.selectAll(".hexagons")	            	
+			            	.remove();
+
+			            svg.append("g")
+			                .attr("class", "hexagons")
+			                .selectAll("path")
+			                .data(hex_flickr)
+			                .enter().append("path")
+			                .attr("d", hexbin.hexagon())
+			                .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})
+			                .style("fill", function(d) {
+			                    color_scale.range(["white", color_brands(d.max_camera)]);
+			                    return color_scale(d.max_photos);
+			                })
+			                .style("opacity", 0.8);
+
+			            // Tooltips
+			            svg.select(".hexagons").selectAll("path")
+			                .on("mouseover", create_tooltip)
+			                .on("mouseout", delete_tooltip);
+
+			            function create_tooltip(d) {
+			                var url_index = getRandomIntInclusive(0, d.length-1);
+
+			                d3.select(this).style("stroke", "#FDB515")
+			                	.style("stroke-width", "3px");
+
+			                var hover_tip = d3.select("body")
+			                                    .append("div")
+			                                    .attr("class", "maptips")
+			                                    .attr("display", "inline")
+			                                    .style("left", (d3.event.pageX + 10) + "px")
+			                                    .style("top", (d3.event.pageY) + "px");
+			                                    
+			                hover_tip.append("img")
+			                    .attr("src", d[url_index].url)
+			                    .attr("class", "img-responsive");
+
+			                hover_tip.append("p")
+			                    .text("Photo by: " + d[url_index].user);
+		                    
+		                    var camera_ref = camera_makers.map( function(k) { 
+		                        var rObj = {};
+		                        rObj["camera"] = k
+		                        rObj["count"] = d.camera_counts[k];
+		                        return rObj;
+		                        });                    
+
+		                    var table_row = hover_tip.append("table")
+		                        .attr("class", "table")
+		                        .selectAll("tr")
+		                        .data(camera_ref)
+		                        .enter()
+		                        .append("tr");
+
+		                    table_row.append("td")                        
+		                        .html(function(e){ return e.camera; });
+
+		                    table_row.append("td")                        
+		                        .html(function(e){ return Math.round(e.count/d.length*100) + "% " + "(" + e.count + ")"; });
+
+			            };
+
+			            function delete_tooltip(d) {
+			            	d3.select(this)
+			            		.transition()
+			            		.duration(200)
+			                	.style("stroke-width", "0px");
+			                d3.select(".maptips").remove();
+			            };
+		           	}; //mapviz 
+		        }; //ready
+			}); //each
 
         // Legends
         var map_legend = d3.selectAll(".map-legend")
@@ -391,158 +557,7 @@
             .scale(color_brands);
 
         map_legend.select(".legendOrdinal")
-            .call(legendOrdinal);
-
-        // Load data
-        queue()
-            .defer(d3.csv, "data/sf.csv")
-            .await(ready);
-
-        function ready(error, flickr) {
-            if (error) throw error;            
-
-           	// Call map function
-           	map_viz(flickr, {"low":2005, "high":2014});
-           	function map_viz(flickr, filter) {
-           		// Project long/lat into pixel coordinates
-	            flickr.forEach(function(d) {            	
-	                var p = projection([d.longitude, d.latitude]);
-	                d[0] = p[0];
-	                d[1] = p[1];
-	                d.year = parseInt(d.year);
-	            });
-
-	            // Filter	            
-	            flickr_filtered = flickr.filter(function(d) { return d.year>=filter.low & d.year<=filter.high; });	            
-
-	            // Create hexbins
-	            var hex_flickr = hexbin(flickr_filtered);
-	            var global_max = 0;
-
-	            // Get camera counts of each hexbin
-	            hex_flickr.forEach(function(hex) {
-	                hex.camera_counts = {CANON:0, NIKON:0, APPLE:0, SONY:0, PANASONIC:0};
-	                hex.max_camera = "";
-	                hex.max_photos = 0;
-	                hex.forEach(function(d) {
-	                    if (d.camera in hex.camera_counts) {
-	                        hex.camera_counts[d.camera] += 1;   
-	                    };          
-	                });
-	                for (var key in hex.camera_counts){
-	                    if (hex.camera_counts[key] > hex.max_photos) {
-	                        hex.max_photos = hex.camera_counts[key];
-	                        hex.max_camera = key;
-
-	                        if (hex.max_photos > global_max) {
-	                        global_max = hex.max_photos;
-	                        };  
-	                    };
-	                    
-	                };
-	            });
-
-	            // Set color scale
-	            color_scale.domain([0, global_max]);
-
-	            // Draw hexagons	            
-	            svg.selectAll(".hexagons")	            	
-	            	.remove();
-
-	            svg.append("g")
-	                .attr("class", "hexagons")
-	                .selectAll("path")
-	                .data(hex_flickr)
-	                .enter().append("path")
-	                .attr("d", hexbin.hexagon())
-	                .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})
-	                .style("fill", function(d) {
-	                    color_scale.range(["white", color_brands(d.max_camera)]);
-	                    return color_scale(d.max_photos);
-	                })
-	                .style("opacity", 0.8);
-
-	            // Tooltips
-	            svg.select(".hexagons").selectAll("path")
-	                .on("mouseover", create_tooltip)
-	                .on("mouseout", delete_tooltip);
-
-	            function create_tooltip(d) {
-	                var url_index = getRandomIntInclusive(0, d.length-1);
-
-	                d3.select(this).style("stroke", "#FDB515")
-	                	.style("stroke-width", "3px");
-
-	                var hover_tip = d3.select("body")
-	                                    .append("div")
-	                                    .attr("class", "maptips")
-	                                    .attr("display", "inline")
-	                                    .style("left", (d3.event.pageX + 10) + "px")
-	                                    .style("top", (d3.event.pageY) + "px");
-	                                    
-	                hover_tip.append("img")
-	                    .attr("src", d[url_index].url)
-	                    .attr("class", "img-responsive");
-
-	                hover_tip.append("p")
-	                    .text("Photo by: " + d[url_index].user);
-                    
-                    var camera_ref = camera_makers.map( function(k) { 
-                        var rObj = {};
-                        rObj["camera"] = k
-                        rObj["count"] = d.camera_counts[k];
-                        return rObj;
-                        });                    
-
-                    var table_row = hover_tip.append("table")
-                        .attr("class", "table")
-                        .selectAll("tr")
-                        .data(camera_ref)
-                        .enter()
-                        .append("tr");
-
-                    table_row.append("td")                        
-                        .html(function(e){ return e.camera; });
-
-                    table_row.append("td")                        
-                        .html(function(e){ return Math.round(e.count/d.length*100) + "% " + "(" + e.count + ")"; });
-
-	            };
-
-	            function delete_tooltip(d) {
-	            	d3.select(this)
-	            		.transition()
-	            		.duration(200)
-	                	.style("stroke-width", "0px");
-	                d3.select(".maptips").remove();
-	            };
-           	};
-
-           	// Filtering mechanism
-            d3.select("#sffilter")
-            	.append("button")
-            	.attr("class", "btn btn-default").attr("type", "button")
-           	    .on("click", function(){ map_viz(flickr, {"low":1000, "high":2007}); })
-           	    .html("&mdash;2007");
-
-           	d3.select("#sffilter")
-            	.append("button")
-            	.attr("class", "btn btn-default").attr("type", "button")
-            	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
-           	    .html("2008&ndash;2011");
-
-           	d3.select("#sffilter")
-            	.append("button")
-            	.attr("class", "btn btn-default").attr("type", "button")
-            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":3000}); })
-           	    .html("2012&mdash;");
-
-           	d3.select("#sffilter")
-            	.append("button")
-            	.attr("class", "btn btn-default").attr("type", "button")
-            	.on("click", function(){ map_viz(flickr, {"low":1000, "high":3000}); })
-           	    .html("ALL");
-        };
+            .call(legendOrdinal);       
 
     </script>
 
