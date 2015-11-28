@@ -395,7 +395,7 @@
 
         // Load data
         queue()
-            .defer(d3.csv, "data/flickr_results.csv")
+            .defer(d3.csv, "data/sf.csv")
             .await(ready);
 
         function ready(error, flickr) {
