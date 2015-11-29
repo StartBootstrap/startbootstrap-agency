@@ -109,7 +109,13 @@
                         <a class="page-scroll" href="#data">Data</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#rank">Rank</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#cities">Cities</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#wordcloud">Word Cloud</a>
                     </li>                                        
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
@@ -133,7 +139,7 @@
     </header>
 
     <!-- Data Section -->
-    <section id="data">
+    <section id="data" class='bg-light-gray'>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -170,6 +176,19 @@
         </div>
     </section>
 
+
+    <!-- Rank Section -->
+    <section id="rank">
+        <div class="container">
+            <div class="row cities-section">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Rank</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>                                                
+            </div>
+        </div>
+    </section>
+
     <!-- Cities Maps Section -->
     <section id="cities" class="bg-light-gray">
         <div class="container">
@@ -191,6 +210,18 @@
                 <div class="btn-group cities-filter" role="group" id="nyfilter"></div>                
                 <div class="cities-maps"></div>
                 <div class="map-legend"></div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Word Cloud Section -->
+    <section id="wordcloud">
+        <div class="container">
+            <div class="row cities-section">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Word Cloud</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>                                                
             </div>
         </div>
     </section>
@@ -359,8 +390,8 @@
 			        .translate([width / 2, height / 2])
 			        .center(city.center);
 	    		var path = d3.geo.path().projection(projection);
-
 	    		var svg = d3.select(this);
+
 				svg.selectAll("g")
 		            .data(tiler
 		                .scale(projection.scale() * 2 * Math.PI)
