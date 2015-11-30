@@ -78,6 +78,10 @@
                   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
           line-break: auto;
         }
+        .tooltip-image {
+            max-width: 100%;
+            max-height: 300px;
+        }
 
     </style>
 
@@ -408,7 +412,7 @@
 			                        .attr("class", function(d) { return d.properties.kind; })
 			                        .attr("d", path);
 		                	});
-		            });            
+		            });
 
 		        var filter_selection = d3.select(this.parentNode.parentNode)
 		        	.select(".cities-filter");
@@ -417,39 +421,32 @@
 		        // Hexbins
 		        queue()
             		.defer(d3.csv, city.file)
-            		.await(ready);
-
-            	// Hexbin functions
+            		.await(ready);            	
 		        function ready(error, flickr) {
 		            if (error) throw error;
-
-		            // Filtering mechanism
-		            filter_selection
-		            	.append("button")
+		            
+		            filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
 		           	    .on("click", function(){ map_viz(flickr, {"low":1000, "high":2007}); })
 		           	    .html("&mdash;2007");
 
-		           	filter_selection
-		            	.append("button")
+		           	filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
 		            	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
 		           	    .html("2008&ndash;2011");
 
-		           	filter_selection
-		            	.append("button")
+		           	filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
 		            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":3000}); })
 		           	    .html("2012&mdash;");
 
-		           	filter_selection
-		            	.append("button")
+		           	filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
 		            	.on("click", function(){ map_viz(flickr, {"low":1000, "high":3000}); })
 		           	    .html("ALL");		        	
 
 		        	// Call map function
-		           	map_viz(flickr, {"low":2005, "high":2014});
+		           	map_viz(flickr, {"low":1000, "high":3000});
 		           	function map_viz(flickr, filter) {		           		
 		           		// Project long/lat into pixel coordinates
 			            flickr.forEach(function(d) {            	
@@ -516,11 +513,11 @@
 			            // Tooltips
 			            svg.select(".hexagons").selectAll("path")
 			                .on("mouseover", create_tooltip)
-			                .on("mouseout", delete_tooltip);
+			                .on("mouseout", delete_tooltip)
+                            .on("click", new_tooltip);
 
 			            function create_tooltip(d) {
 			                var url_index = getRandomIntInclusive(0, d.length-1);
-
 			                d3.select(this).style("stroke", "#FDB515")
 			                	.style("stroke-width", "3px");
 
@@ -528,15 +525,17 @@
 			                                    .append("div")
 			                                    .attr("class", "maptips")
 			                                    .attr("display", "inline")
-			                                    .style("left", (d3.event.pageX + 10) + "px")
+			                                    .style("left", (d3.event.pageX < 2/3*window.innerWidth) ?
+                                                    (d3.event.pageX + 10) + "px" :
+                                                    (d3.event.pageX - 250 - 10) + "px")
 			                                    .style("top", (d3.event.pageY) + "px");
 			                                    
 			                hover_tip.append("img")
 			                    .attr("src", d[url_index].url)
-			                    .attr("class", "img-responsive");
-
+			                    .attr("class", "img-responsive")
+                                .attr("class", "tooltip-image");
 			                hover_tip.append("p")
-			                    .text("Photo by: " + d[url_index].user);
+			                    .text("Photo by: " + d[url_index].user.slice(0,15));
 		                    
 		                    var camera_ref = camera_makers.map( function(k) { 
 		                        var rObj = {};
@@ -567,7 +566,16 @@
 			                	.style("stroke-width", "0px");
 			                d3.select(".maptips").remove();
 			            };
-		           	}; //mapviz 
+
+                        function new_tooltip(d) {                            
+                            var url_index = getRandomIntInclusive(0, d.length-1);
+                            hover_tip = d3.select(".maptips");                            
+                            hover_tip.select("img")                                                                
+                                .attr("src", d[url_index].url);
+                            hover_tip.select("p")
+                                .text("Photo by: " + d[url_index].user.slice(0,15));
+                        };
+		           	}; //mapviz
 		        }; //ready
 			}); //each
 
