@@ -570,7 +570,7 @@
 			                    .attr("src", d[url_index].url)
 			                    .attr("class", "img-responsive img-rounded tooltip-image");
 			                hover_tip.append("p")
-			                    .text("Photo by: " + d[url_index].user.slice(0,15));
+			                    .html("Photo by: " + d[url_index].user.slice(0,15) + "<br>(CLICK bin for more photos)");
 		                    
 		                    var camera_ref = camera_makers.map( function(k) { 
 		                        var rObj = {};
@@ -608,7 +608,7 @@
                             hover_tip.select("img")                                                                
                                 .attr("src", d[url_index].url);
                             hover_tip.select("p")
-                                .text("Photo by: " + d[url_index].user.slice(0,15));
+                                .html("Photo by: " + d[url_index].user.slice(0,15) + "<br>(CLICK bin for more photos)");
                         };
 		           	}; //mapviz
 		        }; //ready
