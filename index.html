@@ -83,6 +83,14 @@
             max-height: 300px;
         }
 
+        .legends {
+            margin-bottom: 100px;
+        }
+
+        .legend-des {
+            margin-top: 10px;
+        }
+
     </style>
 
 </head>
@@ -184,7 +192,7 @@
     <!-- Rank Section -->
     <section id="rank">
         <div class="container">
-            <div class="row cities-section">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Rank</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -196,24 +204,36 @@
     <!-- Cities Maps Section -->
     <section id="cities" class="bg-light-gray">
         <div class="container">
-            <div class="row cities-section">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">San Francisco</h2>
-                    <p class="text-muted">Regional patterns of geolocations emerge as we take a closer look at individual cities. In San Francisco, Canon and Nikon users dominate traditional landscape locations&ndash;Golden Gate Bridge, Marin Headlands, and Ocean Beach, while Apple users are very active in downtown areas. Temporal patterns are equally interesting. Filter the time periods using the buttons below, and observe the growth of smartphones over time.</p>
-                </div>                
-                <div class="btn-group cities-filter" role="group" id="sffilter"></div> 	            		            
+            <div class="cities-section">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">San Francisco</h2>
+                        <p class="text-muted">The following series of <em>hexbin</em> maps focuses on cities around the world. Each bin contains a number of photos taken at that location. The bin's hue is determined by the majority camera brand, its saturation by the ratio of the current bin's number of photos to the biggest bin's. Regional patterns of geolocations emerge from these maps. In San Francisco, many photos are taken in downtown, while not very many are taken in residential areas. Canon and Nikon users dominate traditional landscape locations&ndash;Golden Gate Bridge, Marin Headlands, and Ocean Beach, while Apple users are very active in downtown areas. Temporal patterns are equally interesting. Filter the time periods using the buttons below, and observe the growth of smartphones over time.</p>
+                    </div>
+                </div>
+                <div class="btn-group cities-filter" role="group" id="sffilter"></div>
             	<div class="cities-maps"></div>
-                <div class="map-legend"></div>
-            	
+                <div class="row legends">
+                    <div class="map-legend col-md-4"></div>
+                    <div class="sat-legend col-md-4"></div>
+                    <div class="text-muted text-right legend-des col-md-4">Hue: Camera makers<br>Saturation: Photos per bin</div>
+                </div>
             </div>
-            <div class="row cities-section">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">New York</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>                
-                <div class="btn-group cities-filter" role="group" id="nyfilter"></div>                
+
+            <div class="cities-section">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">New York</h2>
+                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    </div>
+                </div>
+                <div class="btn-group cities-filter" role="group" id="nyfilter"></div>
                 <div class="cities-maps"></div>
-                <div class="map-legend"></div>                
+                <div class="row legends">
+                    <div class="map-legend col-md-4"></div>
+                    <div class="sat-legend col-md-4"></div>
+                    <div class="text-muted text-right legend-des col-md-4">Hue: Camera makers<br>Saturation: Photos per bin</div>
+                </div>
             </div>
         </div>
     </section>
@@ -221,7 +241,7 @@
     <!-- Word Cloud Section -->
     <section id="wordcloud">
         <div class="container">
-            <div class="row cities-section">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Word Cloud</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -349,9 +369,12 @@
     <script src="js/d3.geo.tile.min.js"></script>
 
     <!-- D3 Script -->
-    <script>
-        var width = Math.max(960, 0.9*window.innerWidth),
-            height = Math.max(700, 0.65*window.innerHeight);        
+    <script>        
+        var height = Math.max(700, 0.6*window.innerHeight);
+
+        if (window.innerWidth<960) {var width = 960;} 
+        else if (window.innerWidth>1200) {var width = 1200;} 
+        else {var width = 0.8*window.innerWidth;}
 
         function getRandomIntInclusive(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -377,7 +400,7 @@
 
         var color_scale = d3.scale.pow()
             .exponent(0.333)
-            .interpolate(d3.interpolateHsl);        
+            .interpolate(d3.interpolateHsl);       
 
         // Use D3 to create svg maps
 	    d3.selectAll(".cities-maps")
@@ -424,29 +447,35 @@
             		.await(ready);            	
 		        function ready(error, flickr) {
 		            if (error) throw error;
+                    var filter_cats = [
+                    {"low":1000, "high":2007, "label":"&mdash;2007"},
+                    {"low":2008, "high":2011, "label":"2008&ndash;2011"},
+                    {"low":2012, "high":3000, "label":"2012&mdash;"},
+                    {"low":1000, "high":3000, "label":"ALL"}
+                    ];
 		            
 		            filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
-		           	    .on("click", function(){ map_viz(flickr, {"low":1000, "high":2007}); })
-		           	    .html("&mdash;2007");
+		           	    .on("click", function(){ map_viz(flickr, filter_cats[0]); })
+		           	    .html(filter_cats[0].label);
 
 		           	filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
-		            	.on("click", function(){ map_viz(flickr, {"low":2008, "high":2011}); })
-		           	    .html("2008&ndash;2011");
+		            	.on("click", function(){ map_viz(flickr, filter_cats[1]); })
+		           	    .html(filter_cats[1].label);
 
 		           	filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
-		            	.on("click", function(){ map_viz(flickr, {"low":2012, "high":3000}); })
-		           	    .html("2012&mdash;");
+		            	.on("click", function(){ map_viz(flickr, filter_cats[2]); })
+		           	    .html(filter_cats[2].label);
 
 		           	filter_selection.append("button")
 		            	.attr("class", "btn btn-default").attr("type", "button")
-		            	.on("click", function(){ map_viz(flickr, {"low":1000, "high":3000}); })
-		           	    .html("ALL");		        	
+		            	.on("click", function(){ map_viz(flickr, filter_cats[3]); })
+		           	    .html(filter_cats[3].label);
 
 		        	// Call map function
-		           	map_viz(flickr, {"low":1000, "high":3000});
+		           	map_viz(flickr, filter_cats[3]);
 		           	function map_viz(flickr, filter) {		           		
 		           		// Project long/lat into pixel coordinates
 			            flickr.forEach(function(d) {            	
@@ -509,6 +538,13 @@
 			                    return color_scale(d.max_photos);
 			                })
 			                .style("opacity", 0.8);
+
+                        svg.select("text").remove();
+                        svg.append("text")                                                        
+                            .attr("x", 0)
+                            .attr("y", 20)                            
+                            .html("View: " + filter.label)
+                            .style("opacity", 0.3);
 
 			            // Tooltips
 			            svg.select(".hexagons").selectAll("path")
@@ -578,10 +614,10 @@
 		        }; //ready
 			}); //each
 
-        // Legends
+        // Map Legends (cameras)
         var map_legend = d3.selectAll(".map-legend")
             .append("svg")
-            .attr("width", width/2)
+            .attr("width", width/3)
             .attr("height", 50);
 
         map_legend.append("g")
@@ -596,6 +632,31 @@
 
         map_legend.select(".legendOrdinal")
             .call(legendOrdinal);       
+        
+        // Saturation Legends
+        var color_scale_sat = color_scale
+                                .domain([0, 100])
+                                .range(["white", "#1f78b4"]);
+
+        var sat_legend = d3.selectAll(".sat-legend")
+            .append("svg")
+            .attr("width", width/3)
+            .attr("height", 50);
+
+        sat_legend.append("g")
+            .attr("class", "legendSat")
+            .attr("transform", "translate(20,20)");
+
+        var legendSat = d3.legend.color()
+            .shape("path", hexbin.hexagon(12))
+            .shapePadding(50)
+            .orient("horizontal")
+            .cells([1,10,20,50,100])
+            .labelFormat(d3.format("d"))
+            .scale(color_scale_sat);
+
+        sat_legend.select(".legendSat")
+            .call(legendSat);
 
     </script>
 
