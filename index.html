@@ -441,8 +441,9 @@
 			                        .attr("class", function(d) { return d.properties.kind; })
 			                        .attr("d", path);
 		                	});
-		            });
+		            });                
 
+                var hex_g = svg.append("g").attr("class", "hexagons");                
 		        var filter_selection = d3.select(this.parentNode.parentNode)
 		        	.select(".cities-filter");
 				    
@@ -528,22 +529,32 @@
 			            // Set color scale
 			            color_scale.domain([0, global_max]);
 
-			            // Draw hexagons	            
-			            svg.selectAll(".hexagons")	            	
-			            	.remove();
+			            // Draw hexagons
+                        var hexagons = hex_g.selectAll("path").data(hex_flickr);
+                        hexagons                            
+                            .exit()
+                            .transition().duration(400)
+                            .attr("transform", "translate(" + width + "," + height + ")")
+                            .remove();
 
-			            svg.append("g")
-			                .attr("class", "hexagons")
-			                .selectAll("path")
-			                .data(hex_flickr)
-			                .enter().append("path")
-			                .attr("d", hexbin.hexagon())
-			                .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})
-			                .style("fill", function(d) {
-			                    color_scale.range(["white", color_brands(d.max_camera)]);
-			                    return color_scale(d.max_photos);
-			                })
-			                .style("opacity", 0.8);
+                        hexagons.enter()
+                            .append("path")                            
+                            .attr("d", hexbin.hexagon())                            
+                            .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})
+                            .style("fill", function(d) {
+                                color_scale.range(["white", color_brands(d.max_camera)]);
+                                return color_scale(d.max_photos);
+                            })
+                            .style("opacity", 0.8);
+
+                        hexagons
+                            .transition().duration(200)
+                            .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";})                            
+                            .style("fill", function(d) {
+                                color_scale.range(["white", color_brands(d.max_camera)]);
+                                return color_scale(d.max_photos);
+                            })
+                            .style("opacity", 0.8);                    
 
                         svg.select("text").remove();
                         svg.append("text")                                                        
@@ -625,7 +636,7 @@
                             // var page = "http://www.flickr.com/photos/" + cur_photo.nsid + "/" + cur_photo.identifier;
                             // var cc_url = "http://creativecommons.org/licenses/" + cur_photo.license + "/" + cur_photo.version;
                             hover_tip = d3.select(".maptips");                            
-                            hover_tip.select("img")                                                                
+                            hover_tip.select("img")
                                 .attr("src", cur_photo.url);
                             hover_tip.select("p")
                                 .html(cur_photo.title.slice(0,15) + " by: " + cur_photo.user.slice(0,15) + 
