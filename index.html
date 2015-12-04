@@ -83,6 +83,10 @@
             max-height: 300px;
         }
 
+        .tooltip-p {
+            line-height: 1.2;
+        }
+
         .legends {
             margin-bottom: 100px;
         }
@@ -216,7 +220,10 @@
                 <div class="row legends">
                     <div class="map-legend col-md-4"></div>
                     <div class="sat-legend col-md-4"></div>
-                    <div class="text-muted text-right legend-des col-md-4">Hue: Camera makers<br>Saturation: Photos per bin</div>
+                    <div class="text-muted text-right legend-des col-md-4">
+                        <p> Hue: Camera makers<br>Saturation: Photos per bin </p>
+                        <p class="attribution"></p>
+                    </div>
                 </div>
             </div>
 
@@ -232,7 +239,7 @@
                 <div class="row legends">
                     <div class="map-legend col-md-4"></div>
                     <div class="sat-legend col-md-4"></div>
-                    <div class="text-muted text-right legend-des col-md-4">Hue: Camera makers<br>Saturation: Photos per bin</div>
+                    <div class="attribution text-muted text-right legend-des col-md-4">Hue: Camera makers<br>Saturation: Photos per bin</div>
                 </div>
             </div>
         </div>
@@ -554,6 +561,10 @@
 
 			            function create_tooltip(d) {
 			                var url_index = getRandomIntInclusive(0, d.length-1);
+                            var cur_photo = d[url_index];
+                            // var page = "http://www.flickr.com/photos/" + cur_photo.nsid + "/" + cur_photo.identifier;
+                            // var cc_url = "http://creativecommons.org/licenses/" + cur_photo.license + "/" + cur_photo.version;
+
 			                d3.select(this).style("stroke", "#FDB515")
 			                	.style("stroke-width", "3px");
 
@@ -567,10 +578,12 @@
 			                                    .style("top", (d3.event.pageY) + "px");
 			                                    
 			                hover_tip.append("img")
-			                    .attr("src", d[url_index].url)
+			                    .attr("src", cur_photo.url)
 			                    .attr("class", "img-responsive img-rounded tooltip-image");
 			                hover_tip.append("p")
-			                    .html("Photo by: " + d[url_index].user.slice(0,15) + "<br>(CLICK bin for more photos)");
+                                .attr("class", "tooltip-p")
+			                    .html(cur_photo.title.slice(0,15) + " by: " + cur_photo.user.slice(0,15) + 
+                                    "<br>(CC " + cur_photo.license.toUpperCase() + " " + cur_photo.version + ")");
 		                    
 		                    var camera_ref = camera_makers.map( function(k) { 
 		                        var rObj = {};
@@ -592,6 +605,11 @@
 		                    table_row.append("td")                        
 		                        .html(function(e){ return Math.round(e.count/d.length*100) + "% " + "(" + e.count + ")"; });
 
+                            // d3.select(this.parentNode.parentNode.parentNode.parentNode)
+                            //     .select(".legend-des").select(".attribution")
+                            //     .html("Last " + "<a href='" + page + "'>Photo</a> By: " + cur_photo.user.slice(0,15) +
+                            //         "(<a href='" + cc_url + "'>CC " +  cur_photo.license.toUpperCase() + " " + cur_photo.version + "</a>" +
+                            //         ")");
 			            };
 
 			            function delete_tooltip(d) {
@@ -602,13 +620,23 @@
 			                d3.select(".maptips").remove();
 			            };
 
-                        function new_tooltip(d) {                            
+                        function new_tooltip(d) {                       
                             var url_index = getRandomIntInclusive(0, d.length-1);
+                            var cur_photo = d[url_index];
+                            // var page = "http://www.flickr.com/photos/" + cur_photo.nsid + "/" + cur_photo.identifier;
+                            // var cc_url = "http://creativecommons.org/licenses/" + cur_photo.license + "/" + cur_photo.version;
                             hover_tip = d3.select(".maptips");                            
                             hover_tip.select("img")                                                                
-                                .attr("src", d[url_index].url);
+                                .attr("src", cur_photo.url);
                             hover_tip.select("p")
-                                .html("Photo by: " + d[url_index].user.slice(0,15) + "<br>(CLICK bin for more photos)");
+                                .html(cur_photo.title.slice(0,15) + " by: " + cur_photo.user.slice(0,15) + 
+                                    "<br>(CC " + cur_photo.license.toUpperCase() + " " + cur_photo.version + ")");
+
+                            // d3.select(this.parentNode.parentNode.parentNode.parentNode)
+                            //     .select(".legend-des").select(".attribution")
+                            //     .html("Last " + "<a href='" + page + "'>Photo</a> By: " + cur_photo.user.slice(0,15) +
+                            //         "(<a href='" + cc_url + "'>CC " +  cur_photo.license.toUpperCase() + " " + cur_photo.version + "</a>" +
+                            //         ")");
                         };
 		           	}; //mapviz
 		        }; //ready
