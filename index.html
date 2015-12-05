@@ -261,18 +261,18 @@
     </section>
 
     <section id="wordcloud">
-      <div class="container">
-        <div class="cities-tags-section">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading">New York Tags</h2>
-              <h3 class="section-subheading text-muted">Some NY foorbar tag text.</h3>
-            </div>
+    <div class="container">
+      <div class="cities-tags-section">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">New York Tags</h2>
+            <h3 class="section-subheading text-muted">Some NY foorbar tag text.</h3>
           </div>
-          <div class="btn-group cities-filter" role="group" id="sffilter"></div>
-          <div class="cities-tags"></div>
         </div>
+        <div class="btn-group cities-filter" role="group" id="nyfilter"></div>
+        <div class="cities-tags"></div>
       </div>
+    </div>
     </section>
 
     <!-- Team Section -->
@@ -717,8 +717,8 @@
             .call(legendSat);
 
         var city_tags = [
-          {"name": "sanfrancisco", "tagfile": "data/sf_tags.csv"},
-          {"name": "newyork", "tagfile": "data/ny_tags.csv"}
+          {"name": "sanfrancisco", "tagfile": "data/sf_tags_test.csv"},
+          {"name": "newyork", "tagfile": "data/ny_tags_test.csv"}
         ];
 
         d3.selectAll(".cities-tags")
@@ -728,81 +728,86 @@
           .attr("height", height)
           .attr("id", function (city) { return city.name; })
           .each(function (city) {
+            var tags_svg = d3.select(this);
+            var tags_g = tags_svg.append("g").attr("class", "tags");
+            var tags_filter = d3.select(this.parentNode.parentNode)
+              .select(".cities-filter");
 
-              // using a test dataset for now. will use actual _tags.csv files after
-              var flickr = [
-                {"year": 2002, "tag": city.name, "count": 70},
-                {"year": 2002, "tag": "foo", "count": 20},
-                {"year": 2002, "tag": "bar", "count": 30}
-              ]
+            var tags_cats = [
+              {"low":1000, "high":2007, "label":"&mdash;2007"},
+              {"low":2008, "high":2011, "label":"2008&ndash;2011"},
+              {"low":2012, "high":3000, "label":"2012&mdash;"},
+              {"low":1000, "high":3000, "label":"ALL"}
+            ];
 
-              var svg = d3.select(this);
-              var tag_g = svg.append("g").attr("class", "tags");
-              var filter_selection = d3.select(this.parentNode.parentNode)
-                .select(".cities-filter");
+            queue()
+              .defer(d3.csv, city.tagfile)
+              .await(tags_ready);
 
-              var filter_cats = [
-                {"low":1000, "high":2007, "label":"&mdash;2007"},
-                {"low":2008, "high":2011, "label":"2008&ndash;2011"},
-                {"low":2012, "high":3000, "label":"2012&mdash;"},
-                {"low":1000, "high":3000, "label":"ALL"}
-              ];
+            function tags_ready(error, data) {
+              if (error) throw error;
 
-              filter_selection.append("button")
+              tags_filter.append("button")
                 .attr("class", "btn btn-default").attr("type", "button")
-                  .on("click", function(){ draw_cloud(flickr, filter_cats[0]); })
-                  .html(filter_cats[0].label);
+                .on("click", function() { draw_cloud(data, tags_cats[0]); })
+                .html(tags_cats[0].label);
 
-              filter_selection.append("button")
+              tags_filter.append("button")
                 .attr("class", "btn btn-default").attr("type", "button")
-                .on("click", function(){ draw_cloud(flickr, filter_cats[1]); })
-                  .html(filter_cats[1].label);
+                .on("click", function() { draw_cloud(data, tags_cats[1]); })
+                .html(tags_cats[1].label);
 
-              filter_selection.append("button")
+              tags_filter.append("button")
                 .attr("class", "btn btn-default").attr("type", "button")
-                .on("click", function(){ draw_cloud(flickr, filter_cats[2]); })
-                  .html(filter_cats[2].label);
+                .on("click", function() { draw_cloud(data, tags_cats[2]); })
+                .html(tags_cats[2].label);
 
-              filter_selection.append("button")
+              tags_filter.append("button")
                 .attr("class", "btn btn-default").attr("type", "button")
-                .on("click", function(){ draw_cloud(flickr, filter_cats[3]); })
-                  .html(filter_cats[3].label);
+                .on("click", function() { draw_cloud(data, tags_cats[3]); })
+                .html(tags_cats[3].label);
 
-               draw_cloud(flickr, filter_cats[3]);
+              draw_cloud(data, tags_cats[3]);
 
-                function draw_cloud(flickr, filter) {
-                  d3.layout.cloud()
-                    .size([width, height])
-                    .words(flickr)
-                    .padding(5)
-                    .rotate(function() { return ~~(Math.random() * 2) * 90; })
-                    .font("Impact")
-                    .fontSize(function(d) { return Math.max(8, Math.min(d.size, 24)); })
-                    .on("end", draw)
-                    .start();
+              function draw_cloud(data, filter) {
+                d3.layout.cloud()
+                  .size([width, height])
+                  .words(data)
+                  .padding(5)
+                  .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                  .fontSize(function(d) { return Math.max(8, Math.min(d.size, 24)); })
+                  .on("end", draw)
+                  .start();
 
-                  function draw(words) {
-                    var fill = d3.scale.category20();
+                function draw(words) {
+                  var city_div = "#" + city.name;
+                  var min_count = 10;
+                  var fill = d3.scale.category20();
 
-                    d3.select(city.name)
-                      .append("svg")
-                      .attr("width", width)
-                      .attr("height", height)
-                      .append("g")
-                      .attr("transform", "translate(300,300)")
-                      .selectAll("text")
-                      .data(flickr)
-                      .enter().append("text")
-                      .filter(function(d) {return d.year > filter.low && d.year < filter.high;})
-                      .style("font-size", function(d) { return d.count + "px"; })
-                      .style("font-family", "Impact")
-                      .style("fill", function(d, i) { return fill(i); })
-                      .attr("text-anchor", "middle")
-                      .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; })
-                      .text(function(d) { return d.tag; });
-                  }
+                  d3.select(city_div)
+                    .select("svg")
+                    .remove();
+
+                  d3.select(city_div)
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .append("g")
+                    .attr("transform", "translate(300,300)")
+                    .selectAll("text")
+                    .data(data)
+                    .enter().append("text")
+                    .filter(function(d) {return d.count > min_count && d.year > filter.low && d.year < filter.high;})
+                    .style("font-size", function(d) { return d.count + "px"; })
+                    .style("fill", function(d, i) { return fill(i); })
+                    .attr("text-anchor", "middle")
+                    .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; })
+                    .text(function(d) { return d.tag; });
                 }
-          });
+              }
+            }
+          }
+        );
     </script>
 </body>
 </html>
