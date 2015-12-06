@@ -774,8 +774,6 @@
                   .size([width, height])
                   .words(data)
                   .padding(5)
-                  .rotate(function() { return ~~(Math.random() * 2) * 90; })
-                  .fontSize(function(d) { return Math.max(8, Math.min(d.size, 24)); })
                   .on("end", draw)
                   .start();
 
@@ -784,20 +782,19 @@
                   var min_count = 10;
                   var fill = d3.scale.category20();
 
-                  d3.select(city_div)
-                    .select("svg")
+                  tags_svg
+                    .select("g")
                     .remove();
 
-                  d3.select(city_div)
-                    .append("svg")
+                  tags_svg
+                    .append("g")
                     .attr("width", width)
                     .attr("height", height)
-                    .append("g")
                     .attr("transform", "translate(300,300)")
                     .selectAll("text")
                     .data(data)
                     .enter().append("text")
-                    .filter(function(d) {return d.count > min_count && d.year > filter.low && d.year < filter.high;})
+                    .filter(function(d) {return d.count >= min_count & d.year >= filter.low & d.year <= filter.high;})
                     .style("font-size", function(d) { return d.count + "px"; })
                     .style("fill", function(d, i) { return fill(i); })
                     .attr("text-anchor", "middle")
