@@ -251,7 +251,7 @@
           <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading">San Francisco Tags</h2>
-              <h3 class="section-subheading text-muted">Some SF foorbar tag text.</h3>
+              <p class="text-muted">San Francisco's user photo tags highlight locations (e.g. "market", "street", "golden", "gate", "bridge") as well as the lifestyle ("bar", "park", "protest", "gay"), suggesting that people in this city take pictures of tourist attractions as well as of social events that are culturally associated with San Francisco.</p>
             </div>
           </div>
           <div class="btn-group cities-filter" role="group" id="sffilter"></div>
@@ -266,7 +266,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">New York Tags</h2>
-            <h3 class="section-subheading text-muted">Some NY foorbar tag text.</h3>
+            <p class="text-muted">In New York, photos have tags that mention various boroughs (e.g. "Manhattan", "Brooklyn") as well as the various locations where people visiting the city would tend to take photos (e.g. "art", "museum", "park").</p>
           </div>
         </div>
         <div class="btn-group cities-filter" role="group" id="nyfilter"></div>
@@ -717,8 +717,8 @@
             .call(legendSat);
 
         var city_tags = [
-          {"name": "sanfrancisco", "tagfile": "data/sf_tags_test.csv"},
-          {"name": "newyork", "tagfile": "data/ny_tags_test.csv"}
+          {"name": "sanfrancisco", "tagfile": "data/sf_tags.csv", "max": 26000},
+          {"name": "newyork", "tagfile": "data/ny_tags.csv", "max": 25000}
         ];
 
         d3.selectAll(".cities-tags")
@@ -779,7 +779,6 @@
 
                 function draw(words) {
                   var city_div = "#" + city.name;
-                  var min_count = 10;
                   var fill = d3.scale.category20();
 
                   tags_svg
@@ -794,11 +793,11 @@
                     .selectAll("text")
                     .data(data)
                     .enter().append("text")
-                    .filter(function(d) {return d.count >= min_count & d.year >= filter.low & d.year <= filter.high;})
-                    .style("font-size", function(d) { return d.count + "px"; })
+                    .filter(function(d) {return d.count > 750 && d.year >= filter.low && d.year <= filter.high;})
+                    .style("font-size", function(d) { return Math.min(Math.round(d.count*150/city.max), 85) + "px"; })
                     .style("fill", function(d, i) { return fill(i); })
                     .attr("text-anchor", "middle")
-                    .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; })
+                    .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + ~~(Math.random() * 2) * 90 + ")"; })
                     .text(function(d) { return d.tag; });
                 }
               }
