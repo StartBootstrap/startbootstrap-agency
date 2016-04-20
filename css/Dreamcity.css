@@ -53,14 +53,17 @@ font-weight: 300;}
 
 #services{
   padding:70px 0px;
-  background-color: #eeeeee;}
+  background-color: #eeda72;}
 
 /*挑戰階段*/
-
 #portfolio{
   padding:70px 0px;
   background-color:  #004862;
 }
+#portfolio .portfolio-item .portfolio-link {
+  border: 2px solid white ;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover{}
 #portfolio .section-heading{
   color: white;
 }
@@ -89,6 +92,9 @@ font-weight: 300;}
 }
 
 /*常見問題*/
+#about{
+  padding:70px 0px;
+  background-color: #eeeeee;}
 #about ol{
   background-color: #eeeeee;
 /*border-top : 2px solid #eeda72 ;
@@ -104,5 +110,55 @@ border-bottom : 2px solid #eeda72 ;*/
 }
 
 /*主辦單位*/
+
+#team{
+  padding:70px 0px;
+  background-color: white;}
+.team-member{margin: 0px;}
+.team-member p{
+  margin-top:15px;
+}
+
+/*贊助單位*/
+
+.modal-content{
+  background-color: #004862;
+  color: #eeda72;
+}
+.portfolio-modal .modal-content h2 {
+  color: #eeeeee;
+}
+.portfolio-modal .modal-content p.item-intro{
+  margin:3px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  color: #004862;
+  color: #eeeeee;
+}
+.portfolio-modal .close-modal .lr {
+  background-color: white;
+}
+.portfolio-modal .close-modal .rl {
+  background-color: white;
+}
+.portfolio-modal ul li{
+  list-style: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;
+  color: #004862;
+}
+
+/*#clients {
+  padding:70px 0px;
+  background-color: #eeeeee;}
+*/
+/*@media (min-width: 767px) {
+  .col-sm-6{
+    width: 25%;
+    margin: 0 0 30px;
+  }
+}*/
+
+
 
 /*聯絡我們*/
