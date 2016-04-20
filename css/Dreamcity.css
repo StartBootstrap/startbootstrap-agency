@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css); /*google web font*/
+
+/*color-setting:#004862, #eeda72*/
+
+h1, h2, h3{  
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  color: #004862;
+}
+h4, h5, h6, p{  
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;
+  color: #004862;
+}
+/*p.text-muted{
+  color: #eeda72;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;
+}*/
+
+.navbar-default.navbar-shrink{
+  padding:5px;
+  background-color: #004862;
+}
+.navbar-brand {
+   display: block;
+  width: 170px;
+  height: 50px;
+  padding: 0px;
+  background: url(../img/logos/LogoW.svg);
+  background-size: 100% ;
+  background-repeat: no-repeat;
+}
+
+.navbar-default .nav li a {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+}
+.nav > li .active {
+  color: #004862;
+}
+.btn-xl{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  color:black;
+}
+
+header .intro-text .intro-heading { font-family: 'Noto Sans TC', sans-serif;
+font-weight: 300;}
+
+/*計畫緣起*/
+
+
+#services{
+  padding:70px 0px;
+  background-color: #eeeeee;}
+
+/*挑戰階段*/
+
+#portfolio{
+  padding:70px 0px;
+  background-color:  #004862;
+}
+#portfolio .section-heading{
+  color: white;
+}
+#portfolio .portfolio-item .portfolio-caption{
+  background: none;
+}
+.portfolio-caption > h4 {
+  color:white;
+  font-weight: 300;
+  font-size: 0.8em; }
+
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    width: 33%;
+    margin: 0 0 30px;
+  }
+}
+
+#portfolio .portfolio-item .portfolio-caption p{
+  color: #eeda72;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
+
+
+}
+
+/*常見問題*/
+#about ol{
+  background-color: #eeeeee;
+/*border-top : 2px solid #eeda72 ;
+border-bottom : 2px solid #eeda72 ;*/
+}
+#about ol li {
+  padding:20px 0px;
+  border-bottom: 2px solid #dddddd ;
+  list-style: none;
+  color: #004862;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
+}
+
+/*主辦單位*/
+
+/*聯絡我們*/
