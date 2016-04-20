@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css); /*google web font*/
+h1, h2, h3, h4, h5, h6, p{  
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;}
+
+.navbar-default.navbar-shrink{
+  padding:5px;
+}
+.navbar-brand {
+   display: block;
+  width: 170px;
+  height: 50px;
+  padding: 0px;
+  background: url(../img/logos/LogoW.svg);
+  background-size: 100% ;
+  background-repeat: no-repeat;
+}
+
+.navbar-default .nav li a {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+}
+.btn-xl{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  color:black;
+}
+
+header .intro-text .intro-heading { font-family: 'Noto Sans TC', sans-serif;
+font-weight: 300;}
+
+/*計畫緣起*/
+
+#services{
+  padding:50px;
+  background-color: #eeeeee;}
+
