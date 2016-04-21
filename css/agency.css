@@ -4,6 +4,24 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
+.video-container {
+ position: relative;
+ padding-bottom: 56.25%;
+ padding-top: 30px;
+ height: 0;
+ overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -224,7 +242,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/cover.png');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -660,6 +678,7 @@ ul.social-buttons li a:active {
   min-height: 100%;
   padding: 100px 0;
   text-align: center;
+  /*color: white;*/
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
