@@ -137,14 +137,23 @@ border-bottom : 2px solid #eeda72 ;*/
 .portfolio-modal .close-modal .lr {
   background-color: black;
 }
+<<<<<<< HEAD
+.portfolio-modal .close-modal .lr .rl {
+  background-color: white;
+=======
 .portfolio-modal .close-modal .rl {
   background-color: black;
+>>>>>>> refs/remotes/HaoWeiZeroLin/gh-pages
 }
 .portfolio-modal ul li{
   list-style: none;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 300;
+<<<<<<< HEAD
+  color: #eeda72;
+=======
   color: white;
+>>>>>>> refs/remotes/HaoWeiZeroLin/gh-pages
 }
 
 /*#clients {

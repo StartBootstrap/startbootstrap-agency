@@ -678,7 +678,7 @@ ul.social-buttons li a:active {
   min-height: 100%;
   padding: 100px 0;
   text-align: center;
-  color: white;
+  /*color: white;*/
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
