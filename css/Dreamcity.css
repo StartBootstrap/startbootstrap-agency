@@ -48,6 +48,12 @@ h4, h5, h6, p{
 header .intro-text .intro-heading { font-family: 'Noto Sans TC', sans-serif;
 font-weight: 300;}
 
+@media (min-width: 768px){
+header .intro-text {
+    padding-top: 450px;
+    padding-bottom: 50px;
+}
+}
 /*計畫緣起*/
 
 
@@ -135,25 +141,20 @@ border-bottom : 2px solid #eeda72 ;*/
   color: white;
 }
 .portfolio-modal .close-modal .lr {
-  background-color: black;
-}
-<<<<<<< HEAD
-.portfolio-modal .close-modal .lr .rl {
   background-color: white;
-=======
+}
+.portfolio-modal .close-modal .lr .rl {
+  background-color: white;}
 .portfolio-modal .close-modal .rl {
   background-color: black;
->>>>>>> refs/remotes/HaoWeiZeroLin/gh-pages
 }
 .portfolio-modal ul li{
   list-style: none;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 300;
-<<<<<<< HEAD
   color: #eeda72;
-=======
   color: white;
->>>>>>> refs/remotes/HaoWeiZeroLin/gh-pages
+  line-height: 2em;
 }
 
 /*#clients {
