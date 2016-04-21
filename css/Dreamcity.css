@@ -138,14 +138,14 @@ border-bottom : 2px solid #eeda72 ;*/
 .portfolio-modal .close-modal .lr {
   background-color: white;
 }
-.portfolio-modal .close-modal .rl {
+.portfolio-modal .close-modal .lr .rl {
   background-color: white;
 }
 .portfolio-modal ul li{
   list-style: none;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 300;
-  color: #eeeeee;
+  color: #eeda72;
 }
 
 /*#clients {
