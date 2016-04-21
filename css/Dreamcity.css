@@ -123,29 +123,37 @@ border-bottom : 2px solid #eeda72 ;*/
 
 .modal-content{
   background-color: #004862;
-  color: #eeda72;
+  color: white;
 }
 .portfolio-modal .modal-content h2 {
-  color: #eeeeee;
+  color: white;
 }
 .portfolio-modal .modal-content p.item-intro{
   margin:3px;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 500;
-  color: #004862;
-  color: #eeeeee;
+  color: white;
 }
 .portfolio-modal .close-modal .lr {
-  background-color: white;
+  background-color: black;
 }
+<<<<<<< HEAD
 .portfolio-modal .close-modal .lr .rl {
   background-color: white;
+=======
+.portfolio-modal .close-modal .rl {
+  background-color: black;
+>>>>>>> refs/remotes/HaoWeiZeroLin/gh-pages
 }
 .portfolio-modal ul li{
   list-style: none;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 300;
+<<<<<<< HEAD
   color: #eeda72;
+=======
+  color: white;
+>>>>>>> refs/remotes/HaoWeiZeroLin/gh-pages
 }
 
 /*#clients {
