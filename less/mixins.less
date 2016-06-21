@@ -1,41 +1,41 @@
 // Bootstrap Button Variant
 
 .button-variant(@color; @background; @border) {
-	color: @color;
-	background-color: @background;
-	border-color: @border;
+  color: @color;
+  background-color: @background;
+  border-color: @border;
 
-	&:hover,
-	&:focus,
-	&:active,
-	&.active,
-	.open .dropdown-toggle& {
-		color: @color;
-		background-color: darken(@background, 10%);
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
         border-color: darken(@border, 12%);
-	}
-	&:active,
-	&.active,
-	.open .dropdown-toggle& {
-		background-image: none;
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&:active,
-		&.active {
-			background-color: @background;
-			border-color: @border;
-		}
-	}
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+      border-color: @border;
+    }
+  }
 
-	.badge {
-		color: @background;
-		background-color: @color;
-	}
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
 }
 
 // Background Features
@@ -50,18 +50,18 @@
 // Font Selections
 
 .serif-font() {
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .script-font() {
-	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
 .body-font() {
-	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .heading-font() {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }

@@ -1,15 +1,9 @@
-/*!
- * Agency v1.0.7 (http://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .text-muted {
-  color: #777777;
+  color: #777;
 }
 .text-primary {
   color: #fed136;
@@ -54,10 +48,10 @@ h6 {
   background-color: #f7f7f7;
 }
 .bg-darkest-gray {
-  background-color: #222222;
+  background-color: #222;
 }
 .btn-primary {
-  color: #ffffff;
+  color: white;
   background-color: #fed136;
   border-color: #fed136;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -69,7 +63,7 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-  color: #ffffff;
+  color: white;
   background-color: #fec503;
   border-color: #f6bf01;
 }
@@ -98,10 +92,10 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-primary .badge {
   color: #fed136;
-  background-color: #ffffff;
+  background-color: white;
 }
 .btn-xl {
-  color: #ffffff;
+  color: white;
   background-color: #fed136;
   border-color: #fed136;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -116,7 +110,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-  color: #ffffff;
+  color: white;
   background-color: #fec503;
   border-color: #f6bf01;
 }
@@ -145,10 +139,10 @@ fieldset[disabled] .btn-xl.active {
 }
 .btn-xl .badge {
   color: #fed136;
-  background-color: #ffffff;
+  background-color: white;
 }
 .navbar-default {
-  background-color: #222222;
+  background-color: #222;
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
@@ -216,7 +210,7 @@ fieldset[disabled] .btn-xl.active {
     border-radius: 3px;
   }
   .navbar-default.navbar-shrink {
-    background-color: #222222;
+    background-color: #222;
     padding: 10px 0;
   }
   .navbar-default.navbar-shrink .navbar-brand {
@@ -552,7 +546,7 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
-  background-color: #222222;
+  background-color: #222;
   background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -628,7 +622,7 @@ ul.social-buttons {
 }
 ul.social-buttons li a {
   display: block;
-  background-color: #222222;
+  background-color: #222;
   height: 40px;
   width: 40px;
   border-radius: 100%;
@@ -697,7 +691,7 @@ ul.social-buttons li a:active {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: #222222;
+  background-color: #222;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -708,7 +702,7 @@ ul.social-buttons li a:active {
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: #222222;
+  background-color: #222;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
