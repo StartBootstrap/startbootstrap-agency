@@ -152,12 +152,17 @@ h1, h2, h3, h4, h5, h6 {
 			border-radius: 3px;
 		}
     }
-    .navbar-default.navbar-shrink {
-    	background-color: @gray-darkest;
-        padding: 10px 0;
+}
+
+// Navbar Change on Scroll
+
+@media(min-width:768px) {
+	.navbar-default.affix {
+		background-color: @gray-darkest;
+		padding: 10px 0;
 		.navbar-brand {
-	        font-size: 1.5em;
-	    }    
+			font-size: 1.5em;
+		}
 	}
 }
 

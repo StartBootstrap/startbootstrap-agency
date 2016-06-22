@@ -209,17 +209,19 @@ fieldset[disabled] .btn-xl.active {
   .navbar-default .navbar-nav > .active > a {
     border-radius: 3px;
   }
-  .navbar-default.navbar-shrink {
+}
+@media (min-width: 768px) {
+  .navbar-default.affix {
     background-color: #222;
     padding: 10px 0;
   }
-  .navbar-default.navbar-shrink .navbar-brand {
+  .navbar-default.affix .navbar-brand {
     font-size: 1.5em;
   }
 }
 header {
   background-image: url('../img/header-bg.jpg');
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   -webkit-background-size: cover;
