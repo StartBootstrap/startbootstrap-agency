@@ -13,7 +13,7 @@ body {
 }
 
 .text-primary {
-	color: @brand-primary;
+	color: @theme-primary;
 }
 
 p {
@@ -34,14 +34,14 @@ a.active {
 }
 
 a {
-	color: @brand-primary;
+	color: @theme-primary;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-	color: darken(@brand-primary, 10%);
+	color: darken(@theme-primary, 10%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,13 +64,13 @@ h1, h2, h3, h4, h5, h6 {
 // Restyled Primary Buttons
 
 .btn-primary {
-	.button-variant(white; @brand-primary; @brand-primary);
+	.button-variant(white; @theme-primary; @theme-primary);
 	.heading-font;
 	font-weight: 700;
 }
 
 .btn-xl {
-	.button-variant(white; @brand-primary; @brand-primary);
+	.button-variant(white; @theme-primary; @theme-primary);
 	.heading-font;
 	font-weight: 700;
 	border-radius: 3px;
@@ -84,27 +84,27 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: @gray-darkest;
 	border-color: transparent;
 	.navbar-brand {
-		color: @brand-primary;
+		color: @theme-primary;
 		.script-font;
         &:hover,
         &:focus,
         &:active,
         &.active {
-        	color: darken(@brand-primary, 10%);
+        	color: darken(@theme-primary, 10%);
         }
 	}
 	.navbar-collapse {
 		border-color: fade(white, 2%);
 	}
 	.navbar-toggle {
-		background-color: @brand-primary;
-		border-color: @brand-primary;
+		background-color: @theme-primary;
+		border-color: @theme-primary;
 		.icon-bar {
 			background-color: white;
 		}
 		&:hover,
 		&:focus {
-			background-color: @brand-primary;
+			background-color: @theme-primary;
 		}
 	}
     .nav {
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
     			color: white;
     			&:hover,
     			&:focus {
-    				color: @brand-primary;
+    				color: @theme-primary;
     				outline: none;
     			}
     		}
@@ -125,12 +125,12 @@ h1, h2, h3, h4, h5, h6 {
 	.navbar-nav>.active>a {
 		border-radius: 0;
 		color: white;
-		background-color: @brand-primary;
+		background-color: @theme-primary;
 	}
 	.navbar-nav>.active>a:hover,
 	.navbar-nav>.active>a:focus {
 		color: white;
-		background-color: darken(@brand-primary, 10%);
+		background-color: darken(@theme-primary, 10%);
 	}
 }
 
@@ -261,7 +261,7 @@ section {
             max-width: 400px;
             margin: 0 auto;
             .portfolio-hover {
-                background: fade(@brand-primary, 90%);
+                background: fade(@theme-primary, 90%);
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -376,7 +376,7 @@ section {
 	        height: 80px;
             position: absolute;
             z-index: 100;
-            background-color: @brand-primary;
+            background-color: @theme-primary;
             color: white;
             border-radius: 100%;
             border: 7px solid #f1f1f1;
@@ -556,7 +556,7 @@ section#contact {
 		}
 	}
 	.form-control:focus {
-		border-color: @brand-primary;
+		border-color: @theme-primary;
 		box-shadow: none;
 	}
 	::-webkit-input-placeholder {
@@ -580,7 +580,7 @@ section#contact {
 	   color: @placeholder-text;
 	}
 	.text-danger {
-		color: @brand-danger;
+		color: @theme-danger;
 	}
 }
 
@@ -623,7 +623,7 @@ ul.social-buttons {
 	        &:hover,
 	        &:focus,
 	        &:active {
-				background-color: @brand-primary;
+				background-color: @theme-primary;
 	        }
 		}
 	}
@@ -712,12 +712,12 @@ ul.social-buttons {
 
 ::-moz-selection {
     text-shadow: none;
-    background: @brand-primary;
+    background: @theme-primary;
 }
 
 ::selection {
     text-shadow: none;
-    background: @brand-primary;
+    background: @theme-primary;
 }
 
 img::selection {
@@ -729,5 +729,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: @brand-primary;
+    webkit-tap-highlight-color: @theme-primary;
 }
