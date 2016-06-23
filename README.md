@@ -4,10 +4,20 @@
 
 ## Getting Started
 
-To begin using this template, choose one of the following options to get started:
+Several options are available to get started quickly:
 * [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/agency/)
 * Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
 * Fork the repo
+
+## Using Source Files
+
+To use the source files, you will need to have npm installed globally along with Gulp.js. To start:
+* Run `npm install` in the root directory
+* Run `gulp dev` and edit the files as needed
+
+If you need to update the plugins included with this template, simpy run the following tasks:
+* First run `npm update` to update the dependencies
+* Then run `gulp copy` to copy the new versions to their proper destinations
 
 ## Bugs and Issues
 

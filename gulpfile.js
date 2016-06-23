@@ -5,6 +5,7 @@ var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
+var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -36,26 +37,38 @@ gulp.task('less', function() {
 gulp.task('minify-css', function() {
     return gulp.src('css/agency.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({suffix: '.min'}))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }))
 });
 
-// Grab Bootstrap core files from node_modules
+// Minify JS
+gulp.task('minify-js', function() {
+    return gulp.src('js/agency.js')
+        .pipe(uglify())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+// Copy Bootstrap core files from node_modules
 gulp.task('bootstrap', function() {
     return gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest(''))
 })
 
-// Grab jQuery core files from node_modules
+// Copy jQuery core files from node_modules
 gulp.task('jquery', function() {
     return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest('js'))
 })
 
-// Grab Font Awesome core files from node_modules
+// Copy Font Awesome core files from node_modules
 gulp.task('fontawesome', function() {
     return gulp.src([
             'node_modules/font-awesome/**',
@@ -68,8 +81,8 @@ gulp.task('fontawesome', function() {
         .pipe(gulp.dest('font-awesome'))
 })
 
-// Updates all dependencies and puts them into their proper destinations
-gulp.task('update', ['bootstrap', 'jquery', 'fontawesome']);
+// Copy all dependencies from node_modules
+gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -81,9 +94,10 @@ gulp.task('browserSync', function() {
 })
 
 // Watch Task that compiles LESS and watches for HTML or JS changes and reloads with browserSync
-gulp.task('watch', ['browserSync', 'less', 'minify-css'], function() {
+gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
+    gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);

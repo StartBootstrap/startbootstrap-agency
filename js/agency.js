@@ -1,9 +1,3 @@
-/*!
- * Agency v1.0.x (http://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 (function($) {
     "use strict"; // Start of use strict
 
