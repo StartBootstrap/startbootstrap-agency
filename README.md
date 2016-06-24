@@ -9,8 +9,6 @@ Several options are available to get started quickly:
 * Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
 * Fork the repo
 
-Note: The package contains the source files used to develop the theme. If you are a beginner and don't wish to use the source files, you can delete the `.gitignore` file, the `gulpfile.js` file, the `package.json` file, and the entire `less` directory. If you want to use GulpJS and LESS with this project, see the instructions below!
-
 ## Developing Using Source Files
 
 To use the source files, you will need to have npm installed globally along with Gulp.js. To start:
