@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Custom Navigation Bar
 
-.navbar-default {
+.navbar-custom {
 	background-color: @gray-darker;
 	border-color: transparent;
 	.navbar-brand {
@@ -99,9 +99,9 @@ h1, h2, h3, h4, h5, h6 {
 	.navbar-toggle {
 		background-color: @theme-primary;
 		border-color: @theme-primary;
-		.icon-bar {
-			background-color: white;
-		}
+		.heading-font;
+		color: white;
+		font-size: 12px;
 		&:hover,
 		&:focus {
 			background-color: @theme-primary;
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media(min-width:768px) {
-    .navbar-default {
+    .navbar-custom {
     	background-color: transparent;
         padding: 25px 0;
         -webkit-transition: padding 0.3s;
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 // Navbar Change on Scroll
 
 @media(min-width:768px) {
-	.navbar-default.affix {
+	.navbar-custom.affix {
 		background-color: @gray-darker;
 		padding: 10px 0;
 		.navbar-brand {

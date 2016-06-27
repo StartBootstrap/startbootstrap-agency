@@ -146,58 +146,59 @@ fieldset[disabled] .btn-xl.active {
   color: #fed136;
   background-color: white;
 }
-.navbar-default {
+.navbar-custom {
   background-color: #222222;
   border-color: transparent;
 }
-.navbar-default .navbar-brand {
+.navbar-custom .navbar-brand {
   color: #fed136;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
   color: #fec503;
 }
-.navbar-default .navbar-collapse {
+.navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
-.navbar-default .navbar-toggle {
+.navbar-custom .navbar-toggle {
   background-color: #fed136;
   border-color: #fed136;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
 }
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: white;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
   background-color: #fed136;
 }
-.navbar-default .nav li a {
+.navbar-custom .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
 }
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
   color: #fed136;
   outline: none;
 }
-.navbar-default .navbar-nav > .active > a {
+.navbar-custom .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
   background-color: #fed136;
 }
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
   color: white;
   background-color: #fec503;
 }
 @media (min-width: 768px) {
-  .navbar-default {
+  .navbar-custom {
     background-color: transparent;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
@@ -205,22 +206,22 @@ fieldset[disabled] .btn-xl.active {
     transition: padding 0.3s;
     border: none;
   }
-  .navbar-default .navbar-brand {
+  .navbar-custom .navbar-brand {
     font-size: 2em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .navbar-default .navbar-nav > .active > a {
+  .navbar-custom .navbar-nav > .active > a {
     border-radius: 3px;
   }
 }
 @media (min-width: 768px) {
-  .navbar-default.affix {
+  .navbar-custom.affix {
     background-color: #222222;
     padding: 10px 0;
   }
-  .navbar-default.affix .navbar-brand {
+  .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
 }
