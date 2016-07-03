@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 // Custom Navigation Bar
 
 .navbar-custom {
-	background-color: @gray-darker;
+	background-color: @navbar-pink;
 	border-color: transparent;
 	.navbar-brand {
 		color: @theme-primary;
@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media(min-width:768px) {
 	.navbar-custom.affix {
-		background-color: @gray-darker;
+		background-color: @navbar-pink;
 		padding: 10px 0;
 		.navbar-brand {
 			font-size: 1.5em;
@@ -167,13 +167,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-	background-image: url('../img/header-bg.jpg');
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
+	background: url('../img/circle.jpg') no-repeat scroll center center;
 	.background-cover;
 	text-align: center;
-	color: white;
+	color:@green-blue;
 	.intro-text {
 		padding-top: 100px;
 		padding-bottom: 50px;
@@ -209,7 +206,7 @@ header {
 			.intro-heading {
 				.heading-font;
 				font-weight: 700;
-				font-size: 75px;
+				font-size: 55px;
 				line-height: 75px;
 				margin-bottom: 50px;
 			}
@@ -609,7 +606,7 @@ ul.social-buttons {
 	li {
 		a {
 			display: block;
-			background-color: @gray-darker;
+			background-color: @navbar-pink;
 			height: 40px;
 			width: 40px;
 			border-radius: 100%;

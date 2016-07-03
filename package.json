@@ -23,5 +23,8 @@
   "repository": {
     "type": "git",
     "url": "https://githsub.com/haha54carol/startbootstrap-agency.git"
+  },
+  "dependencies": {
+    "typewriting": "^1.2.2"
   }
 }

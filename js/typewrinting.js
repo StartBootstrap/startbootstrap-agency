@@ -1,0 +1,1 @@
+/** * Created by Carol on 2016/7/3. */var typeWriting = new TypeWriting({    targetElement   : document.getElementsByClassName('typing')[0],    inputString     : 'Hi,Shawn',    typing_interval : 130,    blink_interval  : '1s',    cursor_color    : '#00fd55',}, function() {    console.log("END");});
