@@ -741,3 +741,10 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+.logo-container{
+    padding-top:7px
+}
+.logo{
+    float: left;
+    height: 35px;
+}
