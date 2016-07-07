@@ -1,5 +1,12 @@
 // Mixins
 
+@font-face {
+  font-family: 'simplerPro';
+  src: local('SimplerPro Regular'),
+    url('../vendor/fonts/SimplerPro-Regular.otf');
+    format('opentype');
+}
+
 // Bootstrap Button Variant
 
 .button-variant(@color; @background; @border) {
@@ -52,18 +59,18 @@
 // Font Mixins
 
 .serif-font() {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .script-font() {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
 .body-font() {
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .heading-font() {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
