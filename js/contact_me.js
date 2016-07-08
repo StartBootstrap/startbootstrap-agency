@@ -22,6 +22,7 @@ $(function() {
             $.ajax({
                 url: "https://formspree.io/contact@orhanona.com",
                 type: "POST",
+                dataType: "json",
                 data: {
                     name: name,
                     phone: phone,
