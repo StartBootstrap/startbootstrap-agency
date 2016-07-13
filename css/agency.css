@@ -653,6 +653,11 @@ ul.social-buttons li a:active {
 .btn:active:focus {
   outline: none;
 }
+.portfolio-modal .modal-dialog {
+  margin: 0;
+  height: 100%;
+  width: auto;
+}
 .portfolio-modal .modal-content {
   border-radius: 0;
   background-clip: border-box;
