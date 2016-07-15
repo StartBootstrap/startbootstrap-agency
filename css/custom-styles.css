@@ -1,0 +1,62 @@
+.btn-action-show {
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+a.page-scroll {
+    transition: all 0.3s ease;
+}
+
+.m-top-15 {
+    margin-top: 15px;
+}
+
+section#appSubscribe {
+    background: #e6e6e6;
+}
+
+.social-block {
+    width: 100%;
+}
+
+.social-block a {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    position: relative;
+    float: left;
+    left: 50%;
+    margin-left: -100px;
+    line-height: 220px;
+    margin-top: 55px;
+    transition: all 0.3s ease;
+    color: #333
+}
+
+.social-block .fa {
+    font-size: 60px;
+}
+
+.social-block .fa-vk {
+}
+
+.social-block a.vk:hover {
+    background: #5b7198;
+    color: #fff;
+}
+
+.social-block a.facebook:hover {
+    background: #465897;
+    color: #fff;
+}
+
+.social-block a.instagram:hover {
+    background: #0c89d0;
+    color: #fff;
+}
+
+.social-block a.vk {
+
+}

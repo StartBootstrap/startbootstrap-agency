@@ -42,8 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
   font-weight: 700;
 }
 .img-centered {
@@ -226,7 +225,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/header-bg1.png');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -249,13 +248,17 @@ header .intro-text .intro-lead-in {
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  font-family: "Roboto Slab";
+  /*text-transform: uppercase;*/
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 25px;
   background-color: rgba(0, 0, 0, 0.25);
+}
+header .intro-text .intro-heading span{
+  font-size: 38px;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -269,23 +272,32 @@ header .intro-text .intro-heading {
     line-height: 40px;
     margin-bottom: 25px;
   }
-  header .intro-text .intro-heading {
+  /*header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 50px;
-  }
+  }*/
 }
 section {
   padding: 100px 0;
 }
 section h2.section-heading {
+  font-family: 'Roboto Slab';
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
+  color: #333;
 }
+
+section h2.section-heading span{
+  font-family: 'Roboto Slab';
+  font-size: 24px;
+  color: #555;
+}
+
 section h3.section-subheading {
   font-size: 16px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
