@@ -1,0 +1,57 @@
+YUI.Env.JSONP.yui_3_16_0_1_1468565492062_1016({
+   "ads" : [
+      {
+         "beacon" : "https://beap.gemini.yahoo.com/mbcsc?bv=1.0.0&es=LSvIrncGIS9AQaHinn7k2PWhfZrjIzyqp.mcHeekP3x17My.0z7eSaJCXzXz0WQVNKEpI2b25ZImQvlcwmo.9bGPOyoGItRFTfNJyspXXg9CaACBYqeNoEhSMDh6wkcWHvSyYBHfTWvCXjFD7ZyZ4Qm3bIlx5q6ODo_rKUmkkL8Cls7JzCAQbsjc1ejAYaUjXrntbSYGbGWUtMi0l2ulxQwHxs6o5o.OUzzjlE9oKpyZZoy7ROi0rhayCqpOgYuK9g.AklZ03cXqMPg928ESFmEFjrpIwZGceF3GGT3LHfsvpFPASQ1yO6BPSORTNKcWONJYQHAfopB6TpnG.M8GOI3HWgGR8nxt4fZhX7cteHpmuF1yAwYms1Qfzf5HNd8BorbQez7TpHT0t47PsK2I3i1qREU-&ap=$(AD_POSN)",
+         "bidUSD" : 1.020,
+         "ccCode" : "STRM",
+         "clickProbability" : 0.001982726352888496,
+         "creativeId" : 32190290605,
+         "displayUrl" : "http://l.yimg.com/av/curveball/ads/pr/RESIZE/82x82/0424d5cafcf9b4b8fea492d42545e6b1.jpeg",
+         "index" : 1,
+         "landingPageUrl" : "https://ad.doubleclick.net/ddm/clk/305809567;133228820;h",
+         "normalizedEcpm" : 0.5309031357001058,
+         "rsc" : 0.0006256583067170141,
+         "sponsoredBy" : "Luxury Card",
+         "tag" : "{\"ad_feedback_beacon\":\"https://us.af.beap.bc.yahoo.com/af?bv=1.0.0&bs=(15nqd3sh0(gid$60fc87d6-4a58-11e6-b9d1-008cfacc8ca4-7f77872f6700,st$1468565412636000,li$0,cr$32190290605,dmn$c32190290605,srv$3,exp$1468572612636000,ct$27,v$1.0,adv$1319394,pbid$1,seid$4964388))&r=1468565412636&al=$(AD_FEEDBACK)\",\"advertiser_id\":\"1319394\",\"callToAction\":\"Learn more\",\"clickUrl\":\"https://beap.gemini.yahoo.com/mbclk?bv=1.0.0&es=5.WXUUAGIS_tGxcgAAIAMxE.3FsJ6A3bPS5M35douDR.M6cgAi741HWFb5ZCj8xnGjcWPaQRWdMr_ty4HXrKOOKFzJP88tGNsZNgZ20CSulklMerFR1UfbZY5KAOQ6ghXIhUkE7imZbPQkef3ifmAt60fQxEX7U00I7HqbCjq0Fkob20FVmq9KbONvR6Bvm0J9ntkjzVRP8LKnVx_699oaNJEiz.L79iSKOuLIjBplsNvlhc18I5x1xi4opd_lAoN0hJ7wLC7WPdqg7eN6BmDJSoi8OUILNBZm6EzoC1ZK9Pq2MdRWRV7VxdH8aAT5OchCu9wtW4yOdLz3Ybj3RxZQkfEvLblJQzEL9Q1Fx_OBu65zu8Dc5OUku.GFBsFI8Zg67x_sd6vngzasEYRQotFOps2e3i6fSaObQDkjo80yU4ac37J14HPo48G448iotQYp1aXi5ZZTctHdgu6oux0QeAq6ZCYTkgHQd5OJONSX21RF_0iJvlFemLCeO46hWypK1HQA--%26lp=\",\"headline\":\"Life Without Limits™ - Mastercard® Black Card™\",\"hqImage\":\"https://s.yimg.com/av/moneyball/ads/1464107798875-8290.jpg\",\"hqImageHeight\":627,\"hqImageWidth\":1200,\"image\":\"http://l.yimg.com/av/curveball/ads/pr/RESIZE/82x82/0424d5cafcf9b4b8fea492d42545e6b1.jpeg\",\"imageHeight\":82,\"imageWidth\":82,\"imprTrackingUrl\":\"https://ad.doubleclick.net/ddm/ad/N5928.8578.YAHOOINC/B9373274.133228820;sz=1x1;ord=1468565412;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\",\"imprTrackingUrls\":[\"https://ad.doubleclick.net/ddm/ad/N5928.8578.YAHOOINC/B9373274.133228820;sz=1x1;ord=1468565412;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\"],\"landingUrl\":\"https://ad.doubleclick.net/ddm/clk/305809567;133228820;h\",\"objective\":\"VISIT_WEB\",\"origImg\":\"https://s.yimg.com/av/moneyball/ads/1464107799763-8694.jpg\",\"origImgHeight\":627,\"origImgWidth\":627,\"secHqImage\":\"https://s.yimg.com/av/moneyball/ads/1464107798875-8290.jpg\",\"secImage\":\"https://s.yimg.com/av/curveball/ads/pr/RESIZE/82x82/0424d5cafcf9b4b8fea492d42545e6b1.jpeg\",\"secOrigImg\":\"https://s.yimg.com/av/moneyball/ads/1464107799763-8694.jpg\",\"source\":\"Luxury Card\",\"sponsoredByLabel\":\"Sponsored\",\"summary\":\"The Ultimate Buying Tool. Become a Cardmember and enjoy access to exclusive privileges such as our industry-Leading Rewards Program. Apply Now.\",\"uuid\":\"32190290605\"}"
+      },
+      {
+         "beacon" : "https://beap.gemini.yahoo.com/mbcsc?bv=1.0.0&es=5BZae_gGIS9u0Ljq7edUZLHconlGaoVJQAyxCrCjI6HlZFgtAbuIbea5JYjEiRclNfYM9xuW8sOGR2hqoV_RqB2mUcJmAmgiy7IBywj0UxPyz.jgxmv7sGIhWwC3PTGdpWkJvK6xlJz4HbMHyXArukYjrgzrhMfaS_mg5VVYdh2Grx0ui6phxuMXvarZ3sSPDW4TYrI6Faa0mGqdipyq.2unuhKLRVffmh171ziMbqK0tTdu_SH2RY9PUxjK2vZddYYWSrdR9S_YGe5NRutZZ3SgLk4TZ4XOHE3FE8iV3mFUFvqpxX_xFZOEN9wjrmJPbbgYQGB806zZgbkPws1OthY7aE69bYkh5T1PPB9KwP6bLuwN.yQo4aNkb4SXxrW417uwFXIQ85V5EgIk1JL5DTKQApYtZ_Xg3NGX&ap=$(AD_POSN)",
+         "bidUSD" : 0.02701989304037920,
+         "ccCode" : "STRM",
+         "clickProbability" : 0.001264069127453970,
+         "creativeId" : 31751597588,
+         "displayUrl" : "http://l.yimg.com/av/curveball/ads/pr/RESIZE/82x82/6264450060bab367813586dc9b1ce701.jpeg",
+         "index" : 2,
+         "landingPageUrl" : "http://www.ancestry.com/s67028/t32876/rd.ashx",
+         "normalizedEcpm" : 0.06320345637269850,
+         "rsc" : 3.415713433696510e-05,
+         "sponsoredBy" : "Ancestry",
+         "tag" : "{\"ad_feedback_beacon\":\"https://us.af.beap.bc.yahoo.com/af?bv=1.0.0&bs=(15mmp8bdp(gid$60fc87d6-4a58-11e6-b9d1-008cfacc8ca4-7f77872f6700,st$1468565412636000,li$0,cr$31751597588,dmn$ancestry.com,srv$3,exp$1468572612636000,ct$27,v$1.0,adv$912845,pbid$1,seid$4964388))&r=1468565412636&al=$(AD_FEEDBACK)\",\"advertiser_id\":\"912845\",\"callToAction\":\"Learn more\",\"clickUrl\":\"https://beap.gemini.yahoo.com/mbclk?bv=1.0.0&es=KPDjAtcGIS.f3NLHDghbJd.T.O_xo4SoW7G1l.JImkBaWIFUgwMDf5JyQ3.i6FZ0a2WzziUHjygK6xtwzbSVHCrO8L9CeBng8R6z.14aomgmy6XeZHxE3YYCuiO3RAuODOmaTgYsW0AYRf7LBJEvtwvK9AQvmazNnwolr0B__AxcXOFr_R0mT4T2Vta80Y9S10AaN1cZ5Ae.kcBi2hZm6aTmkAU7OSojD0rlN13N7pdfDvIi4c9nHVNsJLsF5OljSJHTEHLkJ1y5Y2UVz.K0p06b.MmPK.7Nxt3WRrSqOFwJUonJ136a1RNtk5gXABVPHmwSc7VLZrAYld_z6LfRibYLxBcxa_HuI3oXDne3Mcq5KXWD74xoRA.vkmLITCi3as8ahUnYM0KmHSsg6ICWX6h_NLX2mXUkW5xhwR50oozbGi5oHp.3jMUuja7RUE9CPH7QEflzPJpkPKD2_GrDkkDeKXgYUX8DKODXSzJ2JyPqdTds%26lp=\",\"headline\":\"What does your last name say about you?\",\"hqImage\":\"https://s.yimg.com/av/moneyball/ads/1456163953809-8626.jpg\",\"hqImageHeight\":627,\"hqImageWidth\":1200,\"image\":\"http://l.yimg.com/av/curveball/ads/pr/RESIZE/82x82/6264450060bab367813586dc9b1ce701.jpeg\",\"imageHeight\":82,\"imageWidth\":82,\"landingUrl\":\"http://www.ancestry.com/s67028/t32876/rd.ashx\",\"objective\":\"VISIT_WEB\",\"origImg\":\"https://s.yimg.com/av/moneyball/ads/1456163954725-2930.jpg\",\"origImgHeight\":627,\"origImgWidth\":627,\"secHqImage\":\"https://s.yimg.com/av/moneyball/ads/1456163953809-8626.jpg\",\"secImage\":\"https://s.yimg.com/av/curveball/ads/pr/RESIZE/82x82/6264450060bab367813586dc9b1ce701.jpeg\",\"secOrigImg\":\"https://s.yimg.com/av/moneyball/ads/1456163954725-2930.jpg\",\"source\":\"Ancestry\",\"sponsoredByLabel\":\"Sponsored\",\"summary\":\"Enter your last name to learn its meaning and origin. Start your 14-day free trial from Ancestry.com today!\",\"uuid\":\"31751597588\"}"
+      },
+      {
+         "beacon" : "https://beap.gemini.yahoo.com/mbcsc?bv=1.0.0&es=ElcSYosGIS_8bVPqX9dn9aYMqwAxXM_QrcW7jX_xFS2Bl10i82cDpNQTBOUqRJdAZ4e1JXiElCK4N9pBhIWkPur0YlBc1PlEcfxl_lajBfq0c0WUW8s6em3oSs7EmQ29c3NwjtAHv2MhrA4mX0xjaQ4PW4YDACRgkdmeX3rFyThFmWYvi7gNPc9V_5iVxKX7NRVNvCvGFpLPRI0m0QZ_n1J6etACqcP6.0bbNtX6YO9WTJfDjxu9Z_tr5Bwaa9wow6EGMtNjv1unUGlIyNWHK0uay5CJi7xsfd5zcqMtqBxnFX04O3Tw.6MOzraLR9NAO7EtFuiJwo_l9QZr__.SB8qy0PoC4D_B6LNj9Kl2G.lBYSWMEBLmklYiSSBeOUfJBll.c3KJvHQfkx9usEir2cy_zZfUEzMVHHv3IA--&ap=$(AD_POSN)",
+         "bidUSD" : 0.03432133448009069,
+         "ccCode" : "STRM",
+         "clickProbability" : 0.0004281651683086789,
+         "creativeId" : 32110778671,
+         "displayUrl" : "http://l.yimg.com/av/curveball/ads/pr/RESIZE/82x82/3c9b8b59897aa6ca0cfd0d33137c90b1.jpeg",
+         "index" : 3,
+         "landingPageUrl" : "https://www.abcmouse.com/landing/dis:yahoonative:15",
+         "normalizedEcpm" : 0.02140825841543394,
+         "rsc" : 1.475835290420946e-05,
+         "sponsoredBy" : "ABCmouse.com",
+         "tag" : "{\"ad_feedback_beacon\":\"https://us.af.beap.bc.yahoo.com/af?bv=1.0.0&bs=(15nsrls99(gid$60fc87d6-4a58-11e6-b9d1-008cfacc8ca4-7f77872f6700,st$1468565412636000,li$0,cr$32110778671,dmn$c32110778671,srv$3,exp$1468572612636000,ct$27,v$1.0,adv$1381234,pbid$1,seid$4964388))&r=1468565412636&al=$(AD_FEEDBACK)\",\"advertiser_id\":\"1381234\",\"callToAction\":\"Learn more\",\"clickUrl\":\"https://beap.gemini.yahoo.com/mbclk?bv=1.0.0&es=TcDXNp8GIS_WsHOct0DKZAe4Cgr20qr51X7iYhDqygHO5iNBuIrf2862lAeKRweMS12zur64VmKLqD58Ihp8ZHJQmwsu59WCAmQ0z9vlWggVPxwT8yFWSk.DyDJiPEU.w066X8IHr4RH9pHtH6DaBp6UkIr23jPhu2eXIG7._uB.M2uu4e92UfPFgMFQpLn.R.4TAzJkxmxofklTabMDtDWwJH7V7Z8G..0zUgflvv4pC0J6QAnAw8QRUl.Dh9A2ekw2D_jHMm62duoy9FiQ0RQ6NxlU3oAltJRsCywxFrnL4_luO8sMEL7uev34ItlLHU0DcrzP.aZiSdIU.lpwJca6mevt8wOkFlGU7pSfLVjO_OOcn0fRf91psAufqK8nCiDVWB33TSSbMVvFE7eN_DHyz5n2PZD1VKtS9J9X_51kfhF5cC5CQ3z7O25gKTzlRWjmCmKggsv64wRjJykvZdgp8VyD2QhP03beHUuF1JQSq7BGTXkcxsyFOG4tnwI-%26lp=\",\"headline\":\"Get your Kids Ages 2-7 Excited to Learn!\",\"hqImage\":\"https://s.yimg.com/av/moneyball/ads/1464201660865-9007.jpg\",\"hqImageHeight\":627,\"hqImageWidth\":1200,\"image\":\"http://l.yimg.com/av/curveball/ads/pr/RESIZE/82x82/3c9b8b59897aa6ca0cfd0d33137c90b1.jpeg\",\"imageHeight\":82,\"imageWidth\":82,\"landingUrl\":\"https://www.abcmouse.com/landing/dis:yahoonative:15\",\"objective\":\"VISIT_WEB\",\"origImg\":\"https://s.yimg.com/av/moneyball/ads/1464201706805-9947.jpg\",\"origImgHeight\":1080,\"origImgWidth\":1080,\"secHqImage\":\"https://s.yimg.com/av/moneyball/ads/1464201660865-9007.jpg\",\"secImage\":\"https://s.yimg.com/av/curveball/ads/pr/RESIZE/82x82/3c9b8b59897aa6ca0cfd0d33137c90b1.jpeg\",\"secOrigImg\":\"https://s.yimg.com/av/moneyball/ads/1464201706805-9947.jpg\",\"source\":\"ABCmouse.com\",\"sponsoredByLabel\":\"Sponsored\",\"summary\":\"Start early with your child's education by providing them with books, games, puzzles and more! Try it free for 30 days!\",\"uuid\":\"32110778671\"}"
+      }
+   ],
+   "adsRequested" : 8,
+   "adserverLatency" : 1.700000000000000e-05,
+   "section" : {
+      "id" : 4964388
+   },
+   "serverIp" : "fe36.cbs.cb.bf1.yahoo.com",
+   "status" : "0",
+   "totalAds" : 3,
+   "totalLatency" : 0.026170,
+   "userCountry" : "RU",
+   "version" : "2"
+})
