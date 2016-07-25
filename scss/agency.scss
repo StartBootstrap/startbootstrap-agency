@@ -717,6 +717,11 @@ ul.social-buttons {
 }
 
 .portfolio-modal {
+  .modal-dialog{
+    margin: 0;
+    height: 100%;
+    width: auto;
+  }
   .modal-content {
     border-radius: 0;
     background-clip: border-box;
