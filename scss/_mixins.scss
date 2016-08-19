@@ -1,37 +1,51 @@
+// Mixins
+
 // Bootstrap Button Variant
 
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
   border-color: $border;
-  @at-root {
-    &.active,
-    &:active,
-    &:focus,
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
     &:hover,
-    .open .dropdown-toggle#{&} {
+    &:focus,
+    &.focus {
       color: $color;
-      background-color: darken($background, 10%);
-      border-color: darken($border, 12%);
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
     }
-
-    &.active,
-    &:active,
-    .open .dropdown-toggle#{&} {
-      background-image: none;
-    }
-
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] #{&} {
-      &,
-      &.active,
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: $background;
-        border-color: $border;
-      }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
     }
   }
 
@@ -41,7 +55,7 @@
   }
 }
 
-// Background Features
+// Background Cover Mixin
 
 @mixin background-cover {
   -webkit-background-size: cover;
@@ -50,7 +64,7 @@
   -o-background-size: cover;
 }
 
-// Font Selections
+// Font Mixins
 
 @mixin serif-font {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
