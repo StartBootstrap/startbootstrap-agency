@@ -2,6 +2,27 @@
 	font-size: 14px;
 }
 
+.text-primary {
+  color: #4F1726;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+}
+a {
+  color: #092F96;
+}
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #092F96;
+  }
+
 header {
   background-image: url('../img/background.png');
   background-repeat: no-repeat;
