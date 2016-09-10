@@ -5,13 +5,13 @@
  */
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .text-muted {
   color: #777777;
 }
 .text-primary {
-  color: #fed136;
+  color: #BCD968;
 }
 p {
   font-size: 14px;
