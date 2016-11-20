@@ -19,8 +19,15 @@
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
-            $('.navbar-toggle:visible').click();
+    $('.navbar-collapse ul li a').click(function(event){ 
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // Closes the Responsive Menu off Menu Click
+    $(document).click(function(event) { 
+        if(!$(event.target).closest('.navbar-collapse').length) {
+            $('.navbar-collapse').collapse('hide');
+        }
     });
 
     // Offset for Main Navigation
@@ -28,6 +35,6 @@
         offset: {
             top: 100
         }
-    })
+    });
 
 })(jQuery); // End of use strict
