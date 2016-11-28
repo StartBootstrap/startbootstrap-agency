@@ -187,11 +187,19 @@ header {
         }
         .intro-heading {
             .heading-font;
+            text-transform: uppercase;
             font-weight: 700;
             font-size: 50px;
             line-height: 50px;
             margin-bottom: 25px;
         }
+      .intro-sub-heading {
+        .heading-font;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 25px;
+      }
     }
 }
 
@@ -208,11 +216,18 @@ header {
             }
             .intro-heading {
                 .heading-font;
+                text-transform: uppercase;
                 font-weight: 700;
-                font-size: 75px;
-                line-height: 75px;
-                margin-bottom: 50px;
+                font-size: 50px;
+                line-height: 50px;
             }
+          .intro-sub-heading {
+            .heading-font;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 35px;
+            margin-bottom: 25px;
+          }
         }
     }
 }
@@ -606,6 +621,7 @@ footer {
 
 ul.social-buttons {
     margin-bottom: 0;
+    margin-top: 10px;
     li {
         a {
             display: block;
@@ -735,4 +751,12 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @theme-primary;
+}
+
+.clients{
+  background-color: #d9d9d9;
+}
+
+.team-heading{
+  margin-bottom: 20px;
 }
