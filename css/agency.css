@@ -226,7 +226,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-color: #201a1b;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -238,6 +238,7 @@ header {
   color: white;
 }
 header .intro-text {
+  position: absolute;
   padding-top: 100px;
   padding-bottom: 50px;
 }
