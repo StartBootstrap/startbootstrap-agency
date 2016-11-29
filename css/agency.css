@@ -731,11 +731,9 @@ ul.social-buttons li a:active {
 }
 ::-moz-selection {
   text-shadow: none;
-  background: #fed136;
 }
 ::selection {
   text-shadow: none;
-  background: #fed136;
 }
 img::selection {
   background: transparent;
@@ -751,4 +749,9 @@ body {
 }
 .team-heading {
   margin-bottom: 20px;
+}
+#mc_embed_signup {
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 100%;
 }
