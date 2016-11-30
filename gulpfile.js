@@ -59,6 +59,9 @@ gulp.task('copy', function() {
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest('vendor/jquery'))
 
+    gulp.src(['node_modules/tether/dist/js/tether.js', 'node_modules/tether/dist/js/tether.min.js'])
+        .pipe(gulp.dest('vendor/tether'))
+
     gulp.src([
             'node_modules/font-awesome/**',
             '!node_modules/font-awesome/**/*.map',

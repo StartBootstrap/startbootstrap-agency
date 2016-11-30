@@ -9,39 +9,25 @@ body {
 }
 
 .text-muted {
-    color: @gray-light;
+    color: @gray-light !important;
 }
 
 .text-primary {
-    color: @theme-primary;
+    color: @theme-primary !important;
 }
 
 p {
-    font-size: 14px;
     line-height: 1.75;
-}
-
-p.large {
-    font-size: 16px;
-}
-
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-    outline: none;
 }
 
 a {
     color: @theme-primary;
-}
-
-a:hover,
-a:focus,
-a:active,
-a.active {
-    color: darken(@theme-primary, 10%);
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: darken(@theme-primary, 10%);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img-centered {
+    display: block;
     margin: 0 auto;
 }
 
@@ -80,62 +67,46 @@ h1, h2, h3, h4, h5, h6 {
 
 // Custom Navigation Bar
 
-.navbar-custom {
+#mainNav {
     background-color: @gray-darker;
     border-color: transparent;
-    .navbar-brand {
-        color: @theme-primary;
-        .script-font;
-        &:hover,
-        &:focus,
-        &:active,
-        &.active {
-            color: darken(@theme-primary, 10%);
+    .container {
+        padding: 0;
+        .navbar-brand {
+            color: @theme-primary;
+            .script-font;
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                color: darken(@theme-primary, 10%);
+            }
         }
-    }
-    .navbar-collapse {
-        border-color: fade(white, 2%);
-    }
-    .navbar-toggle {
-        background-color: @theme-primary;
-        border-color: @theme-primary;
-        .heading-font;
-        color: white;
-        font-size: 12px;
-        &:hover,
-        &:focus {
-            background-color: @theme-primary;
+        .btn-toggle {
+            padding: .75em;
+            font-size: 80%;
         }
-    }
-    .nav {
-        li {
-            a {
-                .heading-font;
-                font-weight: 400;
-                letter-spacing: 1px;
-                color: white;
-                &:hover,
-                &:focus {
-                    color: @theme-primary;
-                    outline: none;
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    font-size: 90%;
+                    padding: 0.75em 0;
+                    .heading-font;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    color: white;
+                    &:hover,
+                    &.active {
+                        color: @theme-primary;
+                    }
                 }
             }
         }
     }
-    .navbar-nav>.active>a {
-        border-radius: 0;
-        color: white;
-        background-color: @theme-primary;
-    }
-    .navbar-nav>.active>a:hover,
-    .navbar-nav>.active>a:focus {
-        color: white;
-        background-color: darken(@theme-primary, 10%);
-    }
 }
 
 @media(min-width:768px) {
-    .navbar-custom {
+    #mainNav {
         background-color: transparent;
         padding: 25px 0;
         -webkit-transition: padding 0.3s;
@@ -143,25 +114,25 @@ h1, h2, h3, h4, h5, h6 {
         transition: padding 0.3s;
         border: none;
         .navbar-brand {
-            font-size: 2em;
+            font-size: 1.75em;
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             transition: all 0.3s;
         }
-        .navbar-nav>.active>a {
-            border-radius: 3px;
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    padding: 1.2em 0.4em !important;
+                }
+            }
         }
-    }
-}
-
-// Navbar Change on Scroll
-
-@media(min-width:768px) {
-    .navbar-custom.affix {
-        background-color: @gray-darker;
-        padding: 10px 0;
-        .navbar-brand {
-            font-size: 1.5em;
+        &.navbar-shrink {
+            background-color: @gray-darker;
+            padding: 5px 0;
+            .navbar-brand {
+                padding: 0.65em 0;
+                font-size: 1.25em;
+            }
         }
     }
 }
@@ -590,11 +561,13 @@ footer {
     padding: 25px 0;
     text-align: center;
     span.copyright {
+        font-size: 90%;
         line-height: 40px;
         .heading-font;
         text-transform: none;
     }
     ul.quicklinks {
+        font-size: 90%;
         margin-bottom: 0;
         line-height: 40px;
         .heading-font;
@@ -640,7 +613,7 @@ ul.social-buttons {
     .modal-dialog{
         margin: 0;
         height: 100%;
-        width: auto;
+        max-width: none;
     }
     .modal-content {
         border-radius: 0;
