@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2016 Start Bootstrap
+ * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
@@ -142,6 +142,15 @@ fieldset[disabled] .btn-xl.active {
   background-color: #222222;
   border-color: transparent;
 }
+#mainNav .navbar-toggler {
+  border: 0;
+  color: white;
+  background-color: #fed136;
+  font-size: 12px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 13px;
+}
 #mainNav .container {
   padding: 0;
 }
@@ -154,10 +163,6 @@ fieldset[disabled] .btn-xl.active {
 #mainNav .container .navbar-brand:active,
 #mainNav .container .navbar-brand.active {
   color: #fec503;
-}
-#mainNav .container .btn-toggle {
-  padding: .75em;
-  font-size: 80%;
 }
 #mainNav .container .navbar-nav .nav-item .nav-link {
   font-size: 90%;
@@ -172,7 +177,7 @@ fieldset[disabled] .btn-xl.active {
 #mainNav .container .navbar-nav .nav-item .nav-link.active {
   color: #fed136;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #mainNav {
     background-color: transparent;
     padding: 25px 0;
@@ -188,7 +193,7 @@ fieldset[disabled] .btn-xl.active {
     transition: all 0.3s;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    padding: 1.2em 0.4em !important;
+    padding: 1.2em 1em !important;
   }
   #mainNav.navbar-shrink {
     background-color: #222222;
