@@ -1,7 +1,7 @@
 {
   "name": "agency",
   "title": "Agency",
-  "version": "3.3.7+1",
+  "version": "4.0.0-alpha",
   "homepage": "http://startbootstrap.com/template-overviews/agency",
   "author": "Start Bootstrap",
   "license": {
@@ -9,7 +9,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.5",
+    "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.13.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
