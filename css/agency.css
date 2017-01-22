@@ -247,6 +247,14 @@ header .intro-text .intro-lead-in {
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
+  position: absolute;
+  top:250px;
+  left:140px;
+  width:500px;
+  height:50px;
+  background-color:black;
+  z-index:0;
+  opacity:0.5;
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
