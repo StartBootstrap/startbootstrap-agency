@@ -247,14 +247,6 @@ header .intro-text .intro-lead-in {
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
-  position: absolute;
-  top:250px;
-  left:140px;
-  width:500px;
-  height:50px;
-  background-color:black;
-  z-index:0;
-  opacity:0.25;
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -263,14 +255,6 @@ header .intro-text .intro-heading {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 25px;
-  position: absolute;
-  top:250px;
-  left:140px;
-  width:500px;
-  height:50px;
-  background-color:black;
-  z-index:0;
-  opacity:0.25;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -283,6 +267,14 @@ header .intro-text .intro-heading {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
+    position: absolute;
+    top:250px;
+    left:140px;
+    width:500px;
+    height:50px;
+    background-color:black;
+    z-index:0;
+    opacity:0.25;
   }
   header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -291,6 +283,14 @@ header .intro-text .intro-heading {
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 50px;
+    position: absolute;
+    top:250px;
+    left:140px;
+    width:500px;
+    height:50px;
+    background-color:black;
+    z-index:0;
+    opacity:0.25;
   }
 }
 section {
