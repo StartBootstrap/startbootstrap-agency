@@ -19,10 +19,10 @@ var banner = ['/*!\n',
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    return gulp.src('stylesheets/less/agency.less')
+    return gulp.src('less/agency.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('stylesheets/css'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -30,10 +30,10 @@ gulp.task('less', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
-    return gulp.src('stylesheets/css/agency.css')
+    return gulp.src('css/agency.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('stylesheets/css'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -87,8 +87,8 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('stylesheets/less/*.less', ['less']);
-    gulp.watch('stylesheets/css/*.css', ['minify-css']);
+    gulp.watch('less/*.less', ['less']);
+    gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
@@ -98,10 +98,10 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
 // Compiles SCSS files from /scss into /css
 // NOTE: This theme uses LESS by default. To swtich to SCSS you will need to update this gulpfile by changing the 'less' tasks to run 'sass'!
 gulp.task('sass', function() {
-    return gulp.src('stylesheets/scss/agency.scss')
+    return gulp.src('scss/agency.scss')
         .pipe(sass())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('stylesheets/css'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }))
