@@ -1,1 +1,8 @@
-node_modules
+node_modules/
+
+# system-related files
+.DS_Store
+Thumbs.db
+
+# EditorConfig (http://editorconfig.org/)
+.editorconfig
