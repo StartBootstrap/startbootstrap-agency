@@ -6,7 +6,7 @@
   "author": "Start Bootstrap",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+    "url": "https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
