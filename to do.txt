@@ -2,7 +2,5 @@
    *look for audmail for old reports (AI, Oice, SW Engineering, Field Experience, 
        Engineering Design, DSP, Signals and Systems, Microprocessors, Compuer Architecture, Data structures and algorithms, 
 - Add Experience
-- Add Transitions between sections (yes, indeed every one would say this about themselves. but don't take it just from me. Check out my projects, experience, and what others say. 
- 	(button "Find out more" change first button to "about me" ... or make a button like download cv saying: find my projects, experience, and more
-- Implement tags for projects
+- Implement tags for projects like in https://bootstrapmade.com/demo/Butterfly/
 - Add page about skills ( Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
