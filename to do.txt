@@ -1,6 +1,76 @@
-- Add Projects:
+2- Add Projects:
    *look for audmail for old reports (AI, Oice, SW Engineering, Field Experience, 
        Engineering Design, DSP, Signals and Systems, Microprocessors, Compuer Architecture, Data structures and algorithms, 
-- Add Experience
-- Implement tags for projects like in https://bootstrapmade.com/demo/Butterfly/
-- Add page about skills ( Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
+	Mention that I asked for courses such as artificial intelligence and Mobile applications to be given. 
+		I sat with the chair and we decided what course to take for my senior year. I wanted to add value to my learning and expand my knowledge before I wrap up my years at AUD
+		I had the chance to choose, and thanks to our flexible and accommodating faculty, my professor agreed to offer these courses.
+	LaTeX Workshops
+	SGA Projects and Events, International Night, revamp and what I learned from it, SGA Online Bookstore System,
+	PHE, UNICEF affiliation.
+	Green chemistry, protective approach to pollution prevention. 
+	SGA Videos if found
+	Extracurricular: Int'l Night Performances, Syrian Night, Palestenian Night, The Voice AUD,)
+	Football team (Offside: Founded the team and played as a captain, until Igot busy and found another coach to take care of the team.
+		Today Offside is still active in several Dubai amateur Football tournaments and activities, and I cannot wait to join them again.
+	St Mary's Arabic Choir. Can Write the story of how I randomly got in but still made it. Then I can add my performance la lan ara and others. 
+3- Add Experience. Include Universities, Work GL, Freelance tutor, math and program center, TUD internship, coffeol, SGA, PHE, IEEE, others. 
+
+1- Implement tags for projects like in https://bootstrapmade.com/demo/Butterfly/  and http://bootsnipp.com/snippets/r1Z7d. 
+	-Tags include: All, Engineering & Science, Business (Startups), Media (incl music and voiceover), Extracurricular (Volunteer Work, Sports)
+	-Maybe for each project in the end add some tags and then have them all in the end of the website like kamalabs.
+		Tags like leadership to join together the Offside Captainship and SGA. 
+	+Could be made into big CATEGORIES (The main headings: All, Engineering, Business, Media, Extrcurricular) and then smaller TAGS: (public speaking, music, sports, social, REST, APIs, Java)
+		or maybe Tags and sub-tags like tabs and subtabs in websites.
+4- Add page about skills ( Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
+
+5- Maybe instead of my key characteristics change it to my Interests and then list Computer Interests (Topics and programming languages), 
+	Business Interests (startups related to music, videos, social services. social enterprises, tech startups), 
+	Special Interests (Music, Singing, writing songs (mostly parodies), Movie-making, voice-over, Sports, Yoga, Football, Cooking.
+	<This could be like the interest tags in Couchsurfing for example. Put them in a box>
+
+6- Link to blogposts from intopreneur. (how to hack weekend, fashion hack, arduino vs arduino). 
+	- Maybe have a tab section about Media (subheading: "My Blogposts, or posts about me").
+	- My Blogpost links, 
+	- POsts about me. Behzad Sandila, Mustafa (ieeeAUD), LaTeX Workshop if there was a post about it, The Student Services Testimonial, Leen Al Faisal's post about International Night.
+7- Search about SEO. Does the tags thing allow this? 
+
+8- Fix carousel timing issue. Let it be static when one image is clicked. 
+	Also Let it to fit mobile devices. 
+	Also make bold sentences. 
+	Also let it to enable "...more" functionality.
+
+9- In the About Section add one-sentence bullets. This could be another section before Contact me [More Facts]: 
+	-"\bf{My ultimate goal in life} : fusing my technical major with my hobbies and interests in media, such as computer engineering and music, or in any project that has great societal impact. To reach it, I try to make every tiny opportunity to learn. 
+	-"\bf{Currently I am learning} web software development, I want to become a full-stack developer. In the future I want to learn mobile application development as well and become good at it.
+	-"\bf{I love languages}. I am fluent in Arabic and English, and can speak French and Spanish at basic conversational level. I am learning Swedish and Finnish. 
+		I can also throw a couple of sentences* in German, Dutch, Italian, Japanese, and Hindi.
+		(footnote)* Maximum 4 sentences pronounced decent enough to convince people that I am fluent at these languages ;P
+	-"\bf{Currently I am reading} "How not to be wrong: The Power of Mathematical Thinking by .... I enjoy non-fiction books that bring food for thought.
+	-"\bf{During my free time}, I do sports, play football and organize matches, sing and record, learn to play music, socialize with friends and organize social activities, cook.
+
+	22 random facts about me: 
+	- I was born in Aleppo, Syria. I love going there.
+	- I Lived in 4 cities: Aleppo, Dubai, Stockholm, and Helsinki.
+	- My travel count is currently 10 countries, 7 of them being visited only last year, and it's just the beginning.
+	- My Favorite drink is Yerba Mate (put link).
+	- My Favorite food is Sushi, formerly I was passionate in spaghetti. I'm a foodie, and I love trying exotic food.
+	- I began the entrepreneurial life since childhood (at 6 years old). My first business was selling hand-crafted elastic key-chains. I started with my cousin. The business failed because we lacked marketing resources. Door-to-door sales is no easy game.
+	- I also started a business of selling skateboard rides to kids in town. The business shut down after injuries caused by riding on steep roads in Aleppo.
+	- I was a maker. Aside from the key-chain stuff I mentioned, I enjoyed making my own footballs, basketball rims (and broke many), and other toys. My marshmallow rifle was the most sophisticated, accurate, and peaceful.
+	- When no one in the neighborhood played football, I thought we needed a change. The next week I started a football bootcamp and trained them.
+	- As a kid I used to have passion in motorbikes. Still an adventurous person, I am now more speed- and safety-aware.
+	- I am a fan of The German national team and Bayern Munich, and I had a dream-come-true when I met the players of each team when They visited Dubai.
+	- I have a flag of Germany in my room containing the autographs of key players, including the world-cup winning ones and their coach. I plan to keep this invaluable (priceless) piece to my next generations. 
+	- I was a passionate goalkeeper in football until I broke my arm (Ironically while I was goalkeeping). From that moment I was scared of the ball and now I play as a defender. The phobia is fading though, I'm getting stronger.
+	- My music taste is a fusion between different cultures, such as Western and Middle-Eastern.
+	- I always wanted to join the choir in Dubai, but never had a serious thought. How I ended up in it was random. (link to project).
+	- My favorite instrument is piano and learning it is on my bucket list. Right now, I got an Ukulele from Yousician (link), and I got excited to learn to play it. 
+	- I often fantasize of having a radio or tv program to talk about wierd and fun things.
+	- I do voice-over for my projects as well as my friends'. I offer voice-over as a service. You can find more in the portfolio section.
+	- My favorite elective subjects in University were Pychology, Public Speaking, and Spanish.
+	- I love to teach and share knowledge. In my school I gave lectured for various subjects when the teachers were absent, or present.
+	- My motto as a teacher or team leader is that every person is capable hand has something to bring to the table. Every single person.
+	- I love to present in public. I might be the most stressed person before giving a speech, but the feeling of adrenaline rush  is irreplaceable. 
+	
+10- Fix Contact me page to include the linkedin there. Also Add phone number and security question (im not a robot).
+			
