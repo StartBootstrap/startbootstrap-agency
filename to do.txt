@@ -13,6 +13,7 @@
 	Football team (Offside: Founded the team and played as a captain, until Igot busy and found another coach to take care of the team.
 		Today Offside is still active in several Dubai amateur Football tournaments and activities, and I cannot wait to join them again.
 	St Mary's Arabic Choir. Can Write the story of how I randomly got in but still made it. Then I can add my performance la lan ara and others. 
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/m6O3dLezJyg" frameborder="0" allowfullscreen></iframe>
 3- Add Experience. Include Universities, Work GL, Freelance tutor, math and program center, TUD internship, coffeol, SGA, PHE, IEEE, others. 
 
 1- Implement tags for projects like in https://bootstrapmade.com/demo/Butterfly/  and http://bootsnipp.com/snippets/r1Z7d. 
@@ -32,7 +33,7 @@
 	- Maybe have a tab section about Media (subheading: "My Blogposts, or posts about me").
 	- My Blogpost links, 
 	- POsts about me. Behzad Sandila, Mustafa (ieeeAUD), LaTeX Workshop if there was a post about it, The Student Services Testimonial, Leen Al Faisal's post about International Night.
-7- Search about SEO. Does the tags thing allow this? 
+7- Search about SEO. Does the tags thing allow this? Also Check the website description on browser (description meta tag not working)
 
 8- Fix carousel timing issue. Let it be static when one image is clicked. 
 	Also Let it to fit mobile devices. 
