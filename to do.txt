@@ -16,12 +16,6 @@
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/m6O3dLezJyg" frameborder="0" allowfullscreen></iframe>
 3- Add Experience. Include Universities, Work GL, Freelance tutor, math and program center, TUD internship, coffeol, SGA, PHE, IEEE, others. 
 
-1- Implement tags for projects like in https://bootstrapmade.com/demo/Butterfly/  and http://bootsnipp.com/snippets/r1Z7d. 
-	-Tags include: All, Engineering & Science, Business (Startups), Media (incl music and voiceover), Extracurricular (Volunteer Work, Sports)
-	-Maybe for each project in the end add some tags and then have them all in the end of the website like kamalabs.
-		Tags like leadership to join together the Offside Captainship and SGA. 
-	+Could be made into big CATEGORIES (The main headings: All, Engineering, Business, Media, Extrcurricular) and then smaller TAGS: (public speaking, music, sports, social, REST, APIs, Java)
-		or maybe Tags and sub-tags like tabs and subtabs in websites.
 4- Add page about skills ( Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
 
 5- Maybe instead of my key characteristics change it to my Interests and then list Computer Interests (Topics and programming languages), 
