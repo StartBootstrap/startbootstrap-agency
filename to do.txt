@@ -68,4 +68,4 @@
 	- I love to present in public. I might be the most stressed person before giving a speech, but the feeling of adrenaline rush  is irreplaceable. 
 	
 10- Fix Contact me page to include the linkedin there. Also Add phone number and security question (im not a robot).
-			
+11- Include link to blog website:
