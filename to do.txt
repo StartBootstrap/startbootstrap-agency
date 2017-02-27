@@ -14,7 +14,6 @@
 		Today Offside is still active in several Dubai amateur Football tournaments and activities, and I cannot wait to join them again.
 	St Mary's Arabic Choir. Can Write the story of how I randomly got in but still made it. Then I can add my performance la lan ara and others. 
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/m6O3dLezJyg" frameborder="0" allowfullscreen></iframe>
-3- Add Experience. Include Universities, Work GL, Freelance tutor, math and program center, TUD internship, coffeol, SGA, PHE, IEEE, others. 
 
 4- Add page about skills ( Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
 
