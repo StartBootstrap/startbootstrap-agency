@@ -34,7 +34,7 @@
 	Also let it to enable "...more" functionality.
 
 9- In the About Section add one-sentence bullets. This could be another section before Contact me [More Facts]: 
-	-"\bf{My ultimate goal in life} : fusing my technical major with my hobbies and interests in media, such as computer engineering and music, or in any project that has great societal impact. To reach it, I try to make every tiny opportunity to learn. 
+	-"\bf{My ultimate goal in life} : Solving the world's big problems by fusing my technical major with my hobbies and interests in media, such as computer engineering and music, or in any project that has great societal impact. To reach it, I try to make every tiny opportunity to learn. 
 	-"\bf{Currently I am learning} web software development, I want to become a full-stack developer. In the future I want to learn mobile application development as well and become good at it.
 	-"\bf{I love languages}. I am fluent in Arabic and English, and can speak French and Spanish at basic conversational level. I am learning Swedish and Finnish. 
 		I can also throw a couple of sentences* in German, Dutch, Italian, Japanese, and Hindi.
