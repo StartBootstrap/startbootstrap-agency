@@ -631,10 +631,10 @@ ul.social-buttons {
 ul.social-buttons li a {
   display: block;
   background-color: #222222;
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   border-radius: 100%;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 40px;
   color: white;
   outline: none;
