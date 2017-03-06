@@ -19,8 +19,8 @@
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('#navbarResponsive>ul>li>a').click(function() {
-        $('#navbarResponsive').collapse('hide');
+    $('.navbar-collapse>ul>li>a').click(function() {
+        $('.navbar-collapse').collapse('hide');
     });
 
     // jQuery to collapse the navbar on scroll
