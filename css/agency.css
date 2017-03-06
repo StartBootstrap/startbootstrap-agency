@@ -305,6 +305,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
+  /*height: 500px;*/
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
