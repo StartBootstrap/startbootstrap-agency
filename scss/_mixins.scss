@@ -73,6 +73,9 @@
 @mixin script-font {
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
+@mixin navbar-font {
+  font-family: 'Raleway', sans-serif;
+}
 
 @mixin body-font {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;

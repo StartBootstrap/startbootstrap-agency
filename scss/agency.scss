@@ -13,7 +13,7 @@ body {
 }
 
 .text-primary {
-    color: $theme-primary;
+    color: blue;
 }
 
 p {
@@ -34,7 +34,7 @@ a.active {
 }
 
 a {
-    color: $theme-primary;
+    color: blue;
 }
 
 a:hover,
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 // Restyled Primary Buttons
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
+    @include button-variant(white, #2574BB, $theme-primary);
     @include heading-font;
     font-weight: 700;
 }
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: transparent;
     .navbar-brand {
         color: $theme-primary;
-        @include script-font;
+        @include navbar-font;
         &:hover,
         &:focus,
         &:active,
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    background-image: url('../img/header-bg.jpg');
+    background-image: url('../img/logos/solotravelgoals-22658.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -187,7 +187,7 @@ header {
         .intro-heading {
             @include heading-font;
             font-weight: 700;
-            font-size: 50px;
+            font-size: 40px;
             line-height: 50px;
             margin-bottom: 25px;
         }
@@ -247,18 +247,39 @@ section {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
+    text-align: center;
+  }
+
+#services {
+  background-color: $gray-lighter;
+}
+
+.individual-pane {
+  display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+    /* height: 10vh; */
+    margin: 30px 20px;
+    padding: 20px;
+    img{
+      // height: 7vw;
+      width: 7vw;
+    }
 }
 
 // Portfolio Section
 
 #portfolio {
+  background-color: white;
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
         .portfolio-link {
             display: block;
             position: relative;
-            max-width: 400px;
+            max-width: 1400px;
             margin: 0 auto;
             .portfolio-hover {
                 background: fade-out($theme-primary, .9);
@@ -288,13 +309,13 @@ section {
                     h4 {
                         margin: 0;
                     }
-                }                
-            }            
+                }
+            }
         }
         .portfolio-caption {
             max-width: 400px;
             margin: 0 auto;
-            background-color: white;
+            background-color: #f7f7f7;
             text-align: center;
             padding: 25px;
             h4 {
@@ -334,7 +355,7 @@ section {
         position: absolute;
         content: "";
         width: 2px;
-        background-color: #f1f1f1;
+        background-color: red;
         left: 40px;
         margin-left: -1.5px;
     }
@@ -574,7 +595,7 @@ section#contact {
        font-weight: 700;
        color: $gray-lighter;
     }
-    :-ms-input-placeholder {  
+    :-ms-input-placeholder {
        @include heading-font;
        font-weight: 700;
        color: $gray-lighter;
@@ -587,6 +608,7 @@ section#contact {
 // Footer
 
 footer {
+    background-color: $gray-lighter;
     padding: 25px 0;
     text-align: center;
     span.copyright {
@@ -704,8 +726,8 @@ ul.social-buttons {
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index:1052;
-            }            
-        }        
+            }
+        }
     }
     .modal-backdrop {
         opacity: 0;
@@ -735,4 +757,46 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: $theme-primary;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50vh;
+  justify-content: center;
+}
+
+.skills-name {
+  font-weight: bold;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.grovemade-modal {
+  display: flex;
+  // justify-content:
+}
+// .grovemade-portfolio {
+//   display: flex;
+//   width: 5vw;
+//   height: 5vw;
+// }
+.portfolio-item{
+  // background-color: green;
+}
+#about-text {
+  text-align: center;
+}
+
+.about-text-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
