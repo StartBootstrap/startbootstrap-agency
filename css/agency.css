@@ -14,7 +14,7 @@ body {
   color: #fed136;
 }
 p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
 }
 p.large {
@@ -306,6 +306,7 @@ section h3.section-subheading {
   margin: 0 0 15px;
   right: 0;
   height: 300px;
+
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
@@ -323,6 +324,7 @@ section h3.section-subheading {
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
+
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;
@@ -611,7 +613,7 @@ section#contact .text-danger {
   color: #e74c3c;
 }
 footer {
-  padding: 25px 0;
+  padding: 15px 0;
   text-align: center;
 }
 footer span.copyright {
@@ -632,13 +634,13 @@ ul.social-buttons {
 }
 ul.social-buttons li a {
   display: block;
-  background-color: #222222;
-  height: 42px;
-  width: 42px;
+  background-color: #FFFFFF;
+  height: 80px;
+  width: 80px;
   border-radius: 100%;
-  font-size: 25px;
-  line-height: 40px;
-  color: white;
+  font-size: 40px;
+  line-height: 80px;
+  color: #222222;
   outline: none;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -775,9 +777,11 @@ body {
 }
 #quote-carousel .carousel-indicators {
     right: 50%;
-    top: auto;
+    /*top: auto;*/
+    /*position: relative;*/
     bottom: 0px;
     margin-right: -19px;
+
 }
 #quote-carousel .carousel-indicators li {
     width: 50px;
