@@ -881,6 +881,52 @@ body {
 .tags li {
   float: left;
 }
+
+
+/*NEWSTICKERS*/
+
+#nt-example1 {
+	max-width: 1000px;
+	margin: auto;
+}
+
+#nt-example1-container {
+	text-align: center;
+}
+
+#nt-example1-container i {
+	font-size: 36px;
+	margin: 8px;
+	cursor: pointer;
+	-webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+#nt-example1-container i:hover {
+	color: #333;
+}
+
+#nt-example1 li {
+	color: #4e4e4e;
+	background: #F2F2F2;
+	overflow: hidden;
+	height: 80px;
+	padding: 10px;
+	line-height: 30px;
+	font-size: 24px;
+	text-align: left;
+	border-bottom: 1px dotted #2c8162;
+}
+
+#nt-example1 li:hover {
+	background: #FFF;
+}
+#nt-example1 li a{
+	color: #777777;
+}
 /*
 .tag {
   font: 11px/1.5 'PT Sans', serif;

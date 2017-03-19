@@ -24,5 +24,4 @@ ale project
 2- Add page about skills (Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
 
 
-3- Fix carousel timing issue. Let it be static when one image is clicked. 
-	Also Let it to fit mobile devices. 
+3- Fix carousel Let it to fit mobile devices. 
