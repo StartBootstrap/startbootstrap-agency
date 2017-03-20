@@ -755,7 +755,7 @@ body {
 
 #quote-carousel {
     padding: 0 10px 30px 10px;
-    margin-top: 30px;
+    margin-top: 0px;
     /* Control buttons  */
     /* Previous button  */
     /* Next button  */
@@ -767,7 +767,7 @@ body {
     color: #CACACA;
     font-size: 2.3em;
     text-shadow: none;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 #quote-carousel .carousel-control.left {
     left: -60px;
@@ -777,9 +777,9 @@ body {
 }
 #quote-carousel .carousel-indicators {
     right: 50%;
-    /*top: auto;*/
-    /*position: relative;*/
-    bottom: 345px;
+    top: auto;
+    position: relative;
+    bottom: 0px;
     margin-right: -19px;
 
 }
@@ -816,6 +816,32 @@ body {
     float: left;
     margin-right: 10px;
 }
+
+/* For Carousel on Mobile*/
+@media (max-width: 767px) {
+    /* CSS goes here */
+    #quote-carousel .carousel-indicators li {
+        width: 30px;
+        height: 30px;
+        margin: 1px;
+        cursor: pointer;
+        border: 0px solid #CCC;
+        border-radius: 30px;
+        opacity: 0.4;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+    #quote-carousel .carousel-indicators .active {
+        background: #333333;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        border-color: #fed136;
+        opacity: 1;
+        overflow: hidden;
+    }
+}
+
 
 .tag{
   margin:0;
