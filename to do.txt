@@ -1,4 +1,7 @@
-1- Add Projects:
+
+
+
+Add Projects:
  
 <iframe src="https://drive.google.com/file/d/0B-5t6BG5xRcPczVuM2JkLWtIUms/preview" width="640" height="480"></iframe>
 ale project
@@ -20,8 +23,3 @@ ale project
 
 	St Mary's Arabic Choir. Can Write the story of how I randomly got in but still made it. Then I can add my performance la lan ara and others. 
 	
-
-2- Add page about skills (Programming, C++,  teamwork, ...) maybe like tags or check for linkedin plugin, or just add icons and progress bars for each skill. 
-
-
-3- Fix carousel Let it to fit mobile devices. 
