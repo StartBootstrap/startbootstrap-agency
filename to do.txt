@@ -24,5 +24,3 @@ ale project
 	St Mary's Arabic Choir. Can Write the story of how I randomly got in but still made it. Then I can add my performance la lan ara and others. 
 
 
-Fix scrolling glitch
-Fix timing of Carousel elements

@@ -953,6 +953,22 @@ body {
 #nt-example1 li a{
 	color: #777777;
 }
+
+
+summary {
+    cursor: pointer;
+}
+
+details {
+    /*border: 0.0px solid #363636;*/
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+    color: #363636;
+    margin: 0 0 .4em;
+    padding: 1%;
+}
+
+
 /*
 .tag {
   font: 11px/1.5 'PT Sans', serif;
