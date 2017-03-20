@@ -22,4 +22,7 @@ ale project
 		Today Offside is still active in several Dubai amateur Football tournaments and activities, and I cannot wait to join them again.
 
 	St Mary's Arabic Choir. Can Write the story of how I randomly got in but still made it. Then I can add my performance la lan ara and others. 
-	
+
+
+Fix scrolling glitch
+Fix timing of Carousel elements

@@ -792,7 +792,7 @@ body {
     border-radius: 50px;
     opacity: 0.4;
     overflow: hidden;
-    transition: all 0.4s;
+    transition: all 0.5s;
 }
 #quote-carousel .carousel-indicators .active {
     background: #333333;
@@ -829,7 +829,7 @@ body {
         border-radius: 30px;
         opacity: 0.4;
         overflow: hidden;
-        transition: all 0.4s;
+        transition: all 0.5s;
     }
     #quote-carousel .carousel-indicators .active {
         background: #333333;
