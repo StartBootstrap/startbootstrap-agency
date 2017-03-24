@@ -1,12 +1,11 @@
 
 
-
 Add Projects:
  
 <iframe src="https://drive.google.com/file/d/0B-5t6BG5xRcPczVuM2JkLWtIUms/preview" width="640" height="480"></iframe>
 ale project
-  *look for audmail for old reports (SW Engineering, Field Experience, 
-       Engineering Design, Microprocessors, Compuer Architecture, Data structures and algorithms, 
+
+ 
 	
 	Mention that I asked for courses such as artificial intelligence and Mobile applications to be given. 
 		I sat with the chair and we decided what course to take for my senior year. I wanted to add value to my learning and expand my knowledge before I wrap up my years at AUD
