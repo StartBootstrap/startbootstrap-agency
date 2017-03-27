@@ -752,7 +752,9 @@ body {
 }
 
 /* Carousel */
-
+#references{
+  height: 900px;
+}
 #quote-carousel {
     padding: 0 10px 30px 10px;
     margin-top: 0px;
@@ -839,6 +841,9 @@ body {
         border-color: #fed136;
         opacity: 1;
         overflow: hidden;
+    }
+    #references{
+      height: 1200px;
     }
 }
 
