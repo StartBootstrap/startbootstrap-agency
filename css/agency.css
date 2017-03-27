@@ -820,7 +820,7 @@ body {
 }
 
 /* For Carousel on Mobile*/
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
     /* CSS goes here */
     #quote-carousel .carousel-indicators li {
         width: 30px;
@@ -843,7 +843,7 @@ body {
         overflow: hidden;
     }
     #references{
-      height: 1500px;
+      height: 1250px;
     }
 }
 
