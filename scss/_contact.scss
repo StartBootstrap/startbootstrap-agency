@@ -1,0 +1,52 @@
+// Styling for the contact section
+section#contact {
+    background-color: $gray-darker;
+    background-image: url('../img/map-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    .section-heading {
+        color: white;
+    }
+    .form-group {
+        margin-bottom: 25px;
+        input,
+        textarea {
+            padding: 20px;
+        }
+        input.form-control {
+            height: auto;
+        }
+        textarea.form-control {
+            height: 236px;
+        }
+    }
+    .form-control:focus {
+        border-color: $theme-primary;
+        box-shadow: none;
+    }
+    ::-webkit-input-placeholder {
+        @include heading-font;
+        font-weight: 700;
+        color: $gray-lighter;
+    }
+    :-moz-placeholder {
+        /* Firefox 18- */
+        @include heading-font;
+        font-weight: 700;
+        color: $gray-lighter;
+    }
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        @include heading-font;
+        font-weight: 700;
+        color: $gray-lighter;
+    }
+    :-ms-input-placeholder {
+        @include heading-font;
+        font-weight: 700;
+        color: $gray-lighter;
+    }
+    .text-danger {
+        color: $theme-danger;
+    }
+}
