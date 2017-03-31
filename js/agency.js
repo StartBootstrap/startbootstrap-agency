@@ -1,7 +1,7 @@
 (function($) {
     "use strict"; // Start of use strict
 
-    // Smooth scrolling using jQuery Easing
+    // Smooth scrolling using jQuery easing
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
