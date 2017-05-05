@@ -221,7 +221,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('img/portfolio/header-blue.png') !important;
+  background-image: url('../img/portfolio/header-blue.png') !important;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
