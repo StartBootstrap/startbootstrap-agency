@@ -1,82 +1,82 @@
 // Styling for the timeline section
 .timeline {
-    list-style: none;
-    padding: 0;
     position: relative;
+    padding: 0;
+    list-style: none;
     &:before {
+        position: absolute;
         top: 0;
         bottom: 0;
-        position: absolute;
-        content: "";
-        width: 2px;
-        background-color: #f1f1f1;
         left: 40px;
+        width: 2px;
         margin-left: -1.5px;
+        content: '';
+        background-color: #f1f1f1;
     }
     > li {
-        margin-bottom: 50px;
         position: relative;
         min-height: 50px;
+        margin-bottom: 50px;
         &:before,
         &:after {
-            content: " ";
             display: table;
+            content: ' ';
         }
         &:after {
             clear: both;
         }
         .timeline-panel {
-            width: 100%;
-            float: right;
-            padding: 0 20px 0 100px;
             position: relative;
+            float: right;
+            width: 100%;
+            padding: 0 20px 0 100px;
             text-align: left;
             &:before {
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
                 right: auto;
+                left: -15px;
+                border-right-width: 15px;
+                border-left-width: 0;
             }
             &:after {
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
                 right: auto;
+                left: -14px;
+                border-right-width: 14px;
+                border-left-width: 0;
             }
         }
         .timeline-image {
-            left: 0;
-            margin-left: 0;
-            width: 80px;
-            height: 80px;
             position: absolute;
             z-index: 100;
-            background-color: $theme-primary;
-            color: white;
-            border-radius: 100%;
-            border: 7px solid #f1f1f1;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            margin-left: 0;
             text-align: center;
+            color: white;
+            border: 7px solid #f1f1f1;
+            border-radius: 100%;
+            background-color: $theme-primary;
             h4 {
                 font-size: 10px;
-                margin-top: 12px;
                 line-height: 14px;
+                margin-top: 12px;
             }
         }
         &.timeline-inverted > .timeline-panel {
             float: right;
-            text-align: left;
             padding: 0 20px 0 100px;
+            text-align: left;
             &:before {
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
                 right: auto;
+                left: -15px;
+                border-right-width: 15px;
+                border-left-width: 0;
             }
             &:after {
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
                 right: auto;
+                left: -14px;
+                border-right-width: 14px;
+                border-left-width: 0;
             }
         }
         &:last-child {
@@ -106,29 +106,29 @@
             left: 50%;
         }
         > li {
-            margin-bottom: 100px;
             min-height: 100px;
+            margin-bottom: 100px;
             .timeline-panel {
-                width: 41%;
                 float: left;
+                width: 41%;
                 padding: 0 20px 20px 30px;
                 text-align: right;
             }
             .timeline-image {
+                left: 50%;
                 width: 100px;
                 height: 100px;
-                left: 50%;
                 margin-left: -50px;
                 h4 {
                     font-size: 13px;
-                    margin-top: 16px;
                     line-height: 18px;
+                    margin-top: 16px;
                 }
             }
             &.timeline-inverted > .timeline-panel {
                 float: right;
-                text-align: left;
                 padding: 0 30px 20px 20px;
+                text-align: left;
             }
         }
     }
@@ -147,8 +147,8 @@
                 margin-left: -75px;
                 h4 {
                     font-size: 18px;
-                    margin-top: 30px;
                     line-height: 26px;
+                    margin-top: 30px;
                 }
             }
             &.timeline-inverted > .timeline-panel {

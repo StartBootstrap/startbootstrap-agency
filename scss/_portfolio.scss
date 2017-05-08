@@ -1,34 +1,34 @@
 // Styling for the portfolio section
 #portfolio {
     .portfolio-item {
-        margin: 0 0 15px;
         right: 0;
+        margin: 0 0 15px;
         .portfolio-link {
-            cursor: pointer;
-            display: block;
             position: relative;
+            display: block;
             max-width: 400px;
             margin: 0 auto;
+            cursor: pointer;
             .portfolio-hover {
-                background: fade-out($theme-primary, .1);
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                -webkit-transition: all ease .5s;
+                -moz-transition: all ease .5s;
+                transition: all ease .5s;
                 opacity: 0;
-                transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
+                background: fade-out($theme-primary, .1);
                 &:hover {
                     opacity: 1;
                 }
                 .portfolio-hover-content {
+                    font-size: 20px;
                     position: absolute;
+                    top: 50%;
                     width: 100%;
                     height: 20px;
-                    font-size: 20px;
-                    text-align: center;
-                    top: 50%;
                     margin-top: -12px;
+                    text-align: center;
                     color: white;
                     i {
                         margin-top: -12px;
@@ -43,18 +43,18 @@
         .portfolio-caption {
             max-width: 400px;
             margin: 0 auto;
-            background-color: white;
-            text-align: center;
             padding: 25px;
+            text-align: center;
+            background-color: white;
             h4 {
-                text-transform: none;
                 margin: 0;
+                text-transform: none;
             }
             p {
-                @include serif-font;
-                font-style: italic;
                 font-size: 16px;
+                font-style: italic;
                 margin: 0;
+                @include serif-font;
             }
         }
     }
@@ -73,35 +73,35 @@
 
 .portfolio-modal {
     .modal-dialog {
-        margin: 0;
-        height: 100%;
         max-width: none;
+        height: 100%;
+        margin: 0;
     }
     .modal-content {
+        min-height: 100%;
+        padding: 100px 0;
+        text-align: center;
+        border: none;
         border-radius: 0;
         background-clip: border-box;
         -webkit-box-shadow: none;
         box-shadow: none;
-        border: none;
-        min-height: 100%;
-        padding: 100px 0;
-        text-align: center;
         h2 {
-            margin-bottom: 15px;
             font-size: 3em;
+            margin-bottom: 15px;
         }
         p {
             margin-bottom: 30px;
         }
         p.item-intro {
+            font-size: 16px;
+            font-style: italic;
             margin: 20px 0 30px;
             @include serif-font;
-            font-style: italic;
-            font-size: 16px;
         }
         ul.list-inline {
-            margin-bottom: 30px;
             margin-top: 0;
+            margin-bottom: 30px;
         }
         img {
             margin-bottom: 30px;
@@ -112,41 +112,41 @@
     }
     .close-modal {
         position: absolute;
-        width: 75px;
-        height: 75px;
-        background-color: transparent;
         top: 25px;
         right: 25px;
+        width: 75px;
+        height: 75px;
         cursor: pointer;
+        background-color: transparent;
         &:hover {
-            opacity: 0.3;
+            opacity: .3;
         }
         .lr {
-            height: 75px;
-            width: 1px;
-            margin-left: 35px;
-            background-color: $gray-darker;
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
             /* Safari and Chrome */
             z-index: 1051;
+            width: 1px;
+            height: 75px;
+            margin-left: 35px;
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: $gray-darker;
             .rl {
-                height: 75px;
-                width: 1px;
-                background-color: $gray-darker;
-                transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                /* IE 9 */
-                -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index: 1052;
+                width: 1px;
+                height: 75px;
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+                background-color: $gray-darker;
             }
         }
     }
     .modal-backdrop {
-        opacity: 0;
         display: none;
+        opacity: 0;
     }
 }

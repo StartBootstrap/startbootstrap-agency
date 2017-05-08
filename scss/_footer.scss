@@ -5,15 +5,15 @@ footer {
     span.copyright {
         font-size: 90%;
         line-height: 40px;
-        @include heading-font;
         text-transform: none;
+        @include heading-font;
     }
     ul.quicklinks {
         font-size: 90%;
-        margin-bottom: 0;
         line-height: 40px;
-        @include heading-font;
+        margin-bottom: 0;
         text-transform: none;
+        @include heading-font;
     }
 }
 
@@ -21,18 +21,18 @@ ul.social-buttons {
     margin-bottom: 0;
     li {
         a {
-            display: block;
-            background-color: $gray-darker;
-            height: 40px;
-            width: 40px;
-            border-radius: 100%;
             font-size: 20px;
             line-height: 40px;
+            display: block;
+            width: 40px;
+            height: 40px;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
             color: white;
+            border-radius: 100%;
             outline: none;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
+            background-color: $gray-darker;
             &:hover,
             &:focus,
             &:active {

@@ -24,8 +24,8 @@ h3,
 h4,
 h5,
 h6 {
-    @include heading-font;
     font-weight: 700;
+    @include heading-font;
 }
 
 section {
@@ -37,11 +37,11 @@ section {
     }
     h3.section-subheading {
         font-size: 16px;
-        @include serif-font;
-        text-transform: none;
-        font-style: italic;
         font-weight: 400;
+        font-style: italic;
         margin-bottom: 75px;
+        text-transform: none;
+        @include serif-font;
     }
 }
 
@@ -53,13 +53,13 @@ section {
 
 // Highlight color customization
 ::-moz-selection {
-    text-shadow: none;
     background: $theme-primary;
+    text-shadow: none;
 }
 
 ::selection {
-    text-shadow: none;
     background: $theme-primary;
+    text-shadow: none;
 }
 
 img::selection {

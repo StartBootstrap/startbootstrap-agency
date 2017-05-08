@@ -2,8 +2,8 @@
 section#contact {
     background-color: $gray-darker;
     background-image: url('../img/map-image.png');
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     .section-heading {
         color: white;
     }
@@ -25,26 +25,26 @@ section#contact {
         box-shadow: none;
     }
     ::-webkit-input-placeholder {
-        @include heading-font;
         font-weight: 700;
         color: $gray-lighter;
+        @include heading-font;
     }
     :-moz-placeholder {
+        font-weight: 700;
+        color: $gray-lighter;
         /* Firefox 18- */
         @include heading-font;
-        font-weight: 700;
-        color: $gray-lighter;
     }
     ::-moz-placeholder {
+        font-weight: 700;
+        color: $gray-lighter;
         /* Firefox 19+ */
         @include heading-font;
-        font-weight: 700;
-        color: $gray-lighter;
     }
     :-ms-input-placeholder {
-        @include heading-font;
         font-weight: 700;
         color: $gray-lighter;
+        @include heading-font;
     }
     .text-danger {
         color: $theme-danger;

@@ -2,14 +2,14 @@
 #mainNav {
     background-color: $gray-darker;
     .navbar-toggler {
-        border: 0;
-        color: white;
-        background-color: $theme-primary;
         font-size: 12px;
-        text-transform: uppercase;
-        @include heading-font;
-        padding: 13px;
         right: 0;
+        padding: 13px;
+        text-transform: uppercase;
+        color: white;
+        border: 0;
+        background-color: $theme-primary;
+        @include heading-font;
     }
     .container {
         padding: 0;
@@ -27,11 +27,11 @@
             .nav-item {
                 .nav-link {
                     font-size: 90%;
-                    padding: 0.75em 0;
-                    @include heading-font;
                     font-weight: 400;
+                    padding: .75em 0;
                     letter-spacing: 1px;
                     color: white;
+                    @include heading-font;
                     &:hover,
                     &.active {
                         color: $theme-primary;
@@ -44,17 +44,17 @@
 
 @media(min-width:992px) {
     #mainNav {
-        background-color: transparent;
         padding: 25px 0;
-        -webkit-transition: padding 0.3s;
-        -moz-transition: padding 0.3s;
-        transition: padding 0.3s;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
         border: none;
+        background-color: transparent;
         .navbar-brand {
             font-size: 1.75em;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
         }
         .navbar-nav {
             .nav-item {
@@ -64,11 +64,11 @@
             }
         }
         &.navbar-shrink {
-            background-color: $gray-darker;
             padding: 0;
+            background-color: $gray-darker;
             .navbar-brand {
-                padding: 12px 0;
                 font-size: 1.25em;
+                padding: 12px 0;
             }
         }
     }
