@@ -221,7 +221,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/portfolio/header-blue.png') !important;
+  background-image: ;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -234,7 +234,7 @@ header {
 }
 header .intro-text {
   padding-top: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
 header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -252,8 +252,8 @@ header .intro-text .intro-heading {
 }
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   header .intro-text .intro-lead-in {
     font-family: 'Dosis', sans-serif;
