@@ -11,19 +11,18 @@
     "theme",
     "template"
   ],
-  "homepage": "https://startbootstrap.com/template-overviews/agency",
+  "homepage": "http://mariamarg.com",
   "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
-    "email": "feedback@startbootstrap.com"
+    "url": "https://github.com/msa0683/startbootstrap-agency/settings",
+    "email": "MariamArgSafi@yahoo.com"
   },
   "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
+  "author": "Mariam Arghandewal Safi",
+  
+
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+    "url": "https://github.com/msa0683/startbootstrap-agency/settings"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
