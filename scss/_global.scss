@@ -9,13 +9,17 @@ p {
 }
 
 a {
-  color: $theme-primary;
+  color: $primary;
   &.active,
   &:active,
   &:focus,
   &:hover {
-    color: darken($theme-primary, 10%);
+    color: darken($primary, 10%);
   }
+}
+
+.text-primary {
+  color: $primary !important;
 }
 
 h1,
@@ -50,14 +54,29 @@ section {
   }
 }
 
+// Button Styles
+.btn {
+  @include heading-font;
+  font-weight: 700;
+}
+
+.btn-primary {
+  @include button-variant(white, $primary, $primary);
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
 // Highlight color customization
 ::-moz-selection {
-  background: $theme-primary;
+  background: $primary;
   text-shadow: none;
 }
 
 ::selection {
-  background: $theme-primary;
+  background: $primary;
   text-shadow: none;
 }
 
@@ -70,5 +89,5 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: $theme-primary;
+  -webkit-tap-highlight-color: $primary;
 }
