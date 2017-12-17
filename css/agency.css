@@ -81,7 +81,7 @@ body {
   -webkit-tap-highlight-color: #fed136; }
 
 .ticket-font {
-  font-size: 24px; }
+  font-size: 18px; }
   .ticket-font a {
     color: black; }
 
@@ -92,6 +92,12 @@ body {
   /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: grayscale(1);
   /* Microsoft Edge and Firefox 35+ */ }
+
+@media (min-width: 992px) {
+  .ticket-font {
+    font-size: 24px; }
+    .ticket-font a {
+      color: black; } }
 
 #mainNav {
   background-color: #212529; }
@@ -361,11 +367,11 @@ h5 {
     color: inherit; }
     .timeline .timeline-heading h4.subheading {
       text-transform: none;
-      font-size: 30px; }
+      font-size: 20px; }
   .timeline .timeline-body > ul,
   .timeline .timeline-body > p {
     margin-bottom: 0;
-    font-size: 22px; }
+    font-size: 16px; }
 
 @media (min-width: 768px) {
   .timeline:before {
@@ -406,7 +412,11 @@ h5 {
         line-height: 26px;
         margin-top: 30px; }
     .timeline > li.timeline-inverted > .timeline-panel {
-      padding: 0 20px 20px; } }
+      padding: 0 20px 20px; }
+  .timeline .timeline-heading h4.subheading {
+    font-size: 30px; }
+  .timeline .timeline-body > p {
+    font-size: 22px; } }
 
 @media (min-width: 1200px) {
   .timeline > li {
