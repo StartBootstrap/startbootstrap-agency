@@ -9,36 +9,6 @@
       max-width: 400px;
       margin: 0 auto;
       cursor: pointer;
-      .portfolio-hover {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all ease 0.5s;
-        -moz-transition: all ease 0.5s;
-        transition: all ease 0.5s;
-        opacity: 0;
-        background: fade-out($primary, .1);
-        &:hover {
-          opacity: 1;
-        }
-        .portfolio-hover-content {
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          width: 100%;
-          height: 20px;
-          margin-top: -12px;
-          text-align: center;
-          color: white;
-          i {
-            margin-top: -12px;
-          }
-          h3,
-          h4 {
-            margin: 0;
-          }
-        }
-      }
     }
     .portfolio-caption {
       max-width: 400px;
@@ -70,6 +40,10 @@
   }
 }
 
+.box-shadow {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  height: 130px;
+}
 .portfolio-modal {
   padding-right: 0px !important;
   .modal-dialog {

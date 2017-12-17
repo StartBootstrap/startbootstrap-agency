@@ -5,7 +5,7 @@
  */
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: "Optimist","Proxima Nova Regular",Helvetica,Arial,sans-serif; }
 
 p {
   line-height: 1.75; }
@@ -25,7 +25,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
 
 section {
   padding: 100px 0; }
@@ -34,19 +34,19 @@ section {
     margin-top: 0;
     margin-bottom: 15px; }
   section h3.section-subheading {
-    font-size: 16px;
+    font-size: 26px;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist","Proxima Nova Regular",Helvetica,Arial,sans-serif; }
 
 @media (min-width: 768px) {
   section {
     padding: 150px 0; } }
 
 .btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif;
   font-weight: 700; }
 
 .btn-xl {
@@ -80,6 +80,25 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #fed136; }
 
+.ticket-font {
+  font-size: 18px; }
+  .ticket-font a {
+    color: black; }
+
+.py-5 img.disabled {
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+  /* Microsoft Edge and Firefox 35+ */ }
+
+@media (min-width: 992px) {
+  .ticket-font {
+    font-size: 24px; }
+    .ticket-font a {
+      color: black; } }
+
 #mainNav {
   background-color: #212529; }
   #mainNav .navbar-toggler {
@@ -90,7 +109,7 @@ body {
     color: white;
     border: 0;
     background-color: #fed136;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
   #mainNav .navbar-brand {
     color: #fed136;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
@@ -102,7 +121,7 @@ body {
     padding: 0.75em 0;
     letter-spacing: 1px;
     color: white;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
     #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
       color: #fed136; }
 
@@ -149,13 +168,13 @@ header.masthead {
       font-style: italic;
       line-height: 22px;
       margin-bottom: 25px;
-      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: "Optimist","Proxima Nova Regular",Helvetica,Arial,sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 50px;
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 25px;
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
@@ -166,17 +185,20 @@ header.masthead {
       font-style: italic;
       line-height: 40px;
       margin-bottom: 25px;
-      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: "Optimist","Proxima Nova Regular",Helvetica,Arial,sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 75px;
       font-weight: 700;
       line-height: 75px;
       margin-bottom: 50px;
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; } }
+      font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; } }
 
 .service-heading {
   margin: 15px 0;
   text-transform: none; }
+
+h5 {
+  font-size: 22px; }
 
 #portfolio .portfolio-item {
   right: 0;
@@ -187,31 +209,6 @@ header.masthead {
     max-width: 400px;
     margin: 0 auto;
     cursor: pointer; }
-    #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-transition: all ease 0.5s;
-      -moz-transition: all ease 0.5s;
-      transition: all ease 0.5s;
-      opacity: 0;
-      background: rgba(254, 209, 54, 0.9); }
-      #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-        opacity: 1; }
-      #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        height: 20px;
-        margin-top: -12px;
-        text-align: center;
-        color: white; }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
-          margin-top: -12px; }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
-          margin: 0; }
   #portfolio .portfolio-item .portfolio-caption {
     max-width: 400px;
     margin: 0 auto;
@@ -225,7 +222,7 @@ header.masthead {
       font-size: 16px;
       font-style: italic;
       margin: 0;
-      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: "Optimist","Proxima Nova Regular",Helvetica,Arial,sans-serif; }
 
 #portfolio * {
   z-index: 2; }
@@ -233,6 +230,10 @@ header.masthead {
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px; } }
+
+.box-shadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  height: 130px; }
 
 .portfolio-modal {
   padding-right: 0px !important; }
@@ -251,7 +252,7 @@ header.masthead {
       font-size: 16px;
       font-style: italic;
       margin: 20px 0 30px;
-      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: "Optimist","Proxima Nova Regular",Helvetica,Arial,sans-serif; }
     .portfolio-modal .modal-content ul.list-inline {
       margin-top: 0;
       margin-bottom: 30px; }
@@ -365,24 +366,26 @@ header.masthead {
     margin-top: 0;
     color: inherit; }
     .timeline .timeline-heading h4.subheading {
-      text-transform: none; }
+      text-transform: none;
+      font-size: 20px; }
   .timeline .timeline-body > ul,
   .timeline .timeline-body > p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 16px; }
 
 @media (min-width: 768px) {
   .timeline:before {
-    left: 50%; }
+    left: 77%; }
   .timeline > li {
     min-height: 100px;
     margin-bottom: 100px; }
     .timeline > li .timeline-panel {
       float: left;
-      width: 41%;
+      width: 68%;
       padding: 0 20px 20px 30px;
       text-align: right; }
     .timeline > li .timeline-image {
-      left: 50%;
+      left: 78%;
       width: 100px;
       height: 100px;
       margin-left: -50px; }
@@ -409,7 +412,11 @@ header.masthead {
         line-height: 26px;
         margin-top: 30px; }
     .timeline > li.timeline-inverted > .timeline-panel {
-      padding: 0 20px 20px; } }
+      padding: 0 20px 20px; }
+  .timeline .timeline-heading h4.subheading {
+    font-size: 30px; }
+  .timeline .timeline-body > p {
+    font-size: 22px; } }
 
 @media (min-width: 1200px) {
   .timeline > li {
@@ -461,36 +468,40 @@ section#contact {
   section#contact ::-webkit-input-placeholder {
     font-weight: 700;
     color: #ced4da;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
   section#contact :-moz-placeholder {
     font-weight: 700;
     color: #ced4da;
     /* Firefox 18- */
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
   section#contact ::-moz-placeholder {
     font-weight: 700;
     color: #ced4da;
     /* Firefox 19+ */
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
   section#contact :-ms-input-placeholder {
     font-weight: 700;
     color: #ced4da;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
 
 footer {
   padding: 25px 0;
+  background-color: #fed136;
   text-align: center; }
   footer span.copyright {
     font-size: 90%;
     line-height: 40px;
     text-transform: none;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
   footer ul.quicklinks {
     font-size: 90%;
     line-height: 40px;
     margin-bottom: 0;
     text-transform: none;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    text: black;
+    font-family: "Optimist Light","Proxima Nova Thin",Helvetica,Arial,sans-serif; }
+    footer ul.quicklinks a {
+      color: black; }
 
 ul.social-buttons {
   margin-bottom: 0; }
