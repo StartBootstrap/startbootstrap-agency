@@ -37,7 +37,7 @@ section {
     margin-bottom: 15px;
   }
   h3.section-subheading {
-    font-size: 16px;
+    font-size: 26px;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 75px;
@@ -99,4 +99,19 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: $primary;
+}
+
+.ticket-font {
+  font-size: 24px;
+  a { 
+    color: $secondary;
+  }
+}
+
+.py-5 {
+    img.disabled {
+      filter: gray; /* IE6-9 */
+      -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+      filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    }
 }

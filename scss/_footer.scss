@@ -1,6 +1,7 @@
 // Styling for the footer
 footer {
   padding: 25px 0;
+  background-color:#fed136;
   text-align: center;
   span.copyright {
     font-size: 90%;
@@ -13,7 +14,11 @@ footer {
     line-height: 40px;
     margin-bottom: 0;
     text-transform: none;
+    text: black;
     @include heading-font;
+    a {
+      color: black;
+    }
   }
 }
 
