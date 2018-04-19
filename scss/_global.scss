@@ -74,7 +74,7 @@ section {
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem lighten($primary, 7.5%) !important;
+    box-shadow: 0 0 0 0.2rem rgba($primary,.5) !important;
   }
 }
 
