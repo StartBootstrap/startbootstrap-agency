@@ -58,6 +58,9 @@ gulp.task('css:compile', function() {
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
     .pipe(gulp.dest('./css'))
 });
 
@@ -87,6 +90,9 @@ gulp.task('js:minify', function() {
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
+    }))
+    .pipe(header(banner, {
+      pkg: pkg
     }))
     .pipe(gulp.dest('./js'))
     .pipe(browserSync.stream());
