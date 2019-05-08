@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Agency v5.0.7 (https://startbootstrap.com/template-overviews/agency)
+ * Start Bootstrap - Agency v5.1.0 (https://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
@@ -35,17 +35,17 @@ h6 {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-section {
+.page-section {
   padding: 100px 0;
 }
 
-section h2.section-heading {
+.page-section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
 }
 
-section h3.section-subheading {
+.page-section h3.section-subheading {
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
@@ -86,9 +86,18 @@ section h3.section-subheading {
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
+::-moz-selection {
+  background: #fed136;
+  text-shadow: none;
+}
+
 ::selection {
   background: #fed136;
   text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
 }
 
 img::selection {
@@ -643,19 +652,19 @@ section#contact :-ms-input-placeholder {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-footer {
+.footer {
   padding: 25px 0;
   text-align: center;
 }
 
-footer span.copyright {
+.footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-footer ul.quicklinks {
+.footer ul.quicklinks {
   font-size: 90%;
   line-height: 40px;
   margin-bottom: 0;
