@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Agency v5.1.1 (https://startbootstrap.com/template-overviews/agency)
+ * Start Bootstrap - Agency v5.2.0 (https://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
@@ -60,6 +60,28 @@ h6 {
   }
 }
 
+::-moz-selection {
+  background: #fed136;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fed136;
+  text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
 .btn {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
@@ -84,28 +106,6 @@ h6 {
 .btn-primary:active, .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
-}
-
-::-moz-selection {
-  background: #fed136;
-  text-shadow: none;
-}
-
-::selection {
-  background: #fed136;
-  text-shadow: none;
-}
-
-img::-moz-selection {
-  background: transparent;
-}
-
-img::selection {
-  background: transparent;
-}
-
-img::-moz-selection {
-  background: transparent;
 }
 
 #mainNav {
@@ -305,10 +305,6 @@ header.masthead .intro-text .intro-heading {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
-}
-
-.portfolio-modal {
-  padding-right: 0px !important;
 }
 
 .portfolio-modal .modal-dialog {
@@ -581,7 +577,7 @@ header.masthead .intro-text .intro-heading {
 .team-member img {
   width: 225px;
   height: 225px;
-  border: 7px solid #fff;
+  border: 7px solid rgba(0, 0, 0, 0.1);
 }
 
 .team-member h4 {
