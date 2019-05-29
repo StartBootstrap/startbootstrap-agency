@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Agency v5.1.1 (https://startbootstrap.com/template-overviews/agency)
+ * Start Bootstrap - Agency v5.2.0 (https://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
