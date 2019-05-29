@@ -71,7 +71,6 @@
 }
 
 .portfolio-modal {
-  padding-right: 0px !important;
   .modal-dialog {
     margin: 1rem;
     max-width: 100vw;
@@ -137,8 +136,5 @@
         background-color: $gray-900;
       }
     }
-  }
-  .modal-backdrop {
-
   }
 }
