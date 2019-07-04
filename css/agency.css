@@ -577,12 +577,12 @@ header.masthead .intro-text .intro-heading {
 .team-member img {
   width: 225px;
   height: 225px;
-  border: 7px solid rgba(0, 0, 0, 0.1);
+  border: 7px solid rgba(110, 110, 110, 0.808);
 }
 
-.team-member h4 {
+.team-member h2 {
   margin-top: 25px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   text-transform: none;
 }
 
