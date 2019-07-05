@@ -578,11 +578,12 @@ header.masthead .intro-text .intro-heading {
   width: 225px;
   height: 225px;
   border: 4px solid rgba(110, 110, 110, 0.808);
+  margin-bottom: 20px;
 }
 
 .team-member h2 {
   margin-top: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: none;
 }
 
