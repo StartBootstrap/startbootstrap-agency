@@ -93,13 +93,13 @@ img::-moz-selection {
 }
 
 .btn-primary {
-  background-color: #1ea351;
-  border-color: #4bfd72;
+  background-color: #fed136;
+  border-color: #fed136;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #0bac41 !important;
-  border-color: #0db92a !important;
+  background-color: #fec810 !important;
+  border-color: #fec810 !important;
   color: white;
 }
 
@@ -577,7 +577,7 @@ header.masthead .intro-text .intro-heading {
 .team-member img {
   width: 225px;
   height: 225px;
-  border: 7px solid rgba(110, 110, 110, 0.808);
+  border: 4px solid rgba(110, 110, 110, 0.808);
 }
 
 .team-member h2 {
