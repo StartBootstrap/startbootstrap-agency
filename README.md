@@ -1,6 +1,6 @@
 # Personal website
 
-This is my personal website with my projects and work experience. I'm using [Agency](https://startbootstrap.com/template-overviews/agency/) theme.
+This is my personal website with my projects and work experience. I'm using the [Agency](https://startbootstrap.com/template-overviews/agency/) theme.
 
 ## Status
 
