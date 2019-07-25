@@ -81,7 +81,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">About Me</h2>
-          <h3 class="section-subheading text-muted">"Greedy Algorithm is about life."
+          <h3 class="section-subheading text-muted">"Life is a Greedy Algorithm."
 </h3>
         </div>
       </div>
@@ -116,7 +116,7 @@
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Computer Science third year undergraduate in NTU, with cGPA 4.84 (first class), has solid foundation of programming and math knowledge and a strong passion in software engineering.
+          <p class="large text-muted">Computer Science third year undergraduate in NTU, with cGPA 4.84 (first class), has solid foundation of programming and math knowledge and a strong passion in coding.
 </p>
         </div>
       </div>
@@ -187,7 +187,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <h4>Future</h4>
+                <h4>Future<br>is<br>Unlimited!</h4>
               </div>
             </li>
           </ul>
@@ -245,177 +245,63 @@
         <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Skills</h2>
-          <h3 class="section-subheading text-muted">"quotes"
-              <br><br>--from</h3>
+          <h3 class="section-subheading text-muted">"I'm multilingual, see? I can write Python, Java, C++, SQL...Wait, what? It doesn't count?"
+
         </div>
       </div>
 
+<div class="row">
+        <div class="col-md-3 text-center">
+          </div>
+          <div class="col-md-3 text-center">
+            <h4>Top Skill 1</h4>
+            <canvas id="doughnut1" width="120" height="120"></canvas>
+            <canvas id="skill2" width="120" height="120" class=""></canvas>
+            <p>Bacon ipsum dolor amet meatloaf ham hock ground round capicola cow kielbasa, ball tip pork loin.
+              <br>Ham hock doner pork loin swine, filet mignon ham rump.</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <h4>Top Skill 2</h4>
+            <canvas id="doughnut2" width="120" height="120"></canvas>
+            <canvas id="skill3" width="120" height="120" class=""></canvas>
+            <p>Bacon ipsum dolor amet meatloaf ham hock ground round capicola cow kielbasa, ball tip pork loin.
+              <br>Ham hock doner pork loin swine, filet mignon ham rump.</p>
+          </div>
+          <div class="col-md-3 text-center">
+          </div>
+          <script src="js/doughnut.js"></script>
+</div>
         <div class="row">
           <div class="col-md-3 text-center">
             <h4>Skill 1</h4>
-            <canvas id="doughnut" width="120" height="120"></canvas>
+            <canvas id="doughnut3" width="120" height="120"></canvas>
             <canvas id="skill1" width="120" height="120" class=""></canvas>
             <p>Bacon ipsum dolor amet meatloaf ham hock ground round capicola cow kielbasa, ball tip pork loin.
               <br>Ham hock doner pork loin swine, filet mignon ham rump.</p>
           </div>
           <div class="col-md-3 text-center">
             <h4>Skill 2</h4>
-            <canvas id="doughnut2" width="120" height="120"></canvas>
+            <canvas id="doughnut4" width="120" height="120"></canvas>
             <canvas id="skill2" width="120" height="120" class=""></canvas>
             <p>Bacon ipsum dolor amet meatloaf ham hock ground round capicola cow kielbasa, ball tip pork loin.
               <br>Ham hock doner pork loin swine, filet mignon ham rump.</p>
           </div>
           <div class="col-md-3 text-center">
             <h4>Skill 3</h4>
-            <canvas id="doughnut3" width="120" height="120"></canvas>
+            <canvas id="doughnut5" width="120" height="120"></canvas>
             <canvas id="skill3" width="120" height="120" class=""></canvas>
             <p>Bacon ipsum dolor amet meatloaf ham hock ground round capicola cow kielbasa, ball tip pork loin.
               <br>Ham hock doner pork loin swine, filet mignon ham rump.</p>
           </div>
           <div class="col-md-3 text-center">
             <h4>Skill 4</h4>
-            <canvas id="doughnut4" width="120" height="120"></canvas>
+            <canvas id="doughnut6" width="120" height="120"></canvas>
             <canvas id="skill4" width="120" height="120" class=""></canvas>
             <p>Bacon ipsum dolor amet meatloaf ham hock ground round capicola cow kielbasa, ball tip pork loin.
               <br>Ham hock doner pork loin swine, filet mignon ham rump.</p>
           </div>
-          <script>
-              //draw the doughnut
-var doughnutArray = [document.getElementById('doughnut').getContext('2d'), document.getElementById('doughnut2').getContext('2d'), document.getElementById('doughnut3').getContext('2d'), document.getElementById('doughnut4').getContext('2d')];
-for (var i = 0; i < doughnutArray.length; i++) {
-  doughnutArray[i].lineWidth = 5; //thickness of the line
-  doughnutArray[i].fillStyle = '#eaeaea';
-  doughnutArray[i].strokeStyle = "#eaeaea";
-  doughnutArray[i].beginPath();
-  doughnutArray[i].arc(60, 60, 55, 4.72, 15, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-  doughnutArray[i].stroke();
-}
-window.onload = function() {
-    loadSkills1();
-    loadSkills2();
-    loadSkills3();
-    loadSkills4();
-  }
-  /*Load skills one function*/
-function loadSkills1() {
-  var ctx = document.getElementById('skill1').getContext('2d');
-  var al = 0;
-  var start = 4.72;
-  var cw = ctx.canvas.width;
-  var ch = ctx.canvas.height;
-  var diff;
-
-  function progressSim() {
-    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.lineWidth = 5; //thickness of the line
-    ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
-    ctx.textAlign = 'center';
-    ctx.font = "30px Radley";
-    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
-    ctx.beginPath();
-    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-    ctx.stroke();
-    if (al >= 100) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
-      clearTimeout(sim);
-      // Add scripting here that will run when progress completes
-    }
-    al++;
-  }
-  var sim = setInterval(progressSim, 20); //speed
-}
-/*loadSkills2 function*/
-function loadSkills2() {
-  var ctx = document.getElementById('skill2').getContext('2d');
-  var al = 0;
-  var start = 4.72;
-  var cw = ctx.canvas.width;
-  var ch = ctx.canvas.height;
-  var diff;
-
-  function progressSim() {
-    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.lineWidth = 5; //thickness of the line
-    ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
-    ctx.textAlign = 'center';
-    ctx.font = "30px Radley";
-    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
-    ctx.beginPath();
-    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-    ctx.stroke();
-    if (al >= 90) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
-      clearTimeout(sim);
-      // Add scripting here that will run when progress completes
-    }
-    al++;
-  }
-  var sim = setInterval(progressSim, 30); //speed
-}
-
-/* loadSkill3 function*/
-function loadSkills3() {
-  var ctx = document.getElementById('skill3').getContext('2d');
-  var al = 0;
-  var start = 4.72;
-  var cw = ctx.canvas.width;
-  var ch = ctx.canvas.height;
-  var diff;
-
-  function progressSim() {
-    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.lineWidth = 5; //thickness of the line
-    ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
-    ctx.textAlign = 'center';
-    ctx.font = "30px Radley";
-    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
-    ctx.beginPath();
-    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-    ctx.stroke();
-    if (al >= 80) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
-      clearTimeout(sim);
-      // Add scripting here that will run when progress completes
-    }
-    al++;
-  }
-  var sim = setInterval(progressSim, 40); //speed
-}
-/* loadSkill4 function*/
-function loadSkills4() {
-  var ctx = document.getElementById('skill4').getContext('2d');
-  var al = 0;
-  var start = 4.72;
-  var cw = ctx.canvas.width;
-  var ch = ctx.canvas.height;
-  var diff;
-
-  function progressSim() {
-    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.lineWidth = 5; //thickness of the line
-     ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
-    ctx.textAlign = 'center';
-    ctx.font = "30px Radley";
-    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
-    ctx.beginPath();
-    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-    ctx.stroke();
-    if (al >= 75) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
-      clearTimeout(sim);
-      // Add scripting here that will run when progress completes
-    }
-    al++;
-  }
-  var sim = setInterval(progressSim, 50); //speed
-}
-          </script>
+          <script src="js/doughnut.js"></script>
         </div>
-
     </div>
    </section>
 
@@ -467,55 +353,14 @@ function loadSkills4() {
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Finish</h4>
-            <p class="text-muted">Identity</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
             <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Lines</h4>
-            <p class="text-muted">Branding</p>
+            <h4>Crisis Management System</h4>
+            <p class="text-muted">Web App for Real-Time Crisis Management</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Southwest</h4>
-            <p class="text-muted">Website Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Window</h4>
-            <p class="text-muted">Photography</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -698,14 +543,18 @@ function loadSkills4() {
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">Crisis Management System</h2>
+                <p class="item-intro text-muted">Web App for Real-Time Crisis Management</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <p>
+                    <b><i>keyword: Django, HTML5, CSS, Google Cloud Storage, APIs</i></b>
+<br>This is a school project aims to build a web app for real-time Crisis Management in Singapore.
+I am responsible for various API modules used in this project, including Facebook, Twitter etc, and functionality of real-time notification.
+                </p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
+                  <li>Date: March - May 2019</li>
+                  <li>Project Members: 10 students</li>
+                  <li>Category: School Project</li>
                 </ul>
                 <a href="#" class="btn btn-primary">
                   Go to github link</a>
@@ -717,104 +566,7 @@ function loadSkills4() {
     </div>
   </div>
 
-  <!-- Modal 4 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Lines</li>
-                  <li>Category: Branding</li>
-                </ul>
-                <a href="#" class="btn btn-primary">
-                  Go to github link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Modal 5 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
-                </ul>
-                <a href="#" class="btn btn-primary">
-                  Go to github link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 6 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Window</li>
-                  <li>Category: Photography</li>
-                </ul>
-               <a href="#" class="btn btn-primary">
-                  Go to github link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
