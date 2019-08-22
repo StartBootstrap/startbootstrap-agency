@@ -707,7 +707,19 @@
           <th>Answer</th>
         </tr>
         <tr>
-          <td>What is Hip Hop?
+          <td>What is Hip Hop?</td>
+          <td>PREFIX : <http://dbpedia.org/resource/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          <br>
+          <br>SELECT ?s WHERE {
+          <br>?s rdfs:label "Hip Hop"@en
+          <br>}
+          <br>
+          </td>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Hip+Hop%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+        <tr>
+         <td>What is Rapping?</td>
           <td>PREFIX : <http://dbpedia.org/resource/>
           <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           <br>
@@ -718,56 +730,52 @@
           </td>
           <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Rapping%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
         </tr>
-        <tr>
-          <td>What was Franz Kafka’s literary movement?</td>
-          <td>SELECT ?literarymovement ?literarymovementbyLabel
-            <br>
-            <br>WHERE {
-            <br>wd:Q905 wdt:P135 ?literarymovement.
-            <br>
-            <br>SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
-            <br>
-            <br>}</td>
-          <td><a href="https://query.wikidata.org/#SELECT%20%3Fliterarymovement%20%3FliterarymovementbyLabel%0A%0AWHERE%20%7B%0Awd%3AQ905%20wdt%3AP135%20%3Fliterarymovement.%0A%0ASERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%7D">Query Result</td>
-        </tr>
-        <tr>
-          <td>Which ethnic group did Franz Kafka belong?</td>
-          <td>SELECT ?ethnicgroup ?ethnicgroupbyLabel
-            <br>
-            <br>WHERE {
-            <br>wd:Q905 wdt:P172 ?ethnicgroup.
-            <br>
-            <br>SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
-            <br>
+          <td>What are Rap Bands and they associated members?</td>
+          <td>PREFIX dbo: <http://dbpedia.org/ontology/></td>
+          <br>PREFIX dbr: <http://dbpedia.org/resource/>
+          <br>PREFIX dbp: <http://dbpedia.org/property/>
+          <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-            <br>}</td>
-          <td><a href="https://query.wikidata.org/#SELECT%20%3Fethnicgroup%20%3FethnicgroupbyLabel%0A%0AWHERE%20%7B%0Awd%3AQ905%20wdt%3AP172%20%3Fethnicgroup.%0A%0ASERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%7D%0A%0A">Query Result</a></td>
-        </tr>
-        <tr>
-          <td>Who are the people influenced by Franz Kafka?</td>
-          <td>select distinct ?y
-            <br>
-          <br>WHERE {
-          <br>?y a dbo:Person . 
-          <br>?y dbo:influencedBy dbr:Franz_Kafka
+          <br>SELECT ?members ?bandName where {
+          ?band dbo:genre dbr:Rap .
+          ?band dbp:currentMembers ?members.
+          ?band foaf:name ?bandName
+          FILTER(langMatches(lang(?bandName), "en"))
+          }
           <br>
+          </td>
+
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3ARap+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+        </tr>
+          <td>What are Hip Hop Bands and they associated members?</td>
+          <td>PREFIX dbo: <http://dbpedia.org/ontology/></td>
+          <br>PREFIX dbr: <http://dbpedia.org/resource/>
+          <br>PREFIX dbp: <http://dbpedia.org/property/>
+          <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+          <br>SELECT ?members ?bandName where {
+          <br>?band dbo:genre dbr:Rap .
+          <br>?band dbp:currentMembers ?members.
+          <br>?band foaf:name ?bandName
+          <br>FILTER(langMatches(lang(?bandName), "en"))
           <br>}
           <br>
-          <br>LIMIT 100</td>
-          <td><a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy%0D%0A%0D%0AWHERE+%7B%0D%0A%3Fy+a+dbo%3APerson+.+%0D%0A%3Fy+dbo%3AinfluencedBy+dbr%3AFranz_Kafka%0D%0A%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+">Query Result</a></td>
+          </td>
+
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3AHip-hop+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
         </tr>
-        <tr>
-          <td>What are the literary works which has the type novella?</td>
-          <td>select distinct ?x 
-              <br>
-            <br>WHERE { 
-            <br>?x a dbo:Book. 
-            <br>?x dbo:literaryGenre dbr:Novella. 
-              <br>
-            <br>}
-              <br>
-            <br>LIMIT 100</td>
-          <td><a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fx+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fx+a+dbo%3ABook.+%0D%0A%3Fx+dbo%3AliteraryGenre+dbr%3ANovella.+%0D%0A%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+">Query Result</a></td>
+          <td>What are derivatives genres of Hip Hop?</td>
+          <td>select distinct ?y 
+
+          <br>WHERE { 
+          <br>?y a dbo:Genre . 
+          <br>?y dbo:derivative dbr:Hip_hop_music
+          <br>}
+          <br>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fy+a+dbo%3AGenre+.+%0D%0A%3Fy+dbo%3Aderivative+dbr%3AHip_hop_music%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
         </tr>
         <tr>
           <td>Who are the people that were born in Austria-Hungary in 1883?</td>
