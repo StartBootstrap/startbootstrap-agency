@@ -709,7 +709,100 @@
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
 
-<!-- Custom scripts for this template -->
+<!-- Queries -->
+  <section class="content-section bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Queries</h2>
+      <p class="lead mb-5">In this section, the information related with Franz Kafka and the novella as literary genre is queried by using the SPARQL language. The data is extracted from <a href="https://wiki.dbpedia.org">DBpedia</a> by using <a href="http://dbpedia.org/sparql">Virtuoso SPARQL Query Editor</a> and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.
+      <br>Additionally, the relation between Franz Kafka and <i>The Metamorphosis</i>has been extracted by using <a href="http://www.visualdataweb.org/relfinder/relfinder.php">RelFinder</a>.</p>
+      <table class="table table-bordered">
+        <tr>
+          <th>NL Question</th>
+          <th>SPARQL Query</th>
+          <th>Answer</th>
+        </tr>
+        <tr>
+          <td>What was Franz Kafka’s occupation?</td>
+          <td>SELECT ?occupation ?occupationbyLabel
+            <br>
+            <br>WHERE {
+            <br>wd:Q905 wdt:P106 ?occupation.
+            <br>  
+            <br>SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+            <br>
+              <br>}
+          </td>
+          <td><a href="https://query.wikidata.org/#SELECT%20%3Foccupation%20%3FoccupationbyLabel%0A%0AWHERE%20%7B%0Awd%3AQ905%20wdt%3AP106%20%3Foccupation.%0A%0ASERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%7D">Query Result</a></td>
+        </tr>
+        <tr>
+          <td>What was Franz Kafka’s literary movement?</td>
+          <td>SELECT ?literarymovement ?literarymovementbyLabel
+            <br>
+            <br>WHERE {
+            <br>wd:Q905 wdt:P135 ?literarymovement.
+            <br>
+            <br>SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+            <br>
+            <br>}</td>
+          <td><a href="https://query.wikidata.org/#SELECT%20%3Fliterarymovement%20%3FliterarymovementbyLabel%0A%0AWHERE%20%7B%0Awd%3AQ905%20wdt%3AP135%20%3Fliterarymovement.%0A%0ASERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%7D">Query Result</td>
+        </tr>
+        <tr>
+          <td>Which ethnic group did Franz Kafka belong?</td>
+          <td>SELECT ?ethnicgroup ?ethnicgroupbyLabel
+            <br>
+            <br>WHERE {
+            <br>wd:Q905 wdt:P172 ?ethnicgroup.
+            <br>
+            <br>SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+            <br>
+
+            <br>}</td>
+          <td><a href="https://query.wikidata.org/#SELECT%20%3Fethnicgroup%20%3FethnicgroupbyLabel%0A%0AWHERE%20%7B%0Awd%3AQ905%20wdt%3AP172%20%3Fethnicgroup.%0A%0ASERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%7D%0A%0A">Query Result</a></td>
+        </tr>
+        <tr>
+          <td>Who are the people influenced by Franz Kafka?</td>
+          <td>select distinct ?y
+            <br>
+          <br>WHERE {
+          <br>?y a dbo:Person . 
+          <br>?y dbo:influencedBy dbr:Franz_Kafka
+          <br>
+          <br>}
+          <br>
+          <br>LIMIT 100</td>
+          <td><a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy%0D%0A%0D%0AWHERE+%7B%0D%0A%3Fy+a+dbo%3APerson+.+%0D%0A%3Fy+dbo%3AinfluencedBy+dbr%3AFranz_Kafka%0D%0A%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+">Query Result</a></td>
+        </tr>
+        <tr>
+          <td>What are the literary works which has the type novella?</td>
+          <td>select distinct ?x 
+              <br>
+            <br>WHERE { 
+            <br>?x a dbo:Book. 
+            <br>?x dbo:literaryGenre dbr:Novella. 
+              <br>
+            <br>}
+              <br>
+            <br>LIMIT 100</td>
+          <td><a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fx+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fx+a+dbo%3ABook.+%0D%0A%3Fx+dbo%3AliteraryGenre+dbr%3ANovella.+%0D%0A%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+">Query Result</a></td>
+        </tr>
+        <tr>
+          <td>Who are the people that were born in Austria-Hungary in 1883?</td>
+          <td>WHERE { 
+            <br>
+            <br>?x a dbo:Person. 
+            <br>?x dbo:birthPlace dbr:Austria-Hungary.
+            <br>?x dbo:birthYear ?year
+            <br>
+            <br>FILTER (?year = "1883"^^xsd:date)
+            <br>
+            <br>}
+            <br>
+            <br>LIMIT 100</td>
+          <td><a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fx%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fx+a+dbo%3APerson.+%0D%0A%3Fx+dbo%3AbirthPlace+dbr%3AAustria-Hungary.%0D%0A%3Fx+dbo%3AbirthYear+%3Fyear%0D%0A%0D%0AFILTER+%28%3Fyear+%3D+%221883%22%5E%5Exsd%3Adate%29%0D%0A%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+">Query Result</a></td>
+        </tr>
+        </table>
+        </div>
+        <br>
 
 </body>
 
