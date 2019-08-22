@@ -730,27 +730,26 @@
           </td>
           <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Rapping%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
         </tr>
-          <td>What are Rap Bands and they associated members?</td>
-          <td>PREFIX dbo: <http://dbpedia.org/ontology/></td>
+          <td>What are Rap Bands and their associated members?</td>
+          <td>PREFIX dbo: <http://dbpedia.org/ontology/>
           <br>PREFIX dbr: <http://dbpedia.org/resource/>
           <br>PREFIX dbp: <http://dbpedia.org/property/>
           <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
           <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
           <br>SELECT ?members ?bandName where {
-          ?band dbo:genre dbr:Rap .
-          ?band dbp:currentMembers ?members.
-          ?band foaf:name ?bandName
-          FILTER(langMatches(lang(?bandName), "en"))
-          }
+          <br>?band dbo:genre dbr:Rap .
+          <br>?band dbp:currentMembers ?members.
+          <br>?band foaf:name ?bandName
+          <br>FILTER(langMatches(lang(?bandName), "en"))
+          <br>}
           <br>
           </td>
 
           <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3ARap+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
         </tr>
         </tr>
-          <td>What are Hip Hop Bands and they associated members?</td>
-          <td>PREFIX dbo: <http://dbpedia.org/ontology/></td>
+          <td>What are Hip Hop Bands and their associated members?</td>
+          <br>PREFIX dbo: <http://dbpedia.org/ontology/>
           <br>PREFIX dbr: <http://dbpedia.org/resource/>
           <br>PREFIX dbp: <http://dbpedia.org/property/>
           <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
