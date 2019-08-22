@@ -61,7 +61,7 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
+        <div class="intro-lead-in">Welcome Our Studio!</div>
         <div class="intro-heading text-uppercase">FUCK YOU!</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
@@ -698,7 +698,7 @@
   <section class="content-section bg-light">
     <div class="container text-center">
       <h2 class="mb-4">Queries</h2>
-      <p class="lead mb-5">In this section, the information related with Franz Kafka and the novella as literary genre is queried by using the SPARQL language. The data is extracted from <a href="https://wiki.dbpedia.org">DBpedia</a> by using <a href="http://dbpedia.org/sparql">Virtuoso SPARQL Query Editor</a> and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.
+      <p class="lead mb-5">In this section, the information related to Hip Hop and Rap is queried by using the SPARQL language. The data is extracted from <a href="https://wiki.dbpedia.org">DBpedia</a> by using <a href="http://dbpedia.org/sparql">Virtuoso SPARQL Query Editor</a> and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.
       <br>Additionally, the relation between Franz Kafka and <i>The Metamorphosis</i>has been extracted by using <a href="http://www.visualdataweb.org/relfinder/relfinder.php">RelFinder</a>.</p>
       <table class="table table-bordered">
         <tr>
@@ -707,17 +707,16 @@
           <th>Answer</th>
         </tr>
         <tr>
-          <td>What was Franz Kafka’s occupation?</td>
-          <td>SELECT ?occupation ?occupationbyLabel
-            <br>
-            <br>WHERE {
-            <br>wd:Q905 wdt:P106 ?occupation.
-            <br>  
-            <br>SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
-            <br>
-              <br>}
+          <td>What is Hip Hop?
+          <td>PREFIX : <http://dbpedia.org/resource/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          <br>
+          <br>SELECT ?s WHERE {
+          <br>?s rdfs:label "Rapping"@en
+          <br>}
+          <br>
           </td>
-          <td><a href="https://query.wikidata.org/#SELECT%20%3Foccupation%20%3FoccupationbyLabel%0A%0AWHERE%20%7B%0Awd%3AQ905%20wdt%3AP106%20%3Foccupation.%0A%0ASERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%7D">Query Result</a></td>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Rapping%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
         </tr>
         <tr>
           <td>What was Franz Kafka’s literary movement?</td>
