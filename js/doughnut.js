@@ -27,8 +27,8 @@ function loadSkills1() {
     diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
     ctx.clearRect(0, 0, cw, ch);
     ctx.lineWidth = 5; //thickness of the line
-    ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
+    ctx.fillStyle = '#A3E4D7';
+    ctx.strokeStyle = "#A3E4D7";
     ctx.textAlign = 'center';
     ctx.font = "30px Radley";
     ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
@@ -56,8 +56,8 @@ function loadSkills2() {
     diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
     ctx.clearRect(0, 0, cw, ch);
     ctx.lineWidth = 5; //thickness of the line
-    ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
+    ctx.fillStyle = '#A3E4D7';
+    ctx.strokeStyle = "#A3E4D7";
     ctx.textAlign = 'center';
     ctx.font = "30px Radley";
     ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
@@ -86,8 +86,8 @@ function loadSkills3() {
     diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
     ctx.clearRect(0, 0, cw, ch);
     ctx.lineWidth = 5; //thickness of the line
-    ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
+    ctx.fillStyle = '#A3E4D7';
+    ctx.strokeStyle = "#A3E4D7";
     ctx.textAlign = 'center';
     ctx.font = "30px Radley";
     ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
@@ -115,8 +115,8 @@ function loadSkills4() {
     diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
     ctx.clearRect(0, 0, cw, ch);
     ctx.lineWidth = 5; //thickness of the line
-     ctx.fillStyle = '#fed136';
-    ctx.strokeStyle = "#fed136";
+    ctx.fillStyle = '#A3E4D7';
+    ctx.strokeStyle = "#A3E4D7";
     ctx.textAlign = 'center';
     ctx.font = "30px Radley";
     ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
@@ -131,63 +131,3 @@ function loadSkills4() {
   }
   var sim = setInterval(progressSim, 50); //speed
 }
-
-// /* loadSkill5 function*/
-// function loadSkills5() {
-//   var ctx = document.getElementById('skill5').getContext('2d');
-//   var al = 0;
-//   var start = 4.72;
-//   var cw = ctx.canvas.width;
-//   var ch = ctx.canvas.height;
-//   var diff;
-
-//   function progressSim() {
-//     diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
-//     ctx.clearRect(0, 0, cw, ch);
-//     ctx.lineWidth = 5; //thickness of the line
-//      ctx.fillStyle = '#fed136';
-//     ctx.strokeStyle = "#fed136";
-//     ctx.textAlign = 'center';
-//     ctx.font = "30px Radley";
-//     ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
-//     ctx.beginPath();
-//     ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-//     ctx.stroke();
-//     if (al >= 75) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
-//       clearTimeout(sim);
-//       // Add scripting here that will run when progress completes
-//     }
-//     al++;
-//   }
-//   var sim = setInterval(progressSim, 50); //speed
-// }
-
-// /* loadSkill4 function*/
-// function loadSkills6() {
-//   var ctx = document.getElementById('skill6').getContext('2d');
-//   var al = 0;
-//   var start = 4.72;
-//   var cw = ctx.canvas.width;
-//   var ch = ctx.canvas.height;
-//   var diff;
-
-//   function progressSim() {
-//     diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
-//     ctx.clearRect(0, 0, cw, ch);
-//     ctx.lineWidth = 5; //thickness of the line
-//      ctx.fillStyle = '#fed136';
-//     ctx.strokeStyle = "#fed136";
-//     ctx.textAlign = 'center';
-//     ctx.font = "30px Radley";
-//     ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
-//     ctx.beginPath();
-//     ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
-//     ctx.stroke();
-//     if (al >= 75) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
-//       clearTimeout(sim);
-//       // Add scripting here that will run when progress completes
-//     }
-//     al++;
-//   }
-//   var sim = setInterval(progressSim, 50); //speed
-// }
