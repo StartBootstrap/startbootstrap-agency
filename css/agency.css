@@ -339,9 +339,10 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-modal .modal-content img {
-  margin-left: 50%;
+  
  
   margin-bottom: 30%;
+  max-width:850px;
 }
 
 .portfolio-modal .modal-content button {
