@@ -3,8 +3,7 @@
 @font-face {
   font-family: 'simplerPro';
   src: local('SimplerPro Regular'),
-    url('../vendor/fonts/SimplerPro-Regular.otf');
-    format('opentype');
+       url('../vendor/fonts/SimplerPro-Regular.otf') format('opentype');
 }
 
 // Bootstrap Button Variant
@@ -14,6 +13,13 @@
   background-color: @background;
   border-color: @border;
 
+  &.active,
+  &:active,
+  &:active:focus,
+  &:focus {
+    outline: 0;
+  }
+
   &:hover,
   &:focus,
   &:active,
@@ -21,7 +27,7 @@
   .open .dropdown-toggle& {
     color: @color;
     background-color: darken(@background, 10%);
-        border-color: darken(@border, 12%);
+    border-color: darken(@border, 12%);
   }
   &:active,
   &.active,
@@ -44,6 +50,13 @@
   .badge {
     color: @background;
     background-color: @color;
+  }
+
+  &.active,
+  &:active,
+  &:active:focus,
+  &:focus {
+    outline: 0;
   }
 }
 
