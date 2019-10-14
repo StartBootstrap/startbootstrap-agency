@@ -69,29 +69,26 @@
   </header>
 
   <!-- Services -->
- <section class="bg-light page-section" id="portfolio">
- <p style="text-align: left; padding-left: 30px;"> Rap is an intensely intertextual and self-referential form. Morover, it is an extremely competitive expressive form. For that reason, emcees exhibit their rhyming abilities against the competition.</p>
+<div class="container">
+          <h2>Preface.</h2>
+          <p>This project belongs to the 'Knowledge Representation and Extraction' course of University of Bologna, a.y. 2018/2019.</p>
 
-                                <pre>
-                                  <code class="python">
-  import requests
-​
-url = 'https://cache-api.ranker.com/lists/855723/items'\
-      '?limit=100&offset=0&include=votes,wikiText,rankings,'\
-      'openListItemContributors&propertyFetchType=ALL&liCacheKey=null'
-r = requests.get(url)
-data = r.json()
-artists = [i['name'] for i in data['listItems']]
-​
-print(artists)
-                                  </code>
-                                </pre>
+          <p>The project is aimed at extracting knowledge of lyrics of 35k rap song dating from 1980 - 2015 with the final goal to covert extracted data in a linked open data environment as the RDF graph.</p>
+
+          <pre><code> 
 
  <div class="container">
-          <h2>I'll take some hip hop please.</h2>
-          <p>The time of a song's release proved to be a valuable feature in our model. Rap music has clearly evolved over the past 30 years, and so a hit in the 2000s has different characterstics than a hit in the 1980s. The visualization below represents the emergence of rap music onto the weekly Billboard Top 100 charts, with the darker green squares representing a higher percentage of rap music in the top 100.</p>
-          <pre>
-              <code class="python">
+          <h2>Introduction.</h2>
+          <p>Rap is an intensely <b>intertextual<b/> and <b>self-referential<b/> form. One of the reason for that is the extremely competitive expressive form of rap music. For that reason, emcees exhibit their rhyming abilities against the competition.</p>
+  </b>
+
+
+ <div class="container">
+          <h2>Acquiring Data.</h2>
+          <p>As a raw data, the lyrics for the top 100 rappers were used as well as the the dataset of songs from MetroLyrics.</p>
+<p>To retrieve the lyrics for the top 100 rappers , I used Cypher, a python library released recently to retrieve music lyrics (to install: pip install thecypher). The list of top rappers was obtained from ranker.com that source the data from an API. This was done by running the following code:</p>
+
+          <pre><code> 
                 import requests
 ​
 url = 'https://cache-api.ranker.com/lists/855723/items'\
@@ -102,8 +99,11 @@ data = r.json()
 artists = [i['name'] for i in data['listItems']]
 ​
 print(artists)
-              </code>
-          </pre>
+</code></pre>
+
+<p>I looped over the output list and run thecypher.get_lyrics on each artist. The following code gets the lyrics and convert it to a DataFrame.</p>
+
+          
           
 
   <!-- Portfolio Grid -->
