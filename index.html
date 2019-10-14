@@ -72,41 +72,20 @@
  <section class="bg-light page-section" id="portfolio">
  <p style="text-align: left; padding-left: 30px;"> Rap is an intensely intertextual and self-referential form. Morover, it is an extremely competitive expressive form. For that reason, emcees exhibit their rhyming abilities against the competition.</p>
 
- <h3 class="mb-0"><center>Linguistic Analysis</center></h3>
-        <p class="lead mb-5" align="justify"> Repetitions, symbolism, synonyms, metaphors and similes are included inside the linguistic analysis. The information is extracted by using Python's wordcount function by eliminating the stopwords in which some more words(the name of the characters, say, know, think...)</p>
-        <xmp>
-
-  import collections
-
-  file = open('metamorphosis.txt', encoding="utf8")
-  a= file.read()
-
-  # Stopwords
-  stopwords = set(line.strip() for line in open('stopwords.txt'))
-  stopwords = stopwords.union(set(['mr','mrs','one','two','said']))
-
-  wordcount = {}
-
-  for word in a.lower().split():
-      word = word.replace(".","")
-      word = word.replace(",","")
-      word = word.replace(":","")
-      word = word.replace("\"","")
-      word = word.replace("!","")
-      word = word.replace("â€œ","")
-      word = word.replace("â€˜","")
-      word = word.replace("*","")
-      if word not in stopwords:
-          if word not in wordcount:
-              wordcount[word] = 1
-          else:
-              wordcount[word] += 1
-
-  word_counter = collections.Counter(wordcount)
-  for word, count in word_counter.most_common(5):
-      print(word, ": ", count)
-
-</xmp>
+                                <pre>
+                                  <code class="python">
+  import requests
+​
+url = 'https://cache-api.ranker.com/lists/855723/items'\
+      '?limit=100&offset=0&include=votes,wikiText,rankings,'\
+      'openListItemContributors&propertyFetchType=ALL&liCacheKey=null'
+r = requests.get(url)
+data = r.json()
+artists = [i['name'] for i in data['listItems']]
+​
+print(artists)
+                                  </code>
+                                </pre>
 
  <div class="container">
           <h2>I'll take some hip hop please.</h2>
