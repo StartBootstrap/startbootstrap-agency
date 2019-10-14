@@ -107,6 +107,7 @@
             <div class="output_area">
                 <div class="prompt"></div>
                 <div class="output_subarea output_text output_stream output_stdout">
+                  <div class="prompt output_prompt">Out[1]:</div>
                     <pre>['Tupac', 'Eminem', 'The Notorious B.I.G.', 'Nas', 'Ice Cube', 'Jay-Z', 'Snoop Dogg', 'Dr. Dre', 'Kendrick Lamar', 'Rakim', 'André 3000', 'Eazy-E', 'Kanye West', '50 Cent', 'DMX', 'Busta Rhymes', 'Method Man', 'J. Cole', 'Mos Def', 'Ludacris', 'KRS-One', 'LL Cool J', 'Lil Wayne', 'Common', 'Big L', 'Ghostface Killah', 'Redman', 'T.I.', 'Big Pun', 'Nate Dogg', 'Tech N9ne', 'Lauryn Hill', 'Scarface', 'Slick Rick', 'Raekwon', 'Big Daddy Kane', "Ol' Dirty Bastard", 'The Game', 'Mobb Deep', 'Logic', 'Chance the Rapper', 'Cypress Hill', 'Ice-T', 'Lupe Fiasco', 'RZA', 'GZA', 'Q-Tip', 'Warren G', 'Talib Kweli', 'Xzibit', 'Missy Elliott', 'ASAP Rocky', 'Joey Badass', 'Immortal Technique', 'Twista', 'Big Sean', 'Kid Cudi', 'Big Boi', 'Chuck D', 'Donald Glover', 'Drake', 'Wiz Khalifa', 'Eric B. &amp; Rakim', 'Schoolboy Q', 'DMC', 'Nelly', 'Hopsin', 'D12', 'Jadakiss', 'Tyler, the Creator', 'Kurupt', 'Grandmaster Flash and the Furious Five', 'Gang Starr', 'Too $hort', 'Royce da 5&amp;#39;9&amp;#34;', 'MC Ren', 'E-40', 'Pusha T', 'Coolio', 'De La Soul', 'Proof', 'Bad Meets Evil', 'Guru', 'Will Smith', 'Krayzie Bone', 'Black Thought', 'B.o.B', 'AZ', 'Yelawolf', 'The Sugarhill Gang', 'Earl Sweatshirt', 'Fabolous', 'Mac Miller', 'Fat Joe', 'Young Jeezy', 'Kool G Rap', 'Bizzy Bone', 'Queen Latifah', 'Prodigy', '2 Chainz']
 </pre>
                 </div>
@@ -215,6 +216,90 @@
     </div>
 </div>
 
+<div class="container">
+<div class="text_cell_render rendered_html" tabs="-1">
+            <p>By default, the data is delivered with one lyric per row. The following code will convert it to one song per row:</p>
+        </div>
+    </div>
+</div>
+<div class="cell code_cell un rendered" tabs="2">
+    <div class="input">
+        <div class="prompt input_prompt">In&nbsp;[3]:</div>
+        <div class="inner_cell">
+            <div class="input_area">
+                <div class="CodeMirror cm-s-ipython">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.59668px; left: 5.59658px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabs="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+                    <div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;">
+                        <div style="min-width: 1px; height: 0px;"></div>
+                    </div>
+                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                    <div class="CodeMirror-scroll" tabs="-1">
+                        <div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 403.139px; margin-bottom: 0px; border-right-width: 30px; min-height: 125px; padding-right: 0px; padding-bottom: 0px;">
+                            <div style="position: relative; top: 0px;">
+                                <div class="CodeMirror-lines">
+                                    <div style="position: relative; outline: none;">
+                                        <div class="CodeMirror-measure"></div>
+                                        <div class="CodeMirror-measure"></div>
+                                        <div style="position: relative; z-index: 1;"></div>
+                                        <div class="CodeMirror-cursors"></div>
+                                        <div class="CodeMirror-code" style="">
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable cm-cm-overlay cm-matchhighlight">group</span> = [<span class="cm-string">'song'</span>, <span class="cm-string">'year'</span>, <span class="cm-string">'album'</span>, <span class="cm-string">'genre'</span>, <span class="cm-string">'artist'</span>]</span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">lyrics_by_song</span> = <span class="cm-variable">lyrics_df</span>.<span class="cm-property">sort_values</span>(<span class="cm-variable cm-cm-overlay cm-matchhighlight">group</span>)<span class="cm-error">\</span></span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">       .<span class="cm-property">groupby</span>(<span class="cm-variable cm-cm-overlay cm-matchhighlight">group</span>).<span class="cm-property">lyric</span><span class="cm-error">\</span></span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">       .<span class="cm-property">apply</span>(<span class="cm-string">' '</span>.<span class="cm-property">join</span>)<span class="cm-error">\</span></span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">       <span class="cm-null cm-error">.</span><span class="cm-property">reset_index</span>(<span class="cm-variable">name</span>=<span class="cm-string">'lyric'</span>)</span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    </span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">lyrics_by_song</span>.<span class="cm-property">head</span>(<span class="cm-number">1</span>)</span></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CodeMirror-gutters" style="display: none; height: 155px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="output_wrapper">
+        <div class=" prompt" title="click to scroll output; double click to hide" style=""></div>
+        <div class="output" style="">
+            <div class="output_area">
+                <div class="prompt output_prompt">Out[3]:</div>
+                <div class="output_subarea output_html rendered_html output_result">
+                    <div>
+                        <table border="1" class="dataframe">
+                            <thead>
+                                <tr style="text-align: right">
+                                    <th></th>
+                                    <th>song</th>
+                                    <th>year</th>
+                                    <th>album</th>
+                                    <th>genre</th>
+                                    <th>artist</th>
+                                    <th>lyric</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>0</th>
+                                    <td>313</td>
+                                    <td>1996</td>
+                                    <td>Infinite (1996)</td>
+                                    <td>Hip_Hop</td>
+                                    <td>Eminem</td>
+                                    <td>Eye-Kyu: Now what you know about a sweet MC, from the 313 None of these skills you bout to see come free So you wanna be a sweet MC, you gotta become me If you ever wanna be one see Eminem: Man what you know about a sweet MC, in the 313 None of these skills you bout to see come free So you wanna be a sweet MC, you better become me If you ever wanna be one see Verse 1: Eye-Kyu Yo some people say I'm whack, now if that's right I'm the freshest whack MC that you ever heard, in your lifetime My slick accapella sounds clever with the beats Boy I'm the deepest thing since potholes to ever hit the streets Forgot a gold digger's succubus, my souls thick with ruggedness With the mic....</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-default output_collapsed" title="click to expand output" style="display: none;">. . .</div>
+    </div>
+</div>
 
            
                         
