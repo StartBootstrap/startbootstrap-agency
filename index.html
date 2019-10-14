@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>FUCK YOU!!</title>
+  <title>Rap and Lyrics</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -61,8 +61,8 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome Our Studio!</div>
-        <div class="intro-heading text-uppercase">FUCK YOU!</div>
+        <div class="intro-lead-in">Rap and Lyrics</div>
+        <div class="intro-heading text-uppercase">Beyond the words</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
@@ -83,6 +83,100 @@
           <p>Rap is an intensely <b>intertextual</b> and <b>self-referential</b> form. One of the reason for that is the extremely competitive expressive form of rap music. For that reason, emcees exhibit their rhyming abilities against the competition.</p>
  </div>
  <p>&nbsp;</p>
+
+ <!-- Queries -->
+  <section class="content-section bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Queries</h2>
+      <p class="lead mb-5">In this section, the information related to Hip Hop and Rap is queried by using the SPARQL language. The data is extracted from <a href="https://wiki.dbpedia.org">DBpedia</a> by using <a href="http://dbpedia.org/sparql">Virtuoso SPARQL Query Editor</a> and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.
+      <br>Additionally, the relation between Franz Kafka and <i>The Metamorphosis</i>has been extracted by using <a href="http://www.visualdataweb.org/relfinder/relfinder.php">RelFinder</a>.</p>
+      <table class="table table-bordered">
+        <tr>
+          <th>NL Question</th>
+          <th>SPARQL Query</th>
+          <th>Answer</th>
+        </tr>
+        <tr>
+          <td>What is Hip Hop?</td>
+          <td>PREFIX : <http://dbpedia.org/resource/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          <br>
+          <br>SELECT ?s WHERE {
+          <br>?s rdfs:label "Hip Hop"@en
+          <br>}
+          <br>
+          </td>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Hip+Hop%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+        <tr>
+         <td>What is Rapping?</td>
+          <td>PREFIX : <http://dbpedia.org/resource/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          <br>
+          <br>SELECT ?s WHERE {
+          <br>?s rdfs:label "Rapping"@en
+          <br>}
+          <br>
+          </td>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Rapping%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+          <td>What are Rap Bands and their associated members?</td>
+          <td>PREFIX dbo: <http://dbpedia.org/ontology/>
+          <br>PREFIX dbr: <http://dbpedia.org/resource/>
+          <br>PREFIX dbp: <http://dbpedia.org/property/>
+          <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          <br>SELECT ?members ?bandName where {
+          <br>?band dbo:genre dbr:Rap .
+          <br>?band dbp:currentMembers ?members.
+          <br>?band foaf:name ?bandName
+          <br>FILTER(langMatches(lang(?bandName), "en"))
+          <br>}
+          <br>
+          </td>
+
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3ARap+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+        </tr>
+          <td>What are Hip Hop Bands and their associated members?</td>
+          <br>PREFIX dbo: <http://dbpedia.org/ontology/>
+          <br>PREFIX dbr: <http://dbpedia.org/resource/>
+          <br>PREFIX dbp: <http://dbpedia.org/property/>
+          <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+          <br>SELECT ?members ?bandName where {
+          <br>?band dbo:genre dbr:Rap .
+          <br>?band dbp:currentMembers ?members.
+          <br>?band foaf:name ?bandName
+          <br>FILTER(langMatches(lang(?bandName), "en"))
+          <br>}
+          <br>
+          </td>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3AHip-hop+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+          <td>What are derivatives genres of Hip Hop?</td>
+          <td>select distinct ?y 
+
+          <br>WHERE { 
+          <br>?y a dbo:Genre . 
+          <br>?y dbo:derivative dbr:Hip_hop_music
+          <br>
+          <br>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fy+a+dbo%3AGenre+.+%0D%0A%3Fy+dbo%3Aderivative+dbr%3AHip_hop_music%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+        <tr>
+          <td>What are genres of Hip Hop</td>
+          <td>select distinct ?y 
+
+          <br>WHERE { 
+          <br>?y dct:subject dbc:Hip_hop_genres
+          <br>}
+          </td>
+          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fy+dct%3Asubject+dbc%3AHip_hop_genres%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
+        </tr>
+        </table>
+        </div>
+        <br>
 
  <div class="container">
           <h2>Acquiring Data.</h2>
@@ -215,6 +309,7 @@
         <div class="btn btn-default output_collapsed" title="click to expand output" style="display: none;">. . .</div>
     </div>
 </div>
+<p>&nbsp;</p>
 
 <div class="container">
 <div class="text_cell_render rendered_html" tabs="-1">
@@ -895,99 +990,7 @@
       </div>
     </div>
   </div>
-  <!-- Queries -->
-  <section class="content-section bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4">Queries</h2>
-      <p class="lead mb-5">In this section, the information related to Hip Hop and Rap is queried by using the SPARQL language. The data is extracted from <a href="https://wiki.dbpedia.org">DBpedia</a> by using <a href="http://dbpedia.org/sparql">Virtuoso SPARQL Query Editor</a> and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.
-      <br>Additionally, the relation between Franz Kafka and <i>The Metamorphosis</i>has been extracted by using <a href="http://www.visualdataweb.org/relfinder/relfinder.php">RelFinder</a>.</p>
-      <table class="table table-bordered">
-        <tr>
-          <th>NL Question</th>
-          <th>SPARQL Query</th>
-          <th>Answer</th>
-        </tr>
-        <tr>
-          <td>What is Hip Hop?</td>
-          <td>PREFIX : <http://dbpedia.org/resource/>
-          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-          <br>
-          <br>SELECT ?s WHERE {
-          <br>?s rdfs:label "Hip Hop"@en
-          <br>}
-          <br>
-          </td>
-          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Hip+Hop%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
-        </tr>
-        <tr>
-         <td>What is Rapping?</td>
-          <td>PREFIX : <http://dbpedia.org/resource/>
-          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-          <br>
-          <br>SELECT ?s WHERE {
-          <br>?s rdfs:label "Rapping"@en
-          <br>}
-          <br>
-          </td>
-          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0ASELECT+%3Fs+WHERE+%7B%0D%0A%3Fs+rdfs%3Alabel+%22Rapping%22%40en%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
-        </tr>
-          <td>What are Rap Bands and their associated members?</td>
-          <td>PREFIX dbo: <http://dbpedia.org/ontology/>
-          <br>PREFIX dbr: <http://dbpedia.org/resource/>
-          <br>PREFIX dbp: <http://dbpedia.org/property/>
-          <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-          <br>SELECT ?members ?bandName where {
-          <br>?band dbo:genre dbr:Rap .
-          <br>?band dbp:currentMembers ?members.
-          <br>?band foaf:name ?bandName
-          <br>FILTER(langMatches(lang(?bandName), "en"))
-          <br>}
-          <br>
-          </td>
-
-          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3ARap+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
-        </tr>
-        </tr>
-          <td>What are Hip Hop Bands and their associated members?</td>
-          <br>PREFIX dbo: <http://dbpedia.org/ontology/>
-          <br>PREFIX dbr: <http://dbpedia.org/resource/>
-          <br>PREFIX dbp: <http://dbpedia.org/property/>
-          <br>PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-          <br>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-          <br>SELECT ?members ?bandName where {
-          <br>?band dbo:genre dbr:Rap .
-          <br>?band dbp:currentMembers ?members.
-          <br>?band foaf:name ?bandName
-          <br>FILTER(langMatches(lang(?bandName), "en"))
-          <br>}
-          <br>
-          </td>
-          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+%3Fmembers+%3FbandName+where+%7B%0D%0A+%3Fband+dbo%3Agenre+dbr%3AHip-hop+.%0D%0A+%3Fband+dbp%3AcurrentMembers+%3Fmembers.%0D%0A+%3Fband+foaf%3Aname+%3FbandName%0D%0A+FILTER%28langMatches%28lang%28%3FbandName%29%2C+%22en%22%29%29%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
-        </tr>
-          <td>What are derivatives genres of Hip Hop?</td>
-          <td>select distinct ?y 
-
-          <br>WHERE { 
-          <br>?y a dbo:Genre . 
-          <br>?y dbo:derivative dbr:Hip_hop_music
-          <br>
-          <br>
-          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fy+a+dbo%3AGenre+.+%0D%0A%3Fy+dbo%3Aderivative+dbr%3AHip_hop_music%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
-        </tr>
-        <tr>
-          <td>What are genres of Hip Hop</td>
-          <td>select distinct ?y 
-
-          <br>WHERE { 
-          <br>?y dct:subject dbc:Hip_hop_genres
-          <br>}
-          </td>
-          <td><a href=https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fy+%0D%0A%0D%0AWHERE+%7B+%0D%0A%3Fy+dct%3Asubject+dbc%3AHip_hop_genres%0D%0A%7D%0D%0A%0D%0ALIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+>Query Result</a></td>
-        </tr>
-        </table>
-        </div>
-        <br>
+  
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
