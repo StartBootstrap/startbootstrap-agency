@@ -118,89 +118,29 @@
             
 
 <div class="container">
-          <p>I looped over the output list and run thecypher.get_lyrics on each artist. The following code gets the lyrics and convert it to a DataFrame.</p>
-</div>
+          <p>I looped over the output list and run thecypher.get_lyrics on each artist. The following code <span class="cm-comment">`get_lyrics`</span> the lyrics and convert it to a <span class="cm-comment">`DataFrame`</span>.</span></pre>.</p>
+          <pre><code> import thecypher
+                      import pandas as pd
+​
+                      lyrics = []
+                      for artist in artists:
+  
+                        # our Cypher code
+                        artist_lyrics = thecypher.get_lyrics(artist)
+  
+                        # append each record
+                        [lyrics.append(i) for i in artist_lyrics]
+​
+                      # convert to a DataFrame
+                      lyrics_df = pd.DataFrame(lyrics)
+                      lyrics_df.head()
+</code></pre>
 
-</div>
-            </div>
-        </div>
-        <div class="btn btn-default output_collapsed" title="click to expand output" style="display: none;">. . .</div>
-    </div>
-</div>
-<div class="cell text_cell un rendered" tabs="2">
-    <div class="prompt input_prompt"></div>
-    <div class="inner_cell">
-        <div class="input_area">
-            <div class="CodeMirror cm-s-default CodeMirror-wrap">
-                <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.59033px; left: 5.59028px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabs="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
-                <div class="CodeMirror-vscrollbar" cm-not-content="true" style="bottom: 0px; width: 18px; pointer-events: none;">
-                    <div style="min-width: 1px; height: 0px;"></div>
-                </div>
-                <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
-                <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
-                <div class="CodeMirror-scroll" tabs="-1">
-                    <div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 0px; padding-bottom: 0px; margin-bottom: 0px; border-right-width: 30px; min-height: 61px;">
-                        <div style="position: relative; top: 0px;">
-                            <div class="CodeMirror-lines">
-                                <div style="position: relative; outline: none;">
-                                    <div class="CodeMirror-measure"></div>
-                                    <div class="CodeMirror-measure"></div>
-                                    <div style="position: relative; z-index: 1;"></div>
-                                    <div class="CodeMirror-cursors"></div>
-                                    <div class="CodeMirror-code">
-                                        <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">To use Cypher to retrieve these lyrics we'll loop over the list and run <span class="cm-comment">`thecypher.get_lyrics`</span> on each artist. The following will <span class="cm-comment">`get_lyrics`</span> and then convert it to a <span class="cm-comment">`DataFrame`</span>.</span></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="CodeMirror-gutters" style="display: none; height: 91px;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="text_cell_render rendered_html" tabs="-1">
-            <p>To use Cypher to retrieve these lyrics we'll loop over the list and run <code>thecypher.get_lyrics</code> on each artist. The following will <code>get_lyrics</code> and then convert it to a <code>DataFrame</code>.</p>
-        </div>
-    </div>
-</div>
-<div class="cell code_cell un rendered" tabs="2">
-    <div class="input">
-        <div class="prompt input_prompt">In&nbsp;[2]:</div>
-        <div class="inner_cell">
-            <div class="input_area">
-                <div class="CodeMirror cm-s-ipython">
-                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.59668px; left: 5.59658px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabs="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
-                    <div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none; bottom: 0px;">
-                        <div style="min-width: 1px; height: 0px;"></div>
-                    </div>
-                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
-                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
-                    <div class="CodeMirror-scroll" tabs="-1">
-                        <div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 372.41px; margin-bottom: 0px; border-right-width: 30px; min-height: 256px; padding-right: 0px; padding-bottom: 0px;">
-                            <div style="position: relative; top: 0px;">
-                                <div class="CodeMirror-lines">
-                                    <div style="position: relative; outline: none;">
-                                        <div class="CodeMirror-measure"></div>
-                                        <div class="CodeMirror-measure"></div>
-                                        <div style="position: relative; z-index: 1;"></div>
-                                        <div class="CodeMirror-cursors"></div>
-                                        <div class="CodeMirror-code" style="">
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword cm-cm-overlay cm-matchhighlight">import</span> <span class="cm-variable">thecypher</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword cm-cm-overlay cm-matchhighlight">import</span> <span class="cm-variable">pandas</span> <span class="cm-keyword">as</span> <span class="cm-variable">pd</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">lyrics</span> = []</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">for</span> <span class="cm-variable">artist</span> <span class="cm-keyword">in</span> <span class="cm-variable">artists</span>:</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    </span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-comment"># our Cypher code</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable">artist_lyrics</span> = <span class="cm-variable">thecypher</span>.<span class="cm-property">get_lyrics</span>(<span class="cm-variable">artist</span>)</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    </span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-comment"># append each record</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    [<span class="cm-variable">lyrics</span>.<span class="cm-property">append</span>(<span class="cm-variable">i</span>) <span class="cm-keyword">for</span> <span class="cm-variable">i</span> <span class="cm-keyword">in</span> <span class="cm-variable">artist_lyrics</span>]</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-comment"># convert to a DataFrame</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">lyrics_df</span> = <span class="cm-variable">pd</span>.<span class="cm-property">DataFrame</span>(<span class="cm-variable">lyrics</span>)</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">lyrics_df</span>.<span class="cm-property">head</span>()</span></pre>
-                                        </div>
+
+
+
+
+           </div>
                                     </div>
                                 </div>
                             </div>
@@ -211,6 +151,88 @@
             </div>
         </div>
     </div>
+    <div class="output_wrapper">
+        <div class=" prompt" title="click to expand output; double click to hide output" style=""></div>
+        <div class="output" style="">
+            <div class="output_area">
+                <div class="prompt output_prompt">Out[2]:</div>
+                <div class="output_subarea output_html rendered_html output_result">
+                    <div>
+                        <table border="1" class="dataframe">
+                            <thead>
+                                <tr style="text-align: right">
+                                    <th></th>
+                                    <th>album</th>
+                                    <th>artist</th>
+                                    <th>genre</th>
+                                    <th>id</th>
+                                    <th>lyric</th>
+                                    <th>song</th>
+                                    <th>year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>0</th>
+                                    <td>Infinite (1996)</td>
+                                    <td>Eminem</td>
+                                    <td>Hip_Hop</td>
+                                    <td>14201</td>
+                                    <td>Oh yeah, this is Eminem baby, back up in that motherfucking ass</td>
+                                    <td>Infinite</td>
+                                    <td>1996</td>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Infinite (1996)</td>
+                                    <td>Eminem</td>
+                                    <td>Hip_Hop</td>
+                                    <td>14202</td>
+                                    <td>One time for your mother fucking mind, we represent the 313</td>
+                                    <td>Infinite</td>
+                                    <td>1996</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Infinite (1996)</td>
+                                    <td>Eminem</td>
+                                    <td>Hip_Hop</td>
+                                    <td>14203</td>
+                                    <td>You know what I'm saying?, 'cause they don't know shit about this</td>
+                                    <td>Infinite</td>
+                                    <td>1996</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Infinite (1996)</td>
+                                    <td>Eminem</td>
+                                    <td>Hip_Hop</td>
+                                    <td>14204</td>
+                                    <td>For the 9-6</td>
+                                    <td>Infinite</td>
+                                    <td>1996</td>
+                                </tr>
+                                <tr>
+                                    <th>4</th>
+                                    <td>Infinite (1996)</td>
+                                    <td>Eminem</td>
+                                    <td>Hip_Hop</td>
+                                    <td>14205</td>
+                                    <td>Ayo, my pen and paper cause a chain reaction</td>
+                                    <td>Infinite</td>
+                                    <td>1996</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-default output_collapsed" title="click to expand output" style="display: none;">. . .</div>
+    </div>
+</div>
+
+
 
           
           
