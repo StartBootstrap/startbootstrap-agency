@@ -101,69 +101,7 @@
 ​
           print(artists)
           </code></pre>
-
-
-          <p>I looped over the output list and run thecypher.get_lyrics on each artist. The following code gets the lyrics and convert it to a DataFrame.</p>
-</div>
-
-</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="CodeMirror-gutters" style="display: none; height: 191px;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="text_cell_render rendered_html" tabs="-1">
-            <p>To get all the lyrics for the top 100 rappers, we'll use <a href="https://github.com/tmthyjames/cypher" target="_blank">Cypher</a>, a new python library <a href="https://tmthyjames.github.io/tools/Cypher/" target="_blank">I released</a> recently to retrieve music lyrics (to install: <code>pip install thecypher</code>). But first, we need to get a list of the top 100 rappers. For this, I just Googled "top rappers" and got a hit from <a href="https://www.ranker.com/crowdranked-list/the-greatest-rappers-of-all-time" target="_blank">ranker.com</a>. This will suffice, although I don't think this list is perfect. Luckily they source the data from an API so we don't have to screen scrape! Here's the code to get this list:</p>
-        </div>
-    </div>
-</div>
-<div class="cell code_cell un rendered" tabs="2">
-    <div class="input">
-        <div class="prompt input_prompt">In&nbsp;[1]:</div>
-        <div class="inner_cell">
-            <div class="input_area">
-                <div class="CodeMirror cm-s-ipython">
-                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.59668px; left: 5.59658px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabs="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
-                    <div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;">
-                        <div style="min-width: 1px; height: 0px;"></div>
-                    </div>
-                    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
-                    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
-                    <div class="CodeMirror-scroll" tabs="-1">
-                        <div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 541.802px; margin-bottom: 0px; border-right-width: 30px; min-height: 175px; padding-right: 0px; padding-bottom: 0px;">
-                            <div style="position: relative; top: 0px;">
-                                <div class="CodeMirror-lines">
-                                    <div style="position: relative; outline: none;">
-                                        <div class="CodeMirror-measure"></div>
-                                        <div class="CodeMirror-measure"></div>
-                                        <div style="position: relative; z-index: 1;"></div>
-                                        <div class="CodeMirror-cursors"></div>
-                                        <div class="CodeMirror-code" style="">
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword cm-cm-overlay cm-matchhighlight">import</span> <span class="cm-variable">requests</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">url</span> = <span class="cm-string">'https://cache-api.ranker.com/lists/855723/items'</span><span class="cm-error">\</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string">'?limit=100&amp;offset=0&amp;include=votes,wikiText,rankings,'</span><span class="cm-error">\</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string">'openListItemContributors&amp;propertyFetchType=ALL&amp;liCacheKey=null'</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">r</span> = <span class="cm-variable">requests</span>.<span class="cm-property">get</span>(<span class="cm-variable">url</span>)</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">data</span> = <span class="cm-variable">r</span>.<span class="cm-property">json</span>()</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">artists</span> = [<span class="cm-variable">i</span>[<span class="cm-string">'name'</span>] <span class="cm-keyword">for</span> <span class="cm-variable">i</span> <span class="cm-keyword">in</span> <span class="cm-variable">data</span>[<span class="cm-string">'listItems'</span>]]</span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">artists</span>)</span></pre>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="CodeMirror-gutters" style="display: none; height: 205px;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="output_wrapper">
+            <div class="output_wrapper">
         <div class=" prompt" title="click to expand output; double click to hide output" style=""></div>
         <div class="output" style="">
             <div class="output_area">
@@ -174,6 +112,15 @@
                 </div>
             </div>
         </div>
+        <div class="btn btn-default output_collapsed" title="click to expand output" style="display: none;">. . .</div>
+    </div>
+</div>
+
+
+          <p>I looped over the output list and run thecypher.get_lyrics on each artist. The following code gets the lyrics and convert it to a DataFrame.</p>
+</div>
+
+
 
           
           
