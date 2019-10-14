@@ -90,7 +90,21 @@ print(artists)
  <div class="container">
           <h2>I'll take some hip hop please.</h2>
           <p>The time of a song's release proved to be a valuable feature in our model. Rap music has clearly evolved over the past 30 years, and so a hit in the 2000s has different characterstics than a hit in the 1980s. The visualization below represents the emergence of rap music onto the weekly Billboard Top 100 charts, with the darker green squares representing a higher percentage of rap music in the top 100.</p>
-          <iframe id="test" style="overflow:hidden" scrolling="no" width="100%" height="710px" frameborder="0" src="./viz/calendar_view/index.html"></iframe>
+          <pre>
+              <code class="python">
+                import requests
+​
+url = 'https://cache-api.ranker.com/lists/855723/items'\
+      '?limit=100&offset=0&include=votes,wikiText,rankings,'\
+      'openListItemContributors&propertyFetchType=ALL&liCacheKey=null'
+r = requests.get(url)
+data = r.json()
+artists = [i['name'] for i in data['listItems']]
+​
+print(artists)
+              </code>
+          </pre>
+          
 
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
