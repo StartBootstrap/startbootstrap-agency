@@ -70,7 +70,48 @@
 
   <!-- Services -->
  <section class="bg-light page-section" id="portfolio">
- <p style="text-align: left; padding-left: 30px;"> This project aims to analyse the given literal text by basing on some computational tools and the computational results are processed and then represented in the knowledge graph which illustrates the relationship between the characters, the themes of the literal texts and Freud's psychoanalysis(id, ego, superego).</p>
+ <p style="text-align: left; padding-left: 30px;"> Rap is an intensely intertextual and self-referential form. Morover, it is an extremely competitive expressive form. For that reason, emcees exhibit their rhyming abilities against the competition.</p>
+
+ <h3 class="mb-0"><center>Linguistic Analysis</center></h3>
+        <p class="lead mb-5" align="justify"> Repetitions, symbolism, synonyms, metaphors and similes are included inside the linguistic analysis. The information is extracted by using Python's wordcount function by eliminating the stopwords in which some more words(the name of the characters, say, know, think...)</p>
+        <xmp>
+
+  import collections
+
+  file = open('metamorphosis.txt', encoding="utf8")
+  a= file.read()
+
+  # Stopwords
+  stopwords = set(line.strip() for line in open('stopwords.txt'))
+  stopwords = stopwords.union(set(['mr','mrs','one','two','said']))
+
+  wordcount = {}
+
+  for word in a.lower().split():
+      word = word.replace(".","")
+      word = word.replace(",","")
+      word = word.replace(":","")
+      word = word.replace("\"","")
+      word = word.replace("!","")
+      word = word.replace("â€œ","")
+      word = word.replace("â€˜","")
+      word = word.replace("*","")
+      if word not in stopwords:
+          if word not in wordcount:
+              wordcount[word] = 1
+          else:
+              wordcount[word] += 1
+
+  word_counter = collections.Counter(wordcount)
+  for word, count in word_counter.most_common(5):
+      print(word, ": ", count)
+
+</xmp>
+
+ <div class="container">
+          <h2>I'll take some hip hop please.</h2>
+          <p>The time of a song's release proved to be a valuable feature in our model. Rap music has clearly evolved over the past 30 years, and so a hit in the 2000s has different characterstics than a hit in the 1980s. The visualization below represents the emergence of rap music onto the weekly Billboard Top 100 charts, with the darker green squares representing a higher percentage of rap music in the top 100.</p>
+          <iframe id="test" style="overflow:hidden" scrolling="no" width="100%" height="710px" frameborder="0" src="./viz/calendar_view/index.html"></iframe>
 
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
