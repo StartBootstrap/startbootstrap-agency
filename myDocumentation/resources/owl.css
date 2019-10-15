@@ -1,0 +1,248 @@
+.RFC2119 {
+  text-transform: lowercase;
+  font-style: italic;
+}
+.nonterminal {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 95%;
+}
+#abstract br {
+   /* doesn't work right SOMETIMES 
+   margin-bottom: 1em;   */
+}
+.name {
+    font-family: monospace;
+}
+.buttonpanel {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    padding-top: 1ex;
+    padding-bottom: 0.6ex;
+    border: 1px dotted black; 
+}
+.grammar {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    padding-top: 1ex;
+    padding-bottom: 0.6ex;
+    border: 1px dashed #2f6fab;
+    font-family: monospace;
+}
+.image {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+    padding-top: 4ex;
+    padding-bottom: 4ex;
+}
+.centered table {
+    margin: 0 auto;
+    text-align: left;
+}
+.caption {
+    font-weight: bold;
+}
+.indent {
+    margin-left: 20px;
+}
+.atrisknote {
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 2px blue;
+    background-color: #FFA;
+}
+.atrisknotehead {
+    font-style: italic;	
+}
+
+/* Stying the examples. */
+
+.anexample:before {
+    content: "Example:";
+    font-family: sans-serif;
+    font-size: 1.6ex;
+    font-weight: bold;
+}
+.anexample {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    padding-top: 1ex;
+    padding-bottom: 0.6ex;
+    border: 1px dashed #2f6fab;
+    background-color: #f9f9f9;
+}
+.anexample table {
+    background-color: #f9f9f9;
+}
+
+/* Styling the parts in the functional-style syntax. */
+
+div.fss {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    font-family: monospace;
+}
+table.fss {
+    margin: 0px 0px 0px 0px; 
+    padding: 0px 0px 0px 0px; 
+    width: 100%;
+}
+table.fss caption.fss {
+    font-size: 1.5ex;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+table.fss td:first-child {
+    font-family: monospace;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+}
+table{
+    background-color: #f4ffff;
+    border: 1px solid navy;
+    margin: 20px;
+    vertical-align: middle;
+}
+table td {
+    padding: 5px 15px;
+    text-align: left;
+}
+
+/* Styling the parts in the RDF syntax. */
+
+div.rdf{
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    font-family: monospace;
+}
+table.rdf {
+    margin: 0px 0px 0px 0px; 
+    padding: 0px 0px 0px 0px; 
+    width: 100%;
+}
+table.rdf caption.rdf {
+    font-size: 1.5ex;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+table.rdf td:first-child {
+    font-family: monospace;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+}
+
+/* Styling the XML syntax. */
+
+div.xmlsyn {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    font-family: monospace;
+}
+div.axioms {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+/* Other styles. */
+
+table.complexity td {
+    text-align: center;
+}
+table.allname td {
+   font-family: monospace;
+}
+table.canonicalparsing {
+    margin-left: 20px;
+    border-style: none;
+}
+table.canonicalparsing td {
+    vertical-align: top;
+    padding: 2px 2px 2px 2px;
+}
+table.canonicalparsing td.two {
+    padding-left: 30px;
+}
+
+/* The following are classes for templates used in the editing process. */
+
+.review {
+    padding: 5px;
+    border: solid 1px black;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #FFA;
+    font-size: smaller;
+}
+.reviewauthor {
+    font-size: smaller;
+    font-style: italic;
+}
+.ednote {
+    padding: 5px;
+    border: solid 1px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ednotehead {
+   font-weight: bold;
+}
+
+/* override mediawiki's beautiful DL styling... */
+dl {
+    background: white;
+    width: 100%;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#fulltitle {
+  font-size: 140%; 
+  font-weight: bold;
+}
+
+.xml {
+ color: red
+}
+
+.rdbms{
+color: red
+}
+
+/* just copying from wiki, so it stays through TR. Currently
+  affects Primer, at least */
+pre {
+  background-color:#F9F9F9;
+  border:1px dashed #2F6FAB;
+  color:black;
+  line-height:1.1em;
+  padding:1em;
+}
