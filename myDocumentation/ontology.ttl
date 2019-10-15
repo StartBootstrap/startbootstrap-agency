@@ -1,0 +1,522 @@
+@prefix : <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap> .
+
+<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#definition
+:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf
+:IsPartOf rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hasSong ;
+          rdfs:domain :MusicalWork ;
+          rdfs:range :Album ;
+          rdfs:comment "property that connects class MusicWork to the class Album." ;
+          rdfs:label "isPartOf" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum
+:hasAlbum rdf:type owl:ObjectProperty ;
+          rdfs:domain :Person ;
+          rdfs:range :Album ;
+          rdfs:comment "property that connects classes of the ontology to the class Album." ;
+          rdfs:label "hasAlbum" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre
+:hasGenre rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Album
+                                      :MusicalWork
+                                      :Person
+                                    )
+                      ] ;
+          rdfs:range <http://purl.org/ontology/mo/Genre> ;
+          rdfs:comment "property that connects classes of the ontology to the music genre." ;
+          rdfs:label "hasGenre" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics
+:hasLyrics rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :MusicalWork ;
+           rdfs:range :Lyrics ;
+           rdfs:comment "property that connects classes of the ontology to the Lyrics." ;
+           rdfs:label "hasLyrics" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace
+:hasPlace rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Person ;
+          rdfs:range :Place ;
+          rdfs:comment "property that connects classes of the ontology to the class Place" ;
+          rdfs:label "hasPlace" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment
+:hasSentiment rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :MusicalWork ;
+              rdfs:range :Sentiment ;
+              rdfs:comment "property that connects classes of the ontology to the class Sentiment." ;
+              rdfs:label "hasSentiment" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong
+:hasSong rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Album ;
+         rdfs:range :MusicalWork ;
+         rdfs:comment "property that connects classes of the ontology to the class Song." ;
+         rdfs:label "hasSong" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject
+:hasSubject rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isReferencedIn ;
+            rdfs:domain :MusicalWork ;
+            rdfs:range :Topic ;
+            rdfs:comment "property that connects classes of the ontology to the class Topic." ;
+            rdfs:label "hasTopic" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan
+:hasTimeSpan rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Album
+                                         :MusicalWork
+                                       )
+                         ] ;
+             rdfs:range :Time_Span ;
+             rdfs:comment "property that connects classes of the ontology to the class Time Span." ;
+             rdfs:label "hasTimeSpan" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy
+:isReferencedBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf :mentionsTopic ;
+                rdfs:domain :MusicalWork ;
+                rdfs:range :Person ;
+                rdfs:comment "property that connects the class Topic to the class Person." ;
+                rdfs:label "isReferencedBy" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn
+:isReferencedIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :Topic ;
+                rdfs:range :MusicalWork ;
+                rdfs:comment "property that connects class Topic to the class Person." ;
+                rdfs:label "isReferencedIn" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic
+:mentionsTopic rdf:type owl:ObjectProperty ;
+               rdfs:domain :Person ;
+               rdfs:range :Topic ;
+               rdfs:comment "property that connects classes of the ontology to the class Topic." ;
+               rdfs:label "mentionsTopic" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references
+:references rdf:type owl:ObjectProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Person ;
+            rdfs:comment "The object property that connects class Person to the same class Person." ;
+            rdfs:label "references" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice
+:usesLiteraryDevice rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Person ;
+                    rdfs:range :LiteraryDevice ;
+                    rdfs:comment "property that connects the class Person to the class Literary Device" ;
+                    rdfs:label "usesLiteraryDevice" .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:FunctionalProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/City
+<http://dbpedia.org/ontology/City> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :City ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:label "dbo:City" .
+
+
+###  http://dbpedia.org/ontology/Country
+<http://dbpedia.org/ontology/Country> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Country ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:label "dbo:City" .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain :MusicalWork ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:label "dc:title" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentimentScore
+:hasSentimentScore rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :MusicalWork ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start
+:activity_start rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MusicArtist ,
+                            :MusicGroup ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://xmlns.com/foaf/0.1/maker
+<http://xmlns.com/foaf/0.1/maker> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain [ rdf:type owl:Class ;
+                                                owl:unionOf ( :Album
+                                                              :MusicalWork
+                                                            )
+                                              ] ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "foaf:maker" .
+
+
+###  http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :MusicGroup ;
+                                   rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :Person ;
+                                 rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/ontology/mo/Genre
+<http://purl.org/ontology/mo/Genre> rdf:type owl:Class ;
+                                    rdfs:label "Genre" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "An expressive style of music." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album
+:Album rdf:type owl:Class ;
+       rdfs:label "Album" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW
+:BMW rdf:type owl:Class ;
+     rdfs:subClassOf :Car ;
+     owl:disjointWith :Mercedes-Benz ;
+     rdfs:label "BMW" ;
+     <http://www.w3.org/2004/02/skos/core#definition> "BMW is defined as an acronym for Bayerische Motoren Werke AG, or in English, Bavarian Motor Works." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car
+:Car rdf:type owl:Class ;
+     rdfs:label "Car" ;
+     <http://www.w3.org/2004/02/skos/core#definition> "a road vehicle." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Place ;
+      owl:disjointWith :Country ;
+      rdfs:label "City" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "A relatively large and permanent settlement, particularly a large urban settlement" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Place ;
+         rdfs:comment "The country where the thing is located." ;
+         rdfs:label "Country" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast
+:East_Coast rdf:type owl:Class ;
+            rdfs:subClassOf :Rap ;
+            rdfs:label "East Coast Rap" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A regional genre of hip hop music that encompasses any artists or music that originated in the East Coast region of the United States." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery
+:Imagery rdf:type owl:Class ;
+         rdfs:subClassOf :LiteraryDevice ;
+         rdfs:label "Imagery" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Imagery is the literary term used for language and description that appeals to our five senses. When a music artist attempts to describe something so that it appeals to our sense of smell, sight, taste, touch, or hearing; he/she has used imagery." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony
+:Irony rdf:type owl:Class ;
+       rdfs:subClassOf :LiteraryDevice ;
+       rdfs:label "Irony" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "The use of irony in literature refers to playing around with words such that the meaning implied by a sentence or word is actually different from the literal meaning. Often irony is used to suggest the stark contrast of the literal meaning being put forth. The deeper, real layer of significance is revealed not by the words themselves but the situation and the context in which they are placed." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice
+:LiteraryDevice rdf:type owl:Class ;
+                rdfs:label "LiteraryDevice" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "literary device is a technique a writer uses to produce a special effect in their writing." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote
+:Litote rdf:type owl:Class ;
+        rdfs:subClassOf :LiteraryDevice ;
+        rdfs:label "Litote" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Litotes are a figure of speech consisting of an understatement in which an affirmative is expressed via the negative of its contrary." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics
+:Lyrics rdf:type owl:Class ;
+        rdfs:label "Lyrics" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Associates lyrics with a musical work" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz
+:Mercedes-Benz rdf:type owl:Class ;
+               rdfs:subClassOf :Car ;
+               rdfs:label "Mercedes-Benz" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Mercedes-Benz is a German global automobile marque and a division of Daimler AG. The brand is known for luxury vehicles, buses, coaches, and trucks." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy
+:Metonymy rdf:type owl:Class ;
+          rdfs:subClassOf :LiteraryDevice ;
+          rdfs:label "Metonomy" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A metonymy is a word or phrase that is substituted for a more formal word or phrase to which it is related." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist
+:MusicArtist rdf:type owl:Class ;
+             rdfs:subClassOf :Person ;
+             owl:disjointWith :MusicGroup ;
+             rdfs:label "Music Artist" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A person or a group of people (or a computer :-) ), whose musical creative work shows sensitivity and imagination." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup
+:MusicGroup rdf:type owl:Class ;
+            rdfs:subClassOf :Person ;
+            rdfs:label "Music Group" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Group of musicians, or musical ensemble, usually popular or folk, playing parts of or improvising off of a musical arrangement." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork
+:MusicalWork rdf:type owl:Class ;
+             rdfs:label "MusicalWork" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Distinct intellectual or artistic musical creation." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom
+:Palindrom rdf:type owl:Class ;
+           rdfs:subClassOf :LiteraryDevice ;
+           rdfs:label "Palindrom" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A word or phrase spelled the same backwards or forwards." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic
+:Pangrammatic rdf:type owl:Class ;
+              rdfs:subClassOf :LiteraryDevice ;
+              rdfs:label "Pangrammatic" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A sentence (or verse, or song) that includes all the letters of the alphabet. Like palindromes, they’re hard to find in songs." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person
+:Person rdf:type owl:Class ;
+        rdfs:label "Person" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A person (alive, dead, undead, or fictional)." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place
+:Place rdf:type owl:Class ;
+       rdfs:label "Place" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Immobile things or locations." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm
+:Pleonasm rdf:type owl:Class ;
+          rdfs:subClassOf :LiteraryDevice ;
+          rdfs:label "Pleonasm" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Pleonasm is a rhetorical device where one or more redundant words are used consecutively in a phrase to express an idea." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton
+:Polysyndeton rdf:type owl:Class ;
+              rdfs:subClassOf :LiteraryDevice ;
+              rdfs:label "Polysyndeton" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Creating a list by adding a conjunction in between all the terms on the list. The opposite of asyndeton." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau
+:Portmanteau rdf:type owl:Class ;
+             rdfs:subClassOf :LiteraryDevice ;
+             rdfs:label "Portmanteau" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Portmanteau is simply a blending of two or more words(including their sounds and meanings) into a singular new word." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap
+:Rap rdf:type owl:Class ;
+     rdfs:subClassOf <http://purl.org/ontology/mo/Genre> ;
+     rdfs:label "Rap" ;
+     <http://www.w3.org/2004/02/skos/core#definition> "A musical form of vocal delivery that incorporates \"rhyme, rhythmic speech, and street vernacular\", which is performed or chanted in a variety of ways, usually over a backing beat or musical accompaniment.The components of rap include \"content\" (what is being said), \"flow\" (rhythm, rhyme), and \"delivery\" (cadence, tone)." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment
+:Sentiment rdf:type owl:Class ;
+           rdfs:label "Sentiment" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The sentiment of a piece of text is its positivity or negativity, and sentiment analysis gives an objective idea of whether the text uses mostly positive, negative, or neutral language." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile
+:Simile rdf:type owl:Class ;
+        rdfs:subClassOf :LiteraryDevice ;
+        rdfs:label "Similie" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A simile is where one thing is compared to another to help with describing something." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism
+:Spoonerism rdf:type owl:Class ;
+            rdfs:subClassOf :LiteraryDevice ;
+            rdfs:label "Spoonerism" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A spoonerism is a play on words in which the sounds of two or more words are transposed." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche
+:Synecdoche rdf:type owl:Class ;
+            rdfs:subClassOf :LiteraryDevice ;
+            rdfs:label "Synecdoche" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "When a part of something stands in for the whole thing OR the whole thing stands in for the part." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia
+:Synesthesia rdf:type owl:Class ;
+             rdfs:subClassOf :LiteraryDevice ;
+             rdfs:label "Synethesia" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "In literature, synesthesia refers to a technique adopted by writers to present ideas, characters, or places in such a manner that they appeal to more than one sense, like hearing, sight, smell, and touch at a given time." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span
+:Time_Span rdf:type owl:Class ;
+           rdfs:label "Time Span" ;
+           <http://www.w3.org/2004/02/skos/core#definition> """Time-Spans are used to define the temporal extent of
+instances in the ontology and any other phenomena valid for a certain time.""" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis
+:Tmesis rdf:type owl:Class ;
+        rdfs:subClassOf :LiteraryDevice ;
+        rdfs:label "Tmesis" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Tmesis involves the separation of the parts of compound word by intervening words." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic
+:Topic rdf:type owl:Class ;
+       rdfs:label "Topic" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Thing or concept that is being discussed, described, or dealt with." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast
+:West_Coast rdf:type owl:Class ;
+            rdfs:subClassOf :Rap ;
+            rdfs:label "West Coast Rap" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A regional genre of hip hop music that encompasses any artists or music that originated in the West Coast region of the United States." .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma
+:Zeugma rdf:type owl:Class ;
+        rdfs:subClassOf :LiteraryDevice ;
+        rdfs:label "Zeugma" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Tmesis involves the separation of the parts of compound word by intervening words." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#int
+:int rdf:type owl:NamedIndividual ,
+              :Sentiment ,
+              :Time_Span .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.org/ontology/mo/Genre>
+                :Album
+                :Car
+                :LiteraryDevice
+                :Lyrics
+                :MusicalWork
+                :Person
+                :Place
+                :Sentiment
+                :Time_Span
+                :Topic
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Imagery
+                :Irony
+                :Litote
+                :Metonymy
+                :Palindrom
+                :Pangrammatic
+                :Pleonasm
+                :Polysyndeton
+                :Portmanteau
+                :Simile
+                :Spoonerism
+                :Synecdoche
+                :Synesthesia
+                :Tmesis
+                :Zeugma
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
