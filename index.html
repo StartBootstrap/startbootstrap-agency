@@ -73,11 +73,7 @@
    <section class="content-section bg-light">
     <div class="container text-center">
           <h2>Preface.</h2>
-          <p>This project belongs to the 'Knowledge Representation and Extraction' course of University of Bologna, a.y. 2018/2019.</p>
-
-          <p>The project is aimed at extracting knowledge of lyrics of 35k rap song dating from 1980 - 2015 with the final goal to covert extracted data in a linked open data environment as the RDF graph.</p>
-
-          <p>The idea behind the project is inspired by the fact rap is not just about music. It’s a unique era of culture where art, music, history, politics, fashion, trends and language became deeply pitted with metaphors that became consistent, ubiquitous and global. Hence, hip hop music is a milestone of information about culture at different time points.</p>
+          <p>This project belongs to the 'Knowledge Representation and Extraction' course of University of Bologna, a.y. 2018/2019.The project is aimed at extracting knowledge of lyrics of 35k rap song dating from 1980 - 2015 with the final goal to covert extracted data in a linked open data environment as the RDF graph.</p>
  </div>
  <p>&nbsp;</p>
 
@@ -126,7 +122,7 @@
                 
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">As a rsearchable the lyrics for the top 100 rappers was obtained as well as the dataset of songs from MetroLyrics. By running the python code, the data was cleaned and processes. </p><a class="nav-link js-scroll-trigger" href="#gettingrawdata">LEARN MORE</a></p> 
+                  <p class="text-muted">As a rsearchable database the lyrics for the top 100 rappers was obtained as well as the dataset of songs from MetroLyrics. By running the python code, the data was cleaned and processes. </p><a class="nav-link js-scroll-trigger" href="#gettingrawdata">LEARN MORE</a></p> 
                 </div>
               </div>
             </li>
@@ -465,9 +461,18 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
           <h2 style="text-align:center;" id="cars">Rap and Cars.</h2>
           <div>
           
-          
+            <style>
+   .leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+   .rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+   }
+  </style>
 
-            <p> Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)">Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p> <img style="vertical-align:middle" src="img/top20.png">
+            <p> <img style="vertical-align:middle" src="img/top20.png">Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)">Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p> <img style="vertical-align:middle" src="img/top20.png">
 <p>By running <a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/reader1.py">reader1.py</a> I obtained the total number of times the brand car names were used by each artist.&nbsp;</p>
 <p>To avoid disambiguation some car brands were not included in the lyrics mining since they have double meaning or unrelated proper names, e.g., Prince, MINI, Oakland.</p>
 </div>
