@@ -473,35 +473,11 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
 <p style="text-align: center;"><strong>Top 20 Cars used.</strong></p>
 <img src="img/top20.png"style="width:75%;" class="center"> 
 <p>&nbsp;</p>
-<p>The search was made for all possible car names. For example, for all terms that refer to&nbsp;<strong>BMW</strong>&nbsp;vehicles:&nbsp;"Beamer" and "Beemer" or "Benz", "Mersedes" for <strong>Mercedes-Benz</strong>.</p>
-<p>&nbsp;</p>
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-</head>
-<body>
 
-<img src="img/mercedes.png" alt="Mercedes" style="width:50%;">
-<p>&nbsp;</p>
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-</head>
-<body>
 
-<img src="img/carcloud.png" alt="Mercedes" style="width:50%;">
 
 
           
-                    
 
 
         
@@ -527,7 +503,7 @@ img {
           </a>
           <div class="portfolio-caption">
             <h4>Getting and cleaning the data</h4>
-            <p class="text-muted">Wikidata</p>
+            <p class="text-muted">Rap and Cars</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -576,36 +552,12 @@ img {
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      
         <div class="col-sm-4">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
+            <h4>Lisa Siurina</h4>
+            <p class="text-muted">University of Bologna</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -625,6 +577,7 @@ img {
             </ul>
           </div>
         </div>
+      </section>
         
   
 
@@ -684,15 +637,14 @@ img {
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">Getting and cleaning the data</h2>
+                <p class="item-intro text-muted">Wikidata.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
-                </ul>
+                <p> Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)">Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p> 
+<p>By running <a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/reader1.py">reader1.py</a> I obtained the total number of times the brand car names were used by each artist.&nbsp;</p>
+<p>To avoid disambiguation some car brands were not included in the lyrics mining since they have double meaning or unrelated proper names, e.g., Prince, MINI, Oakland.</p>
+</div>
+                
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -718,25 +670,25 @@ img {
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">Mining</h2>
+                <p class="item-intro text-muted">A bit of statistics.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
-                  <li>Category: Graphic Design</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+                <p>The search was made for all possible car names. For example, for all terms that refer to&nbsp;<strong>BMW</strong>&nbsp;vehicles:&nbsp;"Beamer" and "Beemer" or "Benz", "Mersedes" for <strong>Mercedes-Benz</strong>.</p>
+<p>&nbsp;</p>
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+<img src="img/mercedes.png" alt="Mercedes" style="width:50%;">
+<p>&nbsp;</p>
+<style>
+                
 
   <!-- Modal 3 -->
   <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
@@ -752,19 +704,295 @@ img {
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">Literary Devices</h2>
+                <p class="item-intro text-muted">Conceptual Mapping.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
+                <p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Literary Device</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Definition</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Hip-Hop Example:</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Zeugma</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Zeugma is a figure of speech in which one word, usually a verb, is used to modify more than one noun. A zeugma is used to blend grammatically and logically different ideas.</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">He </span><strong>held</strong><span style="font-weight: 400;"> her </span><em><span style="font-weight: 400;">hand</span></em><span style="font-weight: 400;"> and his </span><em><span style="font-weight: 400;">temper</span></em><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">verb&mdash;-&gt;noun1&mdash;&mdash;-&gt;noun2</span></p>
+<p><span style="font-weight: 400;">His </span><em><span style="font-weight: 400;">boat</span></em><span style="font-weight: 400;"> and his </span><em><span style="font-weight: 400;">stomach</span></em> <strong>sank</strong><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">noun1&lt;&mdash;&mdash;-noun2&lt;&ndash;verb</span></p>
+<p><span style="font-weight: 400;">Hip-Hop Example:</span></p>
+<p><span style="font-weight: 400;">She </span><strong>broke</strong><span style="font-weight: 400;"> my </span><em><span style="font-weight: 400;">heart</span></em><span style="font-weight: 400;"> and my </span><em><span style="font-weight: 400;">bank account</span></em></p>
+<p><span style="font-weight: 400;">Im deep in a trance and I ain&rsquo;t comin out</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://rap.genius.com/Travis-porter-freaky-girl-lyrics"><span style="font-weight: 400;">Freaky Girl</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/artists/Travis-porter"><span style="font-weight: 400;">Travis Porter</span></a></p>
+<p><span style="font-weight: 400;">A broken heart and a broke bank account are two completely logically different things that are blended together by using the verb </span><strong>broke</strong><span style="font-weight: 400;">.</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Tmesis</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Tmesis involves the separation of the parts of compound word by intervening words.</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">I pull the shit to make you think I got a vote to settle,</span></p>
+<p><span style="font-weight: 400;">Yelawolf is on </span><strong>a</strong> <em><span style="font-weight: 400;">whole</span></em> <strong>&lsquo;nother</strong><span style="font-weight: 400;"> level</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="https://genius.com/artists/Yelawolf"><span style="font-weight: 400;">Yelawolf</span></a><span style="font-weight: 400;">&rsquo;s verse on </span><a href="https://genius.com/artists/Big-krit"><span style="font-weight: 400;">Big KRIT</span></a><span style="font-weight: 400;">&rsquo;s song </span><a href="http://rap.genius.com/Big-krit-fulla-shit-lyrics"><span style="font-weight: 400;">Fulla Shit</span></a></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Synesthesia</span></p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Synesthesia is a technique that authors use to appeal to more than one sense (sight, smell, sound, taste, touch) at a time. Usually, a characteristic of one sensation is used to depict an aspect of a different sense.</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Examples:</span></p>
+<p><span style="font-weight: 400;">The wind was </span><em><span style="font-weight: 400;">bitterly</span></em><span style="font-weight: 400;"> (taste) </span><strong>cold</strong><span style="font-weight: 400;"> (touch) that night.</span></p>
+<p><span style="font-weight: 400;">The </span><em><span style="font-weight: 400;">bright</span></em><span style="font-weight: 400;"> (sight) </span><strong>piano</strong><span style="font-weight: 400;"> (sound) played in the lobby.</span></p>
+<p><span style="font-weight: 400;">Hip-Hop Example:</span></p>
+<p><span style="font-weight: 400;">Hey, I&rsquo;m new in town, I don&rsquo;t know my way around</span></p>
+<p><span style="font-weight: 400;">But I got some </span><em><span style="font-weight: 400;">soft</span></em><span style="font-weight: 400;"> (touch) </span><strong>white</strong><span style="font-weight: 400;"> (sight) that&rsquo;s sure to come back brown</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://rap.genius.com/Jay-z-1-900-hustler-lyrics"><span style="font-weight: 400;">1-900-Hustler</span></a><span style="font-weight: 400;"> by </span><a href="http://rap.genius.com/Jay-z-1-900-hustler-lyrics"><span style="font-weight: 400;">Jay Z</span></a></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="https://genius.com/Rap-genius-glossary-of-literary-devices-and-forms-of-wordplay-used-in-hip-hop-lyrics#note-8893219"><span style="font-weight: 400;">Synecdoche</span></a></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">When a part of something stands in for the whole thing OR the whole thing stands in for the part.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">&ldquo;</span><strong>Seattle</strong><span style="font-weight: 400;"> won the baseball game.&rdquo; (whole for the part)</span></p>
+<p><span style="font-weight: 400;">&ldquo;Those </span><strong>wheels</strong><span style="font-weight: 400;"> are fire.&rdquo; (part for the whole)</span></p>
+<p><a href="https://genius.com/2838"><span style="font-weight: 400;">Hip Hop Example: Jay-Z, &ldquo;Run This Town&rdquo;</span></a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Spoonerism</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">A spoonerism is a play on words in which the sounds of two or more words are transposed.</span></p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Examples:</span></p>
+<p><span style="font-weight: 400;">The Lord is a </span><em><span style="font-weight: 400;">sh</span></em><span style="font-weight: 400;">oving </span><strong>l</strong><span style="font-weight: 400;">eopard.</span></p>
+<p><span style="font-weight: 400;">(The Lord is a </span><strong>l</strong><span style="font-weight: 400;">oving </span><em><span style="font-weight: 400;">sh</span></em><span style="font-weight: 400;">epherd)</span></p>
+<p><span style="font-weight: 400;">It is </span><strong>kiss</strong><span style="font-weight: 400;">tomary to </span><em><span style="font-weight: 400;">cuss</span></em><span style="font-weight: 400;"> the bride.</span></p>
+<p><span style="font-weight: 400;">(It is </span><em><span style="font-weight: 400;">cus</span></em><span style="font-weight: 400;">tomary to </span><strong>kiss</strong><span style="font-weight: 400;"> the bride)</span></p>
+<p><span style="font-weight: 400;">Hip-Hop Example:</span></p>
+<p><span style="font-weight: 400;">I&rsquo;m getting heated, best I go and </span><strong>t</strong><span style="font-weight: 400;">ake a </span><em><span style="font-weight: 400;">sh</span></em><span style="font-weight: 400;">ower, spoonerisms big enough to </span><em><span style="font-weight: 400;">sh</span></em><span style="font-weight: 400;">ake a </span><strong>t</strong><span style="font-weight: 400;">ower</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://www.youtube.com/watch?v=PCwkjfWdM1s"><span style="font-weight: 400;">Spoonerised Minds</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/artists/Chester-p"><span style="font-weight: 400;">Chester P</span></a></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">simile&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">A simile is where one thing is compared to another to help with describing something</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Raekwon&rsquo;s line from </span><a href="https://genius.com/Wu-tang-clan-protect-ya-neck-lyrics"><span style="font-weight: 400;">Protect Ya Neck</span></a><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;">Rhymes rugged and built like Schwarzenegger</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Portmanteau&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Portmanteau is simply a blending of two or more words(including their sounds and meanings) into a singular new word.</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Examples:</span></p>
+<p><strong>Sm</strong><span style="font-weight: 400;">oke + F</span><strong>og</strong><span style="font-weight: 400;"> = </span><strong>Smog</strong></p>
+<p><strong>Br</strong><span style="font-weight: 400;">other + R</span><strong>omance</strong><span style="font-weight: 400;"> = </span><strong>Bromance</strong></p>
+<p><span style="font-weight: 400;">Hip-Hop Examples:</span></p>
+<p><span style="font-weight: 400;">When these streets keep calling, heard it when I was sleep</span></p>
+<p><span style="font-weight: 400;">That this </span><strong>Gay-Z</strong><span style="font-weight: 400;"> and </span><strong>Cock-a-Fella</strong><span style="font-weight: 400;"> Records wanted beef</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://rap.genius.com/Nas-ether-lyrics"><span style="font-weight: 400;">Ether</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/artists/Nas"><span style="font-weight: 400;">Nas</span></a></p>
+<p><strong>Gay</strong><span style="font-weight: 400;"> + Jay-</span><strong>Z</strong><span style="font-weight: 400;"> = </span><strong>Gay-Z</strong></p>
+<p><strong>Cock</strong><span style="font-weight: 400;"> + Roc-</span><strong>A-Fella</strong><span style="font-weight: 400;"> = </span><strong>Cock</strong><span style="font-weight: 400;">-</span><strong>a</strong><span style="font-weight: 400;">-</span><strong>Fella</strong></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Polysyndeton&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Creating a list by adding a conjunction in between all the terms on the list. The opposite of </span><a href="https://genius.com/4228060"><span style="font-weight: 400;">asyndeton</span></a><span style="font-weight: 400;">.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">&ldquo;Let the whitefolks have their money </span><strong>and</strong><span style="font-weight: 400;"> power </span><strong>and</strong><span style="font-weight: 400;"> segregation </span><strong>and</strong><span style="font-weight: 400;"> sarcasm </span><strong>and</strong><span style="font-weight: 400;"> big houses </span><strong>and</strong><span style="font-weight: 400;"> schools </span><strong>and</strong><span style="font-weight: 400;"> lawns like carpets, </span><strong>and</strong><span style="font-weight: 400;"> books, and mostly&ndash;mostly&ndash;let them have their whiteness.&rdquo; (Maya Angelou, I Know Why the Caged Bird Sings)</span></p>
+<p><a href="https://genius.com/16147"><span style="font-weight: 400;">Hip Hop Example: Eminem, &ldquo;Lose Yourself&rdquo;</span></a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Pleonasm&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Pleonasm is a rhetorical device where one or more redundant words are used consecutively in a phrase to express an idea.</span></p>
+<p><span style="font-weight: 400;">Examples:</span></p>
+<p><span style="font-weight: 400;">He earned a </span><strong><em>doctorate degree</em></strong><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">She sat close to the </span><strong><em>burning fire</em></strong><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The </span><strong><em>tuna fish</em></strong><span style="font-weight: 400;"> sandwich was the most popular item on the menu.</span></p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Hip-Hop Example:</span></p>
+<p><span style="font-weight: 400;">The reaper the only thing that can ease my soul </span><strong><em>freezing cold</em></strong></p>
+<p><span style="font-weight: 400;">Feeling like I was given life and if I take it at least I choose</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://rap.genius.com/Slaughterhouse-rain-drops-lyrics"><span style="font-weight: 400;">Rain Drops</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/artists/Slaughterhouse"><span style="font-weight: 400;">Slaughterhouse</span></a></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Pangrammatic&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">A sentence (or verse, or song) that includes all the letters of the alphabet. Like palindromes, they&rsquo;re hard to find in songs. They&rsquo;re more of a language game. I&rsquo;m sure there are some rappers out there that have hidden pangrams and palindromes in their work.</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">One pangrammatic verse out there is the first verse of </span><a href="https://genius.com/3450003"><span style="font-weight: 400;">&ldquo;All the Young Dudes&rdquo;</span></a></p>
+<p><span style="font-weight: 400;">W</span><strong>e</strong><span style="font-weight: 400;">l</span><strong>l</strong><span style="font-weight: 400;">, </span><strong>B</strong><span style="font-weight: 400;">illy ra</span><strong>p</strong><span style="font-weight: 400;">ped </span><strong>a</strong><span style="font-weight: 400;">ll n</span><strong>ight</strong><span style="font-weight: 400;"> about his </span><strong>su</strong><span style="font-weight: 400;">i</span><strong>c</strong><span style="font-weight: 400;">i</span><strong>d</strong><span style="font-weight: 400;">e</span></p>
+<p><span style="font-weight: 400;">How he&rsquo;d </span><strong>k</strong><span style="font-weight: 400;">ick it in the head </span><strong>w</strong><span style="font-weight: 400;">he</span><strong>n</strong><span style="font-weight: 400;"> he was twenty-fi</span><strong>v</strong><span style="font-weight: 400;">e</span></p>
+<p><span style="font-weight: 400;">Speed </span><strong>j</strong><span style="font-weight: 400;">ive, don&rsquo;t want to stay alive</span></p>
+<p><span style="font-weight: 400;">When y</span><strong>o</strong><span style="font-weight: 400;">u'</span><strong>r</strong><span style="font-weight: 400;">e twenty-five</span></p>
+<p><span style="font-weight: 400;">And Wend</span><strong>y</strong><span style="font-weight: 400;">&rsquo;s stealing clothes from </span><strong>M</strong><span style="font-weight: 400;">arks &amp; Sparks</span></p>
+<p><span style="font-weight: 400;">And Freddy&rsquo;s got spots from ripping off the stars from his face</span></p>
+<p><span style="font-weight: 400;">Funky little boat race</span></p>
+<p><span style="font-weight: 400;">Television man is cra</span><strong>z</strong><span style="font-weight: 400;">y saying we&rsquo;re juvenile delin</span><strong>q</strong><span style="font-weight: 400;">uent wrecks</span></p>
+<p><span style="font-weight: 400;">Oh, Man, I need TV when I&rsquo;ve got T.Re</span><strong>x</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Palindrom</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">A word or phrase spelled the same backwards or forwards. Pretty hard to work into a song, but amazing if you see one!</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Party trap</span></p>
+<p><span style="font-weight: 400;">Race car</span></p>
+<p><span style="font-weight: 400;">Won&rsquo;t lovers revolt now?</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Metonymy</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">A metonymy is a word or phrase that is substituted for a more formal word or phrase to which it is related.</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Examples:</span></p>
+<p><strong>The suits</strong><span style="font-weight: 400;"> were at an important meeting.</span></p>
+<p><strong>The suits</strong><span style="font-weight: 400;"> = business people</span></p>
+<p><span style="font-weight: 400;">The </span><strong>pen</strong><span style="font-weight: 400;"> is mightier than the </span><strong>sword</strong><span style="font-weight: 400;">.</span></p>
+<p><strong>Pen</strong><span style="font-weight: 400;"> = written word</span></p>
+<p><strong>Sword</strong><span style="font-weight: 400;"> = military power</span></p>
+<p><span style="font-weight: 400;">Hip-Hop Example:</span></p>
+<p><span style="font-weight: 400;">We don&rsquo;t get down like them clown and the kids</span></p>
+<p><span style="font-weight: 400;">I&rsquo;m used to being indigent, who said it&rsquo;s all about </span><strong>the Benjamins</strong><span style="font-weight: 400;">?</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://rap.genius.com/Binary-star-reality-check-lyrics"><span style="font-weight: 400;">Reality Check</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/artists/Binary-star"><span style="font-weight: 400;">Binary Star</span></a></p>
+<p><strong>The Benjamins</strong><span style="font-weight: 400;"> = vast sums of money</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Litotes&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Litotes are a figure of speech consisting of an understatement in which an affirmative is expressed via the negative of its contrary.</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Examples:</span></p>
+<p><span style="font-weight: 400;">Affirmative &ndash; He is smart.</span></p>
+<p><span style="font-weight: 400;">Litote &ndash; He is not dumb.</span></p>
+<p><span style="font-weight: 400;">Affirmative &ndash; She is ugly.</span></p>
+<p><span style="font-weight: 400;">Litote &ndash; She is no beauty queen.</span></p>
+<p><span style="font-weight: 400;">Hip-Hop example:</span></p>
+<p><span style="font-weight: 400;">I got a Houston ho &ndash; nah </span><em><span style="font-weight: 400;">she ain&rsquo;t the sharpest knife</span></em></p>
+<p><em><span style="font-weight: 400;">In the drawer</span></em><span style="font-weight: 400;"> but she a damn good booster though"</span></p>
+<p><span style="font-weight: 400;">&ndash;</span><a href="http://rap.genius.com/Lloyd-banks-just-another-day-lyrics#note-3545099"><span style="font-weight: 400;">Just Another Day</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/artists/Lloyd-banks"><span style="font-weight: 400;">Lloyd Banks</span></a></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Irony</span></p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><span style="font-weight: 400;">&ldquo;The use of irony in literature refers to playing around with words such that the meaning implied by a sentence or word is actually different from the literal meaning. Often irony is used to suggest the stark contrast of the literal meaning being put forth. The deeper, real layer of significance is revealed not by the words themselves but the situation and the context in which they are placed.&rdquo;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">An example is this line from </span><a href="https://genius.com/Eminem-rap-god-lyrics"><span style="font-weight: 400;">Rap God</span></a><span style="font-weight: 400;"> by </span><a href="https://genius.com/eminem"><span style="font-weight: 400;">Eminem</span></a><span style="font-weight: 400;"> contrasts the literal meanings of the words </span><em><span style="font-weight: 400;">living</span></em><span style="font-weight: 400;"> and </span><em><span style="font-weight: 400;">killing</span></em><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">&ldquo;&lsquo;</span><a href="https://genius.com/2531069"><span style="font-weight: 400;">Made a livin' and killin' off it.</span></a><span style="font-weight: 400;">&rdquo;</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Imagery</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">The author uses words and phrases to create &ldquo;mental images&rdquo; for the reader. Imagery helps the reader to visualize more realistically the author&rsquo;s writings.&nbsp;</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">The author uses words and phrases to create &ldquo;mental images&rdquo; for the reader. Imagery helps the reader to visualize more realistically the author&rsquo;s writings. The usage of metaphors, allusions, descriptive words and similes amongst other literary forms in order to &ldquo;tickle&rdquo; and awaken the readers&rsquo; sensory perceptions is referred to as imagery. Imagery is not limited to only visual sensations, but also refers to igniting kinesthetic, olfactory, tactile, gustatory, thermal and auditory sensations as well.</span></p>
+<p><span style="font-weight: 400;">Hip Hop Examples</span></p>
+<p><span style="font-weight: 400;">&ldquo;You might see me joggin, you might see me walkin</span></p>
+<p><span style="font-weight: 400;">You might see me walkin a dead rottweiler dog</span></p>
+<p><span style="font-weight: 400;">with it&rsquo;s head chopped off in the park with a spiked collar hollerin at him cause the son of a bitch won&rsquo;t quit barkin" </span><a href="https://genius.com/Eminem-marshall-mathers-lyrics/"><span style="font-weight: 400;">Eminem- Marshall Mathers</span></a></p>
+<p><span style="font-weight: 400;">&ldquo;Everybody gotta die sometime; hope your funeral</span></p>
+<p><span style="font-weight: 400;">never gets shot up, bullets tear through the innocent,</span></p>
+<p><span style="font-weight: 400;">Nothin is fair, niggaz roll up, shootin from wheelchairs</span></p>
+<p><span style="font-weight: 400;">My heart is racin, tastin revenge in the air"</span></p>
+<p><a href="https://genius.com/Nas-one-mic-lyrics/"><span style="font-weight: 400;">Nas-One Mic</span></a></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
             </div>
           </div>
         </div>
