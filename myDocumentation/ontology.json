@@ -3,75 +3,127 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
     } ]
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
       "@id" : "http://purl.org/ontology/mo/Genre"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis"
-    }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
     } ]
   } ]
 }, {
@@ -79,38 +131,59 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
     } ]
   } ]
 }, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery"
     }, {
-      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma"
     } ]
   } ]
 }, {
   "@id" : "http://dbpedia.org/ontology/City",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "is a large human settlement."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "dbo:City"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/ontology/Country",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "dbo:City"
@@ -120,15 +193,21 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a title of something."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "dc:title"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/mo/Genre",
@@ -140,10 +219,22 @@
     "@value" : "An expressive style of music."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Album"
@@ -152,22 +243,16 @@
     "@value" : "An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "BMW"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "BMW is defined as an acronym for Bayerische Motoren Werke AG, or in English, Bavarian Motor Works."
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Car"
@@ -176,22 +261,40 @@
     "@value" : "a road vehicle."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "City"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A relatively large and permanent settlement, particularly a large urban settlement"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "compound according to VADER Sentiment analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Compound"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The country where the thing is located."
@@ -200,85 +303,145 @@
     "@value" : "Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1"
+  }, {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle"
+  }, {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a public figure."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "East Coast Rap"
+    "@value" : "Public_Figure"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A regional genre of hip hop music that encompasses any artists or music that originated in the East Coast region of the United States."
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Freaky_Girl"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Imagery"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Imagery is the literary term used for language and description that appeals to our five senses. When a music artist attempts to describe something so that it appeals to our sense of smell, sight, taste, touch, or hearing; he/she has used imagery."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Irony"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "The use of irony in literature refers to playing around with words such that the meaning implied by a sentence or word is actually different from the literal meaning. Often irony is used to suggest the stark contrast of the literal meaning being put forth. The deeper, real layer of significance is revealed not by the words themselves but the situation and the context in which they are placed."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "property that connects class MusicWork to the class Album."
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl"
+  }, {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "isPartOf"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong"
+    "@value" : "Neutral"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "LiteraryDevice"
+    "@value" : "Literary_Device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "literary device is a technique a writer uses to produce a special effect in their writing."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Litote"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Litotes are a figure of speech consisting of an understatement in which an affirmative is expressed via the negative of its contrary."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Lyrics"
@@ -287,91 +450,103 @@
     "@value" : "Associates lyrics with a musical work"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Mercedes-Benz"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Mercedes-Benz is a German global automobile marque and a division of Daimler AG. The brand is known for luxury vehicles, buses, coaches, and trucks."
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Metonomy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A metonymy is a word or phrase that is substituted for a more formal word or phrase to which it is related."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Music Artist"
+    "@value" : "Music_Artist"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A person or a group of people (or a computer :-) ), whose musical creative work shows sensitivity and imagination."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Music Group"
+    "@value" : "Music_Group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Group of musicians, or musical ensemble, usually popular or folk, playing parts of or improvising off of a musical arrangement."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MusicalWork"
+    "@value" : "Musical_Work"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Distinct intellectual or artistic musical creation."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "negative according to VADER Sentiment analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Negative"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "neutral according to VADER Sentiment analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Neutral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Palindrom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A word or phrase spelled the same backwards or forwards."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pangrammatic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A sentence (or verse, or song) that includes all the letters of the alphabet. Like palindromes, they’re hard to find in songs."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Person"
@@ -380,7 +555,7 @@
     "@value" : "A person (alive, dead, undead, or fictional)."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Place"
@@ -389,55 +564,76 @@
     "@value" : "Immobile things or locations."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pleonasm"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Pleonasm is a rhetorical device where one or more redundant words are used consecutively in a phrase to express an idea."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Polysyndeton"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Creating a list by adding a conjunction in between all the terms on the list. The opposite of asyndeton."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Portmanteau"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Portmanteau is simply a blending of two or more words(including their sounds and meanings) into a singular new word."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "positive according to VADER Sentiment analysis."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Rap"
+    "@value" : "Positive"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/mo/Genre"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A musical form of vocal delivery that incorporates \"rhyme, rhythmic speech, and street vernacular\", which is performed or chanted in a variety of ways, usually over a backing beat or musical accompaniment.The components of rap include \"content\" (what is being said), \"flow\" (rhythm, rhyme), and \"delivery\" (cadence, tone)."
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/ontology/mo/Genre" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Release_Date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Time-Spans are used to define the temporal extent of\ninstances in the ontology and any other phenomena valid for a certain time."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sentiment"
@@ -446,76 +642,79 @@
     "@value" : "The sentiment of a piece of text is its positivity or negativity, and sentiment analysis gives an objective idea of whether the text uses mostly positive, negative, or neutral language."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Similie"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A simile is where one thing is compared to another to help with describing something."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Spoonerism"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A spoonerism is a play on words in which the sounds of two or more words are transposed."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Synecdoche"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "When a part of something stands in for the whole thing OR the whole thing stands in for the part."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Synethesia"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "In literature, synesthesia refers to a technique adopted by writers to present ideas, characters, or places in such a manner that they appeal to more than one sense, like hearing, sight, smell, and touch at a given time."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Time Span"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Time-Spans are used to define the temporal extent of\ninstances in the ontology and any other phenomena valid for a certain time."
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tmesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Tmesis involves the separation of the parts of compound word by intervening words."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Topic"
@@ -524,255 +723,622 @@
     "@value" : "Thing or concept that is being discussed, described, or dealt with."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "West Coast Rap"
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap"
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A regional genre of hip hop music that encompasses any artists or music that originated in the West Coast region of the United States."
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Travis_Poter"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Zeugma"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Tmesis involves the separation of the parts of compound word by intervening words."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#definition",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "connects class Person to class Musical work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "collaborated_on_song"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#definition",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "featuring the collaborated artist while making the musical work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "features"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects classes of the ontology to the class Album."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasAlbum"
+    "@value" : "has_album"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "property that connects classes of the ontology to the music genre."
+    "@value" : "compound sentiment score obtained by vader."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_compound_sentiment_score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class Genre to the classes Album or MusicalWork or Person."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasGenre"
+    "@value" : "has_genre"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/ontology/mo/Genre"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class Musical_Work to the class Literary_Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_literary_device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects classes of the ontology to the Lyrics."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasLyrics"
+    "@value" : "has_lyrics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "negative sentiment score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_negative_sentiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "neutral sentiment score obtained by VADER."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_neutral_sentiment_score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects classes of the ontology to the class Place"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasPlace"
+    "@value" : "has_place"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects classes of the ontology to the class Sentiment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasSentiment"
+    "@value" : "has_positive_sentiment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentimentScore",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#int"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "property that connects classes of the ontology to the class Song."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasSong"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "property that connects classes of the ontology to the class Topic."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasTopic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property indicatint a musical work that makes has a reference to a topic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_reference_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects classes of the ontology to the class Time Span."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasTimeSpan"
+    "@value" : "has_release_date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#int",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment", "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span" ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "property that connects the class Topic to the class Person."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "isReferencedBy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "property that connects class Topic to the class Person."
+    "@value" : "property that connects classes of the ontology to the class MusicalWork."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "isReferencedIn"
+    "@value" : "has_song"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects classes of the ontology to the class Topic."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "mentionsTopic"
+    "@value" : "has_topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist"
-  }, {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The object property that connects class Person to the same class Person."
+    "@value" : "compound sentiment score obtained by VADER that belogs to a musical work."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_compound_sentiment_score_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class genre to the classes Album or MusicalWork or Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/ontology/mo/Genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_genre_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class Lyrics to the class Song."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_lyric_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "negative sentiment of a song"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_neg_sentiment_score_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "neutral sentiment score obtained by VADER."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_neutral_sentiment_score_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class MusicWork to the class Album."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_part_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the property that show a relation between class PLace and class Person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_place_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the property that relates class Sentiment to the class MusicalWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_pos_sentiment_score_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects the classes Topic or Place or Car or Person to the class Person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_referenced_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A topic that was referenced in a musical work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid23"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_referenced_in_song"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class Topic to the class Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_topic_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class Person to class Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "made_song"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects classes Topic or Place or Car or Person of the ontology to the class Topic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "references"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "_:genid28"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice",
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connects class Time_Span to the class Album or Car or Musical_Work or Person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "release_date_of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid33"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the sentiment score of a musical work (positive, negative, compound)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sentiment_score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the relation of class Musical_Work to class Person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "song_made_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connect class Literary_Device to the class Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "technique_used_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "property that connect class Literary_Device to the class Musical_Work"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "technique_used_in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "property that connects the class Person to the class Literary Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "usesLiteraryDevice"
+    "@value" : "uses_literary_device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the property that connects class Album to class Person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "was_issued_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
   } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#gYear",
@@ -786,8 +1352,11 @@
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/maker",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the creator of a musical work."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid8"
+    "@id" : "_:genid37"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "foaf:maker"
@@ -798,8 +1367,14 @@
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/member",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a member of a music band."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "foaf:member"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -807,8 +1382,14 @@
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a person's name (person could be  real or fictional)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"

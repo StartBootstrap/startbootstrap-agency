@@ -1,4 +1,4 @@
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 # 
 # 
 # #################################################################
@@ -8,8 +8,14 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#definition
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#definition
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -35,131 +41,394 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class MusicWork to the class Album." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#IsPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/2000/01/rdf-schema#comment> "connects class Person to class Musical work." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.w3.org/2000/01/rdf-schema#label> "collaborated_on_song" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Album." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasAlbum> <http://www.w3.org/2000/01/rdf-schema#label> "hasAlbum" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.w3.org/2000/01/rdf-schema#comment> "featuring the collaborated artist while making the musical work." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.w3.org/2000/01/rdf-schema#label> "features" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Album." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.w3.org/2000/01/rdf-schema#label> "has_album" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#comment> "compound sentiment score obtained by vader." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#label> "has_compound_sentiment_score" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/mo/Genre> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the music genre." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasGenre> <http://www.w3.org/2000/01/rdf-schema#label> "hasGenre" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/mo/Genre> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Genre to the classes Album or MusicalWork or Person." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.w3.org/2000/01/rdf-schema#label> "has_genre" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the Lyrics." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasLyrics> <http://www.w3.org/2000/01/rdf-schema#label> "hasLyrics" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Musical_Work to the class Literary_Device" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device> <http://www.w3.org/2000/01/rdf-schema#label> "has_literary_device" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Place" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasPlace> <http://www.w3.org/2000/01/rdf-schema#label> "hasPlace" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the Lyrics." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.w3.org/2000/01/rdf-schema#label> "has_lyrics" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Sentiment." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#label> "hasSentiment" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/2000/01/rdf-schema#comment> "negative sentiment score" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.w3.org/2000/01/rdf-schema#label> "has_negative_sentiment" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Song." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSong> <http://www.w3.org/2000/01/rdf-schema#label> "hasSong" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#comment> "neutral sentiment score obtained by VADER." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score> <http://www.w3.org/2000/01/rdf-schema#label> "has_neutral_sentiment_score" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Topic." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSubject> <http://www.w3.org/2000/01/rdf-schema#label> "hasTopic" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Place" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.w3.org/2000/01/rdf-schema#label> "has_place" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Sentiment." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.w3.org/2000/01/rdf-schema#label> "has_positive_sentiment" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Time Span." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasTimeSpan> <http://www.w3.org/2000/01/rdf-schema#label> "hasTimeSpan" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/2000/01/rdf-schema#comment> "property indicatint a musical work that makes has a reference to a topic." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.w3.org/2000/01/rdf-schema#label> "has_reference_of" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects the class Topic to the class Person." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isReferencedBy" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Time Span." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.w3.org/2000/01/rdf-schema#label> "has_release_date" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Topic to the class Person." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#isReferencedIn> <http://www.w3.org/2000/01/rdf-schema#label> "isReferencedIn" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class MusicalWork." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.w3.org/2000/01/rdf-schema#label> "has_song" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Topic." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mentionsTopic> <http://www.w3.org/2000/01/rdf-schema#label> "mentionsTopic" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes of the ontology to the class Topic." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.w3.org/2000/01/rdf-schema#label> "has_topic" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property that connects class Person to the same class Person." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#references> <http://www.w3.org/2000/01/rdf-schema#label> "references" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#comment> "compound sentiment score obtained by VADER that belogs to a musical work." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_compound_sentiment_score_of" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects the class Person to the class Literary Device" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#usesLiteraryDevice> <http://www.w3.org/2000/01/rdf-schema#label> "usesLiteraryDevice" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Genre> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class genre to the classes Album or MusicalWork or Person" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_genre_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Lyrics to the class Song." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_lyric_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#comment> "negative sentiment of a song" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_neg_sentiment_score_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#comment> "neutral sentiment score obtained by VADER." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_neutral_sentiment_score_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class MusicWork to the class Album." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_part_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> <http://www.w3.org/2000/01/rdf-schema#comment> "the property that show a relation between class PLace and class Person." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_place_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#comment> "the property that relates class Sentiment to the class MusicalWork" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_pos_sentiment_score_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects the classes Topic or Place or Car or Person to the class Person." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by> <http://www.w3.org/2000/01/rdf-schema#label> "is_referenced_by" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.w3.org/2000/01/rdf-schema#comment> "A topic that was referenced in a musical work." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.w3.org/2000/01/rdf-schema#label> "is_referenced_in_song" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Topic to the class Musical_Work" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_topic_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Person to class Musical_Work" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.w3.org/2000/01/rdf-schema#label> "made_song" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.w3.org/2000/01/rdf-schema#range> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects classes Topic or Place or Car or Person of the ontology to the class Topic." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.w3.org/2000/01/rdf-schema#label> "references" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> <http://www.w3.org/2000/01/rdf-schema#range> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects class Time_Span to the class Album or Car or Musical_Work or Person." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of> <http://www.w3.org/2000/01/rdf-schema#label> "release_date_of" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> <http://www.w3.org/2000/01/rdf-schema#comment> "the relation of class Musical_Work to class Person." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by> <http://www.w3.org/2000/01/rdf-schema#label> "song_made_by" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connect class Literary_Device to the class Person" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by> <http://www.w3.org/2000/01/rdf-schema#label> "technique_used_by" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connect class Literary_Device to the class Musical_Work" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in> <http://www.w3.org/2000/01/rdf-schema#label> "technique_used_in" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.w3.org/2000/01/rdf-schema#comment> "property that connects the class Person to the class Literary Device" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.w3.org/2000/01/rdf-schema#label> "uses_literary_device" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> <http://www.w3.org/2000/01/rdf-schema#comment> "the property that connects class Album to class Person." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by> <http://www.w3.org/2000/01/rdf-schema#label> "was_issued_by" .
 # 
 # http://www.w3.org/2002/07/owl#topObjectProperty
 <http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -175,56 +444,49 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://dbpedia.org/ontology/City
 <http://dbpedia.org/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://dbpedia.org/ontology/City> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City> .
+<http://dbpedia.org/ontology/City> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City> .
 <http://dbpedia.org/ontology/City> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dbpedia.org/ontology/City> <http://www.w3.org/2000/01/rdf-schema#comment> "is a large human settlement." .
 <http://dbpedia.org/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "dbo:City" .
-# 
-# http://dbpedia.org/ontology/Country
-<http://dbpedia.org/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://dbpedia.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country> .
-<http://dbpedia.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://dbpedia.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "dbo:City" .
 # 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#label> "dc:title" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentimentScore
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentimentScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentimentScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#hasSentimentScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-# 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#mo:activity_start> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score> <http://www.w3.org/2000/01/rdf-schema#comment> "the sentiment score of a musical work (positive, negative, compound)." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score> <http://www.w3.org/2000/01/rdf-schema#label> "sentiment_score" .
 # 
 # http://xmlns.com/foaf/0.1/maker
 <http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid37 <http://www.w3.org/2002/07/owl#unionOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/2000/01/rdf-schema#comment> "the creator of a musical work." .
 <http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/2000/01/rdf-schema#label> "foaf:maker" .
 # 
 # http://xmlns.com/foaf/0.1/member
 <http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group> .
 <http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#comment> "a member of a music band." .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#label> "foaf:member" .
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#comment> "a person's name (person could be  real or fictional)." .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
 # 
 # 
 # 
@@ -240,202 +502,199 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/mo/Genre> <http://www.w3.org/2000/01/rdf-schema#label> "Genre" .
 <http://purl.org/ontology/mo/Genre> <http://www.w3.org/2004/02/skos/core#definition> "An expressive style of music." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> <http://www.w3.org/2000/01/rdf-schema#label> "Album" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> <http://www.w3.org/2004/02/skos/core#definition> "An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> <http://www.w3.org/2000/01/rdf-schema#label> "Album" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> <http://www.w3.org/2004/02/skos/core#definition> "An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW> <http://www.w3.org/2000/01/rdf-schema#label> "BMW" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#BMW> <http://www.w3.org/2004/02/skos/core#definition> "BMW is defined as an acronym for Bayerische Motoren Werke AG, or in English, Bavarian Motor Works." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> <http://www.w3.org/2000/01/rdf-schema#label> "Car" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> <http://www.w3.org/2004/02/skos/core#definition> "a road vehicle." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car> <http://www.w3.org/2000/01/rdf-schema#label> "Car" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car> <http://www.w3.org/2004/02/skos/core#definition> "a road vehicle." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City> <http://www.w3.org/2004/02/skos/core#definition> "A relatively large and permanent settlement, particularly a large urban settlement" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#City> <http://www.w3.org/2004/02/skos/core#definition> "A relatively large and permanent settlement, particularly a large urban settlement" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> <http://www.w3.org/2000/01/rdf-schema#comment> "compound according to VADER Sentiment analysis." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> <http://www.w3.org/2000/01/rdf-schema#label> "Compound" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "The country where the thing is located." .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "The country where the thing is located." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast> <http://www.w3.org/2000/01/rdf-schema#label> "East Coast Rap" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#East_Coast> <http://www.w3.org/2004/02/skos/core#definition> "A regional genre of hip hop music that encompasses any artists or music that originated in the East Coast region of the United States." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery> <http://www.w3.org/2000/01/rdf-schema#label> "Imagery" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery> <http://www.w3.org/2004/02/skos/core#definition> "Imagery is the literary term used for language and description that appeals to our five senses. When a music artist attempts to describe something so that it appeals to our sense of smell, sight, taste, touch, or hearing; he/she has used imagery." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery> <http://www.w3.org/2000/01/rdf-schema#label> "Imagery" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery> <http://www.w3.org/2004/02/skos/core#definition> "Imagery is the literary term used for language and description that appeals to our five senses. When a music artist attempts to describe something so that it appeals to our sense of smell, sight, taste, touch, or hearing; he/she has used imagery." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony> <http://www.w3.org/2000/01/rdf-schema#label> "Irony" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony> <http://www.w3.org/2004/02/skos/core#definition> "The use of irony in literature refers to playing around with words such that the meaning implied by a sentence or word is actually different from the literal meaning. Often irony is used to suggest the stark contrast of the literal meaning being put forth. The deeper, real layer of significance is revealed not by the words themselves but the situation and the context in which they are placed." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony> <http://www.w3.org/2000/01/rdf-schema#label> "Irony" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony> <http://www.w3.org/2004/02/skos/core#definition> "The use of irony in literature refers to playing around with words such that the meaning implied by a sentence or word is actually different from the literal meaning. Often irony is used to suggest the stark contrast of the literal meaning being put forth. The deeper, real layer of significance is revealed not by the words themselves but the situation and the context in which they are placed." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> <http://www.w3.org/2000/01/rdf-schema#label> "Literary_Device" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> <http://www.w3.org/2004/02/skos/core#definition> "literary device is a technique a writer uses to produce a special effect in their writing." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> <http://www.w3.org/2000/01/rdf-schema#label> "LiteraryDevice" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> <http://www.w3.org/2004/02/skos/core#definition> "literary device is a technique a writer uses to produce a special effect in their writing." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote> <http://www.w3.org/2000/01/rdf-schema#label> "Litote" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote> <http://www.w3.org/2004/02/skos/core#definition> "Litotes are a figure of speech consisting of an understatement in which an affirmative is expressed via the negative of its contrary." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote> <http://www.w3.org/2000/01/rdf-schema#label> "Litote" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote> <http://www.w3.org/2004/02/skos/core#definition> "Litotes are a figure of speech consisting of an understatement in which an affirmative is expressed via the negative of its contrary." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> <http://www.w3.org/2000/01/rdf-schema#label> "Lyrics" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> <http://www.w3.org/2004/02/skos/core#definition> "Associates lyrics with a musical work" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics> <http://www.w3.org/2000/01/rdf-schema#label> "Lyrics" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics> <http://www.w3.org/2004/02/skos/core#definition> "Associates lyrics with a musical work" .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy> <http://www.w3.org/2000/01/rdf-schema#label> "Metonomy" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy> <http://www.w3.org/2004/02/skos/core#definition> "A metonymy is a word or phrase that is substituted for a more formal word or phrase to which it is related." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz> <http://www.w3.org/2000/01/rdf-schema#label> "Mercedes-Benz" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Mercedes-Benz> <http://www.w3.org/2004/02/skos/core#definition> "Mercedes-Benz is a German global automobile marque and a division of Daimler AG. The brand is known for luxury vehicles, buses, coaches, and trucks." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "Music_Artist" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> <http://www.w3.org/2004/02/skos/core#definition> "A person or a group of people (or a computer :-) ), whose musical creative work shows sensitivity and imagination." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy> <http://www.w3.org/2000/01/rdf-schema#label> "Metonomy" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy> <http://www.w3.org/2004/02/skos/core#definition> "A metonymy is a word or phrase that is substituted for a more formal word or phrase to which it is related." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group> <http://www.w3.org/2000/01/rdf-schema#label> "Music_Group" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group> <http://www.w3.org/2004/02/skos/core#definition> "Group of musicians, or musical ensemble, usually popular or folk, playing parts of or improvising off of a musical arrangement." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#label> "Music Artist" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicArtist> <http://www.w3.org/2004/02/skos/core#definition> "A person or a group of people (or a computer :-) ), whose musical creative work shows sensitivity and imagination." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> <http://www.w3.org/2000/01/rdf-schema#label> "Musical_Work" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> <http://www.w3.org/2004/02/skos/core#definition> "Distinct intellectual or artistic musical creation." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Music Group" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicGroup> <http://www.w3.org/2004/02/skos/core#definition> "Group of musicians, or musical ensemble, usually popular or folk, playing parts of or improvising off of a musical arrangement." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> <http://www.w3.org/2000/01/rdf-schema#comment> "negative according to VADER Sentiment analysis." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> <http://www.w3.org/2000/01/rdf-schema#label> "Negative" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> <http://www.w3.org/2000/01/rdf-schema#label> "MusicalWork" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> <http://www.w3.org/2004/02/skos/core#definition> "Distinct intellectual or artistic musical creation." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> <http://www.w3.org/2000/01/rdf-schema#comment> "neutral according to VADER Sentiment analysis." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> <http://www.w3.org/2000/01/rdf-schema#label> "Neutral" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom> <http://www.w3.org/2000/01/rdf-schema#label> "Palindrom" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom> <http://www.w3.org/2004/02/skos/core#definition> "A word or phrase spelled the same backwards or forwards." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom> <http://www.w3.org/2000/01/rdf-schema#label> "Palindrom" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom> <http://www.w3.org/2004/02/skos/core#definition> "A word or phrase spelled the same backwards or forwards." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic> <http://www.w3.org/2000/01/rdf-schema#label> "Pangrammatic" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic> <http://www.w3.org/2004/02/skos/core#definition> "A sentence (or verse, or song) that includes all the letters of the alphabet. Like palindromes, they’re hard to find in songs." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic> <http://www.w3.org/2000/01/rdf-schema#label> "Pangrammatic" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic> <http://www.w3.org/2004/02/skos/core#definition> "A sentence (or verse, or song) that includes all the letters of the alphabet. Like palindromes, they’re hard to find in songs." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> <http://www.w3.org/2004/02/skos/core#definition> "A person (alive, dead, undead, or fictional)." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> <http://www.w3.org/2004/02/skos/core#definition> "A person (alive, dead, undead, or fictional)." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> <http://www.w3.org/2004/02/skos/core#definition> "Immobile things or locations." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> <http://www.w3.org/2004/02/skos/core#definition> "Immobile things or locations." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm> <http://www.w3.org/2000/01/rdf-schema#label> "Pleonasm" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm> <http://www.w3.org/2004/02/skos/core#definition> "Pleonasm is a rhetorical device where one or more redundant words are used consecutively in a phrase to express an idea." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm> <http://www.w3.org/2000/01/rdf-schema#label> "Pleonasm" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm> <http://www.w3.org/2004/02/skos/core#definition> "Pleonasm is a rhetorical device where one or more redundant words are used consecutively in a phrase to express an idea." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton> <http://www.w3.org/2000/01/rdf-schema#label> "Polysyndeton" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton> <http://www.w3.org/2004/02/skos/core#definition> "Creating a list by adding a conjunction in between all the terms on the list. The opposite of asyndeton." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton> <http://www.w3.org/2000/01/rdf-schema#label> "Polysyndeton" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton> <http://www.w3.org/2004/02/skos/core#definition> "Creating a list by adding a conjunction in between all the terms on the list. The opposite of asyndeton." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau> <http://www.w3.org/2000/01/rdf-schema#label> "Portmanteau" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau> <http://www.w3.org/2004/02/skos/core#definition> "Portmanteau is simply a blending of two or more words(including their sounds and meanings) into a singular new word." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau> <http://www.w3.org/2000/01/rdf-schema#label> "Portmanteau" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau> <http://www.w3.org/2004/02/skos/core#definition> "Portmanteau is simply a blending of two or more words(including their sounds and meanings) into a singular new word." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Genre> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap> <http://www.w3.org/2000/01/rdf-schema#label> "Rap" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap> <http://www.w3.org/2004/02/skos/core#definition> "A musical form of vocal delivery that incorporates \"rhyme, rhythmic speech, and street vernacular\", which is performed or chanted in a variety of ways, usually over a backing beat or musical accompaniment.The components of rap include \"content\" (what is being said), \"flow\" (rhythm, rhyme), and \"delivery\" (cadence, tone)." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive> <http://www.w3.org/2000/01/rdf-schema#comment> "positive according to VADER Sentiment analysis." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive> <http://www.w3.org/2000/01/rdf-schema#label> "Positive" .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiment" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment> <http://www.w3.org/2004/02/skos/core#definition> "The sentiment of a piece of text is its positivity or negativity, and sentiment analysis gives an objective idea of whether the text uses mostly positive, negative, or neutral language." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile> <http://www.w3.org/2000/01/rdf-schema#label> "Similie" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile> <http://www.w3.org/2004/02/skos/core#definition> "A simile is where one thing is compared to another to help with describing something." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> <http://www.w3.org/2000/01/rdf-schema#label> "Release_Date" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> <http://www.w3.org/2004/02/skos/core#definition> "Time-Spans are used to define the temporal extent of\ninstances in the ontology and any other phenomena valid for a certain time." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism> <http://www.w3.org/2000/01/rdf-schema#label> "Spoonerism" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism> <http://www.w3.org/2004/02/skos/core#definition> "A spoonerism is a play on words in which the sounds of two or more words are transposed." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiment" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> <http://www.w3.org/2004/02/skos/core#definition> "The sentiment of a piece of text is its positivity or negativity, and sentiment analysis gives an objective idea of whether the text uses mostly positive, negative, or neutral language." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche> <http://www.w3.org/2000/01/rdf-schema#label> "Synecdoche" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche> <http://www.w3.org/2004/02/skos/core#definition> "When a part of something stands in for the whole thing OR the whole thing stands in for the part." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile> <http://www.w3.org/2000/01/rdf-schema#label> "Similie" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile> <http://www.w3.org/2004/02/skos/core#definition> "A simile is where one thing is compared to another to help with describing something." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia> <http://www.w3.org/2000/01/rdf-schema#label> "Synethesia" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia> <http://www.w3.org/2004/02/skos/core#definition> "In literature, synesthesia refers to a technique adopted by writers to present ideas, characters, or places in such a manner that they appeal to more than one sense, like hearing, sight, smell, and touch at a given time." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism> <http://www.w3.org/2000/01/rdf-schema#label> "Spoonerism" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism> <http://www.w3.org/2004/02/skos/core#definition> "A spoonerism is a play on words in which the sounds of two or more words are transposed." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span> <http://www.w3.org/2000/01/rdf-schema#label> "Time Span" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span> <http://www.w3.org/2004/02/skos/core#definition> "Time-Spans are used to define the temporal extent of\ninstances in the ontology and any other phenomena valid for a certain time." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche> <http://www.w3.org/2000/01/rdf-schema#label> "Synecdoche" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche> <http://www.w3.org/2004/02/skos/core#definition> "When a part of something stands in for the whole thing OR the whole thing stands in for the part." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tmesis" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis> <http://www.w3.org/2004/02/skos/core#definition> "Tmesis involves the separation of the parts of compound word by intervening words." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia> <http://www.w3.org/2000/01/rdf-schema#label> "Synethesia" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia> <http://www.w3.org/2004/02/skos/core#definition> "In literature, synesthesia refers to a technique adopted by writers to present ideas, characters, or places in such a manner that they appeal to more than one sense, like hearing, sight, smell, and touch at a given time." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> <http://www.w3.org/2004/02/skos/core#definition> "Thing or concept that is being discussed, described, or dealt with." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tmesis" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis> <http://www.w3.org/2004/02/skos/core#definition> "Tmesis involves the separation of the parts of compound word by intervening words." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Rap> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast> <http://www.w3.org/2000/01/rdf-schema#label> "West Coast Rap" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#West_Coast> <http://www.w3.org/2004/02/skos/core#definition> "A regional genre of hip hop music that encompasses any artists or music that originated in the West Coast region of the United States." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> <http://www.w3.org/2004/02/skos/core#definition> "Thing or concept that is being discussed, described, or dealt with." .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma> <http://www.w3.org/2000/01/rdf-schema#label> "Zeugma" .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma> <http://www.w3.org/2004/02/skos/core#definition> "Tmesis involves the separation of the parts of compound word by intervening words." .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> <http://www.w3.org/2000/01/rdf-schema#label> "Zeugma" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> <http://www.w3.org/2004/02/skos/core#definition> "Tmesis involves the separation of the parts of compound word by intervening words." .
 # 
 # 
 # 
@@ -446,10 +705,139 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#int
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span> .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://xmlns.com/foaf/0.1/name> "Freaky_Girl" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/2000/01/rdf-schema#comment> "a public figure." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/2000/01/rdf-schema#label> "Public_Figure" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/mo/Genre> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://xmlns.com/foaf/0.1/name> "Travis_Poter" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.w3.org/2000/01/rdf-schema#label> "Neutral" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#comment> "a title of something." .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#label> "dc:title" .
 # 
 # 
 # 
@@ -460,88 +848,88 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid11 <http://www.w3.org/2002/07/owl#members> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Genre> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Album> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Car> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#LiteraryDevice> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Lyrics> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#MusicalWork> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Person> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Place> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Sentiment> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Time_Span> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Topic> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid40 <http://www.w3.org/2002/07/owl#members> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Genre> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid23 <http://www.w3.org/2002/07/owl#members> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Imagery> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Irony> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Litote> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Metonymy> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Palindrom> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pangrammatic> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Pleonasm> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Polysyndeton> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Portmanteau> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Simile> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Spoonerism> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synecdoche> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Synesthesia> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Tmesis> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#Zeugma> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid52 <http://www.w3.org/2002/07/owl#members> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
