@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">RAP Ontology</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -79,6 +79,7 @@
 
           <p>The idea behind the project is inspired by the fact rap is not just about music. It’s a unique era of culture where art, music, history, politics, fashion, trends and language became deeply pitted with metaphors that became consistent, ubiquitous and global. Hence, hip hop music is a milestone of information about culture at different time points.</p>
  </div>
+ <p>&nbsp;</p>
 
   <div class="container">
   <div class="container text-center">
@@ -269,7 +270,7 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
             <div class="output_area">
                 <div class="prompt"></div>
                 <div class="output_subarea output_text output_stream output_stdout">
-                  <div class="prompt output_prompt">Out[1]:</div>
+                  <div class="prompt output_prompt"><strong>Out[1]:</strong></div>
                     <pre>['Tupac', 'Eminem', 'The Notorious B.I.G.', 'Nas', 'Ice Cube', 'Jay-Z', 'Snoop Dogg', 'Dr. Dre', 'Kendrick Lamar', 'Rakim', 'André 3000', 'Eazy-E', 'Kanye West', '50 Cent', 'DMX', 'Busta Rhymes', 'Method Man', 'J. Cole', 'Mos Def', 'Ludacris', 'KRS-One', 'LL Cool J', 'Lil Wayne', 'Common', 'Big L', 'Ghostface Killah', 'Redman', 'T.I.', 'Big Pun', 'Nate Dogg', 'Tech N9ne', 'Lauryn Hill', 'Scarface', 'Slick Rick', 'Raekwon', 'Big Daddy Kane', "Ol' Dirty Bastard", 'The Game', 'Mobb Deep', 'Logic', 'Chance the Rapper', 'Cypress Hill', 'Ice-T', 'Lupe Fiasco', 'RZA', 'GZA', 'Q-Tip', 'Warren G', 'Talib Kweli', 'Xzibit', 'Missy Elliott', 'ASAP Rocky', 'Joey Badass', 'Immortal Technique', 'Twista', 'Big Sean', 'Kid Cudi', 'Big Boi', 'Chuck D', 'Donald Glover', 'Drake', 'Wiz Khalifa', 'Eric B. &amp; Rakim', 'Schoolboy Q', 'DMC', 'Nelly', 'Hopsin', 'D12', 'Jadakiss', 'Tyler, the Creator', 'Kurupt', 'Grandmaster Flash and the Furious Five', 'Gang Starr', 'Too $hort', 'Royce da 5&amp;#39;9&amp;#34;', 'MC Ren', 'E-40', 'Pusha T', 'Coolio', 'De La Soul', 'Proof', 'Bad Meets Evil', 'Guru', 'Will Smith', 'Krayzie Bone', 'Black Thought', 'B.o.B', 'AZ', 'Yelawolf', 'The Sugarhill Gang', 'Earl Sweatshirt', 'Fabolous', 'Mac Miller', 'Fat Joe', 'Young Jeezy', 'Kool G Rap', 'Bizzy Bone', 'Queen Latifah', 'Prodigy', '2 Chainz']
 </pre>
                 </div>
@@ -383,7 +384,7 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
 <div class="text_cell_render rendered_html" tabs="-1">
             <p>By default, the data is delivered with one lyric per row. The following code will convert it to one song per row:</p>
         
-        <div class="prompt input_prompt">In&nbsp;[3]:</div>
+        <div class="prompt input_prompt"><strong>In&nbsp;[3]:</strong></div>
         <div class="inner_cell">
             <div class="input_area">
                 <div class="CodeMirror cm-s-ipython">
@@ -459,16 +460,23 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
         <div class="btn btn-default output_collapsed" title="click to expand output" style="display: none;">. . .</div>
     </div>
 </div>
+<p>&nbsp;</p>
 <div class="container">
           <h2 style="text-align:center;" id="cars">Rap and Cars.</h2>
+          <div>
+          <img style="vertical-align:middle" src="img/top20.png">
+  <span style="">
+
            <p> Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)">Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p>
 <p>By running <a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/reader1.py">reader1.py</a> I obtained the total number of times the brand car names were used by each artist.&nbsp;</p>
-<p>To avoid disambiguation some car brands were not included in the lyrics mining since they have double meaning or unrelated proper names, e.g., Prince, MINI, Oakland.</p>
+<p>To avoid disambiguation some car brands were not included in the lyrics mining since they have double meaning or unrelated proper names, e.g., Prince, MINI, Oakland.</p></span>
+</div>
 <p>&nbsp;</p>
 <div class="container">
 <p style="text-align: center;"><strong>Top 20 Cars used.</strong></p>
-<img src="img/top20.png"style="width:70%;" class="center"> 
-<p>The search was made for all possible car names. For example, for all terms that refer to&nbsp;<strong>BMW</strong>&nbsp;vehicles:&nbsp;"Beamer" and "Beemer"; for <strong>Mercedes-Benz</strong>: "Benz", "Mersedes"</p>
+<img src="img/top20.png"style="width:80%;" class="center"> 
+<p>&nbsp;</p>
+<p>The search was made for all possible car names. For example, for all terms that refer to&nbsp;<strong>BMW</strong>&nbsp;vehicles:&nbsp;"Beamer" and "Beemer" or "Benz", "Mersedes" for <strong>Mercedes-Benz</strong>.</p>
 <p>&nbsp;</p>
 <style>
 img {
