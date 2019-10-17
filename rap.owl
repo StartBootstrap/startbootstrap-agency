@@ -1,0 +1,1389 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap"
+     xml:base="http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rap="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:pimpmyrap="http://www.semanticweb.org/lisa/ontologies/2019/7/pimpmyrap#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>connects class Person to class Musical work.</rdfs:comment>
+        <rdfs:label>collaborated_on_song</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:comment>featuring the collaborated artist while making the musical work.</rdfs:comment>
+        <rdfs:label>features</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+        <rdfs:comment>property that connects classes of the ontology to the class Album.</rdfs:comment>
+        <rdfs:label>has_album</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound"/>
+        <rdfs:comment>compound sentiment score obtained by vader.</rdfs:comment>
+        <rdfs:label>has_compound_sentiment_score</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.org/ontology/mo/Genre"/>
+        <rdfs:comment>property that connects class Genre to the classes Album or MusicalWork or Person.</rdfs:comment>
+        <rdfs:label>has_genre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:comment>property that connects class Musical_Work to the class Literary_Device</rdfs:comment>
+        <rdfs:label>has_literary_device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"/>
+        <rdfs:comment>property that connects classes of the ontology to the Lyrics.</rdfs:comment>
+        <rdfs:label>has_lyrics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative"/>
+        <rdfs:comment>negative sentiment score</rdfs:comment>
+        <rdfs:label>has_negative_sentiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>neutral sentiment score obtained by VADER.</rdfs:comment>
+        <rdfs:label>has_neutral_sentiment_score</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+        <rdfs:comment>property that connects classes of the ontology to the class Place</rdfs:comment>
+        <rdfs:label>has_place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+        <rdfs:comment>property that connects classes of the ontology to the class Sentiment.</rdfs:comment>
+        <rdfs:label>has_positive_sentiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>property indicatint a musical work that makes has a reference to a topic.</rdfs:comment>
+        <rdfs:label>has_reference_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"/>
+        <rdfs:comment>property that connects classes of the ontology to the class Time Span.</rdfs:comment>
+        <rdfs:label>has_release_date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>property that connects classes of the ontology to the class MusicalWork.</rdfs:comment>
+        <rdfs:label>has_song</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+        <rdfs:comment>property that connects classes of the ontology to the class Topic.</rdfs:comment>
+        <rdfs:label>has_topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>compound sentiment score obtained by VADER that belogs to a musical work.</rdfs:comment>
+        <rdfs:label>is_compound_sentiment_score_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/mo/Genre"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>property that connects class genre to the classes Album or MusicalWork or Person</rdfs:comment>
+        <rdfs:label>is_genre_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>property that connects class Lyrics to the class Song.</rdfs:comment>
+        <rdfs:label>is_lyric_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>negative sentiment of a song</rdfs:comment>
+        <rdfs:label>is_neg_sentiment_score_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral"/>
+        <rdfs:comment>neutral sentiment score obtained by VADER.</rdfs:comment>
+        <rdfs:label>is_neutral_sentiment_score_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+        <rdfs:comment>property that connects class MusicWork to the class Album.</rdfs:comment>
+        <rdfs:label>is_part_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:comment>the property that show a relation between class PLace and class Person.</rdfs:comment>
+        <rdfs:label>is_place_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>the property that relates class Sentiment to the class MusicalWork</rdfs:comment>
+        <rdfs:label>is_pos_sentiment_score_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:comment>property that connects the classes Topic or Place or Car or Person to the class Person.</rdfs:comment>
+        <rdfs:label>is_referenced_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>A topic that was referenced in a musical work.</rdfs:comment>
+        <rdfs:label>is_referenced_in_song</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>property that connects class Topic to the class Musical_Work</rdfs:comment>
+        <rdfs:label>is_topic_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>property that connects class Person to class Musical_Work</rdfs:comment>
+        <rdfs:label>made_song</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>property that connects classes Topic or Place or Car or Person of the ontology to the class Topic.</rdfs:comment>
+        <rdfs:label>references</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>property that connects class Time_Span to the class Album or Car or Musical_Work or Person.</rdfs:comment>
+        <rdfs:label>release_date_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:comment>the relation of class Musical_Work to class Person.</rdfs:comment>
+        <rdfs:label>song_made_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:comment>property that connect class Literary_Device to the class Person</rdfs:comment>
+        <rdfs:label>technique_used_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:comment>property that connect class Literary_Device to the class Musical_Work</rdfs:comment>
+        <rdfs:label>technique_used_in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:comment>property that connects the class Person to the class Literary Device</rdfs:comment>
+        <rdfs:label>uses_literary_device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:comment>the property that connects class Album to class Person.</rdfs:comment>
+        <rdfs:label>was_issued_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/City -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/City">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>is a large human settlement.</rdfs:comment>
+        <rdfs:label>dbo:City</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>the sentiment score of a musical work (positive, negative, compound).</rdfs:comment>
+        <rdfs:label>sentiment_score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/maker -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/maker">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>the creator of a musical work.</rdfs:comment>
+        <rdfs:label>foaf:maker</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/member">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>a member of a music band.</rdfs:comment>
+        <rdfs:label>foaf:member</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>a person&apos;s name (person could be  real or fictional).</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/mo/Genre -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/Genre">
+        <rdfs:label>Genre</rdfs:label>
+        <skos:definition>An expressive style of music.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album">
+        <rdfs:label>Album</rdfs:label>
+        <skos:definition>An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car">
+        <rdfs:label>Car</rdfs:label>
+        <skos:definition>a road vehicle.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country"/>
+        <rdfs:label>City</rdfs:label>
+        <skos:definition>A relatively large and permanent settlement, particularly a large urban settlement</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+        <rdfs:comment>compound according to VADER Sentiment analysis.</rdfs:comment>
+        <rdfs:label>Compound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+        <rdfs:comment>The country where the thing is located.</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Imagery</rdfs:label>
+        <skos:definition>Imagery is the literary term used for language and description that appeals to our five senses. When a music artist attempts to describe something so that it appeals to our sense of smell, sight, taste, touch, or hearing; he/she has used imagery.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Irony</rdfs:label>
+        <skos:definition>The use of irony in literature refers to playing around with words such that the meaning implied by a sentence or word is actually different from the literal meaning. Often irony is used to suggest the stark contrast of the literal meaning being put forth. The deeper, real layer of significance is revealed not by the words themselves but the situation and the context in which they are placed.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device">
+        <rdfs:label>Literary_Device</rdfs:label>
+        <skos:definition>literary device is a technique a writer uses to produce a special effect in their writing.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Litote</rdfs:label>
+        <skos:definition>Litotes are a figure of speech consisting of an understatement in which an affirmative is expressed via the negative of its contrary.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics">
+        <rdfs:label>Lyrics</rdfs:label>
+        <skos:definition>Associates lyrics with a musical work</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+        <rdfs:comment>Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces automobiles and motorcycles.</rdfs:comment>
+        <rdfs:label>Mercedes_Benz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Metonomy</rdfs:label>
+        <skos:definition>A metonymy is a word or phrase that is substituted for a more formal word or phrase to which it is related.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group"/>
+        <rdfs:label>Music_Artist</rdfs:label>
+        <skos:definition>A person or a group of people (or a computer :-) ), whose musical creative work shows sensitivity and imagination.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rdfs:label>Music_Group</rdfs:label>
+        <skos:definition>Group of musicians, or musical ensemble, usually popular or folk, playing parts of or improvising off of a musical arrangement.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work">
+        <rdfs:label>Musical_Work</rdfs:label>
+        <skos:definition>Distinct intellectual or artistic musical creation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+        <rdfs:comment>negative according to VADER Sentiment analysis.</rdfs:comment>
+        <rdfs:label>Negative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+        <rdfs:comment>neutral according to VADER Sentiment analysis.</rdfs:comment>
+        <rdfs:label>Neutral</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Palindrom</rdfs:label>
+        <skos:definition>A word or phrase spelled the same backwards or forwards.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Pangrammatic</rdfs:label>
+        <skos:definition>A sentence (or verse, or song) that includes all the letters of the alphabet. Like palindromes, they’re hard to find in songs.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person">
+        <rdfs:label>Person</rdfs:label>
+        <skos:definition>A person (alive, dead, undead, or fictional).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place">
+        <rdfs:label>Place</rdfs:label>
+        <skos:definition>Immobile things or locations.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Pleonasm</rdfs:label>
+        <skos:definition>Pleonasm is a rhetorical device where one or more redundant words are used consecutively in a phrase to express an idea.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Polysyndeton</rdfs:label>
+        <skos:definition>Creating a list by adding a conjunction in between all the terms on the list. The opposite of asyndeton.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Portmanteau</rdfs:label>
+        <skos:definition>Portmanteau is simply a blending of two or more words(including their sounds and meanings) into a singular new word.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+        <rdfs:comment>positive according to VADER Sentiment analysis.</rdfs:comment>
+        <rdfs:label>Positive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date">
+        <rdfs:label>Release_Date</rdfs:label>
+        <skos:definition>Time-Spans are used to define the temporal extent of
+instances in the ontology and any other phenomena valid for a certain time.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment">
+        <rdfs:label>Sentiment</rdfs:label>
+        <skos:definition>The sentiment of a piece of text is its positivity or negativity, and sentiment analysis gives an objective idea of whether the text uses mostly positive, negative, or neutral language.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Similie</rdfs:label>
+        <skos:definition>A simile is where one thing is compared to another to help with describing something.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Spoonerism</rdfs:label>
+        <skos:definition>A spoonerism is a play on words in which the sounds of two or more words are transposed.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Synecdoche</rdfs:label>
+        <skos:definition>When a part of something stands in for the whole thing OR the whole thing stands in for the part.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Synethesia</rdfs:label>
+        <skos:definition>In literature, synesthesia refers to a technique adopted by writers to present ideas, characters, or places in such a manner that they appeal to more than one sense, like hearing, sight, smell, and touch at a given time.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Tmesis</rdfs:label>
+        <skos:definition>Tmesis involves the separation of the parts of compound word by intervening words.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic">
+        <rdfs:label>Topic</rdfs:label>
+        <skos:definition>Thing or concept that is being discussed, described, or dealt with.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+        <rdfs:label>Zeugma</rdfs:label>
+        <skos:definition>Tmesis involves the separation of the parts of compound word by intervening words.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"/>
+        <rap:is_referenced_in_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+        <rap:has_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+        <rap:has_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+        <rap:has_compound_sentiment_score rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8"/>
+        <rap:has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <rap:has_lyrics rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric"/>
+        <rap:has_negative_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2"/>
+        <rap:has_positive_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1"/>
+        <rap:has_positive_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7"/>
+        <rap:has_release_date rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011"/>
+        <rap:has_topic rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle"/>
+        <rap:has_topic rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love"/>
+        <rap:is_part_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"/>
+        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freaky_Girl</foaf:name>
+        <rdfs:comment>a public figure.</rdfs:comment>
+        <rdfs:label>Public_Figure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Love">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap">
+        <rdf:type rdf:resource="http://purl.org/ontology/mo/Genre"/>
+        <rap:is_genre_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma"/>
+        <rap:has_album rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist"/>
+        <rap:has_album rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"/>
+        <rap:has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <rap:has_place rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"/>
+        <rap:made_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist"/>
+        <rap:collaborated_on_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+        <rap:has_place rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist"/>
+        <rap:has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <rap:has_place rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"/>
+        <rap:made_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
+        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travis_Poter</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rap:has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <rap:has_negative_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2"/>
+        <rap:has_positive_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1"/>
+        <rap:has_release_date rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011"/>
+        <rap:is_part_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"/>
+        <rap:uses_literary_device rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"/>
+        <rap:is_lyric_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rap:features rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz"/>
+        <rap:has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <rap:has_release_date rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016"/>
+        <rap:is_part_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"/>
+        <rap:references rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Negative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#74.7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound"/>
+        <rap:is_compound_sentiment_score_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:comment>a title of something.</rdfs:comment>
+        <rdfs:label>dc:title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW">
+        <rdfs:comment>Mercedes-Benz is a German global automobile marque and a division of Daimler AG.</rdfs:comment>
+        <rdfs:label>BMW</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/ontology/mo/Genre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Sentiment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pangrammatic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Polysyndeton"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
