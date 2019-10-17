@@ -478,6 +478,11 @@ owl:topObjectProperty rdf:type owl:FunctionalProperty .
        <http://www.w3.org/2004/02/skos/core#definition> "An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium." .
 
 
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW
+:BMW rdf:type owl:Class ;
+     rdfs:subClassOf :Car .
+
+
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car
 :Car rdf:type owl:Class ;
      rdfs:label "Car" ;
@@ -537,6 +542,13 @@ owl:topObjectProperty rdf:type owl:FunctionalProperty .
 :Lyrics rdf:type owl:Class ;
         rdfs:label "Lyrics" ;
         <http://www.w3.org/2004/02/skos/core#definition> "Associates lyrics with a musical work" .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz
+:Mercedes_Benz rdf:type owl:Class ;
+               rdfs:subClassOf :Car ;
+               rdfs:comment "Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces automobiles and motorcycles." ;
+               rdfs:label "Mercedes_Benz" .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy
@@ -707,30 +719,31 @@ instances in the ontology and any other phenomena valid for a certain time.""" .
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW
 :BMW rdf:type owl:NamedIndividual ,
-              :Car ;
+              :BMW ;
      owl:sameAs :Beamer .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer
 :Beamer rdf:type owl:NamedIndividual ,
-                 :Car .
+                 :BMW ;
+        :is_referenced_in_song :freaky_girl .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid
 :Coolaid rdf:type owl:NamedIndividual ,
                   :Album ;
-         :has_song <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
+         :has_song :let_the_beat_drop .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3
 :Differenter_3 rdf:type owl:NamedIndividual ,
                         :Album ;
-               :has_song :Freaky_Girl .
+               :has_song :freaky_girl .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl
 :Freaky_Girl rdf:type owl:NamedIndividual ,
-                      :Musical_Work ;
+                      :Person ;
              :has_compound_sentiment_score <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> ;
              :has_genre :Rap ;
              :has_lyrics :freaky_girl_lyric ;
@@ -783,16 +796,28 @@ instances in the ontology and any other phenomena valid for a certain time.""" .
                                         :has_album :Differenter_3 .
 
 
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog
+:Snoop_Dog rdf:type owl:NamedIndividual ,
+                    :Music_Artist ;
+           :has_album :Coolaid ;
+           :has_genre :Rap ;
+           :has_place :USA ;
+           :made_song :let_the_beat_drop .
+
+
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz
 :Swizz_Beatz rdf:type owl:NamedIndividual ,
-                      :Music_Artist .
+                      :Music_Artist ;
+             :collaborated_on_song :let_the_beat_drop ;
+             :has_place :USA .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter
 :Travis_Poter rdf:type owl:NamedIndividual ,
                        :Music_Artist ;
+              :has_genre :Rap ;
               :has_place :USA ;
-              :made_song :Freaky_Girl ;
+              :made_song :freaky_girl ;
               <http://xmlns.com/foaf/0.1/name> "Travis_Poter" .
 
 
@@ -801,19 +826,54 @@ instances in the ontology and any other phenomena valid for a certain time.""" .
               :Country .
 
 
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz
+:benz rdf:type owl:NamedIndividual ,
+               :Mercedes_Benz ;
+      owl:sameAs :mercedes ,
+                 :mercedes-benz .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl
+:freaky_girl rdf:type owl:NamedIndividual ,
+                      :Musical_Work ;
+             :has_genre :Rap ;
+             :has_negative_sentiment <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2> ;
+             :has_positive_sentiment <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1> ;
+             :has_release_date :September_29_2011 ;
+             :is_part_of :Differenter_3 ;
+             :uses_literary_device :She_broke_my_heart_and_my_bank_account .
+
+
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric
 :freaky_girl_lyric rdf:type owl:NamedIndividual ,
                             :Lyrics ;
                    :is_lyric_of :Freaky_Girl .
 
 
-###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int
-:int rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop
+:let_the_beat_drop rdf:type owl:NamedIndividual ,
+                            :Musical_Work ;
+                   :features :Swizz_Beatz ;
+                   :has_genre :Rap ;
+                   :has_release_date :July_1_2016 ;
+                   :is_part_of :Coolaid ;
+                   :references :Beamer .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric
 :let_the_beat_drop_lyric rdf:type owl:NamedIndividual ,
                                   :Lyrics .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes
+:mercedes rdf:type owl:NamedIndividual ,
+                   :Mercedes_Benz ;
+          owl:sameAs :mercedes-benz .
+
+
+###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz
+:mercedes-benz rdf:type owl:NamedIndividual ,
+                        :Mercedes_Benz .
 
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2
@@ -833,21 +893,8 @@ instances in the ontology and any other phenomena valid for a certain time.""" .
 
 ###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> rdf:type owl:NamedIndividual ,
-                                                                      :Compound .
-
-
-###  http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> rdf:type owl:NamedIndividual ;
-                                                                                      :collaborated_on_song <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> ;
-                                                                                      :features :Swizz_Beatz ;
-                                                                                      :has_genre :Rap ;
-                                                                                      :has_reference_of :Beamer ;
-                                                                                      :has_release_date :July_1_2016 ;
-                                                                                      :has_topic :Girl ,
-                                                                                                 :Lifestyle ;
-                                                                                      :is_part_of :Coolaid ;
-                                                                                      :is_referenced_in_song <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> ;
-                                                                                      rdfs:label "Neutral" .
+                                                                      :Compound ;
+                                                             :is_compound_sentiment_score_of :freaky_girl .
 
 
 #################################################################
@@ -856,6 +903,10 @@ instances in the ontology and any other phenomena valid for a certain time.""" .
 
 <http://purl.org/dc/elements/1.1/title> rdfs:comment "a title of something." ;
                                         rdfs:label "dc:title" .
+
+
+:BMW rdfs:comment "Mercedes-Benz is a German global automobile marque and a division of Daimler AG." ;
+     rdfs:label "BMW" .
 
 
 #################################################################
@@ -895,6 +946,27 @@ instances in the ontology and any other phenomena valid for a certain time.""" .
                 :Tmesis
                 :Zeugma
               )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :BMW
+                        :mercedes-benz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Beamer
+                        :mercedes-benz
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :freaky_girl
+                        :let_the_beat_drop
+                      )
 ] .
 
 

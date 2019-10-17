@@ -10,7 +10,7 @@
     "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -25,16 +25,16 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "56",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "60",
+    "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
     "id" : "23",
@@ -43,13 +43,13 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "69",
-    "type" : "owl:Class"
-  }, {
     "id" : "74",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
     "type" : "owl:Class"
   }, {
     "id" : "15",
@@ -58,40 +58,43 @@
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "119",
+    "id" : "124",
     "type" : "owl:Class"
   }, {
-    "id" : "127",
+    "id" : "132",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
+    "id" : "81",
     "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "182",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "184",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "186",
-    "type" : "owl:unionOf"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "188",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "190",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "194",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "50",
+    "id" : "52",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "13",
@@ -100,64 +103,67 @@
     "id" : "19",
     "type" : "owl:Thing"
   }, {
-    "id" : "20",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "68",
+    "id" : "73",
     "type" : "owl:unionOf"
   }, {
-    "id" : "46",
+    "id" : "48",
     "type" : "owl:unionOf"
   }, {
-    "id" : "57",
+    "id" : "59",
     "type" : "owl:unionOf"
   }, {
-    "id" : "30",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "170",
+    "id" : "158",
     "type" : "owl:Class"
   }, {
-    "id" : "131",
+    "id" : "144",
     "type" : "owl:Class"
   }, {
-    "id" : "205",
+    "id" : "210",
     "type" : "owl:unionOf"
   }, {
-    "id" : "207",
+    "id" : "212",
     "type" : "owl:unionOf"
   }, {
-    "id" : "197",
+    "id" : "202",
     "type" : "owl:unionOf"
   }, {
-    "id" : "121",
+    "id" : "126",
     "type" : "owl:unionOf"
   }, {
-    "id" : "90",
+    "id" : "95",
     "type" : "owl:unionOf"
   }, {
-    "id" : "102",
+    "id" : "107",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "56",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
-    "id" : "168",
+    "id" : "179",
     "type" : "owl:Class"
   }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
-    "id" : "44",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "161",
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "173",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -194,20 +200,8 @@
       "IRI-based" : "Car",
       "undefined" : "Car"
     },
-    "individuals" : [ {
-      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW",
-      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-      "labels" : {
-        "IRI-based" : "BMW"
-      }
-    }, {
-      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer",
-      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-      "labels" : {
-        "IRI-based" : "Beamer"
-      }
-    } ],
-    "id" : "27"
+    "subClasses" : [ "31", "32" ],
+    "id" : "30"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Simile",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -225,7 +219,7 @@
       "undefined" : "Similie"
     },
     "id" : "17",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Positive",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -283,7 +277,7 @@
       "undefined" : "Pangrammatic"
     },
     "id" : "10",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -313,7 +307,7 @@
         "IRI-based" : "freaky_girl_lyric"
       }
     } ],
-    "id" : "54"
+    "id" : "56"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Palindrom",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -331,7 +325,7 @@
       "undefined" : "Palindrom"
     },
     "id" : "1",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Imagery",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -348,8 +342,8 @@
       "IRI-based" : "Imagery",
       "undefined" : "Imagery"
     },
-    "id" : "60",
-    "superClasses" : [ "44" ]
+    "id" : "62",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Litote",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -366,8 +360,8 @@
       "IRI-based" : "Litote",
       "undefined" : "Litote"
     },
-    "id" : "63",
-    "superClasses" : [ "44" ]
+    "id" : "65",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -412,7 +406,7 @@
       }
     } ],
     "id" : "8",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -441,9 +435,15 @@
       "labels" : {
         "IRI-based" : "Travis_Poter"
       }
+    }, {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "labels" : {
+        "IRI-based" : "Snoop_Dog"
+      }
     } ],
-    "id" : "69",
-    "superClasses" : [ "30" ]
+    "id" : "74",
+    "superClasses" : [ "29" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -479,7 +479,7 @@
         "IRI-based" : "Love"
       }
     } ],
-    "id" : "74"
+    "id" : "79"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -497,17 +497,19 @@
       "undefined" : "Musical_Work"
     },
     "individuals" : [ {
-      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl",
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop",
       "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-      "comment" : {
-        "undefined" : "a public figure."
-      },
       "labels" : {
-        "IRI-based" : "Freaky_Girl",
-        "undefined" : "Public_Figure"
+        "IRI-based" : "let_the_beat_drop"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "labels" : {
+        "IRI-based" : "freaky_girl"
       }
     } ],
-    "id" : "29"
+    "id" : "28"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Portmanteau",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -525,7 +527,7 @@
       "undefined" : "Portmanteau"
     },
     "id" : "15",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Pleonasm",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -543,7 +545,7 @@
       "undefined" : "Pleonasm"
     },
     "id" : "11",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://purl.org/ontology/mo/Genre",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -568,7 +570,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "119"
+    "id" : "124"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Public_Figure",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -576,8 +578,8 @@
     "label" : {
       "IRI-based" : "Public_Figure"
     },
-    "id" : "127",
-    "superClasses" : [ "30" ]
+    "id" : "132",
+    "superClasses" : [ "29" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -594,8 +596,8 @@
       "IRI-based" : "Spoonerism",
       "undefined" : "Spoonerism"
     },
-    "id" : "33",
-    "superClasses" : [ "44" ]
+    "id" : "35",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -625,7 +627,14 @@
         "IRI-based" : "Coolaid"
       }
     } ],
-    "id" : "76"
+    "id" : "81"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -649,33 +658,33 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "182",
+    "id" : "186",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "184",
+    "id" : "188",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "instances" : 0,
-    "union" : [ "29", "76" ],
+    "union" : [ "28", "81" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "186"
+    "id" : "190"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "188",
+    "id" : "192",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "190",
+    "id" : "194",
     "label" : {
       "IRI-based" : "string"
     }
@@ -696,11 +705,11 @@
       "undefined" : "Tmesis"
     },
     "id" : "6",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
+    "id" : "52",
     "label" : {
       "IRI-based" : "string"
     }
@@ -721,7 +730,7 @@
       "undefined" : "Polysyndeton"
     },
     "id" : "13",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -730,27 +739,20 @@
       "undefined" : "Thing"
     }
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "20",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
+    "instances" : 0,
+    "union" : [ "29", "107", "30", "79" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "73"
   }, {
     "instances" : 0,
-    "union" : [ "30", "102", "27", "74" ],
+    "union" : [ "29", "107", "30", "79" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "68"
+    "id" : "48"
   }, {
     "instances" : 0,
-    "union" : [ "30", "102", "27", "74" ],
+    "union" : [ "30", "28", "81" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "46"
-  }, {
-    "instances" : 0,
-    "union" : [ "27", "29", "76" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "57"
+    "id" : "59"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -767,8 +769,19 @@
       "IRI-based" : "Person",
       "undefined" : "Person"
     },
-    "subClasses" : [ "161", "69", "127" ],
-    "id" : "30"
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "comment" : {
+        "undefined" : "a public figure."
+      },
+      "labels" : {
+        "IRI-based" : "Freaky_Girl",
+        "undefined" : "Public_Figure"
+      }
+    } ],
+    "subClasses" : [ "173", "74", "132" ],
+    "id" : "29"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -787,8 +800,8 @@
     "comment" : {
       "undefined" : "The country where the thing is located."
     },
-    "id" : "170",
-    "superClasses" : [ "102" ]
+    "id" : "158",
+    "superClasses" : [ "107" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Irony",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -805,33 +818,33 @@
       "IRI-based" : "Irony",
       "undefined" : "Irony"
     },
-    "id" : "131",
-    "superClasses" : [ "44" ]
+    "id" : "144",
+    "superClasses" : [ "46" ]
   }, {
     "instances" : 0,
-    "union" : [ "30", "29", "76" ],
+    "union" : [ "29", "28", "81" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "205"
+    "id" : "210"
   }, {
     "instances" : 0,
-    "union" : [ "30", "102", "27", "74" ],
+    "union" : [ "29", "107", "30", "79" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "207"
+    "id" : "212"
   }, {
     "instances" : 0,
-    "union" : [ "27", "29", "76" ],
+    "union" : [ "30", "28", "81" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "197"
+    "id" : "202"
   }, {
     "instances" : 0,
-    "union" : [ "30", "29", "76" ],
+    "union" : [ "29", "28", "81" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "121"
+    "id" : "126"
   }, {
     "instances" : 0,
-    "union" : [ "30", "102", "27", "74" ],
+    "union" : [ "29", "107", "30", "79" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "90"
+    "id" : "95"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Place",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -848,8 +861,8 @@
       "IRI-based" : "Place",
       "undefined" : "Place"
     },
-    "subClasses" : [ "168", "170" ],
-    "id" : "102"
+    "subClasses" : [ "179", "158" ],
+    "id" : "107"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synesthesia",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -867,7 +880,7 @@
       "undefined" : "Synethesia"
     },
     "id" : "4",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -897,7 +910,7 @@
         "IRI-based" : "July_1_2016"
       }
     } ],
-    "id" : "56"
+    "id" : "58"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#City",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -914,8 +927,8 @@
       "IRI-based" : "City",
       "undefined" : "City"
     },
-    "id" : "168",
-    "superClasses" : [ "102" ]
+    "id" : "179",
+    "superClasses" : [ "107" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -933,7 +946,7 @@
       "undefined" : "Synecdoche"
     },
     "id" : "2",
-    "superClasses" : [ "44" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -950,8 +963,40 @@
       "IRI-based" : "Metonymy",
       "undefined" : "Metonomy"
     },
-    "id" : "35",
-    "superClasses" : [ "44" ]
+    "id" : "37",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz",
+    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mercedes_Benz",
+      "undefined" : "Mercedes_Benz"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "labels" : {
+        "IRI-based" : "mercedes-benz"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "labels" : {
+        "IRI-based" : "benz"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "labels" : {
+        "IRI-based" : "mercedes"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces automobiles and motorcycles."
+    },
+    "id" : "31",
+    "superClasses" : [ "30" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Literary_device",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -968,8 +1013,28 @@
       "IRI-based" : "Literary_device",
       "undefined" : "Literary_Device"
     },
-    "subClasses" : [ "11", "1", "17", "131", "8", "35", "60", "15", "4", "10", "2", "63", "6", "13", "33" ],
-    "id" : "44"
+    "subClasses" : [ "11", "1", "17", "144", "8", "37", "62", "15", "4", "10", "2", "65", "6", "13", "35" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW",
+    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "BMW",
+      "undefined" : "BMW"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer",
+      "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+      "labels" : {
+        "IRI-based" : "Beamer"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Mercedes-Benz is a German global automobile marque and a division of Daimler AG."
+    },
+    "id" : "32",
+    "superClasses" : [ "30" ]
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Group",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -986,8 +1051,8 @@
       "IRI-based" : "Music_Group",
       "undefined" : "Music_Group"
     },
-    "id" : "161",
-    "superClasses" : [ "30" ]
+    "id" : "173",
+    "superClasses" : [ "29" ]
   } ],
   "property" : [ {
     "id" : "0",
@@ -1020,22 +1085,16 @@
     "id" : "21",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "28",
+    "id" : "27",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "31",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "32",
+    "id" : "33",
     "type" : "owl:disjointWith"
   }, {
     "id" : "34",
     "type" : "owl:disjointWith"
   }, {
     "id" : "36",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "37",
     "type" : "owl:disjointWith"
   }, {
     "id" : "38",
@@ -1056,86 +1115,83 @@
     "id" : "43",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "44",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "45",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "47",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "48",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "49",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "51",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "52",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "53",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "55",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "58",
+    "id" : "57",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "59",
+    "id" : "60",
     "type" : "owl:objectProperty"
   }, {
     "id" : "61",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "64",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "65",
-    "type" : "rdfs:SubClassOf"
+    "id" : "63",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "66",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "67",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "70",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "71",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "72",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "73",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "75",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "76",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "77",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "78",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "79",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "80",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "81",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "82",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "83",
     "type" : "owl:disjointWith"
-  }, {
-    "id" : "62",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "84",
     "type" : "owl:disjointWith"
@@ -1152,29 +1208,32 @@
     "id" : "88",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "89",
+    "id" : "64",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "91",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "92",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "93",
     "type" : "owl:disjointWith"
   }, {
     "id" : "94",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "95",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "96",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "97",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "98",
     "type" : "owl:disjointWith"
@@ -1186,7 +1245,10 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "101",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "102",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "103",
     "type" : "owl:disjointWith"
@@ -1210,10 +1272,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "111",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "112",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "113",
     "type" : "owl:disjointWith"
@@ -1233,23 +1292,26 @@
     "id" : "118",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "120",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "122",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "123",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "124",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "125",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "126",
-    "type" : "owl:disjointWith"
+    "id" : "127",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "128",
     "type" : "owl:disjointWith"
@@ -1258,25 +1320,25 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "130",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "132",
-    "type" : "owl:objectProperty"
+    "id" : "131",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "133",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "134",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "135",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "136",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "137",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "138",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "139",
     "type" : "rdfs:SubClassOf"
@@ -1293,41 +1355,35 @@
     "id" : "143",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "144",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "145",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "146",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "147",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "148",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "149",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "150",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "151",
+    "id" : "150",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "152",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "134",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "153",
     "type" : "owl:disjointWith"
   }, {
     "id" : "154",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "155",
     "type" : "owl:disjointWith"
@@ -1336,36 +1392,45 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "157",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "158",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "159",
     "type" : "owl:disjointWith"
   }, {
     "id" : "160",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "162",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "163",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "164",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "165",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "166",
+    "id" : "165",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "167",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "168",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "169",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "170",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "171",
@@ -1373,9 +1438,6 @@
   }, {
     "id" : "172",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "173",
-    "type" : "owl:disjointWith"
   }, {
     "id" : "174",
     "type" : "rdfs:SubClassOf"
@@ -1387,22 +1449,25 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "177",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "178",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "179",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "180",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "181",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "182",
     "type" : "owl:disjointWith"
   }, {
     "id" : "183",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "184",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "185",
     "type" : "owl:disjointWith"
@@ -1416,20 +1481,17 @@
     "id" : "191",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "192",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "193",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "194",
     "type" : "owl:disjointWith"
   }, {
     "id" : "195",
     "type" : "owl:disjointWith"
   }, {
     "id" : "196",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "rdf:Property"
   }, {
     "id" : "198",
     "type" : "owl:disjointWith"
@@ -1441,10 +1503,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "201",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "202",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "203",
     "type" : "owl:disjointWith"
@@ -1452,29 +1511,29 @@
     "id" : "204",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "205",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "206",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "207",
     "type" : "owl:disjointWith"
   }, {
     "id" : "208",
     "type" : "owl:disjointWith"
   }, {
     "id" : "209",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "210",
     "type" : "owl:disjointWith"
   }, {
     "id" : "211",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "212",
     "type" : "owl:disjointWith"
   }, {
     "id" : "213",
     "type" : "owl:disjointWith"
   }, {
     "id" : "214",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "215",
     "type" : "owl:disjointWith"
@@ -1483,13 +1542,13 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "217",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "218",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "219",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "220",
     "type" : "owl:disjointWith"
@@ -1498,16 +1557,13 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "222",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "77",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "223",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "224",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "225",
     "type" : "owl:disjointWith"
@@ -1518,6 +1574,9 @@
     "id" : "227",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "228",
     "type" : "owl:disjointWith"
   }, {
@@ -1525,43 +1584,43 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "230",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "231",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "232",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "233",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "234",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "235",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "236",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "107",
     "type" : "owl:objectProperty"
   }, {
     "id" : "237",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "238",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "239",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "240",
     "type" : "owl:disjointWith"
   }, {
     "id" : "241",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "242",
     "type" : "owl:disjointWith"
@@ -1597,7 +1656,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "253",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "254",
     "type" : "owl:disjointWith"
@@ -1606,13 +1665,13 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "256",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "257",
     "type" : "owl:disjointWith"
   }, {
     "id" : "258",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "259",
     "type" : "owl:disjointWith"
@@ -1621,10 +1680,10 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "261",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "262",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "263",
     "type" : "owl:disjointWith"
@@ -1639,7 +1698,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "267",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "268",
     "type" : "owl:disjointWith"
@@ -1654,7 +1713,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "272",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "273",
     "type" : "owl:disjointWith"
@@ -1669,6 +1728,21 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "277",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "278",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "279",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "280",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "281",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "282",
     "type" : "owl:disjointWith"
   } ],
   "propertyAttribute" : [ {
@@ -1733,129 +1807,129 @@
       "IRI-based" : "topObjectProperty"
     },
     "domain" : "19",
-    "attributes" : [ "object", "external", "functional" ],
+    "attributes" : [ "external", "object", "functional" ],
     "id" : "21"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "30",
+    "range" : "29",
     "label" : {
       "IRI-based" : "song_made_by",
       "undefined" : "song_made_by"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "the relation of class Musical_Work to class Person."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "28"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "27"
   }, {
     "range" : "17",
     "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "31"
+    "id" : "33"
   }, {
-    "range" : "33",
+    "range" : "35",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "32"
-  }, {
-    "range" : "33",
-    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
-    "range" : "2",
-    "domain" : "35",
+    "range" : "35",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
-    "range" : "4",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "37"
-  }, {
-    "range" : "6",
-    "domain" : "35",
+    "range" : "2",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
-    "range" : "8",
-    "domain" : "35",
+    "range" : "4",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "39"
+  }, {
+    "range" : "6",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "8",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
   }, {
     "range" : "10",
     "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
-  }, {
-    "range" : "11",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "41"
-  }, {
-    "range" : "13",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
-    "range" : "15",
+    "range" : "11",
     "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
+    "range" : "13",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "15",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "46",
+    "range" : "48",
     "label" : {
       "IRI-based" : "references",
       "undefined" : "references"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "property that connects classes Topic or Place or Car or Person of the ontology to the class Topic."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "45"
-  }, {
-    "range" : "13",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "47"
   }, {
-    "range" : "11",
-    "domain" : "35",
+    "range" : "13",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "48"
+    "id" : "49"
+  }, {
+    "range" : "11",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/name",
     "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "50",
+    "range" : "52",
     "label" : {
       "IRI-based" : "name",
       "undefined" : "name"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "a person's name (person could be  real or fictional)."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "49"
-  }, {
-    "range" : "15",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
-    "range" : "17",
-    "domain" : "35",
+    "range" : "15",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "52"
+    "id" : "53"
+  }, {
+    "range" : "17",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_pos_sentiment_score_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "is_pos_sentiment_score_of",
       "undefined" : "is_pos_sentiment_score_of"
@@ -1864,22 +1938,22 @@
     "comment" : {
       "undefined" : "the property that relates class Sentiment to the class MusicalWork"
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "53"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "55"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#release_date_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "57",
+    "range" : "59",
     "label" : {
       "IRI-based" : "release_date_of",
       "undefined" : "release_date_of"
     },
-    "domain" : "56",
+    "domain" : "58",
     "comment" : {
       "undefined" : "property that connects class Time_Span to the class Album or Car or Musical_Work or Person."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "55"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "57"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neutral_sentiment_score_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
@@ -1888,149 +1962,164 @@
       "IRI-based" : "is_neutral_sentiment_score_of",
       "undefined" : "is_neutral_sentiment_score_of"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "neutral sentiment score obtained by VADER."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "58"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "60"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "30",
+    "range" : "29",
     "label" : {
       "IRI-based" : "features",
       "undefined" : "features"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "featuring the collaborated artist while making the musical work."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "59"
+    "id" : "61"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment",
-    "inverse" : "62",
+    "inverse" : "64",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
     "range" : "25",
     "label" : {
       "IRI-based" : "has_negative_sentiment",
       "undefined" : "has_negative_sentiment"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "negative sentiment score"
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "61"
+    "id" : "63"
   }, {
-    "range" : "44",
+    "range" : "46",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "46",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "46",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "range" : "46",
     "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "64"
+    "id" : "69"
   }, {
-    "range" : "44",
-    "domain" : "33",
+    "range" : "46",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "65"
+    "id" : "70"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment",
-    "inverse" : "53",
+    "inverse" : "55",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
     "range" : "22",
     "label" : {
       "IRI-based" : "has_positive_sentiment",
       "undefined" : "has_positive_sentiment"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "property that connects classes of the ontology to the class Sentiment."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "66"
+    "id" : "71"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "is_referenced_in_song",
       "undefined" : "is_referenced_in_song"
     },
-    "domain" : "68",
+    "domain" : "73",
     "comment" : {
       "undefined" : "A topic that was referenced in a musical work."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "67"
-  }, {
-    "range" : "6",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "70"
-  }, {
-    "range" : "8",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "71"
-  }, {
-    "range" : "6",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "inverse functional", "object" ],
     "id" : "72"
   }, {
+    "range" : "6",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "8",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "6",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
     "range" : "8",
     "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "73"
+    "id" : "78"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song",
-    "inverse" : "77",
+    "inverse" : "82",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "has_song",
       "undefined" : "has_song"
     },
-    "domain" : "76",
+    "domain" : "81",
     "comment" : {
       "undefined" : "property that connects classes of the ontology to the class MusicalWork."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "75"
+    "id" : "80"
   }, {
     "range" : "8",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "78"
+    "id" : "83"
   }, {
     "range" : "2",
-    "domain" : "33",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "79"
+    "id" : "84"
   }, {
     "range" : "4",
-    "domain" : "33",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "80"
+    "id" : "85"
   }, {
     "range" : "6",
-    "domain" : "33",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "81"
+    "id" : "86"
   }, {
     "range" : "8",
-    "domain" : "33",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "82"
+    "id" : "87"
   }, {
     "range" : "4",
     "domain" : "2",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "83"
+    "id" : "88"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_neg_sentiment_score_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "is_neg_sentiment_score_of",
       "undefined" : "is_neg_sentiment_score_of"
@@ -2039,235 +2128,235 @@
     "comment" : {
       "undefined" : "negative sentiment of a song"
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "62"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "64"
   }, {
     "range" : "8",
     "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "84"
+    "id" : "89"
   }, {
-    "range" : "33",
+    "range" : "35",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "85"
+    "id" : "90"
   }, {
     "range" : "2",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "86"
+    "id" : "91"
   }, {
     "range" : "4",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "87"
+    "id" : "92"
   }, {
     "range" : "6",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "88"
+    "id" : "93"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_by",
-    "inverse" : "45",
+    "inverse" : "47",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "30",
+    "range" : "29",
     "label" : {
       "IRI-based" : "is_referenced_by",
       "undefined" : "is_referenced_by"
     },
-    "domain" : "90",
+    "domain" : "95",
     "comment" : {
       "undefined" : "property that connects the classes Topic or Place or Car or Person to the class Person."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "89"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "94"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "44",
+    "range" : "46",
     "label" : {
       "IRI-based" : "uses_literary_device",
       "undefined" : "uses_literary_device"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "property that connects the class Person to the class Literary Device"
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "91"
+    "id" : "96"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_by",
-    "inverse" : "91",
+    "inverse" : "96",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "30",
+    "range" : "29",
     "label" : {
       "IRI-based" : "technique_used_by",
       "undefined" : "technique_used_by"
     },
-    "domain" : "44",
+    "domain" : "46",
     "comment" : {
       "undefined" : "property that connect class Literary_Device to the class Person"
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "92"
-  }, {
-    "range" : "17",
-    "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "93"
-  }, {
-    "range" : "33",
-    "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "94"
-  }, {
-    "range" : "2",
-    "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "95"
-  }, {
-    "range" : "4",
-    "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "96"
-  }, {
-    "range" : "6",
-    "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "inverse functional", "object" ],
     "id" : "97"
   }, {
     "range" : "17",
-    "domain" : "13",
+    "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
     "id" : "98"
   }, {
-    "range" : "33",
-    "domain" : "13",
+    "range" : "35",
+    "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
     "id" : "99"
   }, {
     "range" : "2",
-    "domain" : "13",
+    "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
     "id" : "100"
   }, {
-    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of",
-    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "30",
-    "label" : {
-      "IRI-based" : "is_place_of",
-      "undefined" : "is_place_of"
-    },
-    "domain" : "102",
-    "comment" : {
-      "undefined" : "the property that show a relation between class PLace and class Person."
-    },
-    "attributes" : [ "object", "inverse functional" ],
+    "range" : "4",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "101"
   }, {
-    "range" : "4",
+    "range" : "6",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "range" : "17",
     "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "103"
   }, {
-    "range" : "6",
+    "range" : "35",
     "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "104"
   }, {
-    "range" : "8",
+    "range" : "2",
     "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "105"
   }, {
+    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_place_of",
+    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "is_place_of",
+      "undefined" : "is_place_of"
+    },
+    "domain" : "107",
+    "comment" : {
+      "undefined" : "the property that show a relation between class PLace and class Person."
+    },
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "106"
+  }, {
+    "range" : "4",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "range" : "6",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "range" : "8",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score",
-    "inverse" : "107",
+    "inverse" : "112",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
     "range" : "23",
     "label" : {
       "IRI-based" : "has_compound_sentiment_score",
       "undefined" : "has_compound_sentiment_score"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "compound sentiment score obtained by vader."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "106"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "111"
   }, {
     "range" : "4",
     "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "108"
-  }, {
-    "range" : "6",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "109"
-  }, {
-    "range" : "8",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "110"
-  }, {
-    "range" : "15",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "111"
-  }, {
-    "range" : "6",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "112"
-  }, {
-    "range" : "8",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "113"
   }, {
-    "range" : "13",
+    "range" : "6",
     "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
     "id" : "114"
   }, {
-    "range" : "15",
+    "range" : "8",
     "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
-    "range" : "17",
-    "domain" : "11",
+    "range" : "15",
+    "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
-    "range" : "33",
-    "domain" : "11",
+    "range" : "6",
+    "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
     "id" : "117"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "13",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "range" : "15",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "17",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "35",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
   }, {
     "range" : "2",
     "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "118"
+    "id" : "123"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_genre_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "121",
+    "range" : "126",
     "label" : {
       "IRI-based" : "is_genre_of",
       "undefined" : "is_genre_of"
     },
-    "domain" : "119",
+    "domain" : "124",
     "comment" : {
       "undefined" : "property that connects class genre to the classes Album or MusicalWork or Person"
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "120"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "125"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score",
-    "inverse" : "58",
+    "inverse" : "60",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "has_neutral_sentiment_score",
       "undefined" : "has_neutral_sentiment_score"
@@ -2277,664 +2366,667 @@
       "undefined" : "neutral sentiment score obtained by VADER."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "122"
+    "id" : "127"
   }, {
-    "range" : "33",
+    "range" : "35",
     "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "123"
+    "id" : "128"
   }, {
     "range" : "2",
     "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "124"
+    "id" : "129"
   }, {
     "range" : "4",
     "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "125"
-  }, {
-    "range" : "102",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "126"
-  }, {
-    "range" : "30",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "128"
-  }, {
-    "range" : "29",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "129"
-  }, {
-    "range" : "44",
-    "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "130"
   }, {
-    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song",
-    "inverse" : "28",
-    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+    "range" : "107",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
     "range" : "29",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "28",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "46",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song",
+    "inverse" : "27",
+    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+    "range" : "28",
     "label" : {
       "IRI-based" : "made_song",
       "undefined" : "made_song"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "property that connects class Person to class Musical_Work"
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "132"
+    "id" : "136"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics",
-    "inverse" : "134",
+    "inverse" : "138",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "54",
+    "range" : "56",
     "label" : {
       "IRI-based" : "has_lyrics",
       "undefined" : "has_lyrics"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "property that connects classes of the ontology to the Lyrics."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "133"
-  }, {
-    "range" : "44",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "135"
-  }, {
-    "range" : "22",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "136"
-  }, {
-    "range" : "44",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "137"
   }, {
-    "range" : "56",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "138"
-  }, {
-    "range" : "44",
-    "domain" : "60",
+    "range" : "46",
+    "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
     "id" : "139"
   }, {
-    "range" : "54",
-    "domain" : "44",
+    "range" : "22",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "140"
   }, {
-    "range" : "44",
-    "domain" : "15",
+    "range" : "46",
+    "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
     "id" : "141"
   }, {
-    "range" : "74",
-    "domain" : "27",
+    "range" : "58",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "142"
   }, {
-    "range" : "44",
-    "domain" : "4",
+    "range" : "46",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
     "id" : "143"
   }, {
-    "range" : "29",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "144"
-  }, {
-    "range" : "44",
-    "domain" : "10",
+    "range" : "56",
+    "domain" : "46",
     "attributes" : [ "object", "anonymous" ],
     "id" : "145"
   }, {
-    "range" : "54",
-    "domain" : "27",
+    "range" : "46",
+    "domain" : "8",
     "attributes" : [ "object", "anonymous" ],
     "id" : "146"
   }, {
-    "range" : "44",
-    "domain" : "2",
+    "range" : "79",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "147"
   }, {
-    "range" : "102",
-    "domain" : "27",
+    "range" : "46",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "148"
   }, {
-    "range" : "44",
-    "domain" : "63",
+    "range" : "28",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "149"
   }, {
-    "range" : "30",
-    "domain" : "27",
+    "range" : "46",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "150"
   }, {
-    "range" : "44",
-    "domain" : "6",
+    "range" : "56",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "151"
   }, {
-    "range" : "44",
-    "domain" : "17",
+    "range" : "46",
+    "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
     "id" : "152"
   }, {
+    "range" : "107",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "46",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "range" : "29",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "46",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "156"
+  }, {
+    "range" : "107",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "is_lyric_of",
       "undefined" : "is_lyric_of"
     },
-    "domain" : "54",
+    "domain" : "56",
     "comment" : {
       "undefined" : "property that connects class Lyrics to the class Song."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "134"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "138"
   }, {
-    "range" : "74",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "153"
-  }, {
-    "range" : "22",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "154"
-  }, {
-    "range" : "44",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "155"
-  }, {
-    "range" : "22",
-    "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "156"
-  }, {
-    "range" : "30",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "157"
-  }, {
-    "range" : "22",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "158"
-  }, {
-    "range" : "29",
-    "domain" : "76",
+    "range" : "79",
+    "domain" : "81",
     "attributes" : [ "object", "anonymous" ],
     "id" : "159"
   }, {
-    "range" : "30",
-    "domain" : "161",
+    "range" : "22",
+    "domain" : "81",
     "attributes" : [ "object", "anonymous" ],
     "id" : "160"
   }, {
-    "range" : "56",
-    "domain" : "76",
+    "range" : "46",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "162"
-  }, {
-    "range" : "30",
-    "domain" : "69",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "163"
-  }, {
-    "range" : "102",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "164"
-  }, {
-    "range" : "30",
-    "domain" : "127",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "165"
-  }, {
-    "range" : "27",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "166"
-  }, {
-    "range" : "102",
-    "domain" : "168",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "167"
-  }, {
-    "range" : "102",
-    "domain" : "170",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "169"
-  }, {
-    "range" : "54",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "171"
-  }, {
-    "range" : "44",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "172"
-  }, {
-    "range" : "44",
-    "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "173"
-  }, {
-    "range" : "44",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "174"
-  }, {
-    "range" : "22",
-    "domain" : "102",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "175"
-  }, {
-    "range" : "22",
-    "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "176"
+    "id" : "161"
   }, {
     "range" : "22",
     "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "177"
+    "id" : "162"
+  }, {
+    "range" : "29",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
   }, {
     "range" : "22",
-    "domain" : "56",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "range" : "28",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "22",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "range" : "58",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "30",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
+  }, {
+    "range" : "107",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "169"
+  }, {
+    "range" : "30",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "170"
+  }, {
+    "range" : "30",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "171"
+  }, {
+    "range" : "29",
+    "domain" : "173",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "range" : "29",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "range" : "56",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "175"
+  }, {
+    "range" : "29",
+    "domain" : "132",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "range" : "46",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "107",
+    "domain" : "179",
     "attributes" : [ "object", "anonymous" ],
     "id" : "178"
   }, {
-    "range" : "74",
-    "domain" : "102",
+    "range" : "22",
+    "domain" : "107",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "179"
+    "id" : "180"
+  }, {
+    "range" : "22",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
+    "range" : "22",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "182"
+  }, {
+    "range" : "79",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "183"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#technique_used_in",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "technique_used_in",
       "undefined" : "technique_used_in"
     },
-    "domain" : "44",
+    "domain" : "46",
     "comment" : {
       "undefined" : "property that connect class Literary_Device to the class Musical_Work"
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "180"
-  }, {
-    "range" : "22",
-    "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "181"
-  }, {
-    "range" : "56",
-    "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "183"
-  }, {
-    "range" : "56",
-    "domain" : "102",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "185"
-  }, {
-    "range" : "74",
-    "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "187"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "184"
   }, {
     "range" : "22",
     "domain" : "29",
     "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "range" : "58",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "range" : "58",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "189"
   }, {
-    "range" : "56",
+    "range" : "79",
     "domain" : "29",
     "attributes" : [ "object", "anonymous" ],
     "id" : "191"
   }, {
-    "range" : "102",
-    "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "192"
-  }, {
-    "range" : "74",
-    "domain" : "29",
+    "range" : "22",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "193"
   }, {
-    "range" : "102",
-    "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "194"
-  }, {
-    "range" : "30",
-    "domain" : "29",
+    "range" : "58",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "195"
   }, {
+    "range" : "107",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "196"
+  }, {
+    "domain" : "32",
+    "range" : "32",
+    "id" : "197",
+    "label" : {
+      "IRI-based" : "176",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "79",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "range" : "107",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
+  }, {
+    "range" : "29",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date",
-    "inverse" : "55",
+    "inverse" : "57",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "56",
+    "range" : "58",
     "label" : {
       "IRI-based" : "has_release_date",
       "undefined" : "has_release_date"
     },
-    "domain" : "197",
+    "domain" : "202",
     "comment" : {
       "undefined" : "property that connects classes of the ontology to the class Time Span."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "196"
+    "id" : "201"
   }, {
-    "range" : "74",
-    "domain" : "54",
+    "range" : "79",
+    "domain" : "56",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "198"
+    "id" : "203"
   }, {
-    "range" : "102",
-    "domain" : "54",
+    "range" : "107",
+    "domain" : "56",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "199"
+    "id" : "204"
   }, {
-    "range" : "30",
-    "domain" : "54",
+    "range" : "29",
+    "domain" : "56",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "200"
+    "id" : "205"
   }, {
     "range" : "8",
     "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "201"
-  }, {
-    "range" : "22",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "202"
-  }, {
-    "range" : "161",
-    "domain" : "69",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "203"
-  }, {
-    "range" : "56",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "204"
-  }, {
-    "range" : "22",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "206"
   }, {
-    "range" : "56",
-    "domain" : "44",
+    "range" : "22",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "207"
+  }, {
+    "range" : "173",
+    "domain" : "74",
     "attributes" : [ "object", "anonymous" ],
     "id" : "208"
   }, {
+    "range" : "58",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "209"
+  }, {
+    "range" : "22",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "58",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#was_issued_by",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "30",
+    "range" : "29",
     "label" : {
       "IRI-based" : "was_issued_by",
       "undefined" : "was_issued_by"
     },
-    "domain" : "76",
+    "domain" : "81",
     "comment" : {
       "undefined" : "the property that connects class Album to class Person."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "209"
-  }, {
-    "range" : "29",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "210"
-  }, {
-    "range" : "74",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "211"
-  }, {
-    "range" : "1",
-    "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "212"
-  }, {
-    "range" : "35",
-    "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "213"
-  }, {
-    "range" : "11",
-    "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "inverse functional", "object" ],
     "id" : "214"
   }, {
-    "range" : "10",
-    "domain" : "131",
+    "range" : "28",
+    "domain" : "56",
     "attributes" : [ "object", "anonymous" ],
     "id" : "215"
   }, {
-    "range" : "63",
-    "domain" : "131",
+    "range" : "79",
+    "domain" : "46",
     "attributes" : [ "object", "anonymous" ],
     "id" : "216"
   }, {
+    "range" : "1",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "217"
+  }, {
+    "range" : "37",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "218"
+  }, {
+    "range" : "11",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "219"
+  }, {
+    "range" : "10",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "220"
+  }, {
+    "range" : "65",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "221"
+  }, {
     "iri" : "http://dbpedia.org/ontology/City",
     "baseIri" : "http://dbpedia.org/ontology",
-    "range" : "182",
+    "range" : "186",
     "label" : {
       "IRI-based" : "City",
       "undefined" : "dbo:City"
     },
-    "domain" : "168",
+    "domain" : "179",
     "comment" : {
       "undefined" : "is a large human settlement."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "217"
+    "id" : "222"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album",
-    "inverse" : "209",
+    "inverse" : "214",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "76",
+    "range" : "81",
     "label" : {
       "IRI-based" : "has_album",
       "undefined" : "has_album"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "property that connects classes of the ontology to the class Album."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "218"
+    "id" : "223"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "is_topic_of",
       "undefined" : "is_topic_of"
     },
-    "domain" : "74",
+    "domain" : "79",
     "comment" : {
       "undefined" : "property that connects class Topic to the class Musical_Work"
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "219"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "224"
   }, {
     "range" : "8",
-    "domain" : "60",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "220"
+    "id" : "225"
   }, {
     "range" : "6",
-    "domain" : "60",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "221"
+    "id" : "226"
   }, {
-    "range" : "33",
-    "domain" : "60",
+    "range" : "35",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "222"
+    "id" : "227"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "76",
+    "range" : "81",
     "label" : {
       "IRI-based" : "is_part_of",
       "undefined" : "is_part_of"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "property that connects class MusicWork to the class Album."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "77"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "82"
   }, {
     "range" : "17",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "223"
-  }, {
-    "range" : "4",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "224"
-  }, {
-    "range" : "2",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "225"
-  }, {
-    "range" : "11",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "226"
-  }, {
-    "range" : "10",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "227"
-  }, {
-    "range" : "15",
-    "domain" : "60",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "228"
   }, {
-    "range" : "13",
-    "domain" : "60",
+    "range" : "4",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "229"
   }, {
+    "range" : "2",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "range" : "11",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "10",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "15",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "range" : "13",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#sentiment_score",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "184",
+    "range" : "188",
     "label" : {
       "IRI-based" : "sentiment_score",
       "undefined" : "sentiment_score"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "the sentiment score of a musical work (positive, negative, compound)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "230"
+    "id" : "235"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of",
-    "inverse" : "67",
+    "inverse" : "72",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "207",
+    "range" : "212",
     "label" : {
       "IRI-based" : "has_reference_of",
       "undefined" : "has_reference_of"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "property indicatint a musical work that makes has a reference to a topic."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "231"
+    "id" : "236"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place",
-    "inverse" : "101",
+    "inverse" : "106",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "102",
+    "range" : "107",
     "label" : {
       "IRI-based" : "has_place",
       "undefined" : "has_place"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "property that connects classes of the ontology to the class Place"
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "232"
+    "id" : "237"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song",
-    "inverse" : "59",
+    "inverse" : "61",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "collaborated_on_song",
       "undefined" : "collaborated_on_song"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "connects class Person to class Musical work."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "233"
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "238"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre",
-    "inverse" : "120",
+    "inverse" : "125",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "119",
+    "range" : "124",
     "label" : {
       "IRI-based" : "has_genre",
       "undefined" : "has_genre"
     },
-    "domain" : "205",
+    "domain" : "210",
     "comment" : {
       "undefined" : "property that connects class Genre to the classes Album or MusicalWork or Person."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "234"
+    "id" : "239"
   }, {
-    "range" : "35",
-    "domain" : "60",
+    "range" : "37",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "235"
+    "id" : "240"
   }, {
-    "range" : "63",
-    "domain" : "60",
+    "range" : "65",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "236"
+    "id" : "241"
   }, {
     "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "29",
+    "range" : "28",
     "label" : {
       "IRI-based" : "is_compound_sentiment_score_of",
       "undefined" : "is_compound_sentiment_score_of"
@@ -2944,249 +3036,249 @@
       "undefined" : "compound sentiment score obtained by VADER that belogs to a musical work."
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "107"
+    "id" : "112"
   }, {
     "range" : "1",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "237"
-  }, {
-    "range" : "74",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "238"
-  }, {
-    "range" : "74",
-    "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "239"
-  }, {
-    "range" : "131",
-    "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "240"
-  }, {
-    "range" : "170",
-    "domain" : "168",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "241"
-  }, {
-    "range" : "8",
-    "domain" : "63",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "242"
   }, {
-    "range" : "6",
-    "domain" : "63",
+    "range" : "79",
+    "domain" : "22",
     "attributes" : [ "object", "anonymous" ],
     "id" : "243"
   }, {
-    "range" : "10",
-    "domain" : "35",
+    "range" : "79",
+    "domain" : "58",
     "attributes" : [ "object", "anonymous" ],
     "id" : "244"
   }, {
-    "range" : "1",
-    "domain" : "35",
+    "range" : "144",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "245"
   }, {
-    "range" : "33",
-    "domain" : "63",
+    "range" : "158",
+    "domain" : "179",
     "attributes" : [ "object", "anonymous" ],
     "id" : "246"
   }, {
-    "range" : "4",
-    "domain" : "63",
+    "range" : "8",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "247"
   }, {
-    "range" : "2",
-    "domain" : "63",
+    "range" : "6",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "248"
   }, {
-    "range" : "44",
-    "domain" : "119",
+    "range" : "10",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "249"
   }, {
-    "range" : "54",
-    "domain" : "119",
+    "range" : "1",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "250"
   }, {
-    "range" : "29",
-    "domain" : "119",
+    "range" : "35",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "251"
   }, {
-    "range" : "30",
-    "domain" : "119",
+    "range" : "4",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "252"
   }, {
-    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic",
-    "inverse" : "219",
-    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "74",
-    "label" : {
-      "IRI-based" : "has_topic",
-      "undefined" : "has_topic"
-    },
-    "domain" : "29",
-    "comment" : {
-      "undefined" : "property that connects classes of the ontology to the class Topic."
-    },
-    "attributes" : [ "object", "functional" ],
+    "range" : "2",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "253"
   }, {
-    "range" : "102",
-    "domain" : "119",
+    "range" : "46",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
     "id" : "254"
   }, {
     "range" : "56",
-    "domain" : "119",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
     "id" : "255"
   }, {
-    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device",
-    "inverse" : "180",
+    "range" : "28",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  }, {
+    "range" : "29",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "257"
+  }, {
+    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic",
+    "inverse" : "224",
     "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
-    "range" : "44",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "has_topic",
+      "undefined" : "has_topic"
+    },
+    "domain" : "28",
+    "comment" : {
+      "undefined" : "property that connects classes of the ontology to the class Topic."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "258"
+  }, {
+    "range" : "107",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
+  }, {
+    "range" : "58",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "260"
+  }, {
+    "iri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_literary_device",
+    "inverse" : "184",
+    "baseIri" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap",
+    "range" : "46",
     "label" : {
       "IRI-based" : "has_literary_device",
       "undefined" : "has_literary_device"
     },
-    "domain" : "29",
+    "domain" : "28",
     "comment" : {
       "undefined" : "property that connects class Musical_Work to the class Literary_Device"
     },
     "attributes" : [ "object", "functional" ],
-    "id" : "256"
+    "id" : "261"
   }, {
     "range" : "22",
-    "domain" : "119",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "257"
+    "id" : "262"
   }, {
-    "range" : "74",
-    "domain" : "119",
+    "range" : "79",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "258"
+    "id" : "263"
   }, {
-    "range" : "76",
-    "domain" : "119",
+    "range" : "81",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "259"
+    "id" : "264"
   }, {
-    "range" : "27",
-    "domain" : "119",
+    "range" : "30",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "260"
+    "id" : "265"
   }, {
     "range" : "13",
-    "domain" : "63",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "261"
+    "id" : "266"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/member",
     "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "190",
+    "range" : "194",
     "label" : {
       "IRI-based" : "member",
       "undefined" : "foaf:member"
     },
-    "domain" : "161",
+    "domain" : "173",
     "comment" : {
       "undefined" : "a member of a music band."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "262"
-  }, {
-    "range" : "11",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "263"
-  }, {
-    "range" : "17",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "264"
-  }, {
-    "range" : "15",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "265"
-  }, {
-    "range" : "35",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "266"
-  }, {
-    "range" : "8",
-    "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "267"
   }, {
-    "range" : "10",
-    "domain" : "63",
+    "range" : "11",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "268"
   }, {
-    "range" : "1",
-    "domain" : "63",
+    "range" : "17",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "269"
   }, {
-    "range" : "6",
-    "domain" : "131",
+    "range" : "15",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "270"
   }, {
-    "range" : "4",
-    "domain" : "131",
+    "range" : "37",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "271"
   }, {
+    "range" : "8",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "range" : "10",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  }, {
+    "range" : "1",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "274"
+  }, {
+    "range" : "6",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "275"
+  }, {
+    "range" : "4",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "276"
+  }, {
     "iri" : "http://xmlns.com/foaf/0.1/maker",
     "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "188",
+    "range" : "192",
     "label" : {
       "IRI-based" : "maker",
       "undefined" : "foaf:maker"
     },
-    "domain" : "186",
+    "domain" : "190",
     "comment" : {
       "undefined" : "the creator of a musical work."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "272"
+    "id" : "277"
   }, {
     "range" : "2",
-    "domain" : "131",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "273"
+    "id" : "278"
   }, {
     "range" : "15",
-    "domain" : "131",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "274"
+    "id" : "279"
   }, {
     "range" : "13",
-    "domain" : "131",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "275"
+    "id" : "280"
   }, {
-    "range" : "33",
-    "domain" : "131",
+    "range" : "35",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "276"
+    "id" : "281"
   }, {
     "range" : "17",
-    "domain" : "131",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "277"
+    "id" : "282"
   } ]
 }

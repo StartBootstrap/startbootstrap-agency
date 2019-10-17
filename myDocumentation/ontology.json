@@ -177,6 +177,36 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"
+    }, {
+      "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"
+    } ]
+  } ]
+}, {
   "@id" : "http://dbpedia.org/ontology/City",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -232,7 +262,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Neutral" ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -244,13 +277,25 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Mercedes-Benz is a German global automobile marque and a division of Daimler AG."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BMW"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
+  } ],
   "http://www.w3.org/2002/07/owl#sameAs" : [ {
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -291,7 +336,7 @@
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album" ],
   "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country",
@@ -309,11 +354,11 @@
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album" ],
   "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person" ],
   "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score" : [ {
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8"
   } ],
@@ -382,38 +427,6 @@
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Release_date" ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl"
-  }, {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"
-  } ],
-  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Neutral"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Topic" ]
 }, {
@@ -448,6 +461,18 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Associates lyrics with a musical work"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces automobiles and motorcycles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mercedes_Benz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy",
@@ -663,6 +688,21 @@
     "@value" : "A simile is where one thing is compared to another to help with describing something."
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Spoonerism",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -676,7 +716,13 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Synecdoche",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -725,11 +771,14 @@
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
+  } ],
   "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place" : [ {
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"
   } ],
   "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song" : [ {
-    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Travis_Poter"
@@ -748,6 +797,14 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Tmesis involves the separation of the parts of compound word by intervening words."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes"
+  }, {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song",
@@ -784,6 +841,27 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric",
@@ -1026,9 +1104,6 @@
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_topic_of"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1197,6 +1272,24 @@
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work" ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"
+  } ],
+  "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics" ]
 }, {
@@ -1217,6 +1310,15 @@
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#song_made_by"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz" ]
 }, {
   "@id" : "http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],

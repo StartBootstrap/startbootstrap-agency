@@ -736,6 +736,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car -->
 
 
@@ -829,6 +838,17 @@
     <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics">
         <rdfs:label>Lyrics</rdfs:label>
         <skos:definition>Associates lyrics with a musical work</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+        <rdfs:comment>Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces automobiles and motorcycles.</rdfs:comment>
+        <rdfs:label>Mercedes_Benz</rdfs:label>
     </owl:Class>
     
 
@@ -1107,7 +1127,7 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"/>
         <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
     </owl:NamedIndividual>
     
@@ -1117,7 +1137,8 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"/>
+        <is_referenced_in_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
     </owl:NamedIndividual>
     
 
@@ -1127,7 +1148,7 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid">
         <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
-        <has_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"/>
+        <has_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
     </owl:NamedIndividual>
     
 
@@ -1137,7 +1158,7 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3">
         <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album"/>
-        <has_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"/>
+        <has_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
     </owl:NamedIndividual>
     
 
@@ -1146,7 +1167,7 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person"/>
         <has_compound_sentiment_score rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8"/>
         <has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
         <has_lyrics rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric"/>
@@ -1229,11 +1250,26 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
     
 
 
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist"/>
+        <has_album rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <has_place rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"/>
+        <made_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz -->
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz">
         <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist"/>
+        <collaborated_on_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+        <has_place rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"/>
     </owl:NamedIndividual>
     
 
@@ -1243,8 +1279,9 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter">
         <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
         <has_place rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA"/>
-        <made_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl"/>
+        <made_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
         <foaf:name>Travis_Poter</foaf:name>
     </owl:NamedIndividual>
     
@@ -1259,6 +1296,32 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
     
 
 
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <has_negative_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2"/>
+        <has_positive_sentiment rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1"/>
+        <has_release_date rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011"/>
+        <is_part_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3"/>
+        <uses_literary_device rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric -->
 
 
@@ -1269,10 +1332,17 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
     
 
 
-    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int -->
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work"/>
+        <features rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
+        <has_release_date rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016"/>
+        <is_part_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"/>
+        <references rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1281,6 +1351,25 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric">
         <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz"/>
     </owl:NamedIndividual>
     
 
@@ -1317,24 +1406,7 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8">
         <rdf:type rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate) -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)">
-        <collaborated_on_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"/>
-        <features rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz"/>
-        <has_genre rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap"/>
-        <has_reference_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
-        <has_release_date rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016"/>
-        <has_topic rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl"/>
-        <has_topic rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle"/>
-        <is_part_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid"/>
-        <is_referenced_in_song rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)"/>
-        <rdfs:label>Neutral</rdfs:label>
+        <is_compound_sentiment_score_of rdf:resource="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
     </owl:NamedIndividual>
     
 
@@ -1351,6 +1423,10 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
         <rdfs:comment>a title of something.</rdfs:comment>
         <rdfs:label>dc:title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW">
+        <rdfs:comment>Mercedes-Benz is a German global automobile marque and a division of Daimler AG.</rdfs:comment>
+        <rdfs:label>BMW</rdfs:label>
     </rdf:Description>
     
 
@@ -1399,6 +1475,27 @@ instances in the ontology and any other phenomena valid for a certain time.</sko
             <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Tmesis"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 

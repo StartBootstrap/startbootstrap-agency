@@ -507,6 +507,10 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> <http://www.w3.org/2000/01/rdf-schema#label> "Album" .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> <http://www.w3.org/2004/02/skos/core#definition> "An album is a collection of audio recordings issued as a collection on compact disc (CD), vinyl, audio tape, or another medium." .
 # 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+# 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> <http://www.w3.org/2000/01/rdf-schema#label> "Car" .
@@ -558,6 +562,12 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> <http://www.w3.org/2000/01/rdf-schema#label> "Lyrics" .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> <http://www.w3.org/2004/02/skos/core#definition> "Associates lyrics with a musical work" .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> <http://www.w3.org/2000/01/rdf-schema#comment> "Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces automobiles and motorcycles." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> <http://www.w3.org/2000/01/rdf-schema#label> "Mercedes_Benz" .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Metonymy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -707,26 +717,27 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Car> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Album> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Person> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> .
@@ -771,32 +782,74 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> .
 # 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_album> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Snoop_Dog> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> .
+# 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artist> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_place> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#made_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Travis_Poter> <http://xmlns.com/foaf/0.1/name> "Travis_Poter" .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#USA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Country> .
 # 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#benz> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#6.1> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#September_29_2011> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Differenter_3> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#uses_literary_device> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#She_broke_my_heart_and_my_bank_account> .
+# 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl_lyric> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_lyric_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Freaky_Girl> .
 # 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Musical_Work> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop_lyric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lyrics> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz> .
+# 
+# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Mercedes_Benz> .
 # 
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#19.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -813,19 +866,7 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Compound> .
-# 
-# http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#collaborated_on_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#features> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Swizz_Beatz> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_genre> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Rap> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_reference_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_date> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#July_1_2016> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Girl> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_topic> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Lifestyle> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_part_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Coolaid> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_referenced_in_song> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> .
-<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Let_the_Beat_Drop_(Celebrate)> <http://www.w3.org/2000/01/rdf-schema#label> "Neutral" .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#99.8> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#is_compound_sentiment_score_of> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> .
 # 
 # 
 # 
@@ -838,6 +879,9 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#comment> "a title of something." .
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#label> "dc:title" .
+# 
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/2000/01/rdf-schema#comment> "Mercedes-Benz is a German global automobile marque and a division of Daimler AG." .
+<http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> <http://www.w3.org/2000/01/rdf-schema#label> "BMW" .
 # 
 # 
 # 
@@ -931,5 +975,32 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Zeugma> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid68 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#BMW> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid71 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Beamer> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#mercedes-benz> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid74 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#freaky_girl> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lisa/ontologies/2019/7/rap#let_the_beat_drop> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
