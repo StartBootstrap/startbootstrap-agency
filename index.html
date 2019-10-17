@@ -458,16 +458,18 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
     </div>
 </div>
 <br><br><br>
-             <h3 style="text-align:center;" id="ontologyvisualization">Ontology Visualization</h3>
+            <div class="container text-center">
+             <h3 style="text-align:center;" id="ontologyvisualization">Ontology Creation and Visualization</h3>
              <br>
       <div class="row text-center">
-          <p class="text-muted"> Given that one of our main purposes consists of making the knowledge we gained accessible to everyone, we used some tools that allowed us to represent in a suitable way our ontology. We decided to use Widoco, WebVOWL and RDF Grapher.
+          <p class="text-muted"> An ontology is a detailed model of a slice of reality which is based on the facts that we know about that reality. This model is a description of some of the things and some of the relationships between the things that are known about that reality.</p>
+            <p>The RAP Ontology is intended to promote a shared understanding of rap lyrics as the source of cultural heritage information and to reuse the knowledge by providing a framework that any rap song can be mapped to. In this way, it helps to mediate between different sources of information on the Semantic Web.</p> We decided to use Widoco, WebVOWL and RDF Grapher.</p>
+            <p>While creating the ontology, the results of the lyrics mining was taken into account. Hence, 11 classes (superclass owl:Thing) were created: Album, Car, Genre, Literary Device, Person, Place, Release_Date, Sentiment, Topic. Considering the results of <strong>VADER Sentiment Analysis</strong> the following subclasses to <strong>class Sentiment</strong> were added:(subclasses: Compound, Negative, Neutral, Positive). <strong>The literary devices manual analysis</strong> resulted in the creation of 15 subclasses to the class <strong>Literary device</strong>:zeugma, tmesis, synesthesia, synecdoche, spoonerism, simile, portmanteau, polysyndeton, pleonasm, pangrammatic, palindrom, metonymy, litotes, irony, imagery.</p>
             <br><br>
-          Click <a href="https://lotro.github.io/MyDocumentation/index-en.html">here</a> to view the LOTRO Ontology documentation published thanks to Widoco and WebVOWL.
+          Click <a href="https://lisasiurina.github.io/rapandlyrics.github.io./myDocumentation/index-en.html">here</a> to view the RAP Ontology documentation that was generated with Widoco and WebVOWL.
           <br><br>
-          Click <a href="https://drive.google.com/file/d/14PrlQBKowZf0Djz1G0Dl6cjnO290qvTi/view">here</a> to view the outcome of loading the Turtle code of the ontology on RDF Grapher tool.
-    <br><br>
-    You can even see the XML/OWL code of LOTRO ontology by clicking <a href="https://lotro.github.io/LOTROXMLOWL.owl">here</a>.</p>
+          
+    The XML/OWL code of RAP ontology is available here <a href="https://lotro.github.io/LOTROXMLOWL.owl">here</a>.</p>
     </div>
     <br>
     <br>
@@ -539,15 +541,7 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
   
             
   <!-- Team -->
-  <section class="bg-light page-section" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-    </div>
+  
       
         <div class="col-sm-4">
           <div class="team-member">
@@ -616,9 +610,10 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Getting and cleaning the data</h2>
-                <p class="item-intro text-muted">LRap and Cars.</p>
+                <p class="item-intro text-muted">Rap and Cars.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)">Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p><p>By running <a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/reader1.py">reader1.py</a> I obtained the total number of times the brand car names were used by each artist.&nbsp;</p>
+                <p>The wordcloud generated with online tool<a href="https://wordart.com/&nbsp;&nbsp;"> WordArt</a>&nbsp;shows the most used car brands in lyrics.</p>
+                <p>Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)"> Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p><p>By running <a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/reader1.py">reader1.py</a> I obtained the total number of times the brand car names were used by each artist.&nbsp;</p>
                 <p>To avoid disambiguation some car brands were not included in the lyrics mining since they have double meaning or unrelated proper names, e.g., Prince, MINI, Oakland.</p>
                 
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -693,7 +688,7 @@ img {
                 <h2 class="text-uppercase">Literary Devices</h2>
                 <p class="item-intro text-muted">Manually analysing lyrics.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>This part shows the result of manuall lyrics analysis that was aimed at detecting the use of literary devices and their interpretetion. I limited my analysis to 15 literary devices: zeugma,tmesis, synesthesia, synecdoche, spoonerism, simile, portmanteau, polysyndeton, pleonasm, pangrammatic, palindrom, metonymy, litotes, irony, imagery.</p>
+                <p>This part shows the result of manuall lyrics analysis that was aimed at detecting the use of literary devices and their interpretetion. I limited my analysis to 15 literary devices: zeugma, tmesis, synesthesia, synecdoche, spoonerism, simile, portmanteau, polysyndeton, pleonasm, pangrammatic, palindrom, metonymy, litotes, irony, imagery.</p>
                 <style>
 table, th, td {
   border: 1px solid black;
