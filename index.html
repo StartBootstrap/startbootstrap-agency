@@ -517,6 +517,21 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
             <p class="text-muted">Manually analysing lyrics.</p>
           </div>
         </div>
+
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Sentiment Analysis</h4>
+            <p class="text-muted">VADER</p>
+          </div>
+        </div>
         
       </div>
     </div>
@@ -533,6 +548,7 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
           
     <p>The XML/OWL code of RAP ontology is available here <a href="https://lotro.github.io/LOTROXMLOWL.owl">here</a>.</p>
     </div>
+    <p>&nbsp;</p>
 
   
             
@@ -606,9 +622,9 @@ PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Getting and cleaning the data</h2>
-                <p class="item-intro text-muted">Rap and Cars.</p>
+                <p class="item-intro text-muted"><p>The wordcloud generated with online tool<a href="https://wordart.com/&nbsp;&nbsp;"> WordArt</a>&nbsp;shows the most used car brands in lyrics.</p></p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>The wordcloud generated with online tool<a href="https://wordart.com/&nbsp;&nbsp;"> WordArt</a>&nbsp;shows the most used car brands in lyrics.</p>
+                
                 <p>Wikipedia's lists of car manufacturers and brands by country was manually downloaded. To avoid HTML parsing,<a href="https://en.m.wikipedia.org/wiki/List_of_current_automobile_manufacturers_(alphabetical)"> Mobile View</a> was selected. By running&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/clean_wikilist.py">clean_carlist_wiki.py</a> brand name tags were extracted and cleaned with Python&nbsp;<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>&nbsp;library and&nbsp;<a class="reference external" href="http://www.nltk.org/">NLTK.</a>Click here for the final result&nbsp;<a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/hellacars.csv">hellacars.csv</a></p><p>By running <a href="https://github.com/lisasiurina/rapncars.github.io./blob/master/reader1.py">reader1.py</a> I obtained the total number of times the brand car names were used by each artist.&nbsp;</p>
                 <p>To avoid disambiguation some car brands were not included in the lyrics mining since they have double meaning or unrelated proper names, e.g., Prince, MINI, Oakland.</p>
                 
@@ -976,6 +992,37 @@ table, th, td {
 </tbody>
 </table>
                 
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Sentiment Analysis/h2>
+                <p class="item-intro text-muted">VADER (Valence Aware Dictionary and sEntiment Reasoner) </p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                <p>Sentiment Analysis is a sub-field of Natural Language Processing (NLP) that is aimed at identifying and extracting opinions within a given text based on the computational treatment of subjectivity in a text. In order to obrain a sentiment score, VADER (Valence Aware Dictionary and sEntiment Reasoner) a lexicon and rule-based sentiment analysis tool was used</p>
+                <p>VADER uses a combination of A&nbsp;<a class="cx bv nn no np nq" href="http://livernspleen.com/wp-content/uploads/2013/09/social-media-tool-as-a-learning-resource.pdf" target="_blank" rel="noopener">sentiment lexicon</a>&nbsp;is a list of lexical features (e.g., words) which are generally labelled according to their semantic orientation as either positive or negative (compound, neutral as well).</p>
+              
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
