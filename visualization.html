@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LombEnv</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+<script src="Province_2018.geojson"></script>
+<script src="jsonmashup.js"></script>
+<script src="home.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+<link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css">
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html"><b>LombEnv</b> Open Data</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Il Progetto <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogo.html">Catalogo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="dataset.html">Dataset</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="visualization.html">Visualizzazione</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row" style="margin-top: 10px;">
+        
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div id='map' style="height:400px; width:100%; border: 3px solid #fef6ff;"></div>
+            <div id="mapfilterContainer">
+                <h5>Evidenzia le province secondo </h5>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-light active">
+                        <input type="radio" name="mapfilter" id="btnMapFattorie" autocomplete="off" value="fattorie" checked><span class="circleFattorie">○</span> Fattorie
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" name="mapfilter" id="btnMapOperatori" autocomplete="off" value="operatori"><span class="circleOperatori">○</span> Operatori
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" name="mapfilter" id="btnMapFalde" autocomplete="off" value="falde"><span class="circleFalde">○</span> Inquinanti
+                    </label>
+                </div>
+                <ul  style="margin-top: 10px;">
+                    <li>Densità di <b>Fattorie Didattiche</b> sull'area della provincia</li>
+                    <li>Densità di <b>Operatori Biologici</b> sull'area della provincia</li>
+                    <li>Densità del numero di <b>Fattori Inquinanti</b> presenti in acque sotterranee oltre il limite di legge</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <h3>Provincia di <span id="provinciaSelezionata">...</span></h3>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Qualità delle Acque Sotterranee</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Fattorie Didattiche</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Operatori Biologici</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="pieChartContainer">
+                                <canvas id="faldeChart" class="chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-info-circle"></i> Informazioni sui dati rappresentati</h5>
+                                    <p class="card-text">Il grafico mostra il rapporto tra i parametri inquinanti presenti oltre i limiti consentiti e quelli nella norma. I dati qui rappresentati si basano sui dati di analisi chimica delle acque sotterranee effettuate dall'<i>ARPA Lombardia</i> in punti di prelievo distribuiti ma raggruppati per provincia.
+                                        Nello specifico, i dati in input sono costituiti dal numero totale di parametri inquinanti che sono nella norma, il numero di quelli che superano la soglia di attenzione, e il numero di parametri che superano il limite consentito dalla legge.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="polarChartContainer">
+                                <canvas id="fattorieChart" class="chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-info-circle"></i> Informazioni sui dati rappresentati</h5>
+                                    <p class="card-text">I dati raffrontano i servizi offerti da una quantità di fattorie didattiche presenti nel territorio.
+                                        I dati sono ottenuti sommando tutte le fattorie didattiche del territorio che offrono ciascuno dei servizi.
+                                        Questi riguardano: specifiche tipologie di pubblico come quella degli studenti (Dall'Asilo fino alla Scuola secondaria di II Grado), dei Disabili (nonchè, a raffronto, il numero di Fattorie Didattiche che garantiscono Accessibilità ai Disabili), degli Anziani, degli Adulti; la possibilità di Pernottamento, Ristorazione, dell'organizzazione di Attività Sportive; l'essere una Azienda Bio o un punto vendita.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="barChartContainer">
+                                <canvas id="operatoriChart" class="chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-info-circle"></i> Informazioni sui dati rappresentati</h5>
+                                    <p class="card-text">Il grafico raffronta visivamente il numero totale di Operatori Biologici con il numero di operatori che appartengono a diverse categorie.
+                                        Essi possono essere divisi per tipo di prodotti biologici trattati (zootecnico, vegetale o non specificata). Vengono anche conteggiati quei produttori che eseguono attività di produttori e/o preparatori, importatori e/o esportatori.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+<footer class="footer" style="height:80px; line-height: 20px !important;">
+    <div class="container">
+        <span class="text-muted" style="margin-top: 15px; display:block;">This website is licensed under Italian Open Data License v2.0</span>
+        <span class="text-muted" style="margin-top: 15px; display:block;">I dati forniti non devono in nessun modo essere utilizzati per identificare gli interessati</span>
+    </div>
+</footer>
+
+<style>
+    #mapfilterContainer {
+        border: solid black 1px;
+        border-radius: 4px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .tab-content {
+        padding: 5px;
+        padding-top: 20px;
+    }
+
+    .circleFattorie{
+        color: #00661c;
+    }
+    .circleOperatori{
+        color: #c34d2e;
+    }
+    .circleFalde{
+        color: #0b7895;
+    }
+
+    .btn-group-toggle label {
+        display:block;
+    }
+
+    .pieChartContainer, .polarChartContainer, .barChartContainer {
+        margin-top: 20px;
+    }
+
+    .card-text {
+        text-align: justify;
+    }
+
+    .footer {
+        text-align: center;
+    }
+</style>
+</body>
+</html>
