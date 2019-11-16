@@ -75,35 +75,8 @@ function updateChartRegion(region_name) {
     })
 }
 
-function updateChartProvince(province_name) {
 
-  url_province_data = 'https://raw.githubusercontent.com/sebucci/sebucci.github.io/master/Json/percprov.json'
-
-  $.ajax({
-      url: url_province_data,
-      type: 'GET'
-    })
-
-    // On success
-    .done(function (provinces) {
-
-      provinces = JSON.parse(provinces)
-
-      let data = []
-
-      // Get right region
-      for (province of provinces) {
-        if (province["provincia"] == province_name) {
-          data = fixData(province)
-          break
-        }
-      }
-
-      updateChart(data)
-    })
-}
-
-function updateChartItaly() {
+function updateChart() {
 
   url_italy_data = "https://raw.githubusercontent.com/sebucci/sebucci.github.io/master/Json/percitalia.json"
 
