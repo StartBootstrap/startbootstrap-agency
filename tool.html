@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>SEBuCCI | Tool</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SEBuCCI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Index <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tool.html">Tool</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#mashup-dataset">Dataset</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#license">License</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="https://github.com/sebucci/sebucci.github.io#school-self-evaluation-building-certifications-and-cultural-institutes-what-relationship">Documentation</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Alert -->
+  <div class="alert alert-danger text-center" role="alert">
+    <b>ATTENTION:</b> SEBuCCI is only a demo! The schools will be shown only in the province of <b>BOLOGNA</b>!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- Content -->
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-md-8">
+
+        <!-- map id -->
+        <div id="mapid"></div>
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="container-fluid">
+
+          <!-- Selected -->
+          <div id="cardInfo" class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+
+                  <h2 id="txt_selected" class="card-title text-uppercase"> </h2>
+                  <p>
+                    <small>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="The number of schools in the selected area">
+                        <i class="fas fa-info-circle"></i>
+                      </a>
+                    </small>
+                    <b>Schools: </b><span id="txtSchoolNum"></span>
+
+                    <br>
+
+                    <small>
+                      <a target="_blank" href="https://github.com/sebucci/sebucci.github.io#531-cultural-intitutions"
+                        data-html="true" data-toggle="tooltip" data-placement="top" title="N° of cultural institutes divided by Km<sup>2</sup>.<br><span class='text-primary'>Click for more info</span>.">
+                        <i class="fas fa-info-circle"></i>
+                      </a>
+                    </small>
+                    <b>Cultural institutes: </b><span id="txtCulturalNum"></span>
+
+                    <br>
+
+                    <small>
+                      <a target="_blank" href="https://github.com/sebucci/sebucci.github.io#532-school-building-safety-certificates"
+                        data-html="true" data-toggle="tooltip" data-placement="top" title="% of school building safety certificates.<br><span class='text-primary'>Click for more info</span>.">
+                        <i class="fas fa-info-circle"></i>
+                      </a>
+                    </small>
+                    <b>Building safety certificates: </b>
+                    <span id="txtConstructionMean"></span>
+                  </p>
+                  <button type="button" class="btn btn-primary" onclick="reset()">Reset map view</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- cardSchool -->
+          <div id="CardSchool" class="row" style="display: none">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+
+                  <h6 id="school_title" class="card-title text-uppercase"> </h6>
+                  <p id="school_address" class="text-muted"></p>
+                  <p>
+                    <b>Self-evaluation score:</b> <span id="school_score"></span><br>
+                    <b>N° of close cultural institutes:</b> <span id="school_num_c"></span><br>
+                    <b>Building safety certificates:</b> <span id="txtConstructionMean"></span>
+                  </p>
+
+                  <button type="button" class="btn btn-primary" onclick="reset()">Reset map view</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div id="cardChart" class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+
+                  <h3>
+                    <small>
+
+
+
+                      <a target="_blank" data-html="true" data-toggle="tooltip" data-placement="top" title="School self-evaluation is a reflective process of internal school review.<br><span class='text-primary'>Click for more info</span>."
+                        href="https://github.com/sebucci/sebucci.github.io#21-school-self-evaluation"><i class="fas fa-info-circle"></i></a>
+                    </small>Self-evaluation
+                    score of overall student performance <small>(a.y. 2016/2017)</small>
+                  </h3>
+
+                  <p class="text-muted">Hover your mouse over the bars to see the percentage of schools for each 1-7
+                    score.</p>
+
+                  <canvas id="chart_autovalutazione"></canvas>
+
+                  <p><b>keys: </b></p>
+                  <ul class="list-inline" style="list-style: none;">
+                    <li class="list-inline-item">
+                      <span class="badge badge-secondary badge-pill" style="background-color: #ED5565;">1</span>
+                      Extremely
+                      critical</li>
+                    <li class="list-inline-item">
+                      <span class="badge badge-secondary badge-pill" style="background-color: #F6BB42;">3</span>
+                      Moderately
+                      critical</li>
+                    <li class="list-inline-item">
+                      <span class="badge badge-secondary badge-pill" style="background-color: #A0D468;">5</span>
+                      Positive</li>
+                    <li class="list-inline-item">
+                      <span class="badge badge-secondary badge-pill" style="background-color: #37BC9B;">7</span>
+                      Excellent</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <span class="text-muted">
+        This website is licensed under under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC
+          BY 4.0 SA</a>. Visit the <a href="index.html#license">License page</a> to
+        get information about the license of the data.
+        <a class="float-right" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licenza Creative Commons"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></span>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+
+  <!-- Leaflet -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+  <!-- Custom js -->
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/chart.js"></script>
+</body>
+
+</html>
