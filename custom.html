@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="../src/leaflet-geojson-selector.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<h3><a href="../"><big>◄</big> Leaflet GeoJSON Selector</a></h3>
+
+<h4>Custom Item Example: build cutom item list from geojson properties</h4>
+
+<div id="map"></div>
+
+<pre id="selection">&nbsp;</pre>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/leaflet/dist/leaflet.js"></script>
+<script src="../src/leaflet-geojson-selector.js"></script>
+<script>
+
+	var map = new L.Map('map', {
+			layers: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+			attributionControl: false,
+			zoomControl: false
+		});
+
+	map.addControl(L.control.zoom({ position:'topleft' }));
+
+	$.getJSON('italy-regions.json', function(json) {
+
+		var geoLayer = L.geoJson(json).addTo(map);
+		
+		var geoList = new L.Control.GeoJSONSelector(geoLayer, {
+			zoomToLayer: true,
+			listItemBuild: function(layer) {
+				return L.Util.template('<small><b>{name}</b><br>Length: {length} <br>Area: {area} </small>', layer.feature.properties);
+			}
+		}).addTo(map);
+
+		geoList.on('selector:change', function(e) {
+
+			var jsonObj = $.parseJSON( JSON.stringify(e.layers[0].feature.properties) );
+			var html = 'Selection:<br /><table border="1">';
+			$.each(jsonObj, function(key, value){
+					html += '<tr>';
+					html += '<td>' + key.replace(":", " ") + '</td>';
+					html += '<td>' + value + '</td>';
+					html += '</tr>';
+			});
+			html += '</table>';
+
+			$('.selection').html(html);
+		});
+		
+
+		map.addControl(function() {
+			var c = new L.Control({position:'bottomright'});
+			c.onAdd = function(map) {
+					return L.DomUtil.create('pre','selection');
+				};
+			return c;
+		}());
+		
+	});
+
+</script>
+
+<div id="copy"><a href="http://labs.easyblog.it/">Labs</a> &bull; <a rel="author" href="http://labs.easyblog.it/stefano-cudini/">Stefano Cudini</a></div>
+	
+</body>
+</html>
