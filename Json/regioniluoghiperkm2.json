@@ -1,0 +1,73 @@
+[{
+  "regione": "abruzzo",
+  "superficie": "10831.8388",
+  "cikm2": "0.022433864"
+}, {
+  "regione": "basilicata",
+  "superficie": "10073.3226",
+  "cikm2": "0.008338857"
+}, {
+  "regione": "calabria",
+  "superficie": "15221.9021",
+  "cikm2": "0.013204657"
+}, {
+  "regione": "campania",
+  "superficie": "13670.9477",
+  "cikm2": "0.026260067"
+}, {
+  "regione": "emilia-romagna",
+  "superficie": "22452.7779",
+  "cikm2": "0.0265446"
+}, {
+  "regione": "friuli venezia giulia",
+  "superficie": "7862.3024",
+  "cikm2": "0.026073787"
+}, {
+  "regione": "lazio",
+  "superficie": "17232.2906",
+  "cikm2": "0.031162427"
+}, {
+  "regione": "liguria",
+  "superficie": "5416.2135",
+  "cikm2": "0.05114274"
+}, {
+  "regione": "lombardia",
+  "superficie": "23863.6514",
+  "cikm2": "0.02380189"
+}, {
+  "regione": "marche",
+  "superficie": "9401.3755",
+  "cikm2": "0.041270557"
+}, {
+  "regione": "molise",
+  "superficie": "4460.6473",
+  "cikm2": "0.01322678"
+}, {
+  "regione": "piemonte",
+  "superficie": "25387.0691",
+  "cikm2": "0.024618832"
+}, {
+  "regione": "puglia",
+  "superficie": "19540.9041",
+  "cikm2": "0.0129472"
+}, {
+  "regione": "sardegna",
+  "superficie": "24100.0209",
+  "cikm2": "0.012489616"
+}, {
+  "regione": "sicilia",
+  "superficie": "25832.3879",
+  "cikm2": "0.012116572"
+}, {
+  "regione": "toscana",
+  "superficie": "22987.0442",
+  "cikm2": "0.034149671"
+}, {
+  "regione": "umbria",
+  "superficie": "8464.3275",
+  "cikm2": "0.031544148"
+}, {
+  "regione": "veneto",
+  "superficie": "18407.4157",
+  "cikm2": "0.013092549"
+}]

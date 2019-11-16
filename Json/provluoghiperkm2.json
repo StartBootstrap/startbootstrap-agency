@@ -1,0 +1,310 @@
+[{
+  "provincia": "enna",
+  "luogoperkm2": "0.005825912"
+}, {
+  "provincia": "brescia",
+  "luogoperkm2": "0.024866139"
+}, {
+  "provincia": "oristano",
+  "luogoperkm2": "0.012707118"
+}, {
+  "provincia": "salerno",
+  "luogoperkm2": "0.01857026"
+}, {
+  "provincia": "udine",
+  "luogoperkm2": "0.019359146"
+}, {
+  "provincia": "latina",
+  "luogoperkm2": "0.023491226"
+}, {
+  "provincia": "chieti",
+  "luogoperkm2": "0.024619359"
+}, {
+  "provincia": "livorno",
+  "luogoperkm2": "0.041195856"
+}, {
+  "provincia": "l'aquila",
+  "luogoperkm2": "0.017236091"
+}, {
+  "provincia": "parma",
+  "luogoperkm2": "0.022335144"
+}, {
+  "provincia": "treviso",
+  "luogoperkm2": "0.010887862"
+}, {
+  "provincia": "pavia",
+  "luogoperkm2": "0.016169005"
+}, {
+  "provincia": "como",
+  "luogoperkm2": "0.021891458"
+}, {
+  "provincia": "ravenna",
+  "luogoperkm2": "0.038183582"
+}, {
+  "provincia": "ancona",
+  "luogoperkm2": "0.041258793"
+}, {
+  "provincia": "firenze",
+  "luogoperkm2": "0.059196981"
+}, {
+  "provincia": "rovigo",
+  "luogoperkm2": "0.006046115"
+}, {
+  "provincia": "la spezia",
+  "luogoperkm2": "0.038577073"
+}, {
+  "provincia": "savona",
+  "luogoperkm2": "0.032982262"
+}, {
+  "provincia": "bologna",
+  "luogoperkm2": "0.038624418"
+}, {
+  "provincia": "cuneo",
+  "luogoperkm2": "0.019289518"
+}, {
+  "provincia": "novara",
+  "luogoperkm2": "0.021637213"
+}, {
+  "provincia": "biella",
+  "luogoperkm2": "0.029563644"
+}, {
+  "provincia": "lucca",
+  "luogoperkm2": "0.034400654"
+}, {
+  "provincia": "ragusa",
+  "luogoperkm2": "0.015395174"
+}, {
+  "provincia": "imperia",
+  "luogoperkm2": "0.058885461"
+}, {
+  "provincia": "sassari",
+  "luogoperkm2": "0.010400294"
+}, {
+  "provincia": "torino",
+  "luogoperkm2": "0.035593958"
+}, {
+  "provincia": "napoli",
+  "luogoperkm2": "0.110269164"
+}, {
+  "provincia": "massa-carrara",
+  "luogoperkm2": "0.022517135"
+}, {
+  "provincia": "rimini",
+  "luogoperkm2": "0.053186471"
+}, {
+  "provincia": "cagliari",
+  "luogoperkm2": "0.033635519"
+}, {
+  "provincia": "lecco",
+  "luogoperkm2": "0.024552551"
+}, {
+  "provincia": "caltanissetta",
+  "luogoperkm2": "0.005611753"
+}, {
+  "provincia": "ferrara",
+  "luogoperkm2": "0.023528301"
+}, {
+  "provincia": "foggia",
+  "luogoperkm2": "0.00770599"
+}, {
+  "provincia": "venezia",
+  "luogoperkm2": "0.021432259"
+}, {
+  "provincia": "cremona",
+  "luogoperkm2": "0.015250276"
+}, {
+  "provincia": "gorizia",
+  "luogoperkm2": "0.047095331"
+}, {
+  "provincia": "trento",
+  "luogoperkm2": "0.014982794"
+}, {
+  "provincia": "pisa",
+  "luogoperkm2": "0.031905476"
+}, {
+  "provincia": "pesaro e urbino",
+  "luogoperkm2": "0.033102567"
+}, {
+  "provincia": "vercelli",
+  "luogoperkm2": "0.015852918"
+}, {
+  "provincia": "perugia",
+  "luogoperkm2": "0.031402126"
+}, {
+  "provincia": "trieste",
+  "luogoperkm2": "0.268226711"
+}, {
+  "provincia": "asti",
+  "luogoperkm2": "0.029135359"
+}, {
+  "provincia": "taranto",
+  "luogoperkm2": "0.009321727"
+}, {
+  "provincia": "frosinone",
+  "luogoperkm2": "0.015090463"
+}, {
+  "provincia": "verona",
+  "luogoperkm2": "0.015178964"
+}, {
+  "provincia": "lecce",
+  "luogoperkm2": "0.016791314"
+}, {
+  "provincia": "nuoro",
+  "luogoperkm2": "0.010996768"
+}, {
+  "provincia": "genova",
+  "luogoperkm2": "0.06761948"
+}, {
+  "provincia": "rieti",
+  "luogoperkm2": "0.007998488"
+}, {
+  "provincia": "macerata",
+  "luogoperkm2": "0.047133423"
+}, {
+  "provincia": "matera",
+  "luogoperkm2": "0.009198349"
+}, {
+  "provincia": "siena",
+  "luogoperkm2": "0.033237546"
+}, {
+  "provincia": "trapani",
+  "luogoperkm2": "0.014577123"
+}, {
+  "provincia": "lodi",
+  "luogoperkm2": "0.016602996"
+}, {
+  "provincia": "forli-cesena",
+  "luogoperkm2": "0.030692907"
+}, {
+  "provincia": "piacenza",
+  "luogoperkm2": "0.017402345"
+}, {
+  "provincia": "crotone",
+  "luogoperkm2": "0.010946688"
+}, {
+  "provincia": "monza e della brianza",
+  "luogoperkm2": "0.034532635"
+}, {
+  "provincia": "mantova",
+  "luogoperkm2": "0.021354373"
+}, {
+  "provincia": "grosseto",
+  "luogoperkm2": "0.01621097"
+}, {
+  "provincia": "brindisi",
+  "luogoperkm2": "0.013970116"
+}, {
+  "provincia": "messina",
+  "luogoperkm2": "0.012553128"
+}, {
+  "provincia": "fermo",
+  "luogoperkm2": "0.03824902"
+}, {
+  "provincia": "verbano-cusio-ossola",
+  "luogoperkm2": "0.017691999"
+}, {
+  "provincia": "bergamo",
+  "luogoperkm2": "0.023671346"
+}, {
+  "provincia": "pordenone",
+  "luogoperkm2": "0.013623878"
+}, {
+  "provincia": "teramo",
+  "luogoperkm2": "0.031211952"
+}, {
+  "provincia": "vicenza",
+  "luogoperkm2": "0.017263368"
+}, {
+  "provincia": "alessandria",
+  "luogoperkm2": "0.021355352"
+}, {
+  "provincia": "viterbo",
+  "luogoperkm2": "0.021851935"
+}, {
+  "provincia": "sondrio",
+  "luogoperkm2": "0.008448692"
+}, {
+  "provincia": "padova",
+  "luogoperkm2": "0.016789861"
+}, {
+  "provincia": "varese",
+  "luogoperkm2": "0.053417354"
+}, {
+  "provincia": "terni",
+  "luogoperkm2": "0.031967252"
+}, {
+  "provincia": "campobasso",
+  "luogoperkm2": "0.012989644"
+}, {
+  "provincia": "arezzo",
+  "luogoperkm2": "0.026909356"
+}, {
+  "provincia": "isernia",
+  "luogoperkm2": "0.013678643"
+}, {
+  "provincia": "pistoia",
+  "luogoperkm2": "0.05497229"
+}, {
+  "provincia": "ascoli piceno",
+  "luogoperkm2": "0.047220903"
+}, {
+  "provincia": "modena",
+  "luogoperkm2": "0.029389703"
+}, {
+  "provincia": "roma",
+  "luogoperkm2": "0.062275271"
+}, {
+  "provincia": "milano",
+  "luogoperkm2": "0.05902317"
+}, {
+  "provincia": "pescara",
+  "luogoperkm2": "0.025196474"
+}, {
+  "provincia": "belluno",
+  "luogoperkm2": "0.005446234"
+}, {
+  "provincia": "barletta-andria-trani",
+  "luogoperkm2": "0.019443231"
+}, {
+  "provincia": "palermo",
+  "luogoperkm2": "0.0135748"
+}, {
+  "provincia": "potenza",
+  "luogoperkm2": "0.007885434"
+}, {
+  "provincia": "caserta",
+  "luogoperkm2": "0.018103982"
+}, {
+  "provincia": "avellino",
+  "luogoperkm2": "0.021382235"
+}, {
+  "provincia": "bari",
+  "luogoperkm2": "0.018897821"
+}, {
+  "provincia": "catanzaro",
+  "luogoperkm2": "0.018216058"
+}, {
+  "provincia": "benevento",
+  "luogoperkm2": "0.01393937"
+}, {
+  "provincia": "siracusa",
+  "luogoperkm2": "0.014594186"
+}, {
+  "provincia": "prato",
+  "luogoperkm2": "0.060156034"
+}, {
+  "provincia": "catania",
+  "luogoperkm2": "0.016789406"
+}, {
+  "provincia": "cosenza",
+  "luogoperkm2": "0.01654309"
+}, {
+  "provincia": "vibo valentia",
+  "luogoperkm2": "0.023465161"
+}, {
+  "provincia": "agrigento",
+  "luogoperkm2": "0.008189768"
+}, {
+  "provincia": "sud sardegna",
+  "luogoperkm2": "0.012096564"
+}]
