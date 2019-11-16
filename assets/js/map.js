@@ -60,34 +60,32 @@ var url_regions = "https://raw.githubusercontent.com/stefanocudini/leaflet-geojs
 var url_provinces = {
   piemonte: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/1/provinces.geojson",
   valle_d_aosta: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/2/provinces.geojson",
-  lombardia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/3/provinces.geojson",
-  trentino_alto_adige: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/4/provinces.geojson",
+  liguria: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/3/provinces.geojson",
+  lombardia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/4/provinces.geojson",
   veneto: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/5/provinces.geojson",
-  friuli_venezia_giulia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/6/provinces.geojson",
-  liguria: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/7/provinces.geojson",
-  emilia_romagna: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/8/provinces.geojson",
-  toscana: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/9/provinces.geojson",
-  umbria: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/10/provinces.geojson",
-  marche: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/11/provinces.geojson",
-  lazio: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/12/provinces.geojson",
-  abruzzo: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/13/provinces.geojson",
-  molise: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/14/provinces.geojson",
-  campania: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/15/provinces.geojson",
-  puglia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/16/provinces.geojson",
-  basilicata: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/17/provinces.geojson",
-  calabria: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/18/provinces.geojson",
-  sicilia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/19/provinces.geojson",
+  emilia_romagna: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/6/provinces.geojson",
+  toscana: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/7/provinces.geojson",
+  umbria: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/8/provinces.geojson",
+  marche: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/9/provinces.geojson",
+  lazio: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/10/provinces.geojson",
+  abruzzo: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/11/provinces.geojson",
+  molise: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/12/provinces.geojson",
+  campania: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/13/provinces.geojson",
+  puglia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/14/provinces.geojson",
+  basilicata: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/15/provinces.geojson",
+  calabria: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/16/provinces.geojson",
+  sicilia: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/17/provinces.geojson",
   // Sardegna updated 2018
   // sardegna: "https://raw.githubusercontent.com/sebucci/sebucci.github.io/master/dataset/geo/sardegna_prov01012018.geojson"
-  sardegna: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/20/provinces.geojson"
+  sardegna: "https://raw.githubusercontent.com/Dataninja/geo-shapes/master/italy/regions/18/provinces.geojson"
 }
 
 var region_style = {
   style: {
-    fillColor: '#656D78',
+    fillColor: '#797187',
     weight: 2,
     opacity: .5,
-    color: '#434A54',
+    color: '#5C546B',
     fillOpacity: 0.5
   }
 }
@@ -107,11 +105,9 @@ var region_layer = new L.GeoJSON.AJAX(url_regions, region_style)
 // Define provinces layers
 var piemonte_layer = new L.GeoJSON.AJAX(url_provinces.piemonte, province_style)
 var valle_d_aosta_layer = new L.GeoJSON.AJAX(url_provinces.valle_d_aosta, province_style)
-var lombardia_layer = new L.GeoJSON.AJAX(url_provinces.lombardia, province_style)
-var trentino_alto_adige_layer = new L.GeoJSON.AJAX(url_provinces.trentino_alto_adige, province_style)
-var veneto_layer = new L.GeoJSON.AJAX(url_provinces.veneto, province_style)
-var friuli_venezia_giulia_layer = new L.GeoJSON.AJAX(url_provinces.friuli_venezia_giulia, province_style)
 var liguria_layer = new L.GeoJSON.AJAX(url_provinces.liguria, province_style)
+var lombardia_layer = new L.GeoJSON.AJAX(url_provinces.lombardia, province_style)
+var veneto_layer = new L.GeoJSON.AJAX(url_provinces.veneto, province_style)
 var emilia_romagna_layer = new L.GeoJSON.AJAX(url_provinces.emilia_romagna, province_style)
 var toscana_layer = new L.GeoJSON.AJAX(url_provinces.toscana, province_style)
 var umbria_layer = new L.GeoJSON.AJAX(url_provinces.umbria, province_style)
@@ -163,24 +159,16 @@ region_layer.on('click', function (e) {
       mymap.addLayer(piemonte_layer)
       break
 
+    case 'liguria':
+      mymap.addLayer(liguria_layer)
+      break
+
     case 'lombardia':
       mymap.addLayer(lombardia_layer)
       break
 
-    case 'trentino-alto adige/sudtirol':
-      // TODO remove
-      break
-
     case 'veneto':
       mymap.addLayer(veneto_layer)
-      break
-
-    case 'friuli venezia giulia':
-      mymap.addLayer(friuli_venezia_giulia_layer)
-      break
-
-    case 'liguria':
-      mymap.addLayer(liguria_layer)
       break
 
     case 'emilia-romagna':
@@ -242,9 +230,7 @@ region_layer.on('click', function (e) {
 piemonte_layer.on('click', handleProvinceClick)
 valle_d_aosta_layer.on('click', handleProvinceClick)
 lombardia_layer.on('click', handleProvinceClick)
-trentino_alto_adige_layer.on('click', handleProvinceClick)
 veneto_layer.on('click', handleProvinceClick)
-friuli_venezia_giulia_layer.on('click', handleProvinceClick)
 liguria_layer.on('click', handleProvinceClick)
 emilia_romagna_layer.on('click', handleProvinceClick)
 toscana_layer.on('click', handleProvinceClick)
@@ -284,9 +270,7 @@ function removeProvinceLayer() {
   mymap.removeLayer(piemonte_layer)
   mymap.removeLayer(valle_d_aosta_layer)
   mymap.removeLayer(lombardia_layer)
-  mymap.removeLayer(trentino_alto_adige_layer)
   mymap.removeLayer(veneto_layer)
-  mymap.removeLayer(friuli_venezia_giulia_layer)
   mymap.removeLayer(liguria_layer)
   mymap.removeLayer(emilia_romagna_layer)
   mymap.removeLayer(toscana_layer)
@@ -309,30 +293,6 @@ function removeProvinceLayer() {
  * 
  * @param {*} e 
  */
-function handleProvinceClick(e) {
-
-  // Get province name
-  let province_name = e.layer.feature.properties.NOME_PRO
-
-  if (province_name == "REGGIO NELL'EMILIA")
-    province_name = "REGGIO EMILIA"
-
-  if (province_name == "REGGIO DI CALABRIA")
-    province_name = "REGGIO CALABRIA"
-
-  showCardInfo()
-  $('#txt_selected').text(province_name)
-
-  updateChartProvince(province_name)
-  updateMeanProvince(province_name)
-  updateCulturalPlacesProvince(province_name)
-
-  if (province_name == 'BOLOGNA')
-    showBolognaSchools()
-
-  // Move bounds to province
-  mymap.fitBounds(e.layer.getBounds())
-}
 
 /** 
  * 
