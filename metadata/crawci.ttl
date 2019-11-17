@@ -1,0 +1,123 @@
+@prefix dcatapit <http://dati.gov.it/onto/dcatapit> . 
+@prefix dct <http://purl.org/dc/terms/> .
+@prefix dcat <http://www.w3.org/ns/dcat#> .
+@prefix foaf <http://xmlns.com/foaf/0.1/> .
+@prefix owl <http://www.w3.org/2002/07/owl#> .
+@prefix prov <http://www.w3.org/ns/prov#> .
+@prefix xsd <http://www.w3.org/2001/XMLSchema#> .
+
+#Catalogo
+
+<https://lombenvopendata.github.io/resource/Catalogo/lombenvopendata>
+	a dcatapit:Catalog , dcat:Catalog ;
+	dct:title "Catalogo del progetto LombEnvOpenData"@it ;
+	dct:description "Catalogo dati del progetto LombEnvOpenData (Lombardia Environment Open Data)"@it ;
+	dct:modified "2019-02-01"^^xsd:date ;
+	dct:issued "2019-01-31"^^xsd:date ;
+	dct:publisher <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
+	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    foaf:homepage <http://lombenvopendata.github.io/index.html> ;
+	dcat:dataset <http://lombenvopendata.github.io/resource/Dataset/lombenvopendata> ;
+	dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
+
+
+#Dataset 
+
+<http://lombenvopendata.github.io/resource/dataset/lombenvopendata>
+	a dcatapit:Dataset , dcat:Dataset ;
+	dct:identifier "lombenvopendata:D.1" ;
+	dct:title "lombenvopendata"@it ;
+	dct:description "Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere."@it ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+	dct:subject <http://publications.europa.eu/resource/authority/subject-matter/ENV> , <http://eurovoc.europa.eu/2869> , <http://eurovoc.europa.eu/568>; <http://eurovoc.europa.eu/3140>, <http://eurovoc.europa.eu/6397> #ambiente , qualità dell'ambiente , agricoltura biologica, sorveglianza dell'ambiente, educazione ambientale
+	dcat:keyword "ambiente" , "qualità dell'ambiente" , "Lombardia", "agricoltura biologica" , "sorveglianza dell'ambiente", "educazione ambientale", "fattorie didattiche" "acque sotterranee";
+	dct:issued "2019-01-25"^^xsd:date ;
+	dct:modified "2019-01-31"^^xsd:date ;
+	owl:versionInfo "0.1.0" ; 
+	dct:rightsHolder <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
+	dct:publisher <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
+	dct:creator <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
+	prov:wasDerivedFrom <https://www.dati.lombardia.it/Agricoltura/Elenco-Regionale-degli-operatori-biologici/5x8g-mfnn> ;
+	prov:wasDerivedFrom <https://www.dati.lombardia.it/Agricoltura/Fattorie-didattiche-lombarde/j25r-r7bk> ;
+	prov:wasDerivedFrom <https://www.dati.lombardia.it/Ambiente/Dato-analitico-puntuale-relativo-a-ciascun-punto-d/4fvy-q2d2> ;
+	prov:wasDerivedFrom <http://www.geoportale.regione.lombardia.it/download-pacchetti?p_p_id=dwnpackageportlet_WAR_geoportaledownloadportlet&p_p_lifecycle=0&metadataid=%7BB1D945B8-9AF3-4636-A244-70AEF439E912%7D> ;
+	dcat:distribution <http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-CSV> ;
+	dcat:distribution <http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-JSON> ;
+	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/NEVER> ;
+	dcat:contactPoint <http://lombenvopendata.github.io/resource/PuntoContatto/contactPointlombenvopendata> ;
+	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+	#This property refers to a temporal period that the Dataset covers
+	dct:temporal <http://lombenvopendata.github.io/resource/PeriodoTemporale/#####> ;
+	dct:spatial <http://www.geonames.org/3174618/>
+
+
+#Periodo di Tempo
+
+<http://lombenvopendata.github.io/resource/PeriodoTemporale/periodTimelombenvopendata>
+	a dct:PeriodOfTime ;
+	dcatapit:startDate "2019-01-25"^^xsd:date ;
+	
+
+#Distribuzione
+
+<http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-CSV> 
+	a dcatapit:Distribution , dcat:Distribution ;
+	dct:title "CSV distribution of the LombEnvOpenData dataset."@it ;
+	dct:description "Distributione in CSV del dataset LombEnvOpenData (Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere.) dataset."@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
+	dcat:downloadURL <https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.csv> ;
+	dcat:accessURL <https://github.com/lombenvopendata/lombenvopendata/blob/master/resources/dataset/lombenvopendata.csv> .
+
+<http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-JSON> 
+	a dcatapit:Distribution , dcat:Distribution ;
+	dct:title "Distribuzione in JSON  del dataset LombEnvOpenData."@it ;
+	dct:description "JSON distribution of the LombEnvOpenData (Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere.) dataset."@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
+	dcat:downloadURL <https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.json> ;
+	dcat:accessURL <https://github.com/lombenvopendata/lombenvopendata/blob/master/resources/dataset/lombenvopendata.json> .
+
+
+#Licenza
+
+<https://www.dati.gov.it/content/italian-open-data-license-v20>
+     a dcatapit:LicenseDocument , dct:LicenseDocument ;
+     dct:type <http://purl.org/adms/licencetype/Attribution> ;
+     foaf:name "Italian Open Data License" ;
+     owl:versionInfo "2.0" .
+
+#Amministratore
+
+<http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam>
+	a dcatapit:Agent , foaf:Agent ;
+	dct:identifier "LombEnvOpenDatateam" ;
+	foaf:name "LombEnvOpenData Project Team" .
+
+
+#Punto di contatto
+
+<http://lombenvopendata.github.io/resource/PuntoContatto/contactPointlombenvopendata>
+	a dcatapit:Agent
+	vcard:hasEmail <mailto:lombenvopendata@gmail.com> .
+
+
+#Dataset originali
+
+<https://www.dati.lombardia.it/Agricoltura/Elenco-Regionale-degli-operatori-biologici/5x8g-mfnn>
+	a dcatapit:Dataset , dcat:Dataset ;
+	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
+
+<https://www.dati.lombardia.it/Agricoltura/Fattorie-didattiche-lombarde/j25r-r7bk>
+	a dcatapit:Dataset , dcat:Dataset ;
+	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
+
+<https://www.dati.lombardia.it/Ambiente/Dato-analitico-puntuale-relativo-a-ciascun-punto-d/4fvy-q2d2>
+	a dcatapit:Dataset , dcat:Dataset ;
+	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
+
+<http://www.geoportale.regione.lombardia.it/download-pacchetti?p_p_id=dwnpackageportlet_WAR_geoportaledownloadportlet&p_p_lifecycle=0&metadataid=%7BB1D945B8-9AF3-4636-A244-70AEF439E912%7D>
+	a dcatapit:Dataset , dcat:Dataset ;
+	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
