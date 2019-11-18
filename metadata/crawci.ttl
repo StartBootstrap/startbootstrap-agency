@@ -6,118 +6,111 @@
 @prefix prov <http://www.w3.org/ns/prov#> .
 @prefix xsd <http://www.w3.org/2001/XMLSchema#> .
 
-#Catalogo
+#Catalogue
 
-<https://lombenvopendata.github.io/resource/Catalogo/lombenvopendata>
-	a dcatapit:Catalog , dcat:Catalog ;
-	dct:title "Catalogo del progetto LombEnvOpenData"@it ;
-	dct:description "Catalogo dati del progetto LombEnvOpenData (Lombardia Environment Open Data)"@it ;
-	dct:modified "2019-02-01"^^xsd:date ;
-	dct:issued "2019-01-31"^^xsd:date ;
-	dct:publisher <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
-	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    foaf:homepage <http://lombenvopendata.github.io/index.html> ;
-	dcat:dataset <http://lombenvopendata.github.io/resource/Dataset/lombenvopendata> ;
-	dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
+<https://crawci.github.io/resource/catalogue/crawci>
+  a dcatapit:Catalog , dcat:Catalog ;
+  dct:title "Catalogue of the CRAWCI project"@en ;
+  dct:description "Catalogue of the CRAWCI project (Crime rate, Average wages and Cultural Institutions: what relationship?)"@en ;
+  dct:modified "2019-11-14"^^xsd:date ;
+  dct:issued "2019-11-14"^^xsd:date ;
+  dct:publisher <http://crawci.github.io/resource/Administration/crawci> ;
+  dct:language <http://publications.europa.eu/resource/authority/language/EN> ;
+  dcat:dataset <http://crawci.github.io/resource/Dataset/crawci> ;
+  foaf:homepage <http://crawci.github.io/index.html> ;
+  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
 
 
 #Dataset 
 
-<http://lombenvopendata.github.io/resource/dataset/lombenvopendata>
-	a dcatapit:Dataset , dcat:Dataset ;
-	dct:identifier "lombenvopendata:D.1" ;
-	dct:title "lombenvopendata"@it ;
-	dct:description "Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere."@it ;
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
-	dct:subject <http://publications.europa.eu/resource/authority/subject-matter/ENV> , <http://eurovoc.europa.eu/2869> , <http://eurovoc.europa.eu/568>; <http://eurovoc.europa.eu/3140>, <http://eurovoc.europa.eu/6397> #ambiente , qualità dell'ambiente , agricoltura biologica, sorveglianza dell'ambiente, educazione ambientale
-	dcat:keyword "ambiente" , "qualità dell'ambiente" , "Lombardia", "agricoltura biologica" , "sorveglianza dell'ambiente", "educazione ambientale", "fattorie didattiche" "acque sotterranee";
-	dct:issued "2019-01-25"^^xsd:date ;
-	dct:modified "2019-01-31"^^xsd:date ;
-	owl:versionInfo "0.1.0" ; 
-	dct:rightsHolder <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
-	dct:publisher <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
-	dct:creator <http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam> ;
-	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
-	prov:wasDerivedFrom <https://www.dati.lombardia.it/Agricoltura/Elenco-Regionale-degli-operatori-biologici/5x8g-mfnn> ;
-	prov:wasDerivedFrom <https://www.dati.lombardia.it/Agricoltura/Fattorie-didattiche-lombarde/j25r-r7bk> ;
-	prov:wasDerivedFrom <https://www.dati.lombardia.it/Ambiente/Dato-analitico-puntuale-relativo-a-ciascun-punto-d/4fvy-q2d2> ;
-	prov:wasDerivedFrom <http://www.geoportale.regione.lombardia.it/download-pacchetti?p_p_id=dwnpackageportlet_WAR_geoportaledownloadportlet&p_p_lifecycle=0&metadataid=%7BB1D945B8-9AF3-4636-A244-70AEF439E912%7D> ;
-	dcat:distribution <http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-CSV> ;
-	dcat:distribution <http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-JSON> ;
-	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/NEVER> ;
-	dcat:contactPoint <http://lombenvopendata.github.io/resource/PuntoContatto/contactPointlombenvopendata> ;
-	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-	#This property refers to a temporal period that the Dataset covers
-	dct:temporal <http://lombenvopendata.github.io/resource/PeriodoTemporale/#####> ;
-	dct:spatial <http://www.geonames.org/3174618/>
+<http://crawci.github.io/resource/Dataset/crawci>
+  a dcatapit:Dataset , dcat:Dataset ;
+  dct:identifier "CRAWCI:D.1" ;
+  dct:title "CRAWCI"@en ;
+  dct:description "Dataset of CRAWCI Project (Crime rate, Average wages and Cultural Institutions: what relationship?) It contains data about average annual income per family in euro per region"@en ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+  dct:subject <http://publications.europa.eu/resource/authority/resource-type/REPORT_ANNUAL> , <http://eurovoc.europa.eu/637> , <http://eurovoc.europa.eu/3659>; #economy , annual income 
+  dct:issued "2019-03-29"^^xsd:date ;
+  dct:modified "2019-03-29"^^xsd:date ;
+  dcat:keyword "economy" , "annual income";
+  owl:versionInfo "0.1.0" ; 
+  dct:rightsHolder <http://crawci.github.io/resource/Administration/crawciGroup> ;
+  dct:publisher <http://crawci.github.io/resource/Administration/crawciGroup> ;
+  dct:creator <http://crawci.github.io/resource/Administration/crawciGroup> ;
+  dct:license <http://creativecommons.org/licenses/by/4.0> ;
+  prov:wasDerivedFrom <http://dati.istat.it/Index.aspx?QueryId=22919> ;
+  prov:wasDerivedFrom <http://dati.istat.it/Index.aspx?DataSetCode=DCCV_DELITTIPS> ;
+  prov:wasDerivedFrom <http://dati.istat.it/Index.aspx?QueryId=22994&lang=en> ;
+  prov:wasDerivedFrom <http://www.datiopen.it/it/opendata/Mappa_dei_teatri_in_Italia> ;
+  prov:wasDerivedFrom <http://dati.beniculturali.it/resource/datasetLuoghiDellaCultura> ;
+  dcat:distribution <http://crawci.github.io/resource/Distribution/crawci-RDFXML> ;
+  dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+  dcat:contactPoint <http://crawci.github.io/resource/ContactPoint/contactPointcrawci> ;
+  dct:language <http://publications.europa.eu/resource/authority/language/EN> ;
+  dct:temporal <http://crawci.github.io/resource/PeriodOfTime/periodTimecrawci> ;
+  dct:spatial <http://www.geonames.org/3170831/> , <http://www.geonames.org/3174618/> , <http://www.geonames.org/3164604/> ,  <http://www.geonames.org/3176525/> , <http://www.geonames.org/3174725/> , <http://www.geonames.org/3177401/> , <http://www.geonames.org/3165361/> , <http://www.geonames.org/3174004/> , <http://www.geonames.org/3165048/> , <http://www.geonames.org/3174976/> , <http://www.geonames.org/3183560/> , <http://www.geonames.org/3173222/> , <http://www.geonames.org/3181042/> , <http://www.geonames.org/3169778/> , <http://www.geonames.org/3182306/>, <http://www.geonames.org/2525468/> , <http://www.geonames.org/2523119/> , <http://www.geonames.org/2523228/s> .
+  
 
+#Period of time
 
-#Periodo di Tempo
+<http://crawci.github.io/resource/PeriodOfTime/periodTimecrawci>
+  a dct:PeriodOfTime ; 
+  dcatapit:startDate "2019-11-14"^^xsd:date ; 
+  dcatapit:endDate "2019-06-12"^^xsd:date .
+  
+#Distribution
 
-<http://lombenvopendata.github.io/resource/PeriodoTemporale/periodTimelombenvopendata>
-	a dct:PeriodOfTime ;
-	dcatapit:startDate "2019-01-25"^^xsd:date ;
-	
+<http://crawci.github.io/resource/Distribution/crawci-RDFXML> 
+  a dcatapit:Distribution , dcat:Distribution ;
+  dct:title "RDF XML distribution of the CRAWCI dataset."@en ;
+  dct:description "RDF XML distribution of the CRAWCI project (Crime rate, Average wages and Cultural Institutions: what relationship?)"@en ;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
+  dct:license <http://creativecommons.org/licenses/by/4.0> ;
+  dcat:downloadURL <http://crawci.github.io/resource/Distribution/crawci-RDFXML-download> ;
+  dcat:accessURL <http://crawci.github.io/resource/Distribution/crawci-RDFXML> .
 
-#Distribuzione
+<http://crawci.github.io/resource/Distribution/crawci-CSV> 
+  a dcatapit:Distribution , dcat:Distribution ;
+  dct:title "CSV distribution of the crawci dataset."@en ;
+  dct:description "CSV distribution of the crawci dataset(Crime rate, Average wages and Cultural Institutions: what relationship?). "@en ;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+  dct:license <http://creativecommons.org/licenses/by/4.0> ;
+  dcat:downloadURL <http://crawci.github.io/resource/Distribution/crawci-CSV-download> ;
+  dcat:accessURL <https://github.com/simayguzel/crawci/blob/master/dataset/crawciopendata.csv> .
 
-<http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-CSV> 
-	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "CSV distribution of the LombEnvOpenData dataset."@it ;
-	dct:description "Distributione in CSV del dataset LombEnvOpenData (Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere.) dataset."@it ;
-	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
-	dcat:downloadURL <https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.csv> ;
-	dcat:accessURL <https://github.com/lombenvopendata/lombenvopendata/blob/master/resources/dataset/lombenvopendata.csv> .
+#Admin
 
-<http://lombenvopendata.github.io/resource/Distribuzione/lombenvopendata-JSON> 
-	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione in JSON  del dataset LombEnvOpenData."@it ;
-	dct:description "JSON distribution of the LombEnvOpenData (Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere.) dataset."@it ;
-	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
-	dcat:downloadURL <https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.json> ;
-	dcat:accessURL <https://github.com/lombenvopendata/lombenvopendata/blob/master/resources/dataset/lombenvopendata.json> .
+<http://crawci.github.io/resource/Administration/crawciGroup>
+  a dcatapit:Agent , foaf:Agent ;
+  dct:identifier "crawciGroup" ;
+  foaf:name "CRAWCI Project Group" .
 
+#ContactPoint
 
-#Licenza
+<http://crawci.github.io/resource/ContactPoint/contactPointcrawci>
+  a dcatapit:Agent
+  vcard:hasEmail <mailto:crawci@gmail.com> ;
+  vcard:hasURL <http://crawci.github.io/contattaci.html> .
 
-<https://www.dati.gov.it/content/italian-open-data-license-v20>
-     a dcatapit:LicenseDocument , dct:LicenseDocument ;
-     dct:type <http://purl.org/adms/licencetype/Attribution> ;
-     foaf:name "Italian Open Data License" ;
-     owl:versionInfo "2.0" .
+#Original datasets
 
-#Amministratore
+<http://dati.istat.it/Index.aspx?QueryId=22919> 
+  a dcatapit:Dataset , dcat:Dataset ;
+  dct:rightsHolder <> . 
 
-<http://lombenvopendata.github.io/resource/Amministrazione/lombenvopendatateam>
-	a dcatapit:Agent , foaf:Agent ;
-	dct:identifier "LombEnvOpenDatateam" ;
-	foaf:name "LombEnvOpenData Project Team" .
+<http://dati.istat.it/Index.aspx?DataSetCode=DCCV_DELITTIPS>elements1/leaf/?datasetId=DS0280EDICONSICUREZZASTA>
+  a dcatapit:Dataset , dcat:Dataset ;
+  dct:rightsHolder <https://www.wikidata.org/wiki/Q214195> . 
 
+<http://dati.istat.it/Index.aspx?QueryId=22994&lang=en>
+  a dcatapit:Dataset , dcat:Dataset ;
+  dct:rightsHolder <https://www.wikidata.org/wiki/Q214195> . 
 
-#Punto di contatto
+<http://www.datiopen.it/it/opendata/Mappa_dei_teatri_in_Italia>
+  a dcatapit:Dataset , dcat:Dataset ;
+  dct:rightsHolder <http://www.datiopen.it/it/Copyright> . 
 
-<http://lombenvopendata.github.io/resource/PuntoContatto/contactPointlombenvopendata>
-	a dcatapit:Agent
-	vcard:hasEmail <mailto:lombenvopendata@gmail.com> .
+<http://dati.beniculturali.it/resource/datasetLuoghiDellaCultura>
+  a dcatapit:Dataset, dcat:Dataset ;
+  dct:rightsHolder <http://dati.beniculturali.it/resource/Agent/mibact-dgo> .
 
-
-#Dataset originali
-
-<https://www.dati.lombardia.it/Agricoltura/Elenco-Regionale-degli-operatori-biologici/5x8g-mfnn>
-	a dcatapit:Dataset , dcat:Dataset ;
-	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
-
-<https://www.dati.lombardia.it/Agricoltura/Fattorie-didattiche-lombarde/j25r-r7bk>
-	a dcatapit:Dataset , dcat:Dataset ;
-	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
-
-<https://www.dati.lombardia.it/Ambiente/Dato-analitico-puntuale-relativo-a-ciascun-punto-d/4fvy-q2d2>
-	a dcatapit:Dataset , dcat:Dataset ;
-	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 
-
-<http://www.geoportale.regione.lombardia.it/download-pacchetti?p_p_id=dwnpackageportlet_WAR_geoportaledownloadportlet&p_p_lifecycle=0&metadataid=%7BB1D945B8-9AF3-4636-A244-70AEF439E912%7D>
-	a dcatapit:Dataset , dcat:Dataset ;
-	dct:rightsHolder <http://it.dbpedia.org/resource/Lombardia/html> . 

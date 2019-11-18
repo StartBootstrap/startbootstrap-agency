@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LombEnv</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+<link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css">
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html"><b>LombEnv</b> Open Data</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Il Progetto <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogo.html">Catalogo</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="dataset.html">Dataset</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="visualization.html">Visualizzazione</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-8 offset-md-2">
+            <br>
+            <h1>Metadati Dataset LombEnv Open Data</h1>
+            <h6><a href="https://lombenvopendata.github.io/lombenvopendata/metadata/lombenvopendata.ttl">formato machine-readable RDF-Turtle</a></h6>
+            <div class="table-responsive-md" style="margin-top: 30px;">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <th scope="row">Identificativo</th>
+                        <td>lombenvopendata:D.1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Titolo</th>
+                        <td>lombenvopendata</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Lingua</th>
+                        <td>Italiano</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Descrizione</th>
+                        <td>Il dataset offre uno spaccato del territorio lombardo tramite l'aggregazione, su base provinciale, di dati relativi alla presenza di operatori biologici e fattorie didattiche - con relative attività e servizi offerti - e allo stato delle acque sotterranee nei punti di campionamento delle falde acquifere.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Versione</th>
+                        <td><span> 0.1.0</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Derivato da</th>
+                        <td><a href="https://www.dati.lombardia.it/Agricoltura/Elenco-Regionale-degli-operatori-biologici/5x8g-mfnn"> Elenco Regionale degli Operatori Biologici</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Derivato da</th>
+                        <td><a href="https://www.dati.lombardia.it/Agricoltura/Fattorie-didattiche-lombarde/j25r-r7bk"> Fattorie Didattiche Lombarde</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Derivato da</td>
+                        <td><a href="https://www.dati.lombardia.it/Ambiente/Dato-analitico-puntuale-relativo-a-ciascun-punto-d/4fvy-q2d2"> Dato analitico puntuale relativo a ciascun punto della rete di monitoraggio qualitativo delle acque sotterranee</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Copertura temporale</th>
+                        <td><a>2016-2018</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Copertura geografica</th>
+                        <td><a href="https://www.geonames.org/3174618/"> Lombardia, Italia</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Temi</th>
+                        <td><a href="http://publications.europa.eu/resource/authority/data-theme/ENVI">environment</a>, <a href="http://publications.europa.eu/resource/authority/data-theme/AGRI">agricolture</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Keywords</th>
+                        <td><span>ambiente</span> , <span>qualità dell'ambiente</span> , <span>Lombardia</span>,  <span>agricoltura biologica</span> , <span>sorveglianza dell'ambiente</span>,  <span>educazione ambientale</span>,  <span>fattorie didattiche</span>, <span>acque sotterranee</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Titolare</th>
+                        <td><span>LombEnv Open Data Team</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Editore</th>
+                        <td><span>LombEnv Open Data Team</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Creatore</th>
+                        <td><span>LombEnv Open Data Team</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Punto di contatto</th>
+                        <td><a href="mailto:lombenvopendata@gmail.com"> lombenvopendata@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Data ultima modifica</th>
+                        <td><span>2019-09-31</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Data di rilascio</th>
+                        <td><span>2019-01-31</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Formato della data</th>
+                        <td>ISO 8601</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4>Lombenv Open Data - Distribuzione CSV</h4>
+            <div class="table-responsive-md" style="margin-top: 30px;">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td><b>Formato</b></td>
+                        <td><a href="http://publications.europa.eu/resource/authority/file-type/CSV">CSV</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Licenza</b></td>
+                        <td><a href="https://www.dati.gov.it/content/italian-open-data-license-v20">Italian Open Data License v2.0</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>URL di accesso</b></td>
+                        <td><a href="https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.csv">https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.csv</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4>Lombenv Open Data - Distribuzione JSON</h4>
+            <div class="table-responsive-md" style="margin-top: 30px;">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td><b>Formato</b></td>
+                        <td><a href="http://publications.europa.eu/resource/authority/file-type/JSON">JSON</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Licenza</b></td>
+                        <td><a href="https://www.dati.gov.it/content/italian-open-data-license-v20">Italian Open Data License v2.0</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>URL di accesso</b></td>
+                        <td><a href="https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.json">https://lombenvopendata.github.io/lombenvopendata/resources/dataset/lombenvopendata.json</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<footer class="footer" style="height:80px; line-height: 20px !important;">
+    <div class="container">
+        <span class="text-muted" style="margin-top: 15px; display:block;">This website is licensed under Italian Open Data License v2.0</span>
+        <span class="text-muted" style="margin-top: 15px; display:block;">I dati forniti non devono in nessun modo essere utilizzati per identificare gli interessati</span>
+    </div>
+</footer>
+
+</body>
+<style>
+    body {
+        color: #2d2a2d;
+    }
+    .titolone {
+        color: #cea500;
+    }
+
+    .jumbotron {
+        background-image: url('header.jpg');
+        background-size: cover;
+    }
+
+    .introductionBody {
+        text-align: justify !important;
+    }
+
+    .footer {
+        text-align: center;
+    }
+</style>
+</html>
