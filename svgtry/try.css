@@ -1,0 +1,8 @@
+#IT_65 #abruzzo {
+  display: none;
+}
+
+#IT_65:hover #abruzzo {
+  display: block;
+}
+
