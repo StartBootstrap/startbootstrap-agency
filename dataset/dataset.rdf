@@ -9,84 +9,127 @@
    <rdf:Description rdf:about="https://crawci.github.io/resource/region/piemonte">
       <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/34290">34290</ds:average_salary>
       <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/44">44</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/207885">207885</dcterms:crimerate>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/207885">207885</dcterms:crimerate>
        <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,1">69,1</dcterms:internetusage>
    </rdf:Description>
    <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
       <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
       <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
        <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
    </rdf:Description>
    <rdf:Description rdf:about="https://crawci.github.io/resource/region/liguria">
       <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/35866">35866</ds:average_salary>
       <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/23">23</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/79898">79898</dcterms:crimerate>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/79898">79898</dcterms:crimerate>
        <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/65,2">65,2</dcterms:internetusage>
    </rdf:Description>
    <rdf:Description rdf:about="https://crawci.github.io/resource/region/lombardia">
       <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/40459">40459</ds:average_salary>
       <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/113">113</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/475194">475194</dcterms:crimerate>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/475194">475194</dcterms:crimerate>
        <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/73,7">73,7</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+    <rdf:Description rdf:about="https://crawci.github.io/resource/region/trentino">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/396740">396740</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/43">43</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/33620">33620</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/72,5">72,5</dcterms:internetusage>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/veneto">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/39521">39521</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/77">77</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/169999">169999</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/72,6">72,6</dcterms:internetusage>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/friulivenezia">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/374830">374830</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/27">27</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/47465">47465</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/73,1">73,1</dcterms:internetusage>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/emiliaromagna">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/40187">40187</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/67">67</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/229630">229630</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/71,9">71,9</dcterms:internetusage>
    </rdf:Description>
    <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
       <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
       <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
        <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/toscana">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/38202">38202</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/66">66</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/176246">176246</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/71,9,4">71,9,4</dcterms:internetusage>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/umbria">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/35860">35860</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/16">16</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/30108">30108</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69">69</dcterms:internetusage>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/marche">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/36687">36687</ds:average_salary>
       <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/47067">47067</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/70">70</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/lazio">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/36636">36636</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/42">42</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/276255">276255</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/72,9">72,9</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/abruzzo">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/31712">31712</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/7">7</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/43136">43136</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/70">70</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/molise">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/28581">28581</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/1">1</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/8205">8205</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/63,2">63,2</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/campania">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/27778">27778</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/21">21</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/222685">222685</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/64,4">64,4</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/puglia">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/31726">31726</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/28">28</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/149334">149334</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/62,4">62,4</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/basilicata">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/28578">28578</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/6">6</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/13570">13570</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/62,7">62,7</dcterms:internetusage>
    </rdf:Description>
-   <rdf:Description rdf:about="https://crawci.github.io/resource/region/valledoasto">
-      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/33504">33504</ds:average_salary>
-      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/2">2</cis:hostsCulturalEvent>
-      <dcterms:crimereports rdf:resource="https://crawci.github.io/resource/criminalreports/4085">4085</dcterms:crimerate>
-       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/69,4">69,4</dcterms:internetusage>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/calabria">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/26852">26852</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/27">27</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/61137">61137</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/59,4">59,4</dcterms:internetusage>
    </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/sicilia">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/25936">25936</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/50">50</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/176318">176318</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/60,6">60,6</dcterms:internetusage>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://crawci.github.io/resource/region/sardegna">
+      <ds:average_salary rdf:resource="https://crawci.github.io/resource/averagesalary/30332">30332</ds:average_salary>
+      <cis:hostsCulturalEvent rdf:resource="https://crawci.github.io/resource/theatres/21">21</cis:hostsCulturalEvent>
+      <ds:total_crime_rate rdf:resource="https://crawci.github.io/resource/criminalreports/47465">47465</dcterms:crimerate>
+       <dcterms:internetusage rdf:resource="https://crawci.github.io/resource/difuseofinternet/72,4">72,4</dcterms:internetusage>
+   </rdf:Description>
+   
