@@ -112,130 +112,40 @@
           <div class="col-lg-12 text-center">
             <h3 class="section-heading text-uppercase">Original datasets and mushup dataset</h3>
 
-            <p><b>D1</b></p>
-
-            <p>I.Stat, Reddito netto: Regioni e tipo di comune, viewed 14 November 2019, http://dati.istat.it/Index.aspx?QueryId=22919</p>
-
-            <p>License: Creative Commons License – Attribution – 3.0 https://www.istat.it/it/note-legali</p>
-
-            <p>Content description: The dataset provides data about average annual income of families in eur per region.</p>
-
-            <p><b>D2</b></p>
-
-            <p>I.Stat, Delitti denunciati dalle forze di polizia all'autorità giudiziaria, viewed 14 November 2019,  
-            http://dati.istat.it/Index.aspx?DataSetCode=DCCV_DELITTIPS</p>
-
-<p>License: Creative Commons License – Attribution – 3.0 https://www.istat.it/it/note-legali</p>
-
-<p>Content description: The datasets provides information on number of  crimes reported by the police to the judicial authority.</p>
-
-<p><b>D3</b></p>
-
-<p>MiBACT, Luoghi della cultura, electronic dataset, Gli Open Data, viewed 14 November 2019, http://dati.beniculturali.it/lodview/resource/datasetLuoghiDellaCultura.html</p> 
-
-<p>License: https://creativecommons.org/licenses/by/3.0/</p>
-
-<p>Content description: This dataset lists cultural institutions in Italy providing information about their location, identification and services.</p>
-
-<p>In order to extract the data we used the [SPARQL endpoint](http://dati.beniculturali.it/sparql) of dati.beniculturali.it by running the following query:</p>
-
+            <p style="text-align: left;"><strong>D1</strong></p>
+<p style="text-align: left;"><strong>Source:</strong> I.Stat, Reddito netto: Regioni e tipo di comune, viewed 14 November 2019, <a href="http://dati.istat.it/Index.aspx?QueryId=22919">http://dati.istat.it/Index.aspx?QueryId=22919</a></p>
+<p style="text-align: left;"><strong>License:</strong> Creative Commons License &ndash; Attribution &ndash; 3.0 <a href="https://www.istat.it/it/note-legali">https://www.istat.it/it/note-legali</a></p>
+<p style="text-align: left;"><strong>Content description:</strong> The dataset provides data about average annual income of families in eur by region.</p>
+<p style="text-align: left;"><strong>D2</strong></p>
+<p style="text-align: left;"><strong>Source:</strong> I.Stat, Delitti denunciati dalle forze di polizia all'autorit&agrave; giudiziaria, viewed 14 November 2019, <br /><a href="http://dati.istat.it/Index.aspx?DataSetCode=DCCV_DELITTIPS">http://dati.istat.it/Index.aspx?DataSetCode=DCCV_DELITTIPS</a></p>
+<p style="text-align: left;"><strong>License:</strong> Creative Commons License &ndash; Attribution &ndash; 3.0 <a href="https://www.istat.it/it/note-legali">https://www.istat.it/it/note-legali</a></p>
+<p style="text-align: left;"><strong>Content description:</strong> The datasets provides information on number of crimes reported by the police to the judicial authority.</p>
+<p style="text-align: left;"><strong>D3</strong></p>
+<p style="text-align: left;"><strong>Source:</strong> MiBACT, Luoghi della cultura, electronic dataset, Gli Open Data, viewed 14 November 2019, <a href="http://dati.beniculturali.it/lodview/resource/datasetLuoghiDellaCultura.html">http://dati.beniculturali.it/lodview/resource/datasetLuoghiDellaCultura.html</a></p>
+<p style="text-align: left;"><strong>License:</strong> <a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a></p>
+<p style="text-align: left;"><strong>Content description:</strong> This dataset lists cultural institutions in Italy providing information about their location, identification and services.</p>
+<p style="text-align: left;">In order to extract the data we used the [SPARQL endpoint](http://dati.beniculturali.it/sparql) of dati.beniculturali.it by running the following query:</p>
 <code>
-select * where {
-
- select distinct ?s as ?subject
-
- ?Nome_Istituzionale
- ?Descrizione
- ?Identifier
- ?Latitudine
- ?Longitudine
- ?Disciplina
- ?Indirizzo
- ?Codice_postale
- ?Comune
- ?Provincia
- ?Prenotazioni
- ?Orari_di_apertura
- ?Telefono
- ?Fax
- ?Email
- ?WebSite
- str(?Biglietti) as ?Biglietti
- ?Servizi
-
- where {
-
-  graph <http://dati.beniculturali.it/mibact/luoghi> {
-
-   ?s rdf:type cis:CulturalInstituteOrSite ;
-      cis:institutionalCISName ?Nome_Istituzionale .
-   optional { ?s l0:description ?Descrizione }
-   optional { ?s l0:identifier ?Identifier }
-   optional { ?s geo:lat ?Latitudine }
-   optional { ?s geo:long ?Longitudine }
-   optional { ?s cis:hasDiscipline [l0:name ?Disciplina] }
-   optional {
-    ?s cis:hasSite [cis:siteAddress ?address ] .
-    optional { ?address clvapit:fullAddress ?Indirizzo }
-    optional { ?address clvapit:postCode ?Codice_postale }
-    optional { ?address clvapit:hasCity [rdfs:label ?Comune] }
-    optional { ?address clvapit:hasProvince [rdfs:label ?Provincia] }
-   }
-   optional {?s accessCondition:hasAccessCondition [rdf:type accessCondition:Booking ;
-                                                    rdfs:label ?Prenotazioni] }
-   optional {?s accessCondition:hasAccessCondition [rdf:type accessCondition:OpeningHoursSpecification ;
-                                                    l0:description ?Orari_di_apertura ] }
-   optional {
-    ?s smapit:hasOnlineContactPoint ?contactPoint .
-    optional { ?contactPoint smapit:hasTelephone [smapit:hasTelephoneType <https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/channel/031> ;
-                                                  smapit:telephoneNumber ?Telefono] }
-    optional { ?contactPoint smapit:hasTelephone [smapit:hasTelephoneType <https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/channel/033> ;
-                                                  smapit:telephoneNumber ?Fax] }
-    optional { ?contactPoint smapit:hasEmail [smapit:emailAddress ?Email] }
-    optional { ?contactPoint smapit:hasWebSite [smapit:URL ?WebSite] }    
-   }   
-   optional {
-    ?s potapit:hasTicket ?ticket .
-    ?offer potapit:includes ?ticket ;
-           potapit:hasPriceSpecification [potapit:hasCurrencyValue ?Biglietti]
-   }
-   optional { ?s cis:providesService [l0:name ?Servizi] }
-  }
- }
- order by ?s
-
-}
-limit 100
-offset 0
+<p style="text-align: left;"><br />select * where {</p>
+<p style="text-align: left;">select distinct ?s as ?subject</p>
+<p style="text-align: left;">?Nome_Istituzionale<br /> ?Descrizione<br /> ?Identifier<br /> ?Latitudine<br /> ?Longitudine<br /> ?Disciplina<br /> ?Indirizzo<br /> ?Codice_postale<br /> ?Comune<br /> ?Provincia<br /> ?Prenotazioni<br /> ?Orari_di_apertura<br /> ?Telefono<br /> ?Fax<br /> ?Email<br /> ?WebSite<br /> str(?Biglietti) as ?Biglietti<br /> ?Servizi</p>
+<p style="text-align: left;">where {</p>
+<p style="text-align: left;">graph &lt;http://dati.beniculturali.it/mibact/luoghi&gt; {</p>
+<p style="text-align: left;">?s rdf:type cis:CulturalInstituteOrSite ;<br /> cis:institutionalCISName ?Nome_Istituzionale .<br /> optional { ?s l0:description ?Descrizione }<br /> optional { ?s l0:identifier ?Identifier }<br /> optional { ?s geo:lat ?Latitudine }<br /> optional { ?s geo:long ?Longitudine }<br /> optional { ?s cis:hasDiscipline [l0:name ?Disciplina] }<br /> optional {<br /> ?s cis:hasSite [cis:siteAddress ?address ] .<br /> optional { ?address clvapit:fullAddress ?Indirizzo }<br /> optional { ?address clvapit:postCode ?Codice_postale }<br /> optional { ?address clvapit:hasCity [rdfs:label ?Comune] }<br /> optional { ?address clvapit:hasProvince [rdfs:label ?Provincia] }<br /> }<br /> optional {?s accessCondition:hasAccessCondition [rdf:type accessCondition:Booking ;<br /> rdfs:label ?Prenotazioni] }<br /> optional {?s accessCondition:hasAccessCondition [rdf:type accessCondition:OpeningHoursSpecification ;<br /> l0:description ?Orari_di_apertura ] }<br /> optional {<br /> ?s smapit:hasOnlineContactPoint ?contactPoint .<br /> optional { ?contactPoint smapit:hasTelephone [smapit:hasTelephoneType &lt;https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/channel/031&gt; ;<br /> smapit:telephoneNumber ?Telefono] }<br /> optional { ?contactPoint smapit:hasTelephone [smapit:hasTelephoneType &lt;https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/channel/033&gt; ;<br /> smapit:telephoneNumber ?Fax] }<br /> optional { ?contactPoint smapit:hasEmail [smapit:emailAddress ?Email] }<br /> optional { ?contactPoint smapit:hasWebSite [smapit:URL ?WebSite] } <br /> } <br /> optional {<br /> ?s potapit:hasTicket ?ticket .<br /> ?offer potapit:includes ?ticket ;<br /> potapit:hasPriceSpecification [potapit:hasCurrencyValue ?Biglietti]<br /> }<br /> optional { ?s cis:providesService [l0:name ?Servizi] }<br /> }<br /> }<br /> order by ?s</p>
+<p style="text-align: left;">}<br />limit 100<br />offset 0</p>
 </code>
+<p style="text-align: left;"><strong>D4</strong><br /> <br /><strong>Source:</strong> I.Stat,Internet: access and type of use, viewed 14 November 2019<br />http://dati.istat.it/Index.aspx?QueryId=22994&amp;lang=en</p>
+<p style="text-align: left;"><strong>License:</strong> Creative Commons License &ndash; Attribution &ndash; 3.0 <a href="https://www.istat.it/it/note-legali">https://www.istat.it/it/note-legali</a></p>
+<p style="text-align: left;"><strong>Content description:</strong> This dataset shows percentage of internet use in families by regions</p>
+<p style="text-align: left;"><strong>D5</strong></p>
+<p style="text-align: left;"><strong>Source:</strong>&nbsp;DatiOpen.it, Mappa dei teatri in Italia, viewed 14 November 2019<br />http://www.datiopen.it/it/opendata/Mappa_dei_teatri_in_Italia</p>
+<p style="text-align: left;"><strong>License:</strong> Open Database License https://opendatacommons.org/licenses/odbl/</p>
+<p style="text-align: left;"><strong>Content description:</strong> This dataset shows the number of theaters region by region in Italy.</p>
+<p style="text-align: left;"><strong>D6</strong></p>
+<p style="text-align: left;">CRAWCI Project, The final dataset, created 15 November 2019<br />CSV: <a href="https://github.com/simayguzel/crawci/blob/master/dataset/crawciopendata.csv">https://github.com/simayguzel/crawci/blob/master/dataset/crawciopendata.csv</a><br />RDF: <a href="https://github.com/simayguzel/crawci/blob/master/dataset/dataset.rdf">https://github.com/simayguzel/crawci/blob/master/dataset/dataset.rdf</a></p>
+<p style="text-align: left;"><strong>License:</strong></p>
+<p style="text-align: left;"><strong>Content description</strong>: This dataset includes1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km. The result will be a presented as an explorable map which allows users to visualize all the data about regions.</p>
 
-<p><b>D4</b></p>
-  
-<p>I.Stat,Internet: access and type of use, viewed 14 November 2019,
-http://dati.istat.it/Index.aspx?QueryId=22994&lang=en</p>
-
-<p>License: Creative Commons License – Attribution – 3.0 https://www.istat.it/it/note-legali</p>
-
-<p>Content description: This dataset shows percentage of internet use in families by regions</p>
-
-<p><b>D5</b></p>
-
-<p>DatiOpen.it, Mappa dei teatri in Italia, viewed 14 November 2019
-http://www.datiopen.it/it/opendata/Mappa_dei_teatri_in_Italia</p>
-
-<p>License: Open Database License https://opendatacommons.org/licenses/odbl/</p>
-
-<p>Content description: This dataset shows the number of theaters region by region in Italy.</p>
-
-<p><b>D5</b></p>
-
-<p>CRAWCI Project, The final dataset, created 15 November 2019,
-CSV: https://github.com/simayguzel/crawci/blob/master/dataset/crawciopendata.csv
-RDF: https://github.com/simayguzel/crawci/blob/master/dataset/dataset.rdf</p>
-
-<p>License:</p>
-
-<p>Content description: This dataset includes1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km.  The result will be a presented as an explorable map which allows users to visualize all the data about regions. </p>
 </div>
       </div>
 
