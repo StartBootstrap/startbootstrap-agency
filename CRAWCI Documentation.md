@@ -133,7 +133,7 @@ License: Open Database License https://opendatacommons.org/licenses/odbl/
 
 Content description: This dataset shows the number of theaters region by region in Italy.
 
-### D6
+### D6 (Mashup)
 
 CRAWCI Project, The final dataset, created 15 November 2019
 CSV: https://github.com/simayguzel/crawci/blob/master/dataset/crawciopendata.csv
@@ -144,15 +144,75 @@ License:
 Content description: This dataset includes1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km.  The result will be a presented as an explorable map which allows users to visualize all the data about regions. 
 
 
-### 2.2 The data
+### 4. Quality analysis of the datasets 
 
-Every year, MIUR (Italian Ministry of Education, University and Research) makes available open datasets containing the results of school self-evaluations. Specifically, the datasets feature school self-evaluation results and free-text result explanations. 
+This section considers the necessary requirements, established according to the "Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/bozza/aspettiorg.html#qualita-dei-dati). The four characteristics to control the level of information quality are:
 
-MIUR also publishes irregular updates on school safety certificates as open data. 
+accuracy (syntactic and semantic) - the data, and its attributes, correctly represent the real value of the concept or event to which it refers;
+coherence - the data, and its attributes, is not contradictory to other data regarding the context of use of the owner administration;
+completeness - the data is exhaustive for all its expected values and with respect to the relative entities (sources) that contribute to the definition of the procedure;
+currentness (or timeliness of updating) - the data, and its attributes, is of the "right time" (it is updated) with respect to the procedure to which it refers.
 
-SEBuCCI aligns school self-evaluations with school safety certificates to find out if there is a trend (i.e. highest grades when certificates are in accordance with applicable law). 
+<table>      
+<col width="20%" />      
+<col width="20%" />      
+<col width="20%" />      
+<col width="20%" />      
+<col width="20%" />      
+<tbody>      
+<tr class="odd">      
+<td align="left"><p></p></td>      
+<td align="left"><p>Accuracy</p></td>      
+<td align="left"><p>Completeness</p></td>      
+<td align="left"><p>Coerenza</p></td>      
+<td align="left"><p>Curentness</p></td>      
+</tr>      
+<tr class="even">      
+<td align="left"><p>D1</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>No See Point 1</p></td>      
+<td align="left"><p>YES</p></td>      
+</tr>      
+<tr class="odd">      
+<td align="left"><p>D2</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>No See Point 2</p></td>      
+<td align="left"><p>YES</p></td>      
+</tr>      
+<tr class="even">      
+<td align="left"><p>D3</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>No See Point 3</p></td>      
+</tr>
+<tr class="even">      
+<td align="left"><p>D4</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>No See Point 4</p></td>      
+<td align="left"><p>YES</p></td>      
+</tr>
+</tr>
+<tr class="even">      
+<td align="left"><p>D5</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>YES</p></td>      
+<td align="left"><p>No See Point 5</p></td>      
+<td align="left"><p>YES</p></td>      
+</tr>        
+</tbody>      
+</table>      
 
-SEBuCCI makes also use of the open dataset of 'Luoghi culturali' (Cultural institutions) published by MiBACT (Italian Ministry of Cultural Heritage and Activities) to identify and locate cultural institutions and their proximity to schools in Italy. 
+1. D1 makes arbitrary use of uppercase and lowercase.
+
+2. D2 makes arbitrary use of uppercase and lowercase; unclear semantic("CRIMEN", "TERRORHOM")
+3. D3 does not feature up-to-date information regarding Sardinia provinces, which changed in 2016 going from a total of 8 to a total of 4 (see Legge Regionale 4 Febbraio 2016 n.2). 
+4. D4 makes arbitrary use of uppercase and lowercase, unclear semantic FAM_INT_YES, FAM_NO_ELSE, FAM_NO_USE, FAM_NO_EQUI, FAM_NO_COST, FAM_NO_SKIL, FAM_NO_SEC, FAM_NO_BROAD, FAM_NO_OTH
+
+5. D5 makes use of integer values for indicating Comune, Provincia, Regione without a complementary explanation. 
 
 ### 2.3 How SEBuCCI can contribute to E-Governance
 
