@@ -321,16 +321,11 @@ Our final dataset has an open licence which allows others to republish the conte
 
 ### 4.3 Technical analysis (formats, metadata, URIs, provenance)
 
-1. All MIUR datasets taken into consideration (D1, D2, D4.1 and D4.2) use the following date format: full year plus second half of following year with no white spaces or slashes between the two (e.g. 201617). This makes it difficult for machines as well as humans to clearly identify the nature of these particular pieces of data (i.e. the fact that they represent consecutive years and not year plus month if last two digits go from 1 to 12). Furthermore the datasets cover an academic year, meaning that the data do not cover the period going from e.g. January 2016 to December 2017.  
-Durations in CSV could be specified as a time interval according to the standard ISO_8601: YYYY-MM-DD/YYYY-MM-DD (e.g. 2016-09-01/2017-08-31).
+1. The datasets D1, D2, D4 and D5 were in csv format. A CSV should normally follow RFC 4180(https://tools.ietf.org/html/rfc4180), however; it is not followed most of the time. While analysing the CSV files of D1, D2 and D4, we have realized that each row end with ,, which does not suit to the CSV format. Additionally, the last element of each row in  the file of D5, one double-quote is missing.
 
 2. None of the datasets was published in RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
-```xml
-<MIUR:MOTIVAZIONEPUNTEGGIOSCUOLA xml:lang="sl">
-	[description in Slovenian]
-</MIUR:MOTIVAZIONEPUNTEGGIOSCUOLA>
-```
+
 
 3. The XML/RDF version of D1 and D2 makes an incorrect use of namespaces and ontologies, which are declared but not used.
 
