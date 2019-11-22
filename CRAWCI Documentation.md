@@ -13,8 +13,20 @@ If labour market conditions are related in an important way to crime, or individ
 
 ## 2. Application scenario
 
-CRAWCI aligns data from different sources in order to gain knowledge about the existence of the cultural institutions throughout italiab regions. The project looks at the relationship between the number of cultural institutions, digitalization and the number of crime reports by regions in Italy.
-The project aligns 1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km.  The result will be a presented as an explorable map which allows users to visualize all the data about regions.
+CRAWCI aligns data from different sources in order to gain knowledge about the existence of the cultural institutions throughout italiab regions. The project looks at the relationship between the number of cultural institutions, digitalization, average salary and the number of crime reports by region in Italy.
+The project aligns 1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km. 
+
+**The aims of CRAWCI Project:**
+1. Creating a new mashup (final dataset) by aligning acquired datasets.
+2. Producing the final dataset as a 5 star Open Data, following the principles of suggested a 5-star deployment scheme:
+
+-make your data available on the Web under an open license.
+-make it available as structured data (machine readable data) (e.g. Excel)
+-make it available in a non-proprietary open format (CSV)
+-Use a single data model to publish data on the Web: RDF 
+-link RDF to provide context
+
+3. Visualising the result by creating explorable and clickable map.
 
 ### 3. Original datasets and mushup dataset
 
@@ -245,10 +257,6 @@ This section considers the necessary requirements, established according to the 
 5. D5 makes use of integer values for indicating Comune, Provincia, Regione without a complementary explanation. 
 
 ### 5. Ethical-legal analysis
-
-
-
-## 3. Original datasets and mashup
 ## Legal checklist
 
 Legal analysis is necessary to ensure sustainability of the data production and publication process over time and to create a balanced service that respects the public function and the rights of individuals. 
@@ -294,46 +302,8 @@ Legal analysis is necessary to ensure sustainability of the data production and 
 | |6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?|/|/|/|/|/|/|
 
 
-
-### 4.2 Juridical and ethical analysis (privacy, licenses, purposes, etc.)
-
-#### Privacy
-
-Although it does not contain any direct reference to natural persons (e.g. name, address, driving license, detailed physical description), D1 includes indirect information from which it could still be possible to trace the individuals, in this case **minors**, referenced. 
-
-This is does not comply with different Italian acts and laws:
-
-- [DECRETO DEL PRESIDENTE DELLA REPUBBLICA 24 giugno 1998, n. 249](http://www.gazzettaufficiale.it/eli/id/1998/07/29/098G0305/sg) In particular art.2 comma 2: "La  comunita'  scolastica  promuove  la solidarieta' tra i suoi
-componenti e tutela il diritto dello studente alla riservatezza." and art.2 comma 7: "Gli  studenti  stranieri  hanno  diritto al rispetto della vita culturale  e  religiosa  della  comunita' alla quale appartengono. La scuola  promuove e favorisce iniziative volte alla accoglienza e alla tutela  della loro lingua e cultura e alla realizzazione di attivita' interculturali."
-
-- [DECRETO LEGISLATIVO 30 giugno 2003, n. 196](http://www.gazzettaufficiale.it/eli/id/2003/07/29/003G0218/sg) Art. 50 comma 1: "1. Il divieto di cui all'articolo 13 del decreto del Presidente della Repubblica 22 settembre
-1988, n. 448, di pubblicazione e divulgazione con qualsiasi mezzo di notizie o immagini
-idonee a consentire l'identificazione di un minore si osserva anche in caso di
-coinvolgimento a qualunque titolo del minore in procedimenti giudiziari in **materie diverse
-da quella penale.**"
-
-Some significant examples are:
-
-* "[...] come nella classe dove essendoci un alunno affetto da ipoacusia; tutta la classe ha voluto integrare il proprio curriculum con l'apprendimento del LIS (linguaggio dei segni) supportati dall'assistente alla comunicazione."
-* "Nell'anno scolastico in corso sono stati sospesi due alunni della scuola primaria per lesioni ai compagni."
-* "Le rarissime situazioni nelle quali si evidenzia l'assoluta necessita' di 'ripetere l'anno' (quest'anno un alunno diversamente abile di quinta; lo scorso anno due alunni Rom; inseriti solo a meta' anno in quinta; che finalmente avevano cominciato venire a scuola volentieri!)"
-* "La scarsa capacita' di concentrazione dei ragazzi e l'assenza delle famiglie; poco inclini ad alzare la voce quando e' necessario; portano al risultato che i ragazzi non ascoltano; a volte non riescono neanche a rimanere seduti al banco."
-* "Nel corrente anno scolastico nel nostro istituto ci sono stati solo due alunni non ammessi: un alunno straniero che non ha praticamente frequentato e un altro che non ha raggiunto gli obiettivi minimi previsti."
-* "Nel presente anno scolastico non sono stati ammessi alla classe successiva due alunni della scuola primaria [...]. La motivazione delle non ammissioni si puo' riassumere nei seguenti punti: mancato raggiungimento degli obiettivi minimi programmati assenze (non giustificate da un valido motivo) oltre il limite previsto a livello normativo"
-* "Se si esclude un'alunna straniera che si e' ritirata per tornare in Romania (a.s. 2015/16), tutti gli alunni della Scuola primaria negli ultimi due anni scolastici sono stati ammessi alla classe successiva."
-* "Solo un'alunna delle nostre classi quinte dell'a.s. 2015/16 non e' stata ammessa alla classe successiva nella scuola secondaria di primo grado nel corrente anno scolastico."
-* "1 alunna disabile per fermo pedagogico e 4 trasferiti a.s. 2014/15"
-
-We propose three possible solutions:
-1. Remove all free-text explanations for school self-evaluation;
-2. Provide schools with pre-compiled questionnaire in place of guidelines;
-3. Check text semi-automatically before publication (most ideal in order not to loose interesting information, but also most expensive).
-
 #### Licenses
 
-D1, D2, D4.1 and D4.2 (MIUR) are licensed under the Italian Open Data License (IODL) v2.0, which is very similar to a CC-BY 4.0. Each dataset is accompanied by a clear license declaration. However, the whole website is covered by a "All rights reserved" copyright statement, which does not explicitly mentions the exclusion of the contents accompanied by a IODL 2.0 license. 
-
-The metadata of D3 (MiBACT) do not specify a license e.g. by using the property `dcterms:license` (see http://dati.beniculturali.it/lodview/resource/datasetLuoghiDellaCultura.html). The website footer includes a license for all website contents (CC-BY-SA-3.0.) and points to a separate webpage which lists exceptions, among which is our "Luoghi culturali" dataset, licensed under a CC-BY 3.0.
 
 ### 4.3 Technical analysis (formats, metadata, URIs, provenance)
 
