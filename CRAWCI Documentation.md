@@ -178,10 +178,10 @@ def Aligner(cleaned-data1,cleaned-data2,outputdata,area):
 
 This section considers the necessary requirements, established according to the "Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/bozza/aspettiorg.html#qualita-dei-dati). The four characteristics to control the level of information quality are:
 
-accuracy (syntactic and semantic) - the data, and its attributes, correctly represent the real value of the concept or event to which it refers;
-coherence - the data, and its attributes, is not contradictory to other data regarding the context of use of the owner administration;
-completeness - the data is exhaustive for all its expected values and with respect to the relative entities (sources) that contribute to the definition of the procedure;
-currentness (or timeliness of updating) - the data, and its attributes, is of the "right time" (it is updated) with respect to the procedure to which it refers.
+**accuracy** (syntactic and semantic) - the data, and its attributes, correctly represent the real value of the concept or event to which it refers;
+**coherence** - the data, and its attributes, is not contradictory to other data regarding the context of use of the owner administration;
+**completeness** - the data is exhaustive for all its expected values and with respect to the relative entities (sources) that contribute to the definition of the procedure;
+**currentness** (or timeliness of updating) - the data, and its attributes, is of the "right time" (it is updated) with respect to the procedure to which it refers.
 
 <table>      
 <col width="20%" />      
@@ -294,149 +294,6 @@ Legal analysis is necessary to ensure sustainability of the data production and 
 | |6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?|/|/|/|/|/|/|
 
 
-
-### D1
-
-MIUR, 13 February 2018, Autovalutazione della scuola sezione Esiti. Scuola statale, electronic dataset, Portale Unico dei Dati della Scuola, viewed 11 November 2018, http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0500VALUTAZIONE_ESITI_STA  
-
-License: https://www.dati.gov.it/content/italian-open-data-license-v20
-
-Content description: This dataset lists all Italian institutes by institute code and stores for each institute self-evaluations for every criterion of the Esiti section ([see 2.1](https://github.com/sebucci/sebucci.github.io/blob/master/readme.md#21-school-self-evaluation))
-
-### D2
-
-MIUR, 27 September 2018, Certificazioni e documenti relativi alla sicurezza, electronic dataset, Portale Unico dei Dati della Scuola, viewed 11 November 2018, http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0280EDICONSICUREZZASTA
-
-License: https://www.dati.gov.it/content/italian-open-data-license-v20
-
-Content description: This dataset provides the list of building safety certifications for each school in Italy. 
-
-### D3
-
-MiBACT, 10 November 2018 (modified), Luoghi della cultura, electronic dataset, Gli Open Data, viewed 11 November 2018, http://dati.beniculturali.it/datasets/luoghi-della-cultura  
-
-License: https://creativecommons.org/licenses/by/3.0/
-
-Content description: This dataset lists cultural institutions in Italy providing information about their location, identification and services.
-
-Note: this dataset is available as RDF only and it is used in SEBuCCI just for visualization purposes. In order to extract the data we used the [SPARQL endpoint](http://dati.beniculturali.it/sparql) of dati.beniculturali.it with the following query:
-
-```sparql
-select * where {
-
-select distinct ?s as ?subject
-
-?Nome_Istituzionale
-?Descrizione
-?Latitudine
-?Longitudine
-?Disciplina
-?Indirizzo
-?Codice_postale
-?Comune
-?Provincia
-
-where {
-
-graph <http://dati.beniculturali.it/mibact/luoghi> {
-
-?s rdf:type cis:CulturalInstituteOrSite ;
-cis:institutionalName ?Nome_Istituzionale .
-optional { ?s cis:description ?Descrizione }
-optional { ?s geo:lat ?Latitudine }
-optional { ?s geo:long ?Longitudine }
-optional { ?s cis:hasDiscipline [cis:name ?Disciplina] }
-optional {
-?s cis:hasSite [cis:hasAddress ?address ] .
-optional { ?address cis:fullAddress ?Indirizzo   }
-optional { ?address cis:postCode ?Codice_postale }
-optional { ?address cis:postName ?Comune         }
-optional { ?address cis:adminUnitL2 ?Provincia   }
-}
-}
-}
-}
-```
-### D4.1 (auxiliary dataset)
-
-MIUR, 13 February 2018, Rubrica di valutazione utilizzata dalla scuola per l'autovalutazione, electronic dataset, Portale Unico dei Dati della Scuola, viewed 11 November 2018, http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0540RUBRICA_VAL
-
-License: https://www.dati.gov.it/content/italian-open-data-license-v20
-
-Content description: This dataset is an explicatory guide that refers to the criteria used in D1. It is pre-compiled by MIUR and it gives our contextual information about every criterion. 
-
-### D4.2 (auxiliary dataset)
-
-MIUR, 22 June 2018, Informazioni anagrafiche scuole statali, electronic dataset, Portale Unico dei Dati della Scuola, viewed 11 November 2018, http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0400SCUANAGRAFESTAT
-
-License: https://www.dati.gov.it/content/italian-open-data-license-v20
-
-Content description: This dataset lists the location of each school building according to the geographical area (north, south, isles), region, province and municipality.
-
-### D4.3 (auxiliary dataset)
-
-ISTAT, 01 February 2018, Principali statistiche geografiche sui comuni - Superfici delle unità amministrative, Istat Archive (also accessible through SPARQL endpoint on ISTAT open data portal), https://www.istat.it/it/archivio/156224
-
-License: https://www.istat.it/it/note-legali
-
-Content description: With the purpose of describing the geographical characteristics of the Italian territory, ISTAT shares elaborations based on data collected from surveys and other sources. This dataset reports the surface of Italy (in km^2 and ha), alongside with its regions, provinces and municipalities.
-
-### D5 (mashup)
-
-Dataset: https://github.com/sebucci/sebucci.github.io/blob/master/dataset/dataset.rdf  
-Metadata: https://github.com/sebucci/sebucci.github.io/blob/master/metadati/metadata.ttl
-
-Content description: The dataset lists all Italian schools. For each school the following attributes are given: region, province, institute, name, address, buildings, evaluation.
-For each school building the dataset lists the available safety certificates.
-
-Methodology: The mashup of datasets D1, D2, D4.2 was done semi-automatically using Python scripts and the library Pandas, which required a CSV version of the datasets as an input. The script developed using Pandas was able to align D2 and D4.2 through the property "CODICESCUOLA". The newly created dataset was then aligned with D1 through the property "CODICEISTITUTO". This version of D5 (in CSV format) was named D5-alpha.
-
-Here is the Python script developed:
-```python
-import pandas as pd
-
-
-def Aligner(source1,source2,nomeoutput,campo):
-    a = pd.read_csv(source1,encoding='utf-8')
-    b = pd.read_csv(source2,encoding='utf-8')
-    aligned = a.merge(b, on=campo)
-    aligned.to_csv(nomeoutput,index=False)
-```
-
-After the semi-automatic mashup, D5-alpha was edited to remove unnecessary data such as data related to "Scuola dell'infanzia", not covered by this project. Subsequently, the headings of the CSV dataset were modified in order to facilitate further computation processes (see [below](https://github.com/sebucci/sebucci.github.io/blob/master/readme.md#51-processing-data-through-computation))
-
-Finally, the CSV dataset obtained was transformed into a RDF dataset through an [XSLT script](https://github.com/sebucci/sebucci.github.io/tree/master/script/CSVtoRDF). For each school an RDF description was created where the column headings of the CSV input dataset were converted to RDF properties. The RDF dataset obtained makes use of different ontologies, such as [DCMI Metadata Terms](http://dublincore.org/documents/dcmi-terms/), [Dublin Core Metadata Element Set](http://www.dublincore.org/documents/dces/), [GeoNames](https://www.geonames.org/), [FOAF](http://xmlns.com/foaf/spec/), [Cultural-ON (Cultural ONtology)](http://dati.beniculturali.it/lodview/cis/.html).
-
-### D6 (Revision)
-
-Dataset: https://github.com/sebucci/sebucci.github.io/blob/master/dataset/culturalinstituterevised.csv
-Metadata: https://github.com/sebucci/sebucci.github.io/blob/master/metadati/metadata.ttl
-
-We decided to make a revision on D3, that includes a correction on some UTF-8 characters that got encoded wrong and also an update on Sardinia's Provinces (problem discussed [below](https://github.com/sebucci/sebucci.github.io/blob/master/readme.md#41-information-quality)). Moreover, we took out some elements of the original dataset that we didn't need for the visualization.
-
-## 4. Datasets analysis
-
-### 4.1 Information quality
-
-In this section we make some observations related to information quality in the main datasets used in SEBuCCI (D1, D2, D3) according to the ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2017/08/03/open-data-online-linee-guida-valorizzazione-del-patrimonio-informativo-pubblico). 
-
-|  | accuracy | coherence | completeness | currentness | 
-|----|-------------------------|------------------|-------------------------|------------------|
-| D1 | No. See point 1. | No. See point 6. | No. See points 2 and 3. | Yes. |
-| D2 | No. See points 1 and 4. | Yes. | No. See points 1 and 4. | Yes. |
-| D3 | Yes. | Yes. | Yes. | No. See point 5. |
-
-1. D1 and D2 do not feature school names. Schools are indeed identified by school codes only. This made it necessary to use an auxiliary dataset (D4.2) in order to disambiguate school names.
-
-2. D1 lists school self-evaluation criteria, but does not provide any information about the meaning of such criteria. In order to fill this gap, we used an auxiliary dataset (D4.1). 
-
-3. D1 features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results. 
-
-4. D2 features ambiguous information about the situation of safety certificates. Normal values are YES or NO. However, 'Non richiesto' (Not requested) and '-' can also be found in the dataset without any accompanying explanation on their meaning.
-
-5. D3 do not feature up-to-date information for what concerns Sardinia provinces, which changed in 2016 going from a total of 8 to a total of 4 ([see Legge Regionale 4 Febbraio 2016 n.2](http://www.regione.sardegna.it/j/v/1270?s=300929&v=2&c=13906&t=1&anno)). As such, province boundaries are not up-to-date in the demo visualization.
-
-6. According to the metadata, D1 should feature school self-evaluations. However, the self-evaluations are grouped according to 'Codice istituto comprensivo' (Comprehensive school ID), instead of being listed by 'Codice scuola' (School ID). 
 
 ### 4.2 Juridical and ethical analysis (privacy, licenses, purposes, etc.)
 
