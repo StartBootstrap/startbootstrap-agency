@@ -143,6 +143,26 @@ License:
 
 Content description: This dataset includes1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km.  The result will be a presented as an explorable map which allows users to visualize all the data about regions. 
 
+Methodology: The mashup of datasets D1, D2, D4, D5 was done semi-automatically using Python scripts and the library Pandas, which required a CSV version of the datasets as an input. The developed script firstly dropped the unnecessary columns and then the datasets are aligned through the properties "Theaters", "AvarageIncome", "DifuseofInternet", "CriminalReports" and "CulturalInstitutions".
+
+Here is the Python script developed(an example for one of the datasets):
+
+```
+import pandas as pd
+import numpy as np
+import csv
+df = pd.read_csv('dataset1.csv')
+df.head()
+to_drop = ['PRAF',
+           'RDPR',
+           'Data e ora inserimento']
+df.drop(to_drop, inplace=True, axis=1)
+
+df.to_csv(r'cleaned-data1.csv', index=False)
+
+
+
+```
 
 ### 4. Quality analysis of the datasets 
 
