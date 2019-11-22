@@ -16,6 +16,18 @@ If labour market conditions are related in an important way to crime, or individ
 CRAWCI aligns data from different sources in order to gain knowledge about the existence of the cultural institutions throughout italiab regions. The project looks at the relationship between the number of cultural institutions, digitalization and the number of crime reports by regions in Italy.
 The project aligns 1) the number of theaters; 2)the percentage of internet usage in families; 3) the number of crime reports; 4)the average salary; 5) The density of cultural institutions per square km.  The result will be a presented as an explorable map which allows users to visualize all the data about regions.
 
+### 2.1 How CRAWCI can contribute to E-Governance
+
+Advertisements and promotions among citizens to make an awareness on the importance of the presence of cultural institutions such as theaters where there are not available that can be deduced from the crime rate can be interesting for the municipalities.
+
+  - Increase awareness
+  - Opportunities for information sharing
+  - Inspire public participation and collaboration  in a way that enable people to both understand what their governments do and to influence its decisions
+  - Greater transparency and accountability
+  - Support innovation  in processes of governance
+  - Bring the delivery of public services to a new level
+
+
 ### 3. Original datasets and mushup dataset
 
 ### D1
