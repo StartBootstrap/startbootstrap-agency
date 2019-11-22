@@ -271,7 +271,6 @@ This section considers the necessary requirements, established according to the 
 ### 5. Ethical-legal analysis
 ## Legal checklist
 
-Legal analysis is necessary to ensure sustainability of the data production and publication process over time and to create a balanced service that respects the public function and the rights of individuals. 
 
 | | To check | D.1|  D.2 | D.3 | D4 | D5 | D6 | 
 | ----------- | --------| ------|--------|-------|---------|---------|---------|
@@ -314,7 +313,7 @@ Legal analysis is necessary to ensure sustainability of the data production and 
 | |6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?|/|/|/|/|/|/|
 
 
-#### Licenses
+### Licenses
 
 D1, D2, D3 and D4 are licensed under Creative Commons License(https://creativecommons.org/licenses/by/3.0/) – Attribution – 3.0 and D5 is licensed under the Open Data License (ODL) v2.0(https://opendatacommons.org/licenses/odbl/), which is very similar to a CC-BY 4.0. Each dataset is accompanied by a clear license declaration.The content of the website is covered by a "All rights reserved" copyright statement. 
 
@@ -325,7 +324,7 @@ Our final dataset has an open licence which allows others to republish the conte
 1. All MIUR datasets taken into consideration (D1, D2, D4.1 and D4.2) use the following date format: full year plus second half of following year with no white spaces or slashes between the two (e.g. 201617). This makes it difficult for machines as well as humans to clearly identify the nature of these particular pieces of data (i.e. the fact that they represent consecutive years and not year plus month if last two digits go from 1 to 12). Furthermore the datasets cover an academic year, meaning that the data do not cover the period going from e.g. January 2016 to December 2017.  
 Durations in CSV could be specified as a time interval according to the standard ISO_8601: YYYY-MM-DD/YYYY-MM-DD (e.g. 2016-09-01/2017-08-31).
 
-2. D1 features text in Slovenian (Slovenian schools in Friuli Venezia Giulia express their self-evaluation in Slovenian rather than Italian). Languages should be declared at least in the XML/RDF dataset as shown below.
+2. None of the datasets was published in RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
 ```xml
 <MIUR:MOTIVAZIONEPUNTEGGIOSCUOLA xml:lang="sl">
