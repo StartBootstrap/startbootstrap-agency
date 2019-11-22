@@ -20,11 +20,11 @@ The project aligns 1) the number of theaters; 2)the percentage of internet usage
 1. Creating a new mashup (final dataset) by aligning acquired datasets.
 2. Producing the final dataset as a 5 star Open Data, following the principles of suggested a 5-star deployment scheme:
 
--make your data available on the Web under an open license.
--make it available as structured data (machine readable data) (e.g. Excel)
--make it available in a non-proprietary open format (CSV)
--Use a single data model to publish data on the Web: RDF 
--link RDF to provide context
+- Make your data available on the Web under an open license.
+- Make it available as structured data (machine readable data) (e.g. Excel)
+- Make it available in a non-proprietary open format (CSV)
+- Use a single data model to publish data on the Web: RDF 
+- Link RDF to provide context
 
 3. Visualising the result by creating explorable and clickable map.
 
