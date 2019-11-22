@@ -316,6 +316,9 @@ Legal analysis is necessary to ensure sustainability of the data production and 
 
 #### Licenses
 
+D1, D2, D3 and D4 are licensed under Creative Commons License(https://creativecommons.org/licenses/by/3.0/) – Attribution – 3.0 and D5 is licensed under the Open Data License (ODL) v2.0(https://opendatacommons.org/licenses/odbl/), which is very similar to a CC-BY 4.0. Each dataset is accompanied by a clear license declaration.The content of the website is covered by a "All rights reserved" copyright statement. 
+
+Our final dataset has an open licence which allows others to republish the content or data on their own website, to derive new content or data from yours, to make money by selling products that use your content or data, to republish the content or data while charging a fee for access as long as the reusers give attribution or share-alike). Our creative work has Open Data License v2.0(https://www.dati.gov.it/content/italian-open-data-license-v20">Italian). 
 
 ### 4.3 Technical analysis (formats, metadata, URIs, provenance)
 
