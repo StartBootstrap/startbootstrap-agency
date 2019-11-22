@@ -28,6 +28,18 @@ The project aligns 1) the number of theaters; 2)the percentage of internet usage
 
 3. Visualising the result by creating explorable and clickable map.
 
+### 2.1 How CRAWCI can contribute to E-Governance
+
+Advertisements and promotions among citizens to make an awareness on the importance of the presence of cultural institutions such as theaters where there are not available that can be deduced from the crime rate can be interesting for the municipalities.
+
+  - Increase awareness
+  - Opportunities for information sharing
+  - Inspire public participation and collaboration  in a way that enable people to both understand what their governments do and to influence its decisions
+  - Greater transparency and accountability
+  - Support innovation  in processes of governance
+  - Bring the delivery of public services to a new level
+
+
 ### 3. Original datasets and mushup dataset
 
 ### D1
