@@ -145,7 +145,7 @@ Content description: This dataset includes1) the number of theaters; 2)the perce
 
 Methodology: The mashup of datasets D1, D2, D4, D5 was done semi-automatically using Python scripts and the library Pandas, which required a CSV version of the datasets as an input. The developed script firstly dropped the unnecessary columns and then the datasets are aligned through the properties "Theaters", "AvarageIncome", "DifuseofInternet", "CriminalReports" and "CulturalInstitutions".
 
-Here is the Python script developed(an example for one of the datasets):
+Here is the Python script developed to drop the columns(an example for one of the datasets):
 
 ```
 import pandas as pd
@@ -163,7 +163,17 @@ df.to_csv(r'cleaned-data1.csv', index=False)
 
 
 ```
+Here is the Python script developed to align the datasets:
+```
+import pandas as pd
 
+
+def Aligner(cleaned-data1,cleaned-data2,outputdata,area):
+    a = pd.read_csv(cleaned-data1,encoding='utf-8')
+    b = pd.read_csv(cleaned-data2,encoding='utf-8')
+    aligned = a.merge(b, on=area)
+    aligned.to_csv(outputdata,index=False)
+```
 ### 4. Quality analysis of the datasets 
 
 This section considers the necessary requirements, established according to the "Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/bozza/aspettiorg.html#qualita-dei-dati). The four characteristics to control the level of information quality are:
