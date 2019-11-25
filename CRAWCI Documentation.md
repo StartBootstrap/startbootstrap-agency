@@ -321,23 +321,23 @@ Our final dataset has an open licence which allows others to republish the conte
 
 ### 4.3 Technical analysis (formats, metadata, URIs, provenance)
 
-##**D1, D2, D4**
+###**D1, D2, D4**
 
-Datasets **D1, D2, D4** are available in English and Italian languages in multidimensional tables which users can export in .xls, .csv formats.  Default format: Comma (,) separated with codes and labels in separate columns.  The datasets can be can customised by choosing Text File format: Comma ( , ); Pipe ( | ); Tabullator.
+Datasets **D1, D2, D4** are available in English and Italian languages in multidimensional tables which users can export in **.xls, .csv** formats.  Default format: **Comma (,)** separated with codes and labels in separate columns.  The datasets can be can customised by choosing Text File format: **Comma ( , ); Pipe ( | ); Tabullator.**
 
 A CSV should normally follow RFC 4180(https://tools.ietf.org/html/rfc4180), however, it is not followed most of the time. While analysing the CSV files of D1, D2 and D4, we have realized that each row end with ,, which does not suit to the CSV format. 
 
 None of the datasets **D1, D2, D4**  was published in .RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
-Overall, the data is very precise and follows a well-defined structure. The only detected defect - Datasets D1, D2, D4 make arbitrary use of uppercase and lowercase. 
+Overall, the data is very precise and follows a well-defined structure. The only detected defect - Datasets **D1, D2, D4** make arbitrary use of uppercase and lowercase. 
 
-##**D3** 
+###**D3** 
 
-The D3 Dataset сan be displayed in tabular format, accessed directly through the URL or downloaded in the following distribution formats: rdf,turle,json.
+The **D3** Dataset сan be displayed in tabular format, accessed directly through the URL or downloaded in the following distribution formats: rdf,turle,json.
 
-##**D5** 
+###**D5** 
 
-The original D5 can be downloaded as .XLSX, .XML, .JSON,  or can be exported as CSV which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
+The original D5 can be downloaded as **.XLSX, .XML, .JSON,**  or can be exported as **CSV** which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
 
 Overall, the data is very precise and follows a well-defined structure. The only detected defect - dataset D5 makes arbitrary use of uppercase and lowercase. 
 
