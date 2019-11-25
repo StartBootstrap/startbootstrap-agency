@@ -321,18 +321,25 @@ Our final dataset has an open licence which allows others to republish the conte
 
 ### 4.3 Technical analysis (formats, metadata, URIs, provenance)
 
-1. All MIUR datasets taken into consideration (D1, D2, D4.1 and D4.2) use the following date format: full year plus second half of following year with no white spaces or slashes between the two (e.g. 201617). This makes it difficult for machines as well as humans to clearly identify the nature of these particular pieces of data (i.e. the fact that they represent consecutive years and not year plus month if last two digits go from 1 to 12). Furthermore the datasets cover an academic year, meaning that the data do not cover the period going from e.g. January 2016 to December 2017.  
-Durations in CSV could be specified as a time interval according to the standard ISO_8601: YYYY-MM-DD/YYYY-MM-DD (e.g. 2016-09-01/2017-08-31).
+##**D1, D2, D4**
 
-2. None of the datasets was published in RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
+Datasets **D1, D2, D4** are available in English and Italian languages in multidimensional tables which users can export in .xls, .csv formats.  Default format: Comma (,) separated with codes and labels in separate columns.  The datasets can be can customised by choosing Text File format: Comma ( , ); Pipe ( | ); Tabullator.
 
-```xml
-<MIUR:MOTIVAZIONEPUNTEGGIOSCUOLA xml:lang="sl">
-	[description in Slovenian]
-</MIUR:MOTIVAZIONEPUNTEGGIOSCUOLA>
-```
+A CSV should normally follow RFC 4180(https://tools.ietf.org/html/rfc4180), however, it is not followed most of the time. While analysing the CSV files of D1, D2 and D4, we have realized that each row end with ,, which does not suit to the CSV format. 
 
-3. The XML/RDF version of D1 and D2 makes an incorrect use of namespaces and ontologies, which are declared but not used.
+None of the datasets **D1, D2, D4**  was published in .RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
+
+Overall, the data is very precise and follows a well-defined structure. The only detected defect - Datasets D1, D2, D4 make arbitrary use of uppercase and lowercase. 
+
+##**D3** 
+
+The D3 Dataset сan be displayed in tabular format, accessed directly through the URL or downloaded in the following distribution formats: rdf,turle,json.
+
+##**D5** 
+
+The original D5 can be downloaded as .XLSX, .XML, .JSON,  or can be exported as CSV which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
+
+Overall, the data is very precise and follows a well-defined structure. The only detected defect - dataset D5 makes arbitrary use of uppercase and lowercase. 
 
 4. In the MIUR page of the csv D1 dataset there is no indication about the encoding of the file (if it's ASCII, ISO-8859-1), despite this is encouraged by the ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2017/08/03/open-data-online-linee-guida-valorizzazione-del-patrimonio-informativo-pubblico). This problem can create various problems in the automatic computation of the data. In fact, a wrong encoding declaration during the analysis may create incorrect data results (some cells may be skipped for example). After trying multiple encodings, the only one that seemed to work without corrupting, using Python library "csv", was "utf-8-sig" ([see Python documentation about it here](https://docs.python.org/2/library/codecs.html#encodings-and-unicode)). An example of a script using that encoding can be seen in [section 5.1](https://github.com/sebucci/sebucci.github.io/blob/master/readme.md#51-data-processing)
 
