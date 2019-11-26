@@ -269,6 +269,11 @@ This section considers the necessary requirements, established according to the 
 5. D5 makes use of integer values for indicating Comune, Provincia, Regione without a complementary explanation. 
 
 ### 5. Ethical-legal analysis
+
+This analysis is designed to assess compliance with legal and ethical aspects in accordance with European, state and local regulations and compliance with good practices relating to publication in open data.
+
+The analysis pays particular attention to aspects related to privacy, licenses and interest for the purpose of creating a service that balances the public function, transparency and rights of individual citizens.
+
 ## Legal checklist
 
 
@@ -312,6 +317,8 @@ This section considers the necessary requirements, established according to the 
 | | 6.3 Did you check if the dataset for some reason can’t be indexed by the research engines (e.g. Google, Yahoo, etc.) ?|/|/|/|/|/|/|
 | |6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?|/|/|/|/|/|/|
 
+The Datasets do not include any personal information of individuals since no attributes about an individual are released. Hence, an identity cannot be inferred. What is more, date-sets are not cross-referenced and not connected between other databases and datasets. We have not identified threats related to how information can be identified and connected to specific individuals.
+
 
 ### Licenses
 
@@ -333,11 +340,11 @@ Overall, the data is very precise and follows a well-defined structure. The only
 
 ### **D3** 
 
-The **D3** Dataset сan be displayed in tabular format, accessed directly through the URL or downloaded in the following distribution formats: rdf,turle,json.
+The **D3** Dataset сan be displayed in tabular format, accessed directly through the URL or downloaded in the following distribution formats: **rdf,turle,json**.
 
 ### **D5** 
 
-The original D5 can be downloaded as **.XLSX, .XML, .JSON,**  or can be exported as **CSV** which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
+The original D5 can be downloaded as **.xlsx, .xml, .json,**  or can be exported as **CSV** which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
 
 Overall, the data is very precise and follows a well-defined structure. The only detected defect - dataset D5 makes arbitrary use of uppercase and lowercase. 
 
