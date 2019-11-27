@@ -319,7 +319,6 @@ The analysis pays particular attention to aspects related to privacy, licenses a
 
 The Datasets do not include any personal information of individuals since no attributes about an individual are released. Hence, an identity cannot be inferred. What is more, date-sets are not cross-referenced and not connected between other databases and datasets. We have not identified threats related to how information can be identified and connected to specific individuals.
 
-
 ### Licenses
 
 D1, D2, D3 and D4 are licensed under Creative Commons License(https://creativecommons.org/licenses/by/3.0/) – Attribution – 3.0 and D5 is licensed under the Open Data License (ODL) v2.0(https://opendatacommons.org/licenses/odbl/), which is very similar to a CC-BY 4.0. Each dataset is accompanied by a clear license declaration.The content of the website is covered by a "All rights reserved" copyright statement. 
@@ -345,8 +344,65 @@ The **D3** Dataset сan be displayed in tabular format, accessed directly throug
 ### **D5** 
 
 The original D5 can be downloaded as **.xlsx, .xml, .json,**  or can be exported as **CSV** which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
+2. None of the datasets was published in RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
 Overall, the data is very precise and follows a well-defined structure. The only detected defect - dataset D5 makes arbitrary use of uppercase and lowercase. 
+
+
+###CSV to RDF Conversion.
+
+# csv2rdf
+
+To convert our data we used csv2rdf which is a Java based application, which relies on Apache Jena to convert tabular data to RDF. 
+
+The binaries can be obtained by compiling the source code with MAVEN from command line, i.e.
+
+## Compiling
+
+```bash 
+mvn clean install
+```
+Once the source code have been compiled a JAR named stlab.csv2rdf-1.0.jar is available in the target folder.
+
+## Usage
+
+The JAR stlab.csv2rdf-1.0.jar can be used as a command line tool.
+The synopsis is the following
+
+```bash
+java -jar stlab.csv2rdf-1.0.jar [OPTIONS] CSV_FILE
+```
+
+The options available are the following:
+
+* -s,--separator &lt;char&gt;   
+The character used as separator within the CSV file (e.g. , or ;).
+
+* -m,--mapping &lt;file&gt;   
+ A file providing the mapping between CSV columns and the properties of our target CRAWCI ontology.
+    
+ SThe file  contains a set of key=value lines, where each key represents a column position in the source CSV (the counting of positions starts from index 1) and each value is a pair property-datatype composed of property URI form a target ontology or vocabulary and a datatype URI. The property-datatype pairs are separated by the character '>'. The datatype is optional, hence it is possible to provide the property URI only without any datatype. We remark that if no datatype is provided, then the tool tries to infer the more appropriate datatype for the value to transform to RDF. 
+
+ Additionally, the following file, named *mapping* and containing key=property>datatype pairs, define the mapping to be used in order to generate the properties.
+ ```java
+1. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references
+2. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment_score
+3. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score
+4. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment_score
+5. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score
+6. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song
+7. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artis
+8. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_year
+9. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics
+ ``` 
+ 
+ Hence, the following line provides the example about how to use the tool from command line in order to obtain RDF from CSV and saving its content into a file named *musicians.ttl*. We suppose that the input CSV is actually a tab-separated file.
+ ```bash
+ java -jar stlab.csv2rdf-1.0.jar -s '\t' -m mapping -o crawci.ttl cleandata.csv
+ ```
+ 
+ The execution of the tool with the arguments as provided produced the following RDF serialised by using the TURTLE syntax.
+ 
 
 4. In the MIUR page of the csv D1 dataset there is no indication about the encoding of the file (if it's ASCII, ISO-8859-1), despite this is encouraged by the ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2017/08/03/open-data-online-linee-guida-valorizzazione-del-patrimonio-informativo-pubblico). This problem can create various problems in the automatic computation of the data. In fact, a wrong encoding declaration during the analysis may create incorrect data results (some cells may be skipped for example). After trying multiple encodings, the only one that seemed to work without corrupting, using Python library "csv", was "utf-8-sig" ([see Python documentation about it here](https://docs.python.org/2/library/codecs.html#encodings-and-unicode)). An example of a script using that encoding can be seen in [section 5.1](https://github.com/sebucci/sebucci.github.io/blob/master/readme.md#51-data-processing)
 
