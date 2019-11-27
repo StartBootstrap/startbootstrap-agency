@@ -349,9 +349,9 @@ The original D5 can be downloaded as **.xlsx, .xml, .json,**  or can be exported
 Overall, the data is very precise and follows a well-defined structure. The only detected defect - dataset D5 makes arbitrary use of uppercase and lowercase. 
 
 
-###CSV to RDF Conversion.
+# CSV to RDF Conversion.
 
-# csv2rdf
+### csv2rdf
 
 To convert our data we used csv2rdf which is a Java based application, which relies on Apache Jena to convert tabular data to RDF. 
 
@@ -381,9 +381,10 @@ The character used as separator within the CSV file (e.g. , or ;).
 * -m,--mapping &lt;file&gt;   
  A file providing the mapping between CSV columns and the properties of our target CRAWCI ontology.
     
- SThe file  contains a set of key=value lines, where each key represents a column position in the source CSV (the counting of positions starts from index 1) and each value is a pair property-datatype composed of property URI form a target ontology or vocabulary and a datatype URI. The property-datatype pairs are separated by the character '>'. The datatype is optional, hence it is possible to provide the property URI only without any datatype. We remark that if no datatype is provided, then the tool tries to infer the more appropriate datatype for the value to transform to RDF. 
+ The file  contains a set of key=value lines, where each key represents a column position in the source CSV (the counting of positions starts from index 1) and each value is a pair property-datatype composed of property URI form a target ontology or vocabulary and a datatype URI. The property-datatype pairs are separated by the character '>'. The datatype is optional, hence it is possible to provide the property URI only without any datatype. We remark that if no datatype is provided, then the tool tries to infer the more appropriate datatype for the value to transform to RDF. 
 
  Additionally, the following file, named *mapping* and containing key=property>datatype pairs, define the mapping to be used in order to generate the properties.
+ 
  ```java
 1. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references
 2. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment_score
