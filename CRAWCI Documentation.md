@@ -353,7 +353,7 @@ Overall, the data is very precise and follows a well-defined structure. The only
 
 ### csv2rdf
 
-To convert our data we used csv2rdf which is a Java based application, which relies on Apache Jena to convert tabular data to RDF. 
+To convert our data we used csv2rdf which is a Java based application, which relies on Apache Jena to convert tabular data to RDF. https://github.com/anuzzolese/csv2rdf/blob/master/README.md
 
 The binaries can be obtained by compiling the source code with MAVEN from command line, i.e.
 
@@ -386,15 +386,17 @@ The character used as separator within the CSV file (e.g. , or ;).
  Additionally, the following file, named *mapping* and containing key=property>datatype pairs, define the mapping to be used in order to generate the properties.
  
  ```java
-1. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#references
-2. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_negative_sentiment_score
-3. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_neutral_sentiment_score
-4. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_positive_sentiment_score
-5. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_compound_sentiment_score
-6. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_song
-7. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#Music_Artis
-8. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_release_year
-9. http://www.semanticweb.org/lisa/ontologies/2019/7/rap#has_lyrics
+1. http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region
+2. http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasTheater
+3. http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasAverageSalary
+4. http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasInternetDifusion
+5. http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasCriminalReport
+6. http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasDensity
+7. http://www.semanticweb.org/simayguzel/crawci#hasCrimeLevel
+9. http://www.semanticweb.org/simayguzel/crawci#hasInternetDiffusionLevel
+10.http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasNofTheater
+11.http://www.semanticweb.org/simayguzel/crawci#hasSalaryLevel
+
  ``` 
  
  Hence, the following line provides the example about how to use the tool from command line in order to obtain RDF from CSV and saving its content into a file named *musicians.ttl*. We suppose that the input CSV is actually a tab-separated file.
