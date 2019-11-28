@@ -1,0 +1,2857 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crawci: <http://www.semanticweb.org/simayguzel/crawci#> .
+@prefix crawci: <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#> .
+
+<http://www.semanticweb.org/simayguzel/crawci> a owl:Ontology .
+<http://www.semanticweb.org/simayguzel/crawci#correlatedWith>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet>
+   )
+  ] .
+
+<http://www.semanticweb.org/simayguzel/crawci#deduce>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.semanticweb.org/simayguzel/crawci#deducedFrom> ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/crawci#Statistics> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/crawci#Correlation> .
+
+<http://www.semanticweb.org/simayguzel/crawci#deducedFrom>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/crawci#Correlation> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/crawci#Statistics> .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasDensity>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasInstitution>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.semanticweb.org/simayguzel/crawci#locatedIn> ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Theater> .
+
+<http://www.semanticweb.org/simayguzel/crawci#locatedIn>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Theater> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> .
+
+<http://www.semanticweb.org/simayguzel/crawci#representsAverageSalaryIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasAverageSalary> ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> .
+
+<http://www.semanticweb.org/simayguzel/crawci#representsCriminalReportIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasCriminalReport> ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> .
+
+<http://www.semanticweb.org/simayguzel/crawci#representsDensityIn>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> .
+
+<http://www.semanticweb.org/simayguzel/crawci#representsInternetDifusionIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasInternetDifusion> ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> .
+
+<http://www.semanticweb.org/simayguzel/crawci#representsNofTheaterIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasNofTheater> ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/crawci#TotalTheater> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasAverageSalary>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasCriminalReport>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasInternetDifusion>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasNofTheater>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range <http://www.semanticweb.org/simayguzel/crawci#TotalTheater> .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasCrimeLevel>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range xsd:string .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasInternetDiffusionLevel>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range xsd:string .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasPopulation>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country> ;
+  rdfs:range xsd:string .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasSalaryLevel>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range xsd:string .
+
+<http://www.semanticweb.org/simayguzel/crawci#hasTheatresNLevel>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  rdfs:range xsd:string .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country> ;
+  rdfs:range rdfs:Literal .
+
+<http://www.semanticweb.org/simayguzel/crawci#Correlation>
+  a owl:Class ;
+  owl:disjointWith <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country> ;
+  rdfs:comment "Correlation coefficients are used in statistics to measure how strong a relationship is between two variables. The formulas return a value between -1(negative correlation) and 1(positive correlation)" .
+
+<http://www.semanticweb.org/simayguzel/crawci#NegativeCorrelation>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Correlation> ;
+  owl:disjointWith <http://www.semanticweb.org/simayguzel/crawci#PositiveCorrelation> .
+
+<http://www.semanticweb.org/simayguzel/crawci#PositiveCorrelation>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Correlation> .
+
+<http://www.semanticweb.org/simayguzel/crawci#Statistics>
+  a owl:Class ;
+  rdfs:comment "Statistics is the discipline that concerns the collection, organization, displaying, analysis, interpretation and presentation of data." .
+
+<http://www.semanticweb.org/simayguzel/crawci#TotalTheater>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Statistics> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Statistics> ;
+  owl:disjointWith [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet>
+   )
+  ] ;
+  rdfs:comment "It provides data about average annual income of families in eur per region."^^xsd:string .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country> a owl:Class .
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Statistics> ;
+  owl:disjointWith [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet>
+   )
+  ] ;
+  rdfs:comment "It provides information on number of  crimes reported by the police to the judicial authority." .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Statistics> ;
+  owl:disjointWith [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet>
+   )
+  ] ;
+  rdfs:comment "It shows the number of cultural institutions divided by square km." .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/crawci#Statistics> ;
+  owl:disjointWith [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution>
+   )
+  ] .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Theater>
+  a owl:Class ;
+  owl:disjointWith [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.semanticweb.org/simayguzel/crawci#Correlation>
+     <http://www.semanticweb.org/simayguzel/crawci#Statistics>
+     <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country>
+   )
+  ] .
+
+<http://www.semanticweb.org/simayguzel/crawci#Agorà>
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Aleph
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AlfaTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:Alfieri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:Ambra
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:Amphiteatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:Anfiteatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:AnfiteatroCavaDiNord-Est
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:AnfiteatroComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:AnfiteatroDelParco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:AnfiteatroDellaPace
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:AnfiteatroDelleFonti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:AnfiteatroDiAliano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:AnfiteatroDiCapoColonna
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:AnfiteatroFabrizioDeAndrè
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:AnfiteatroLungomarePietreNere
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:AnfiteatroPiazzaAurora
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:AnfiteatroVillaComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:Anfitrione
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:AngeloMasini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:AnsitzFreienfeld a owl:NamedIndividual .
+crawci:AnticoTeatroSacco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:Arena
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:ArenaDelloStretto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:ArenaForlivese
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:ArenaMontecroci
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:ArenaParcoGioghiTorre
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:ArenaSferisterio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:Artè
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:AssociazioneHarpago
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:Astra
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Auditorium
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:AuditoriumA.Zanon
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:AuditoriumArcangeloCorelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:AuditoriumBettolini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumBiblioteca
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:AuditoriumDeiFratiStellati
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:AuditoriumDelleClarisse
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:AuditoriumDiMilano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumGianniVersace
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:AuditoriumGiovanBattistaViotti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:AuditoriumGiovanniTestori
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumIPSAA
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:AuditoriumLuigiCandoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:AuditoriumMarcoSimoncelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:AuditoriumMarioDelMonaco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:AuditoriumMirellaUrbani
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:AuditoriumPaccagnini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumPaganini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:AuditoriumRAIDiViaDellaConciliazione
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:AuditoriumSanFedele
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumScolastico
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:AulaMagnaDelSeminario
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Binario7
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CaffèTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CasaDellaCulturaG.DeRada
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:CascinaCommenda
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Cassero
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:CentroCivico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:CentroCongressi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:CentroCulturaleAnnalenaTonelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:CentroCulturaleDelleGrazie
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:CentroCulturaleSanGiorgio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CentroCulturaleSanGiuseppe
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:CentroEventiAdamello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CentroPolifunzionale-Cineteatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:CentroPolifunzionaleDonMilani
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:CentroSociale
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:Cine-TeatroEdelweiss
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CineTeatroBaretti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:CineTeatroCristallo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CineTeatroIDEAL
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CineTeatroNorba
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:CineTeatroSanGiuseppe
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Cinema-TeatroArlecchino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Cinema-TeatroPadriBarnabiti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Cinema-TeatroSanMassimo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Cinema-TeatroSanRocco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CinemaPatronatoDonBosco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:CinemaSantaChiara
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:CinemaTeatroAstoria
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:CinemaTeatroComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:CinemaTeatroCristallo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:CinemaTeatroGiardino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:CinemaTeatroLux
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CinemaTeatroModerno
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:CinemaTeatroSanCarlo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CinemaTeatroSanGiorgio a owl:NamedIndividual .
+crawci:CinemaTeatroSciarrone
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:CinemaTeatroSilvioPellico
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:CinemaTeatroTraiano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:CinemaTeatroVerdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:CinemateatroNuovo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CinetatroGlauco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:CineteatroArena
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:CineteatroComunaleBeniaminoJoppolo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:CineteatroSociale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:CineteatroSpadaro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:CivicoTeatroCagnoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CompagniaTeatraleTheatron
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:Dante
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:DiCostanzoMattiello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:DiegoFabbri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:DuelBeat
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:Eden
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:EttoreThesorieriTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:FantasyShow
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:FazioliConcertHall
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:FrancoZappalà
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:Friuli-VeneziaGiulia a owl:NamedIndividual .
+crawci:Garibaldi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:GiuseppeVerdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:Goldoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Greco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:GrottaSmeralda
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:GruppoMusicale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:GruppoTeatraleIComelianti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:IlBanchettoDelSultano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:IlRivellino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:IlTesoroDiLabuan
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Incantesimi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Jolly
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:KulturniDomAlbertSirk
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:LaFabbrikaDellaMusica24
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:LaFilarmonica
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:LaFonderiaSedeAterballeto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:LaLucernetta
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:LauroRossi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:MagicStage
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:Marconi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Metropolitan
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Michelucci
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:Moderno
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:MusicaAPalazzo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:NuovoPalladio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:NuovoTeatroDelleCommedie
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Obihall
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:OperaDeiPupi-TuriGrasso
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:OutOff
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:PIMSpazioScenico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:PalmiAnfiteatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:ParcoDellaGrancia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:PavoneTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:PiazzaTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:PiccoloTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:PiccoloTeatroDiCatania
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:PiccoloTeatroGiovanniPierobon
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:PiccoloTeatroGrassi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:PiccoloTeatroMauroBolognini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:PiccoloTeatroTomBenetollo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Politeama
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:PoliteamaGenovese
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:Posillipo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:ReRuggeroII
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:RidottoDelTeatroDelPopolo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:S.O.A.M.S.
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:SalaCentofiori
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:SalaCivicaItaloCalvino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SalaConferenzeTonezza
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:SalaCutu-TeatroDiSacco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:SalaDellaComunità
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SalaFelliniFaenza-Nostrarte
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:SalaJacopoDaPonte
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:SalaLux
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:SalaMusicaleACSCanale a owl:NamedIndividual .
+crawci:SalaPolivalente
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SalaPolivalenteDiCavino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:SalaSciascia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:SalaTeatroComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:SalaTeatroDonDanteRuffa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:SalaTeatroParrochiale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:SalaTeatroPolivalenteEmiliaNauredaCaldon
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:SalaTeatroSamuelBeckett
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:SalettaGramsci
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:SalettaOttavia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SaloneCanonicoLiperi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:SalonePolivalente
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SanBabila
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SanGottardo a owl:NamedIndividual .
+crawci:SanSebastiano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Selinus
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:SiparioBlu
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:SocietàDiMutuoSoccorsoEBeneficenza
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:SpazioAnarchico19Luglio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:SpazioPolaresco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:SpazioTadini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Stadttheater a owl:NamedIndividual .
+crawci:TeZe
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatrinoDeiMilleAlessiaBerardi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatrinoDiCorte
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatrinoDiVetriano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatrinoParrocchiale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:Teatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Teatro13
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroA.Genovesi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:TeatroAccademia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroAccademicoDiCastelfranco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroAdelaideRistori
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:TeatroAdolfoTanzi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroAdrianaBaratta
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroAlCastello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroAlbatros
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroAlcuni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroAlloScalo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroAltrove
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroAmbasciatori
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroAmbraAllaGarbatella
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroAngelDalFoco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroAngeloMusco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroAnselmi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroAntonioGarau
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroArenaDelSole
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroArgotStudio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroAriston
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroArmandoCafaro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroArnaldoMomo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroArrigoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:TeatroAstra
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroAuditoriumComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroAugusteo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:TeatroAurora
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroBarbieri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroBertagnoglio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroBlu
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroBoito
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroBontempelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroBramante
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroBrancati
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroBravò
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroBrunoCasini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroBusnelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroCagnoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroCanossa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroCarani
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroCarcano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroCarignano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroCarloGoldoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroCentrale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroCinemaAntonioRosmini a owl:NamedIndividual .
+crawci:TeatroCinghio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroCiroPinsuti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroCivico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroClitunno
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroColosseo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroCommunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroComunaleA.Testoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroComunaleAccademico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroComunaleAliceZeppilli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroComunaleDiAielloCalabro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:TeatroComunaleDiCervia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroComunaleDiegoMartinelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroComunaleDozza
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroComunaleEbeStignani
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroComunaleElisabettaTurroni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroComunaleG.Verdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroComunaleGiovanniPapini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroComunaleM.S.Severino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:TeatroComunaleSOMS
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroComunaleVittorioEmanueleII
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroConcordia a owl:NamedIndividual .
+crawci:TeatroConsorziale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroCorso
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroCorteCoriano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroDadà
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroDante
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDanteAlighieri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroDeAndrè
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroDegliIndustri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDehon
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroDeiBattuti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroDeiBurattiniSanCarlino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroDeiFilodrammatici
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDeiLeggieri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDeiPupi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroDeiRassicurati
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDeiRinnovati
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDeiSatiri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroDelBuratto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDelFuoco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroDelLevante
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroDelMare
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:TeatroDelParcoTrotter
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDelPopolo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDelSilenzio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDelTre
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroDelTrionfo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroDelVigentino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDella14a
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDellaCaduta
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroDellaCometa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroDellaContraddizione
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDellaCorte
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroDellaLimonaia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDellaMaruca
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:TeatroDellaMemoria
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroDellaRocca
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroDellaTosse
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroDelleLogge
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroDemattè a owl:NamedIndividual .
+crawci:TeatroDiAsparetto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroDiCestello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDiFigura
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroDiPietraPalmintelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroDiRifredi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroDiSacroCuore
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroDiSalisano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroDiTerra
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroDiVerdura
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroDiVillaAdele
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroDiVillaDuchessaDiGalliera
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroDonBosco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroDragoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroDuse
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroE.Zuccato
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroElectra
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroEleonoraDuse
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroElfoPuccini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroErba
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroErmannoFabbri
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroErwinPiscator
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroEuropa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroExClaudia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroF.Garelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroFabbricone
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroFabrizioDeAndrè
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroFarnese
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroFellini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroFilarmonici
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroFilarmonicoComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroFrancescoStabile
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:TeatroFrancescoTorti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroFrancoBicini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroFrancoParenti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroFraschini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroGarage
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroGaribaldi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroGentile
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroGhione
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroGianBattistaVelluti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroGiovanniVerga
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroGiudittaPasta
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroGiuliaDiBarolo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroGiuseppeVerdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroGobetti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroGolden
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroGoldonetta
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroGoldoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroGrande
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroGrandinetti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:TeatroGraziaDeledda
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroGreco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:TeatroGuidoLeontini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroIlFerroviario
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroIlPiccolo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:TeatroIlSiparioStrappato
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroIncontro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroIstitutiFilippin
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroKismetOperA
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroKismetOpera
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroL.Zenucchini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroLaFenice
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroLaFiaba
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroLavagnina
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroLeCave
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroLeLaudi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroLeonardoDaVinci
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroLibero
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroLirico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroLiricoDiMilano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroLiricoGiuseppeVerdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:TeatroLivioCovi a owl:NamedIndividual .
+crawci:TeatroLolli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroLuigiRussolo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroLyrick
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroMaddalene
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroMaffioli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroManzoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroMaratti
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroMarchionneschi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroMarinoniBeneComune
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroMarrucino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:TeatroMascagni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroMecenate
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroMediterraneo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroMercantini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroMetastasio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroMillico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroMinimoGiuseppeTovini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroMisa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroModernissimo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroModerno
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroMonsignorCaproni a owl:NamedIndividual .
+crawci:TeatroMonterosa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroNiccolini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroNuovo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroOlimpico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroOratorio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroOrazioBobbio
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:TeatroPalazzo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroPanettone
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroParioli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroParrocchiale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroParrocchialeDiCastello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroParrocchialeRicci
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroParrocchialeTelve a owl:NamedIndividual .
+crawci:TeatroParvum
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroPetrarca
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroPetrolini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroPiana
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroPiccoloCavour
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroPiccoloOrologio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroPietraRosa
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroPileoDaPrata
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:TeatroPirandello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroPoliteama
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroPoliziano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroPonteAMoriano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroPrati
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroPurgatorio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroRainerum a owl:NamedIndividual .
+crawci:TeatroReGiò
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroReginaMargherita
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroRegioDiCapitanata
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroRex
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroRinaEGilbertoGovi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroRoma
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroRomano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroRossi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroRossini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroRuzante
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroS.O.C
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TeatroSMS
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroSalaFontana
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroSalaPolivalente
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroSalesiani
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroSanDomingo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroSanFedele
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:TeatroSanGenesio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroSanMarco a owl:NamedIndividual .
+crawci:TeatroSandroPertini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroSantaCroce
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroSantaValeria
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroSerpenteAureo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroSignorelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroSilvioPellico
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroSistina
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroSmeraldo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:TeatroSociale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroSociali
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroSpazioBixio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroSpazioISV
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroSpazioReno
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroSperassi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroSperimentaleLirioArena
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroStabileDeiRagazzi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroStefanoStrada
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroTangram
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TeatroTasso
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:TeatroTendo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:TeatroTrivulzio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroUgoTognazzi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroUmbertoGiordano
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:TeatroValentino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroValle
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TeatroVerdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroVerga
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroVillaComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroVilloresi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroVirginian
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroVittoria
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroVittoriaManzoni
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroYvesMontand
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TeatroZanardelli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroZigZag
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:Teatroİ
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TensostrutturaBeatoGiovanniPaoloII
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:TerrazzaDeiPopoli
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:TerrazzaSulMare
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:TestoniRagazzi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TestroDeiVarii
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:TieffeTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TurrenoTeatro
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:Vascello
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:Verdi
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:VereinshausPeterAnichSteinegg a owl:NamedIndividual .
+crawci:VillaggioEuropa
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:VirtuosiDeVenezia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:alMassimo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:cinemaTeatroInstabile
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:museo-teatroStabileDeiPupiSiciliani
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:teatroComunale
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:teatroCuminetti a owl:NamedIndividual .
+crawci:teatroDelleBalate
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:teatroDitirammu
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:teatroG.Spontini
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:teatroLibero
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:teatroNuovoSentiero
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:teatroSantaCecilia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:teatroSantaCroce a owl:NamedIndividual .
+crawci:0
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Trentino>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Valle_d'Aosta> .
+
+crawci:0.0083
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:0.0121
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:0.0125
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:0.0129
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:0.0131
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:0.0132
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise> .
+
+crawci:0.0224
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:0.0238
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:0.0246
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:0.0261
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Friuli-Venezia_Giulia> .
+
+crawci:0.0263
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:0.0265
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:0.0312
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:0.0315
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:0.0341
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:0.0413
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:0.0511
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution> ;
+  crawci:representsDensityIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:0.44787
+  a owl:NamedIndividual, crawci:PositiveCorrelation ;
+  rdfs:comment "It represents the correlation between the cultural institution and internet diffusion." .
+
+crawci:0.59963
+  a owl:NamedIndividual, crawci:PositiveCorrelation ;
+  rdfs:comment "It represents the correlation between the cultural institution and average wage" .
+
+crawci:0.82320
+  a owl:NamedIndividual, crawci:PositiveCorrelation ;
+  rdfs:comment "It represents the correlation between the cultural institution and annual criminal reports." .
+
+crawci:1
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise> .
+
+crawci:113
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:13.570
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:149.334
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:16
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:169.999
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:176.246
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:176.318
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:2
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Valle_d'Aosta> .
+
+crawci:207.885
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:21
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:222.685
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:229.630
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:23
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:25.936_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:26.852_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:27
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Friuli-Venezia_Giulia> .
+
+crawci:27.778_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:276.255
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:28
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:28.578_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:28.581_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise> .
+
+crawci:30.108
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:30.332_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:31
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:31.712_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:31.726_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:33.504_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Valle_d'Aosta> .
+
+crawci:33.620
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Trentino> .
+
+crawci:34.290_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:35.552
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Friuli-Venezia_Giulia> .
+
+crawci:35.860_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:35.866_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:36.636_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:36.687_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:37.483_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Friuli-Venezia_Giulia> .
+
+crawci:38.202_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:39.521_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:39.674_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Trentino> .
+
+crawci:4.085
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Valle_d'Aosta> .
+
+crawci:40.187_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:40.459_EURO
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary> ;
+  crawci:representsAverageSalaryIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:42
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:43
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Trentino> .
+
+crawci:43.136
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:44
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:47.067
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:47.465
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:475.194
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:50
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:59.4
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:6
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:60.6
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:61.137
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:62.4
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia> .
+
+crawci:62.7
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:63.2
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise> .
+
+crawci:64.4
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:65.2
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:66
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:67
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:69
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria> .
+
+crawci:69.1
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte> .
+
+crawci:69.4
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Valle_d'Aosta> .
+
+crawci:7
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:70
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:71.9
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:72.4
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna> .
+
+crawci:72.5
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Trentino> .
+
+crawci:72.6
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:72.9
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:73.1
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Friuli-Venezia_Giulia> .
+
+crawci:73.7
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet> ;
+  crawci:representsInternetDifusionIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:77
+  a owl:NamedIndividual, crawci:TotalTheater ;
+  crawci:representsNofTheaterIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:79.898
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:8.205
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport> ;
+  crawci:representsCriminalReportIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise> .
+
+crawci:Accademiad'ArteDrammaticaDellaCalabria
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria> .
+
+crawci:AiaTaumastica-Torredell?Acquedotto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Angolodell'Arte
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:AuditoriumSant'Agostino
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo> .
+
+crawci:AuditoriumUnitàd'Italia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise> .
+
+crawci:BEATScuolad'Arte
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:CabaretPort'Alba
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania> .
+
+crawci:Cittàdell'Utopia
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata> .
+
+crawci:FrancePre?eren
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Friuli-VeneziaGiulia .
+
+crawci:L'Ordigno
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Teatrinoall'aperto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Teatrinod'Arco
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroBiagiD'Antona
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroCielod'Alcamo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:TeatroDel'900
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:TeatroGabrieleD'Annunzio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:TeatroSant'Andrea
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:TeatroSant'Ermete a owl:NamedIndividual .
+crawci:Teatroall'aperto
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna>, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia> .
+
+crawci:Teatroall'apertoBusoDelGiaso
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto> .
+
+crawci:Teatroall'apertoLicinium
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia> .
+
+crawci:Teatrodell'AccademiaDeiRozzi
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Teatrodell'Angelo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:Teatrodell'Antella
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Teatrodell'Aquila
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche> .
+
+crawci:Teatrodell'Olivo
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana> .
+
+crawci:Teatrodell'Orologio
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+crawci:Teatrodell'Ortica
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria> .
+
+crawci:Teatrodell'Osservanza
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna> .
+
+crawci:Teatrodell'Unione
+  a owl:NamedIndividual ;
+  crawci:locatedIn <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio> .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo>
+  a owl:NamedIndividual, <http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region> ;
+  crawci:hasDensity crawci:0.0224 ;
+  crawci:hasAverageSalary crawci:31.712_EURO ;
+  crawci:hasCriminalReport crawci:43.136 ;
+  crawci:hasInternetDifusion crawci:70 ;
+  crawci:hasNofTheater crawci:7 ;
+  crawci:hasPopulation "1,315,196" .
+
+crawci:Basilicata
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0083 ;
+  crawci:hasAverageSalary crawci:28.578_EURO ;
+  crawci:hasCriminalReport crawci:13.570 ;
+  crawci:hasInternetDifusion crawci:62.7 ;
+  crawci:hasNofTheater crawci:6 .
+
+crawci:Calabria
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0132 ;
+  crawci:hasAverageSalary crawci:26.852_EURO ;
+  crawci:hasCriminalReport crawci:61.137 ;
+  crawci:hasInternetDifusion crawci:59.4 ;
+  crawci:hasNofTheater crawci:27 ;
+  crawci:hasPopulation "1,956,687" .
+
+crawci:Campania
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0263 ;
+  crawci:hasAverageSalary crawci:27.778_EURO ;
+  crawci:hasCriminalReport crawci:222.685 ;
+  crawci:hasInternetDifusion crawci:64.4 ;
+  crawci:hasPopulation "5,826,860" .
+
+crawci:Emilia-Romagna
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0265 ;
+  crawci:hasAverageSalary crawci:40.187_EURO ;
+  crawci:hasCriminalReport crawci:229.630 ;
+  crawci:hasInternetDifusion crawci:71.9 ;
+  crawci:hasNofTheater crawci:67 ;
+  crawci:hasPopulation "4,452,629" .
+
+crawci:Friuli-Venezia_Giulia
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0261 ;
+  crawci:hasAverageSalary crawci:37.483_EURO ;
+  crawci:hasCriminalReport crawci:35.552 ;
+  crawci:hasInternetDifusion crawci:73.1 ;
+  crawci:hasNofTheater crawci:27 ;
+  crawci:hasPopulation "1,215,538" .
+
+crawci:Italy
+  a owl:NamedIndividual, crawci:Country ;
+  crawci:hasName ""^^rdfs:Literal .
+
+crawci:Lazio
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0312 ;
+  crawci:hasAverageSalary crawci:36.636_EURO ;
+  crawci:hasCriminalReport crawci:276.255 ;
+  crawci:hasInternetDifusion crawci:72.9 ;
+  crawci:hasNofTheater crawci:42 ;
+  crawci:hasPopulation "5,896,693" .
+
+crawci:Liguria
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0511 ;
+  crawci:hasAverageSalary crawci:35.866_EURO ;
+  crawci:hasCriminalReport crawci:79.898 ;
+  crawci:hasInternetDifusion crawci:65.2 ;
+  crawci:hasNofTheater crawci:23 ;
+  crawci:hasPopulation "1,556,981" .
+
+crawci:Lombardia
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0238 ;
+  crawci:hasAverageSalary crawci:40.459_EURO ;
+  crawci:hasCriminalReport crawci:475.194 ;
+  crawci:hasInternetDifusion crawci:73.7 ;
+  crawci:hasNofTheater crawci:113 ;
+  crawci:hasPopulation "10,036,258" .
+
+crawci:Marche
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0413 ;
+  crawci:hasAverageSalary crawci:36.687_EURO ;
+  crawci:hasCriminalReport crawci:47.067 ;
+  crawci:hasInternetDifusion crawci:70 ;
+  crawci:hasNofTheater crawci:31 ;
+  crawci:hasPopulation "1,531,753" .
+
+crawci:Molise
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0132 ;
+  crawci:hasAverageSalary crawci:28.581_EURO ;
+  crawci:hasCriminalReport crawci:8.205 ;
+  crawci:hasInternetDifusion crawci:63.2 ;
+  crawci:hasNofTheater crawci:1 ;
+  crawci:hasPopulation "308,493" .
+
+crawci:Piemonte
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0246 ;
+  crawci:hasAverageSalary crawci:34.290_EURO ;
+  crawci:hasCriminalReport crawci:207.885 ;
+  crawci:hasInternetDifusion crawci:69.1 ;
+  crawci:hasNofTheater crawci:44 ;
+  crawci:hasPopulation "4,375,865" .
+
+crawci:Puglia
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0129 ;
+  crawci:hasAverageSalary crawci:31.726_EURO ;
+  crawci:hasCriminalReport crawci:149.334 ;
+  crawci:hasInternetDifusion crawci:62.4 ;
+  crawci:hasNofTheater crawci:28 ;
+  crawci:hasPopulation "4,048,242" .
+
+crawci:Sardegna
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0125 ;
+  crawci:hasAverageSalary crawci:30.332_EURO ;
+  crawci:hasCriminalReport crawci:47.465 ;
+  crawci:hasInternetDifusion crawci:72.4 ;
+  crawci:hasNofTheater crawci:21 ;
+  crawci:hasPopulation "1,648,176" .
+
+crawci:Sicilia
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0121 ;
+  crawci:hasAverageSalary crawci:25.936_EURO ;
+  crawci:hasCriminalReport crawci:176.318 ;
+  crawci:hasInternetDifusion crawci:60.6 ;
+  crawci:hasNofTheater crawci:50 ;
+  crawci:hasPopulation "5,026,989" .
+
+crawci:Toscana
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0341 ;
+  crawci:hasAverageSalary crawci:38.202_EURO ;
+  crawci:hasCriminalReport crawci:176.246 ;
+  crawci:hasInternetDifusion crawci:71.9 ;
+  crawci:hasNofTheater crawci:66 ;
+  crawci:hasPopulation "3,736,968" .
+
+crawci:Trentino
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0 ;
+  crawci:hasAverageSalary crawci:39.674_EURO ;
+  crawci:hasCriminalReport crawci:33.620 ;
+  crawci:hasInternetDifusion crawci:72.5 ;
+  crawci:hasNofTheater crawci:43 ;
+  crawci:hasPopulation "1,067,648" .
+
+crawci:Umbria
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0315 ;
+  crawci:hasAverageSalary crawci:35.860_EURO ;
+  crawci:hasCriminalReport crawci:30.108 ;
+  crawci:hasInternetDifusion crawci:69 ;
+  crawci:hasNofTheater crawci:16 ;
+  crawci:hasPopulation "884,640" .
+
+crawci:Veneto
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0.0131 ;
+  crawci:hasAverageSalary crawci:39.521_EURO ;
+  crawci:hasCriminalReport crawci:169.999 ;
+  crawci:hasInternetDifusion crawci:72.6 ;
+  crawci:hasNofTheater crawci:77 ;
+  crawci:hasPopulation "4,905,037" .
+
+crawci:Valle_d'Aosta
+  a owl:NamedIndividual, crawci:Region ;
+  crawci:hasDensity crawci:0 ;
+  crawci:hasAverageSalary crawci:33.504_EURO ;
+  crawci:hasCriminalReport crawci:4.085 ;
+  crawci:hasInternetDifusion crawci:69.4 ;
+  crawci:hasNofTheater crawci:2 ;
+  crawci:hasPopulation "126,202" .
+
+<http://www.semanticweb.org/simayguzel/ontologies/2019/10/untitled-ontology-26#TeatroGregotti(Ingresso)>
+  a owl:NamedIndividual ;
+  crawci:locatedIn crawci:Sicilia .
