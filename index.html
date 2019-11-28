@@ -232,6 +232,141 @@
           <div class="col-lg-12 text-center">
             <h3 class="section-heading text-uppercase">Querying our Data</h3>
 
+            <h2 id="queries" style="text-align: center;">Queries</h2>
+<p class="lead mb-5">In this section, the information related to Hip Hop and Rap is queried by using the SPARQL language. The data is extracted from <a href="https://wiki.dbpedia.org">DBpedia</a> by using <a href="http://dbpedia.org/sparql">Virtuoso SPARQL Query Editor</a> and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.</p>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th>Question</th>
+<th>SPARQL Query</th>
+<th>Answer</th>
+</tr>
+<tr>
+<td>What regions have the high crime rate?&nbsp;</td>
+<td>
+<p class="p1">BASE &lt;http://www.semanticweb.org/simayguzel/crawci&gt;</p>
+<p class="p1">PREFIX crawci: &lt;http://www.semanticweb.org/simayguzel/crawci&gt;</p>
+<p class="p2">&nbsp;</p>
+<p class="p1">SELECT ?Region</p>
+<p class="p1">WHERE {</p>
+<p class="p1">?Region crawci:hasCriminalReport ?CriminalReport .</p>
+<p class="p1">FILTER (?CriminalReport &gt; 127.0878) .</p>
+<p class="p1">}</p>
+</td>
+<td>
+<p class="p1">Output:</p>
+<p class="p1">Piemonte Trentino Lombardia Veneto Emilia-Romagna Toscana LAzio Molise Campania Sicilia</p>
+</td>
+</tr>
+<tr>
+<td>What regions have the low crime rate?&nbsp;</td>
+<td>
+<p class="p1">BASE &lt;http://www.semanticweb.org/simayguzel/crawci&gt;</p>
+<p class="p1">PREFIX crawci: &lt;http://www.semanticweb.org/simayguzel/crawci&gt;</p>
+<p class="p2">&nbsp;</p>
+<p class="p1">SELECT ?Region</p>
+<p class="p1">WHERE {</p>
+<p class="p1">?Region crawci:hasCriminalReport ?CriminalReport .</p>
+<p class="p1">FILTER (?CriminalReport &lt; 127.0878) .</p>
+<p class="p1">}</p>
+</td>
+<td>
+<p class="p1">Output:</p>
+<p class="p1">Valle_d'Aosta Liguria Trentino Friuli-Venezia_Giulia Umbria Marche Abruzzo Molise Basilicata Calabria Sardegna</p>
+&nbsp;</td>
+</tr>
+<tr>
+<td>What regions have high diffusion of cultural institutions per km?&nbsp;</td>
+<td>
+<p class="p1"><span class="s1">BASE &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1">PREFIX crawci: &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p2">&nbsp;</p>
+<p class="p3">SELECT ?Region</p>
+<p class="p3">WHERE {</p>
+<p class="p3">?Region crawci:hasDensity ?CulturalInstitution .</p>
+<p class="p3">FILTER (?CulturalInstitution &gt; 0.0262) .</p>
+<p class="p3">}</p>
+</td>
+<td>
+<p class="p1">Output:</p>
+<p class="p1">Liguria Emilia-Romagna Toscana Umbria Marche Lazio Campania</p>
+</td>
+</tr>
+<tr>
+<td>What regions have low diffusion of cultural institutions per km?&nbsp;</td>
+<td>
+<p class="p1"><span class="s1">BASE &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1">PREFIX crawci: &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p2">&nbsp;</p>
+<p class="p3">SELECT ?Region</p>
+<p class="p3">WHERE {</p>
+<p class="p3">?Region crawci:hasDensity ?CulturalInstitution .</p>
+<p class="p3">FILTER (?CulturalInstitution &lt; 0.0262) .</p>
+<p class="p3">}</p>
+</td>
+<td>
+<p class="p1">Output:</p>
+<p class="p1">Valle_d'Aosta Liguria Friuli-Venezia_Giulia Umbria Marche Abruzzo Molise Basilicata Calabria Sardegna</p>
+</td>
+</tr>
+<tr>
+<td>What regions have low level of internet diffusion?&nbsp;</td>
+<td>
+<p class="p1"><span class="s1">BASE &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1">PREFIX crawci: &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p2">&nbsp;</p>
+<p class="p3">SELECT ?Region</p>
+<p class="p3">WHERE {</p>
+<p class="p3">?Region crawci:hasInternetDifusionLevel ?DifusionofInternet .</p>
+<p class="p3">FILTER (?DifusionofInternet &lt; 68.32) .</p>
+<p class="p3">}</p>
+</td>
+<td>&nbsp;
+<p class="p1">Output: Liguria Molise Campania Puglia Basilicata Calabria Sicilia</p>
+</td>
+</tr>
+<tr>
+<td>What theatres are located in Abruzzo?&nbsp;</td>
+<td>
+<p class="p1"><span class="s1">BASE &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1">PREFIX crawci: &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p2">&nbsp;</p>
+<p class="p3">SELECT*</p>
+<p class="p3">WHERE {</p>
+<p class="p3">?Theater crawci:locatedIn ?Abruzzo .</p>
+<p class="p2">&nbsp;</p>
+<p class="p3">}</p>
+</td>
+<td>
+<p class="p1">Output:</p>
+<p class="p1">Auditorium AuditoriumSant'Agostino TeatroComunale TeatroDelMare TeatroMarrucino</p>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p class="p1">&nbsp;</p>
+What regions have the lowest average salary?&nbsp;&nbsp;</td>
+<td>
+<p class="p1"><span class="s1">BASE &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1">PREFIX crawci: &lt;</span>http://www.semanticweb.org/simayguzel/crawci<span class="s1">&gt;</span></p>
+<p class="p2">&nbsp;</p>
+<p class="p3">SELECT ?Region</p>
+<p class="p3">WHERE {</p>
+<p class="p3">?Region crawci:hasAverageSalary ?AverageSalary .</p>
+<p class="p3">FILTER (?AverageSalary &lt; 29.843) .</p>
+<p class="p3">}</p>
+</td>
+<td>
+<p>Output:</p>
+<p class="p1">Campania Puglia Calabria Sicilia</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="container">&nbsp;</div>
+</div>
+
   <!-- licenses -->
   <section class="page-section" id="licenses">
     <div class="container">
