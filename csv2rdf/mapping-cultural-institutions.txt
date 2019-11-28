@@ -1,0 +1,4 @@
+
+1=http://www.semanticweb.org/simayguzel/crawci/hasName
+2=http://www.semanticweb.org/simayguzel/crawci/locatedIn
+3=http://www.semanticweb.org/simayguzel/crawci/locatedIn
