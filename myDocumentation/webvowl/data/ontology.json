@@ -1,0 +1,1331 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/simayguzel/crawci" ],
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#DifusionOfInternet",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DifusionOfInternet"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#69.4",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "69.4"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#59.4",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "59.4"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#73.1",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "73.1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#72.5",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "72.5"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#63.2",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "63.2"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#62.4",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "62.4"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#60.6",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "60.6"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#72.4",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "72.4"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#65.2",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "65.2"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#64.4",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "64.4"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#69",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "69"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#72.6",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "72.6"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#62.7",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "62.7"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#72.9",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "72.9"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#69.1",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "69.1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#71.9",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "71.9"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#73.7",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "73.7"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#70",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "70"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#TotalTheater",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TotalTheater"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#44",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "44"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#77",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "77"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#2",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#66",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "66"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#21",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "21"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#43",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "43"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#1",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#67",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "67"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#23",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "23"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#6",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "6"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#28",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "28"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#7",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#16",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "16"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#27",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "27"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#50",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "50"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#31",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "31"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#42",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "42"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#113",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "113"
+      }
+    } ],
+    "id" : "7",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CriminalReport",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CriminalReport"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#47.067",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "47.067"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#4.085",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "4.085"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#176.318",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "176.318"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#207.885",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "207.885"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#30.108",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "30.108"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#222.685",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "222.685"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#8.205",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "8.205"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#276.255",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "276.255"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#43.136",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "43.136"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#13.570",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "13.570"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#79.898",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "79.898"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#176.246",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "176.246"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#47.465",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "47.465"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#35.552",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "35.552"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#475.194",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "475.194"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#169.999",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "169.999"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#61.137",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "61.137"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#229.630",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "229.630"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#149.334",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "149.334"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#33.620",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "33.620"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "It provides information on number of  crimes reported by the police to the judicial authority."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#NegativeCorrelation",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NegativeCorrelation"
+    },
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#Correlation",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Correlation"
+    },
+    "subClasses" : [ "14", "18" ],
+    "comment" : {
+      "undefined" : "Correlation coefficients are used in statistics to measure how strong a relationship is between two variables. The formulas return a value between -1(negative correlation) and 1(positive correlation)"
+    },
+    "id" : "15"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Country",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Italy",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Italy"
+      }
+    } ],
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Theater",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Theater"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Region",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Region"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Emilia-Romagna",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Emilia-Romagna"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Veneto",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Veneto"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Molise",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Molise"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sardegna",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Sardegna"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Friuli-Venezia_Giulia",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Friuli-Venezia_Giulia"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Campania",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Campania"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Trentino",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Trentino"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Piemonte",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Piemonte"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Valle_d'Aosta",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Valle_d'Aosta"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lazio",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Lazio"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Liguria",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Liguria"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Puglia",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Puglia"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Toscana",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Toscana"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Basilicata",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Basilicata"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Sicilia",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Sicilia"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Umbria",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Umbria"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Marche",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Marche"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Lombardia",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Lombardia"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Abruzzo",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Abruzzo"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#Calabria",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+      "labels" : {
+        "IRI-based" : "Calabria"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#CulturalInstitution",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalInstitution"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0261",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0261"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0263",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0263"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0131",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0131"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0121",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0121"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0341",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0341"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0132",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0132"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0083",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0083"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0511",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0511"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0413",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0413"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0315",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0315"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0238",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0238"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0129",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0129"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0265",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0265"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0246",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0246"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0312",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0312"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0125",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0125"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.0224",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "0.0224"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "It shows the number of cultural institutions divided by square km."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "0", "8", "23" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#Statistics",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Statistics"
+    },
+    "subClasses" : [ "0", "8", "29", "7", "23" ],
+    "comment" : {
+      "undefined" : "Statistics is the discipline that concerns the collection, organization, displaying, analysis, interpretation and presentation of data."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#AverageSalary",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AverageSalary"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#31.726_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "31.726_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#38.202_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "38.202_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#35.860_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "35.860_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#25.936_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "25.936_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#36.636_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "36.636_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#30.332_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "30.332_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#35.866_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "35.866_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#36.687_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "36.687_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#34.290_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "34.290_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#27.778_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "27.778_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#33.504_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "33.504_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#31.712_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "31.712_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#40.459_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "40.459_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#39.674_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "39.674_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#26.852_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "26.852_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#39.521_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "39.521_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#40.187_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "40.187_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#28.581_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "28.581_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#37.483_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "37.483_EURO"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#28.578_EURO",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "labels" : {
+        "IRI-based" : "28.578_EURO"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "It provides data about average annual income of families in eur per region."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#PositiveCorrelation",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PositiveCorrelation"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.44787",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "comment" : {
+        "undefined" : "It represents the correlation between the cultural institution and internet diffusion."
+      },
+      "labels" : {
+        "IRI-based" : "0.44787"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.82320",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "comment" : {
+        "undefined" : "It represents the correlation between the cultural institution and annual criminal reports."
+      },
+      "labels" : {
+        "IRI-based" : "0.82320"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/simayguzel/crawci#0.59963",
+      "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+      "comment" : {
+        "undefined" : "It represents the correlation between the cultural institution and average wage"
+      },
+      "labels" : {
+        "IRI-based" : "0.59963"
+      }
+    } ],
+    "id" : "18",
+    "superClasses" : [ "15" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasName",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasInternetDifusion",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasInternetDifusion"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#representsInternetDifusionIn",
+    "inverse" : "5",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "representsInternetDifusionIn"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasSalaryLevel",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasSalaryLevel"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#locatedIn",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "locatedIn"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasCrimeLevel",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasCrimeLevel"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#deduce",
+    "inverse" : "20",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "deduce"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "1",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "3",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "15",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "1",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasDensity",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasDensity"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "range" : "1",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasInstitution",
+    "inverse" : "12",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasInstitution"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasNofTheater",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasNofTheater"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasInternetDiffusionLevel",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasInternetDiffusionLevel"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "33"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasCriminalReport",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasCriminalReport"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasPopulation",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasPopulation"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#representsNofTheaterIn",
+    "inverse" : "32",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "representsNofTheaterIn"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "range" : "3",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "18",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#deducedFrom",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "deducedFrom"
+    },
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#representsCriminalReportIn",
+    "inverse" : "39",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "representsCriminalReportIn"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#correlatedWith",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "correlatedWith"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci#hasAverageSalary",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/ontologies/2019/10/crawci",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasAverageSalary"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#representsAverageSalaryIn",
+    "inverse" : "46",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "representsAverageSalaryIn"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#representsDensityIn",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "representsDensityIn"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.semanticweb.org/simayguzel/crawci#hasTheatresNLevel",
+    "baseIri" : "http://www.semanticweb.org/simayguzel/crawci",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasTheatresNLevel"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  } ]
+}
