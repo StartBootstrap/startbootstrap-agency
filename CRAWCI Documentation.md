@@ -335,7 +335,7 @@ A CSV should normally follow RFC 4180(https://tools.ietf.org/html/rfc4180), howe
 
 None of the datasets **D1, D2, D4**  was published in .RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
-Overall, the data is very precise and follows a well-defined structure. The only detected defect - Datasets **D1, D2, D4** make arbitrary use of uppercase and lowercase. 
+Overall, **D1, D2, D4** are very consistent, all of the follow a well-defined structure and include explanations for the abbreviations.  However, Datasets **D1, D2, D4** make arbitrary use of uppercase and lowercase. Moreover, **D2** list types of crimes in different order to different regions, which made it difficult to manipulate data while extracting necessary information. 
 
 ### **D3** 
 
