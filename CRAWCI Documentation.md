@@ -344,10 +344,10 @@ The **D3** Dataset сan be displayed in tabular format, accessed directly throug
 ### **D5** 
 
 The original D5 can be downloaded as **.xlsx, .xml, .json,**  or can be exported as **CSV** which can be customised by choosing necessary columns. The dataset is also available in .RDF format but the file is damaged and cannot be opened in a proper way. 
-2. None of the datasets was published in RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
-Overall, the data is very precise and follows a well-defined structure. The only detected defect - dataset D5 makes arbitrary use of uppercase and lowercase. 
+Dataset D5 makes arbitrary use of uppercase and lowercase. Also, D5 has empty rows which lack information about theatres and makes harder data processing and data extraction.
 
+None of the datasets was published in RDF format which give us a reson to consider all the original  datasets as 3-star Open Data.
 
 # CSV to RDF Conversion.
 
