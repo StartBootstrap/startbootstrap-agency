@@ -1,0 +1,25 @@
+#portfolio {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.container.portfolio-leading-text {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.cta-btn {
+  margin: 3px;
+  color: white;
+}
+
+
+
+.card {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.view-code-btn {
+  color: white;
+}
