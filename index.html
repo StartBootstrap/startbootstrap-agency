@@ -283,6 +283,41 @@
 <p style="text-align: left;">All the mapping files can be found here on<a href="https://github.com/simayguzel/crawci/tree/master/csv2rdf"> Github Repository folder csv2rdf.</a></p>
 <p style="text-align: left;">Hence, the following line provides an example about how to use the tool from command line in order to obtain RDF from CSV and saving its content into a file named *musicians.ttl*. We suppose that the input CSV is actually a tab-separated file.<br/> <code>bash<br/> java -jar stlab.csv2rdf-1.0.jar -s '\t' -m mapping -o crawci.ttl cleandata.csv<br/> </code><br/> <br/> The execution of the tool with the arguments as provided produced the following RDF serialised by using the TURTLE syntax.</p>
   
+
+
+
+<section class="page-section" id="datasetsd">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">9. Handling the visualization (technical description)</h3>
+
+<p>In order to visualize the data the following libraries were used:</p>
+
+<p><span style="color: red;">Bootstrap:</span> Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
+<p><span style="color: red;">Chart.js:</span> For the visualization of school self-evaluation a specific bar chart was chosen (MIT license).</p>
+<p><span style="color: red;">GEOJSON:</span> Leaflet makes it possible to draw polygons directly from geojson files: Regions: To help us draw regions, data from Stefano Cudini's repository were used.</p>
+
+<h4>9.1 The Icons(<span style="color: green;">green circle</span> / <span style="color: red;">red</span> circle)</h4>
+
+<p>The average of each column is calculated:</p>
+
+<p>Avarage Salary: 29843</p>
+
+<p>Avarage Number of Theaters: 36</p>
+
+<p>Average Internet Diffusion: 68,32</p>
+
+<p>Average Criminal reports: 127087</p>
+
+<p>Average of Cultural Density: 0,021185</p>
+
+<p>If a region has a <b>higher value</b> of salary, number of theaters, internet diffusion and cultural density than <b>the average value</b>, the <span style="color: green;">green circle</span> appears; <i>else</i> <span style="color: red;">the red circle</span> appears.</p>
+
+<p>However; if a region has a <b>higher</b> value of criminal reports than <b>the average value</b>, <span style="color: red;">the red circle</span> appears; <i>else</i> <span style="color: green;">the green circle 
+</span> appears.</p>
+
+
  <!-- Queries -->
 <section class="page-section" id="datasets">
       <div class="container">
