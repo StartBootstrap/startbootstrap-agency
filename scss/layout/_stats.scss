@@ -1,0 +1,42 @@
+* ===================================================================
+* 16. stats - (_layout.scss)
+*
+* -------------------------------------------------------------------
+*/
+#stats {
+ background: #990047;
+ padding-top: 7.2rem;
+ padding-bottom: 6rem;
+ text-align: center;
+}
+#stats .row {
+ max-width: 1440px;
+}
+#stats .stat {
+ border-left: 1px solid rgba(255, 255, 255, 0.12);
+ min-height: 17.4rem;
+}
+#stats .stat:first-child {
+ border: none;
+}
+#stats .icon-part i {
+ font-size: 4.8rem;
+ color: #000000;
+}
+#stats .stat-count {
+ color: #FFFFFF;
+ font-size: 3.6rem;
+ margin-top: 1.2rem;
+ margin-bottom: 0;
+ font-family: "poppins-medium", sans-serif;
+ color: white;
+}
+#stats .stat-title {
+ color: rgba(255, 255, 255, 0.5);
+}
+
+/**
+* responsive:
+* stats
+* -------------------------------------------------------------------
+*/
