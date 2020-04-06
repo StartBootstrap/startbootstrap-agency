@@ -1,0 +1,8 @@
+// Button Styles
+
+.btn-xl {
+  @include heading-font;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.25rem 2.5rem;
+}
