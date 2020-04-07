@@ -186,7 +186,7 @@ header.masthead .intro-text {
 }
 
 header.masthead .intro-text .intro-lead-in {
-  font-size: 10px;
+  font-size: 20px;
   font-style: italic;
   line-height: 30px;
   margin-bottom: 25px;
@@ -194,7 +194,7 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 header.masthead .intro-text .intro-heading {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 10;
   line-height: 10px;
   margin-bottom: 25px;
