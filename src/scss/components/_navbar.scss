@@ -1,73 +1,78 @@
 // Styling for the navbar
 #mainNav {
-  background-color: $gray-900;
-  .navbar-toggler {
-    font-size: 12px;
-    right: 0;
-    padding: 13px;
-    text-transform: uppercase;
-    color: white;
-    border: 0;
-    background-color: $primary;
-    @include heading-font;
-  }
-  .navbar-brand {
-    color: $primary;
-    @include script-font;
-    &.active,
-    &:active,
-    &:focus,
-    &:hover {
-      color: darken($primary, 10%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $gray-900;
+    .navbar-toggler {
+        padding: 0.75rem;
+        font-family: $headings-font-family;
+        font-size: 0.75rem;
+        color: $white;
+        text-transform: uppercase;
+        background-color: $primary;
+        border: 0;
     }
-  }
-  .navbar-nav {
-    .nav-item {
-      .nav-link {
-        font-size: 90%;
-        font-weight: 400;
-        padding: 0.75em 0;
-        letter-spacing: 1px;
-        color: white;
-        @include heading-font;
-        &.active,
-        &:hover {
-          color: $primary;
-        }
-      }
-    }
-  }
-}
-@media(min-width:992px) {
-  #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background-color: transparent;
     .navbar-brand {
-      font-size: 1.75em;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
+        color: $primary;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        letter-spacing: $headings-letter-spacing;
+        text-transform: uppercase;
+        img {
+            height: 1.5rem;
+        }
     }
     .navbar-nav {
-      .nav-item {
-        .nav-link {
-          padding: 1.1em 1em !important;
+        .nav-item {
+            .nav-link {
+                font-family: $headings-font-family;
+                font-size: 0.95rem;
+                color: $white;
+                letter-spacing: $headings-letter-spacing;
+                &.active,
+                &:hover {
+                    color: $primary;
+                }
+            }
         }
-      }
     }
-    &.navbar-shrink {
-      padding-top: 0;
-      padding-bottom: 0;
-      background-color: $gray-900;
-      .navbar-brand {
-        font-size: 1.25em;
-        padding: 12px 0;
-      }
+}
+
+// Responsive styling for screen width equal to or greater than the large breakpoint
+@include media-breakpoint-up(lg) {
+    #mainNav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border: none;
+        background-color: transparent;
+        transition: padding-top 0.3s ease-in-out,
+            padding-bottom 0.3s ease-in-out;
+        .navbar-brand {
+            font-size: 1.5em;
+            transition: font-size 0.3s ease-in-out;
+            img {
+                height: 2rem;
+                transition: height 0.3s ease-in-out;
+            }
+        }
+        // Styling for when the navbar shrinks on larger screens
+        &.navbar-shrink {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: $gray-900;
+            .navbar-brand {
+                font-size: 1.25em;
+                svg,
+                img {
+                    height: 1.5rem;
+                }
+            }
+        }
+        .navbar-nav .nav-item {
+            margin-right: 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
-  }
 }
