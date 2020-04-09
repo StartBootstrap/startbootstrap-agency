@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Freelancer - Start Bootstrap Theme</title>
+        <title>Agency - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://startbootstrap.com/assets/img/icons/favicon-32x32.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
@@ -315,39 +315,34 @@
                         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
-                                </div>
+                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                                <p class="help-block text-danger"></p>
                             </div>
-                        </form>
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </section>
         <!-- Footer-->
@@ -398,7 +393,7 @@
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i>Close Project</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
                         </div>
@@ -427,7 +422,7 @@
                                         <li>Client: Explore</li>
                                         <li>Category: Graphic Design</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i>Close Project</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
                         </div>
@@ -456,7 +451,7 @@
                                         <li>Client: Finish</li>
                                         <li>Category: Identity</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i>Close Project</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
                         </div>
@@ -485,7 +480,7 @@
                                         <li>Client: Lines</li>
                                         <li>Category: Branding</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i>Close Project</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
                         </div>
@@ -514,7 +509,7 @@
                                         <li>Client: Southwest</li>
                                         <li>Category: Website Design</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i>Close Project</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
                         </div>
@@ -543,7 +538,7 @@
                                         <li>Client: Window</li>
                                         <li>Category: Photography</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i>Close Project</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
                         </div>
