@@ -204,7 +204,7 @@ header.masthead .intro-text .intro-heading{
 	background:rgba(254,209,54,.9)
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover{
-	opacity:1
+	opacity:.3
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content{
 	font-size:20px;
