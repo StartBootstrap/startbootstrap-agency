@@ -8,28 +8,29 @@ p {
 }
 
 .page-section {
-    padding: 100px 0;
+    padding: 6rem 0;
     h2.section-heading {
-        font-size: 40px;
+        font-size: 2.5rem;
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
     }
     h3.section-subheading {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         font-style: italic;
-        margin-bottom: 75px;
-        text-transform: none;
         font-family: $subheadings-font-family;
+        margin-bottom: 4rem;
     }
 }
-@media (min-width: 768px) {
+
+@include media-breakpoint-up(md) {
     section {
-        padding: 150px 0;
+        padding: 9rem 0;
     }
 }
 
 // Highlight color customization
+
 ::-moz-selection {
     background: $primary;
     text-shadow: none;

@@ -11,11 +11,10 @@
 @import "./components/buttons.scss";
 @import "./components/navbar.scss";
 
-// Layout
-@import "./layout/masthead.scss";
-@import "./layout/services.scss";
-@import "./layout/portfolio.scss";
-@import "./layout/timeline.scss";
-@import "./layout/team.scss";
-@import "./layout/contact.scss";
-@import "./layout/footer.scss";
+// Sections
+@import "./sections/masthead.scss";
+@import "./sections/portfolio.scss";
+@import "./sections/timeline.scss";
+@import "./sections/team.scss";
+@import "./sections/contact.scss";
+@import "./sections/footer.scss";

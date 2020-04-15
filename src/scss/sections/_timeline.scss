@@ -99,7 +99,7 @@
         }
     }
 }
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
     .timeline {
         &:before {
             left: 50%;
@@ -132,7 +132,7 @@
         }
     }
 }
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
     .timeline {
         > li {
             min-height: 150px;
@@ -155,7 +155,7 @@
         }
     }
 }
-@media (min-width: 1200px) {
+@include media-breakpoint-up(xl) {
     .timeline {
         > li {
             min-height: 170px;
