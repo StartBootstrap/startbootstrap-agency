@@ -1,6 +1,6 @@
 {
-    "title": "Agency",
-    "name": "startbootstrap-agency",
+    "title": "Renovo",
+    "name": "renovo",
     "version": "6.0.0",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -12,7 +12,7 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "Agency is a one page HTML theme for Bootstrap.",
+    "description": "Consultoria Ambienntal Inteligente.",
     "keywords": [
         "css",
         "sass",

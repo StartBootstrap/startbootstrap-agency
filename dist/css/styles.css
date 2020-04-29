@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap - Agency v6.0.0 (https://startbootstrap.com/template-overviews/agency)
+* Start Bootstrap - Renovo v6.0.0 (https://startbootstrap.com/template-overviews/agency)
 * Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/BlackrockDigital/renovo/blob/master/LICENSE)
 */
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -159,8 +159,7 @@ sup {
 }
 
 a {
-  /*color: #fed136;*/
-  color: #28a745;
+  color: #fed136;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2458,15 +2457,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  /*background-color: #fed136;
-  border-color: #fed136;*/
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #fed136;
+  border-color: #fed136;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #aac235;
-  border-color: #aac235;
+  background-color: #fec810;
+  border-color: #fec503;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
