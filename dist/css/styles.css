@@ -159,7 +159,8 @@ sup {
 }
 
 a {
-  color: #fed136;
+  /*color: #fed136;*/
+  color: #28a745;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2457,13 +2458,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #fed136;
-  border-color: #fed136;
+  /*background-color: #fed136;
+  border-color: #fed136;*/
+  background-color: #28a745;
+  border-color: #28a745;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #fec810;
-  border-color: #fec503;
+  background-color: #aac235;
+  border-color: #aac235;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
