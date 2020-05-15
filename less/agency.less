@@ -4,7 +4,7 @@
 body {
 	overflow-x: hidden;
 	font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	webkit-tap-highlight-color: #fed136
+	webkit-tap-highlight-color: #e8e8e8
 }
 
 .text-muted {
@@ -13,7 +13,7 @@ body {
 
 .text-primary,
 a {
-	color: #fed136
+	color: #000000;
 }
 
 p {
@@ -30,26 +30,19 @@ a.active,
 a:active,
 a:focus,
 a:hover {
-	outline: 0
+	outline: 0;
+	color: #0f4c82
 }
 
 a.active,
 a:active,
 a:focus,
 a:hover {
-	color: #fec503
+	color: #0f4c82
 }
 
 .img-centered {
 	margin: 0 auto
-}
-
-.bg-light-gray {
-	background-color: #eee
-}
-
-.bg-darkest-gray {
-	background-color: #222
 }
 
 .navbar-custom {
@@ -58,7 +51,7 @@ a:hover {
 }
 
 .navbar-custom .navbar-brand {
-	color: #fed136;
+	color: rgba(255, 255, 255, 0.5);
 	font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, cursive
 }
 
@@ -66,13 +59,13 @@ a:hover {
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:hover {
-	color: #fec503
+	color: #ffffff;
 }
 
 .navbar-custom .nav li a,
 .navbar-custom .navbar-toggle {
 	font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #fff;
+	color: #000000;
 	text-transform: uppercase
 }
 
@@ -81,14 +74,14 @@ a:hover {
 }
 
 .navbar-custom .navbar-toggle {
-	background-color: #fed136;
-	border-color: #fed136;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	font-size: 12px
 }
 
 .navbar-custom .navbar-toggle:focus,
 .navbar-custom .navbar-toggle:hover {
-	background-color: #fed136
+	background-color: #ffffff
 }
 
 .navbar-custom .nav li a {
@@ -98,20 +91,20 @@ a:hover {
 
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:hover {
-	color: #fed136;
+	color: #ffffff;
 	outline: 0
 }
 
 .navbar-custom .navbar-nav>.active>a {
 	border-radius: 0;
-	color: #fff;
-	background-color: #fed136
+	color: #000000;
+	background-color: rgba(255, 255, 255, 0.5)
 }
 
 .navbar-custom .navbar-nav>.active>a:focus,
 .navbar-custom .navbar-nav>.active>a:hover {
-	color: #fff;
-	background-color: #fec503
+	color: #000000;
+	background-color: rgba(255, 255, 255, 0.8)
 }
 
 @media (min-width:768px) {
@@ -133,7 +126,8 @@ a:hover {
 		border-radius: 3px
 	}
 	.navbar-custom.affix {
-		background-color: #222;
+		background-color: #e8e8e8;
+		opacity: 0.95;
 		padding: 10px 0
 	}
 	.navbar-custom.affix .navbar-brand {
@@ -150,7 +144,7 @@ header {
 	background-size: cover;
 	-o-background-size: cover;
 	text-align: center;
-	color: #fff
+	color: #000000
 }
 
 header .intro-text {
@@ -231,7 +225,7 @@ section h3.section-subheading {
 	text-transform: none;
 	font-weight: 400;
 	margin-bottom: 75px;
-	line-height:1.2;
+	line-height:1.5;
 }
 
 @media (min-width:768px) {
@@ -382,7 +376,7 @@ footer ul.quicklinks {
 }
 
 .timeline-image4 {
-	background-color: #ffd317;
+	background-color: #0f4c82;
 }
 
 .timeline>li .timeline-image {
@@ -539,13 +533,8 @@ aside.clients img {
 }
 
 section#contact {
-	background-color: #222;
 	background-position: center;
 	background-repeat: no-repeat
-}
-
-section#contact .section-heading {
-	color: #fff
 }
 
 section#contact .form-group {
@@ -622,7 +611,7 @@ ul.social-buttons {
 
 ul.social-buttons li a {
 	display: block;
-	background-color: #222;
+	background-color: #e8e8e8;
 	height: 40px;
 	width: 40px;
 	border-radius: 100%;
@@ -693,7 +682,7 @@ ul.social-buttons li a:hover {
 	height: 75px;
 	width: 1px;
 	margin-left: 35px;
-	background-color: #222;
+	background-color: #e8e8e8;
 	transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -703,7 +692,7 @@ ul.social-buttons li a:hover {
 .portfolio-modal .close-modal .lr .rl {
 	height: 75px;
 	width: 1px;
-	background-color: #222;
+	background-color: #e8e8e8;
 	transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	-webkit-transform: rotate(90deg);
@@ -717,12 +706,12 @@ ul.social-buttons li a:hover {
 
 ::-moz-selection {
 	text-shadow: none;
-	background: #fed136
+	background: #e8e8e8
 }
 
 ::selection {
 	text-shadow: none;
-	background: #fed136
+	background: #e8e8e8
 }
 
 img::selection {
@@ -838,7 +827,8 @@ img::-moz-selection {
 }
 
 .navbar-custom.affix {
-	background-color: #222
+	background-color: #e8e8e8;
+	opacity: 0.95;
 }
 
 .services-border {
@@ -855,6 +845,7 @@ img::-moz-selection {
 
 .download-button {
 	margin-bottom: 75px;
+	color: #0f4c82;
 }
 
 .download-button-margin {
@@ -863,8 +854,8 @@ img::-moz-selection {
 
 .btn-primary {
 	color: white;
-	background-color: #fed136;
-	border-color: #fed136;
+	background-color: #e8e8e8;
+	border-color: #e8e8e8;
 	font-family: "simplerPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -875,8 +866,8 @@ img::-moz-selection {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
 	color: white;
-	background-color: #fec503;
-	border-color: #f6bf01;
+	background-color: #e8e8e8;
+	border-color: #e8e8e8;
 }
 .btn-primary:active,
 .btn-primary.active,
