@@ -83,8 +83,7 @@
 
     <!-- Header -->
     <header class="fullscreen-bg">
-        <video loop muted autoplay poster="img/header-bg.jpg" class="fullscreen-bg__video">
-            <source src="img/intro.webm" type="video/webm">
+        <video id="coverVideo" loop muted autoplay class="fullscreen-bg__video">
         </video>
     </header>
 
@@ -1228,6 +1227,18 @@
                 autoplaySpeed:2000,
                 lazyLoad:'progressive'
             });
+
+            var video = $('#coverVideo');
+
+            var WindowWidth = $(window).width();
+
+            if (WindowWidth < 768) {
+                video.poster="img/header-bg2.jpg";
+                video.append("<source src=\"img/intro2.mp4\" type=\"video/mp4\">");
+            } else {
+                video.poster="img/header-bg.jpg";
+                video.append("<source src=\"img/intro.webm\" type=\"video/webm\">");
+            }
         });
     </script>
 
