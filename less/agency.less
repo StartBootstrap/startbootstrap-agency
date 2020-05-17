@@ -206,7 +206,7 @@ header .intro-text .intro-heading {
 
 @media (min-width:768px) {
 	#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-		background: rgba(254, 209, 54, .9);
+		background: rgba(255, 255, 255, .9);
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -265,7 +265,7 @@ section h3.section-subheading {
 }
 
 @media (min-width:768px) {
-	section {
+	.about-section {
 		margin-top: 150px;
 	}
 }
@@ -278,6 +278,11 @@ section h3.section-subheading {
 #portfolio .portfolio-item {
 	margin: 0 0 15px;
 	right: 0
+}
+
+#portfolio .portfolio-plus {
+	color: #0f4c82;
+	opacity: 0.4;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -541,6 +546,29 @@ footer ul.quicklinks {
 	}
 	.timeline>li.timeline-inverted>.timeline-panel {
 		padding: 43px 100px 20px 20px
+	}
+}
+
+@media (min-width:1500px) {
+	.timeline>li {
+		min-height: 170px
+	}
+	.timeline>li .timeline-panel {
+		padding: 43px 20px 20px 100px
+	}
+	.timeline>li .timeline-image {
+		width: 170px;
+		height: 170px;
+		margin-left: -85px
+	}
+	.timeline>li .timeline-image h4 {
+		margin-top: 40px
+	}
+	.timeline>li.timeline-inverted>.timeline-panel {
+		padding: 43px 100px 20px 20px
+	}
+	.portfolio-container {
+		width: 1530px;
 	}
 }
 
