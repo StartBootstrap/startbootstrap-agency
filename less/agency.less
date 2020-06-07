@@ -624,7 +624,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-	border-color: #fed136;
+	border-color: #0f4c82;
 	box-shadow: none
 }
 
@@ -654,6 +654,10 @@ section#contact :-ms-input-placeholder {
 
 section#contact .text-danger {
 	color: #e74c3c
+}
+
+.opacityOnHover:hover {
+	opacity: .7
 }
 
 footer {
@@ -696,7 +700,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:active,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
-	background-color: #fed136
+	background-color: #0f4c82
 }
 
 .portfolio-modal .modal-content {
@@ -706,6 +710,7 @@ ul.social-buttons li a:hover {
 	box-shadow: none;
 	border: none;
 	min-height: 100%;
+	min-width: 100%;
 	padding: 100px 0;
 }
 
@@ -730,16 +735,16 @@ ul.social-buttons li a:hover {
 }
 
 .portfolio-modal .modal-content img {
-	margin-bottom: 10px
+	margin-bottom: 50px
 }
 
 .portfolio-modal .close-modal {
-	position: absolute;
-	width: 75px;
-	height: 75px;
+	position: fixed;
+	width: 100px;
+	height: 100px;
 	background-color: transparent;
-	top: 25px;
-	right: 25px;
+	top: 35px;
+	right: 35px;
 	cursor: pointer
 }
 
@@ -748,10 +753,10 @@ ul.social-buttons li a:hover {
 }
 
 .portfolio-modal .close-modal .lr {
-	height: 75px;
+	height: 100px;
 	width: 1px;
-	margin-left: 35px;
-	background-color: #e8e8e8;
+	margin-left: 45px;
+	background-color: #0f4c82;
 	transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -759,9 +764,9 @@ ul.social-buttons li a:hover {
 }
 
 .portfolio-modal .close-modal .lr .rl {
-	height: 75px;
+	height: 100px;
 	width: 1px;
-	background-color: #e8e8e8;
+	background-color: #0f4c82;
 	transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	-webkit-transform: rotate(90deg);
@@ -879,8 +884,8 @@ img::-moz-selection {
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
-	margin-bottom: 10px;
-	padding-top: 30px;
+	margin-bottom: 50px;
+	//padding-top: 30px;
 	height: 0;
 	overflow: hidden;
 }
