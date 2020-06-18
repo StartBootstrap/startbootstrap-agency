@@ -1,6 +1,6 @@
 # [Start Bootstrap - Agency](https://startbootstrap.com/themes/agency/)
 
-[Agency](http://startbootstrap.com/themes/agency/) is a one page, agency portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
+[Agency](https://startbootstrap.com/themes/agency/) is a one page, agency portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
 
 ## Preview
 
@@ -50,7 +50,7 @@ You must have npm installed in order to use this build environment.
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-agency/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](http://startbootstrap.com/themes/agency/).
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-agency/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/themes/agency/).
 
 ## About
 
