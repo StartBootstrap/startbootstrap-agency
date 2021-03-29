@@ -2,7 +2,7 @@
     "use strict"; // Start of use strict
 
     // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on('click', function () {
         if (
             location.pathname.replace(/^\//, "") ==
                 this.pathname.replace(/^\//, "") &&
@@ -13,20 +13,19 @@
                 ? target
                 : $("[name=" + this.hash.slice(1) + "]");
             if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top - 72,
-                    },
-                    1000,
-                    "easeInOutExpo"
-                );
+                anime({
+                    targets: 'html, body',
+                    scrollTop: target.offset().top - 72,
+                    duration: 1000,
+                    easing: 'easeInOutExpo'
+                });
                 return false;
             }
         }
     });
 
     // Closes responsive menu when a scroll trigger link is clicked
-    $(".js-scroll-trigger").click(function () {
+    $(".js-scroll-trigger").on('click', function () {
         $(".navbar-collapse").collapse("hide");
     });
 
@@ -47,5 +46,5 @@
     // Collapse now if page is not at top
     navbarCollapse();
     // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
+    $(window).on('scroll', navbarCollapse);
 })(jQuery); // End of use strict
