@@ -36,14 +36,14 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-agency.git"
     },
     "dependencies": {
-        "bootstrap": "^5.0.0-beta3"
+        "bootstrap": "5.0.0"
     },
     "devDependencies": {
         "autoprefixer": "10.2.5",
-        "browser-sync": "^2.19.0",
+        "browser-sync": "2.26.14",
         "chokidar": "3.5.1",
         "concurrently": "6.0.2",
-        "postcss": "8.2.13",
+        "postcss": "8.2.14",
         "prettier": "2.2.1",
         "pug": "3.0.2",
         "sass": "1.32.12",
