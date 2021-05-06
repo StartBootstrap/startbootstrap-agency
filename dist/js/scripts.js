@@ -44,13 +44,11 @@ window.addEventListener('DOMContentLoaded', event => {
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
     responsiveNavItems.map(function (responsiveNavItem) {
-        console.log(responsiveNavItem);
         responsiveNavItem.addEventListener('click', () => {
-            console.log('asd');
-            navbarToggler.click();
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
         });
-
     });
-
 
 });
