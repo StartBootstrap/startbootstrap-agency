@@ -291,6 +291,8 @@ html(lang='en')
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
+
+                                // Name input
                                 input#name.form-control(
                                     type='text',
                                     placeholder='Your Name *',
@@ -298,7 +300,10 @@ html(lang='en')
                                 )
                                 .invalid-feedback(data-sb-feedback='name:required')
                                     | A name is required.
+
                             .form-group
+
+                                // Email address input
                                 input#email.form-control(
                                     type='email',
                                     placeholder='Your Email *',
@@ -308,7 +313,10 @@ html(lang='en')
                                     | An email is required.
                                 .invalid-feedback.d-none(data-sb-feedback='email:email')
                                     | Email is not valid.
+
                             .form-group.mb-md-0
+
+                                // Phone number input
                                 input#phone.form-control(
                                     type='tel',
                                     placeholder='Your Phone *',
@@ -316,9 +324,15 @@ html(lang='en')
                                 )
                                 .invalid-feedback.d-none(data-sb-feedback='phone:required')
                                     | A phone number is required.
+
                         .col-md-6
                             .form-group.form-group-textarea.mb-md-0
-                                textarea#message.form-control(placeholder='Your Message *', data-sb-validations='required')
+
+                                // Message input
+                                textarea#message.form-control(
+                                    placeholder='Your Message *',
+                                    data-sb-validations='required'
+                                )
                                 .invalid-feedback.d-none(data-sb-feedback='message:required')
                                     | A message is required.
 
