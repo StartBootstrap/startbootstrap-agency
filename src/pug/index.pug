@@ -309,9 +309,9 @@ html(lang='en')
                                     placeholder='Your Email *',
                                     data-sb-validations='required,email'
                                 )
-                                .invalid-feedback.d-none(data-sb-feedback='email:required')
+                                .invalid-feedback(data-sb-feedback='email:required')
                                     | An email is required.
-                                .invalid-feedback.d-none(data-sb-feedback='email:email')
+                                .invalid-feedback(data-sb-feedback='email:email')
                                     | Email is not valid.
 
                             .form-group.mb-md-0
@@ -322,7 +322,7 @@ html(lang='en')
                                     placeholder='Your Phone *',
                                     data-sb-validations='required'
                                 )
-                                .invalid-feedback.d-none(data-sb-feedback='phone:required')
+                                .invalid-feedback(data-sb-feedback='phone:required')
                                     | A phone number is required.
 
                         .col-md-6
@@ -333,7 +333,7 @@ html(lang='en')
                                     placeholder='Your Message *',
                                     data-sb-validations='required'
                                 )
-                                .invalid-feedback.d-none(data-sb-feedback='message:required')
+                                .invalid-feedback(data-sb-feedback='message:required')
                                     | A message is required.
 
                     // Submit success message
