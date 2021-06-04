@@ -280,12 +280,14 @@ html(lang='en')
                     h2.section-heading.text-uppercase Contact Us
                     h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
 
-                // Contact Form
-                //
-                // This form is pre-integrated with SB Forms
+                // * * * * * * * * * * * * * * *
+                // * * SB Forms Contact Form * *
+                // * * * * * * * * * * * * * * *
+
+                // This form is pre-integrated with SB Forms.
                 // To make this form functional, sign up at
                 // https://startbootstrap.com/solution/contact-forms
-                // to get your API token!
+                // to get an API token!
 
                 form#contactForm(data-sb-form-api-token='API_TOKEN')
                     .row.align-items-stretch.mb-5
@@ -365,11 +367,7 @@ html(lang='en')
             .container
                 .row.align-items-center
                     .col-lg-4.text-lg-start
-                        | Copyright &copy; Your Website
-                        // This script automatically adds the current year to your website footer
-                        // (credit: https://updateyourfooter.com/)
-                        script.
-                            document.write(new Date().getFullYear());
+                        | Copyright &copy; Your Website 2021
                     .col-lg-4.my-3.my-lg-0
                         a.btn.btn-dark.btn-social.mx-2(href='#!')
                             i.fab.fa-twitter
@@ -395,5 +393,9 @@ html(lang='en')
         // Core theme JS
         script(src='js/scripts.js')
 
-        // SB Forms JS
-        //- script(src='path/to/cdn.js')
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        // * *                               SB Forms JS                               * *
+        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
