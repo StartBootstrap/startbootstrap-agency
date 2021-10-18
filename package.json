@@ -1,7 +1,7 @@
 {
     "title": "Agency",
     "name": "startbootstrap-agency",
-    "version": "7.0.9",
+    "version": "7.0.10",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -46,7 +46,7 @@
         "postcss": "8.3.9",
         "prettier": "2.4.1",
         "pug": "3.0.2",
-        "sass": "1.42.1",
+        "sass": "1.43.2",
         "shelljs": "0.8.4",
         "upath": "2.0.1"
     }
