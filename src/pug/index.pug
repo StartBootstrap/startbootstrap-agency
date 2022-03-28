@@ -13,12 +13,14 @@ html(lang='en')
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-        // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v6.1.0/js/all.js', crossorigin='anonymous')
+        // Font Awesome icons 6.1.1 (free version, including only needed icons)
+        script(src='js/brands.js', defer)
+        script(src='js/solid.js', defer)
+        script(src='js/fontawesome.min.js', defer)
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='preload', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='preload', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
@@ -95,7 +97,7 @@ html(lang='en')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-plus.fa-3x
-                                img.img-fluid(src='assets/img/portfolio/1.jpg', alt='...')
+                                img.img-fluid(src='assets/img/portfolio/1.jpg', loading='lazy', alt='...')
                             .portfolio-caption
                                 .portfolio-caption-heading Threads
                                 .portfolio-caption-subheading.text-muted Illustration
@@ -106,7 +108,7 @@ html(lang='en')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-plus.fa-3x
-                                img.img-fluid(src='assets/img/portfolio/2.jpg', alt='...')
+                                img.img-fluid(src='assets/img/portfolio/2.jpg', loading='lazy', alt='...')
                             .portfolio-caption
                                 .portfolio-caption-heading Explore
                                 .portfolio-caption-subheading.text-muted Graphic Design
@@ -117,7 +119,7 @@ html(lang='en')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-plus.fa-3x
-                                img.img-fluid(src='assets/img/portfolio/3.jpg', alt='...')
+                                img.img-fluid(src='assets/img/portfolio/3.jpg', loading='lazy', alt='...')
                             .portfolio-caption
                                 .portfolio-caption-heading Finish
                                 .portfolio-caption-subheading.text-muted Identity
@@ -128,7 +130,7 @@ html(lang='en')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-plus.fa-3x
-                                img.img-fluid(src='assets/img/portfolio/4.jpg', alt='...')
+                                img.img-fluid(src='assets/img/portfolio/4.jpg', loading='lazy', alt='...')
                             .portfolio-caption
                                 .portfolio-caption-heading Lines
                                 .portfolio-caption-subheading.text-muted Branding
@@ -139,7 +141,7 @@ html(lang='en')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-plus.fa-3x
-                                img.img-fluid(src='assets/img/portfolio/5.jpg', alt='...')
+                                img.img-fluid(src='assets/img/portfolio/5.jpg', loading='lazy', alt='...')
                             .portfolio-caption
                                 .portfolio-caption-heading Southwest
                                 .portfolio-caption-subheading.text-muted Website Design
@@ -150,7 +152,7 @@ html(lang='en')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-plus.fa-3x
-                                img.img-fluid(src='assets/img/portfolio/6.jpg', alt='...')
+                                img.img-fluid(src='assets/img/portfolio/6.jpg', loading='lazy', alt='...')
                             .portfolio-caption
                                 .portfolio-caption-heading Window
                                 .portfolio-caption-subheading.text-muted Photography
@@ -164,7 +166,7 @@ html(lang='en')
                 ul.timeline
                     li
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/1.jpg', alt='...')
+                            img.rounded-circle.img-fluid(src='assets/img/about/1.jpg', loading='lazy', alt='...')
                         .timeline-panel
                             .timeline-heading
                                 h4 2009-2011
@@ -174,7 +176,7 @@ html(lang='en')
                                     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
                     li.timeline-inverted
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/2.jpg', alt='...')
+                            img.rounded-circle.img-fluid(src='assets/img/about/2.jpg', loading='lazy', alt='...')
                         .timeline-panel
                             .timeline-heading
                                 h4 March 2011
@@ -184,7 +186,7 @@ html(lang='en')
                                     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
                     li
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', alt='...')
+                            img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', loading='lazy', alt='...')
                         .timeline-panel
                             .timeline-heading
                                 h4 December 2015
@@ -194,7 +196,7 @@ html(lang='en')
                                     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
                     li.timeline-inverted
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/4.jpg', alt='...')
+                            img.rounded-circle.img-fluid(src='assets/img/about/4.jpg', loading='lazy', alt='...')
                         .timeline-panel
                             .timeline-heading
                                 h4 July 2020
@@ -262,16 +264,16 @@ html(lang='en')
                 .row.align-items-center
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg', alt='...', aria-label='Microsoft Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg', loading='lazy', alt='...', aria-label='Microsoft Logo')
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg', alt='...', aria-label='Google Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg', loading='lazy', alt='...', aria-label='Google Logo')
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg', alt='...', aria-label='Facebook Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg', loading='lazy', alt='...', aria-label='Facebook Logo')
                     .col-md-3.col-sm-6.my-3
                         a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg', alt='...', aria-label='IBM Logo')
+                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg', loading='lazy', alt='...', aria-label='IBM Logo')
 
         // Contact
         section#contact.page-section
