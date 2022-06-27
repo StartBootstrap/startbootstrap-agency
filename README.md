@@ -1,4 +1,5 @@
-# [Start Bootstrap - Agency](https://startbootstrap.com/theme/agency)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+# [Liqa Technologies](https://startbootstrap.com/theme/agency)
 
 [Agency](https://startbootstrap.com/theme/agency) is a one page, agency portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
 
